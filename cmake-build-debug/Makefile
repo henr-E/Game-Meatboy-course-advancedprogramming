@@ -162,41 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 2022_project_henrey_T
+# Target rules for targets named hw
 
 # Build rule for target.
-2022_project_henrey_T: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 2022_project_henrey_T
-.PHONY : 2022_project_henrey_T
+hw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hw
+.PHONY : hw
 
 # fast build rule for target.
-2022_project_henrey_T/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/build
-.PHONY : 2022_project_henrey_T/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/main.cpp.s
-.PHONY : main.cpp.s
+hw/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/build
+.PHONY : hw/fast
 
 # Help Target
 help:
@@ -210,10 +186,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... 2022_project_henrey_T"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... hw"
 .PHONY : help
 
 

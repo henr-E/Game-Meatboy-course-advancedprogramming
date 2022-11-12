@@ -8,13 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/main.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles/2022_project_henrey_T.dir/main.cpp.o"
+  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../."
   )
 
 # The set of dependency files which are needed:
