@@ -1,0 +1,8 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T"
+CMake Error at CMakeLists.txt:6 (INSTALL):
+  INSTALL TARGETS given target "2022_project_henrey_T" which does not exist.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles/CMakeError.log".
