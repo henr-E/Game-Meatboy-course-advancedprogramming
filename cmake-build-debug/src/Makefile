@@ -199,6 +199,30 @@ main.cpp.s:
 	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+testDoxygen.o: testDoxygen.cpp.o
+.PHONY : testDoxygen.o
+
+# target to build an object file
+testDoxygen.cpp.o:
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/testDoxygen.cpp.o
+.PHONY : testDoxygen.cpp.o
+
+testDoxygen.i: testDoxygen.cpp.i
+.PHONY : testDoxygen.i
+
+# target to preprocess a source file
+testDoxygen.cpp.i:
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/testDoxygen.cpp.i
+.PHONY : testDoxygen.cpp.i
+
+testDoxygen.s: testDoxygen.cpp.s
+.PHONY : testDoxygen.s
+
+# target to generate assembly for a file
+testDoxygen.cpp.s:
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/testDoxygen.cpp.s
+.PHONY : testDoxygen.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,6 +239,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... testDoxygen.o"
+	@echo "... testDoxygen.i"
+	@echo "... testDoxygen.s"
 .PHONY : help
 
 

@@ -96,12 +96,12 @@ src/clean: src/CMakeFiles/hw.dir/clean
 src/CMakeFiles/hw.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target hw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=1,2,3 "Built target hw"
 .PHONY : src/CMakeFiles/hw.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/hw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/hw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" 0
 .PHONY : src/CMakeFiles/hw.dir/rule

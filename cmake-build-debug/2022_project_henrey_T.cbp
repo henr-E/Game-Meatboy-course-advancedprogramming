@@ -121,6 +121,12 @@
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp">
 			<Option target="hw"/>
 		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/testDoxygen.cpp">
+			<Option target="hw"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/testDoxygen.h">
+			<Option target="hw"/>
+		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hw.dir/main.cpp.o"
+  "CMakeFiles/hw.dir/testDoxygen.cpp.o"
   "hw"
   "hw.pdb"
 )

@@ -3,3 +3,15 @@
 //
 
 #include "testDoxygen.h"
+#include <iostream>
+using namespace std;
+
+
+/**
+ *
+ * @return
+ */
+int testDoxygen::testDoxy(){
+    cout<<6<<endl;
+    return 0;
+}

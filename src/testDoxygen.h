@@ -5,12 +5,12 @@
 #ifndef INC_2022_PROJECT_HENREY_T_TESTDOXYGEN_H
 #define INC_2022_PROJECT_HENREY_T_TESTDOXYGEN_H
 
-
-/*
- *test doxygen
- */
 class testDoxygen {
-
+public:
+    /*
+     * testcomment
+     */
+    int testDoxy();
 };
 
 
