@@ -1,5 +1,7 @@
 Name\+: Henri Kerch ~\newline
- Student number\+: s0211160\hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysection{run from terminal}\label{md__r_e_a_d_m_e_autotoc_md0}
+ Student number\+: s0211160\hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysection{circle\+CI}\label{md__r_e_a_d_m_e_autotoc_md0}
+\href{https://app.circleci.com/pipelines/github/AP-Lab-Sessions}{\texttt{ https\+://app.\+circleci.\+com/pipelines/github/\+AP-\/\+Lab-\/\+Sessions}} ~\newline
+ only admin access \hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{run from terminal}\label{md__r_e_a_d_m_e_autotoc_md1}
 cd \texorpdfstring{$<$}{<} directory \texorpdfstring{$>$}{>} ~\newline
  mkdir build ~\newline
  cd build ~\newline
@@ -7,16 +9,16 @@ cd \texorpdfstring{$<$}{<} directory \texorpdfstring{$>$}{>} ~\newline
  make ~\newline
  make install ~\newline
  ./installed/bin/hw ~\newline
-\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{doxygen}\label{md__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{doxygen}\label{md__r_e_a_d_m_e_autotoc_md2}
 the OUTPUT\+\_\+\+DIRECTORY in the \char`\"{}doxygen config\+\_\+file\char`\"{} is set to the \char`\"{}doxygen\char`\"{} directory
 \begin{DoxyItemize}
 \item \#\#\#changes in default config\+\_\+file
 \begin{DoxyItemize}
 \item EXTRACT\+\_\+\+ALL = YES
 \item EXTRACT\+\_\+\+PRIVATE = YES
-\item RECURSIVE = YES
+\item EXTRACT\+\_\+\+PRIV\+\_\+\+VIRTUAL = YES
+\item RECURSIVE = NO
 \item OUTPUT\+\_\+\+DIRECTORY = doxygen
-\item 
 \end{DoxyItemize}
 \item \#\#\#install
 \begin{DoxyItemize}
@@ -28,6 +30,18 @@ the OUTPUT\+\_\+\+DIRECTORY in the \char`\"{}doxygen config\+\_\+file\char`\"{} 
 \end{DoxyItemize}
 \item \#\#\#run doxygen
 \begin{DoxyItemize}
-\item doxygen doxygen/config\+\_\+file 
+\item doxygen doxygen/config\+\_\+file
 \end{DoxyItemize}
+\item \#\#\#doxygen documentation 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/**}
+\DoxyCodeLine{* ... text ...}
+\DoxyCodeLine{*/}
+\DoxyCodeLine{}
+\DoxyCodeLine{///}
+\DoxyCodeLine{/// ... text ...}
+\DoxyCodeLine{///}
+
+\end{DoxyCode}
+ 
 \end{DoxyItemize}

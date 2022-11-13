@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/hw.dir/src/main.cpp.o CMakeFiles/hw.dir/src/input.cpp.o CMakeFiles/hw.dir/src/update.cpp.o CMakeFiles/hw.dir/src/draw.cpp.o CMakeFiles/hw.dir/src/player.cpp.o -o hw 

@@ -79,32 +79,77 @@ src/CMakeFiles/hw.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw.dir/main.cpp.s"
 	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp" -o CMakeFiles/hw.dir/main.cpp.s
 
-src/CMakeFiles/hw.dir/testDoxygen.cpp.o: src/CMakeFiles/hw.dir/flags.make
-src/CMakeFiles/hw.dir/testDoxygen.cpp.o: ../src/testDoxygen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/hw.dir/testDoxygen.cpp.o"
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw.dir/testDoxygen.cpp.o -c "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/testDoxygen.cpp"
+src/CMakeFiles/hw.dir/input.cpp.o: src/CMakeFiles/hw.dir/flags.make
+src/CMakeFiles/hw.dir/input.cpp.o: ../src/input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/hw.dir/input.cpp.o"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw.dir/input.cpp.o -c "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.cpp"
 
-src/CMakeFiles/hw.dir/testDoxygen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw.dir/testDoxygen.cpp.i"
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/testDoxygen.cpp" > CMakeFiles/hw.dir/testDoxygen.cpp.i
+src/CMakeFiles/hw.dir/input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw.dir/input.cpp.i"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.cpp" > CMakeFiles/hw.dir/input.cpp.i
 
-src/CMakeFiles/hw.dir/testDoxygen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw.dir/testDoxygen.cpp.s"
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/testDoxygen.cpp" -o CMakeFiles/hw.dir/testDoxygen.cpp.s
+src/CMakeFiles/hw.dir/input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw.dir/input.cpp.s"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.cpp" -o CMakeFiles/hw.dir/input.cpp.s
+
+src/CMakeFiles/hw.dir/update.cpp.o: src/CMakeFiles/hw.dir/flags.make
+src/CMakeFiles/hw.dir/update.cpp.o: ../src/update.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/hw.dir/update.cpp.o"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw.dir/update.cpp.o -c "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.cpp"
+
+src/CMakeFiles/hw.dir/update.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw.dir/update.cpp.i"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.cpp" > CMakeFiles/hw.dir/update.cpp.i
+
+src/CMakeFiles/hw.dir/update.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw.dir/update.cpp.s"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.cpp" -o CMakeFiles/hw.dir/update.cpp.s
+
+src/CMakeFiles/hw.dir/draw.cpp.o: src/CMakeFiles/hw.dir/flags.make
+src/CMakeFiles/hw.dir/draw.cpp.o: ../src/draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/hw.dir/draw.cpp.o"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw.dir/draw.cpp.o -c "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.cpp"
+
+src/CMakeFiles/hw.dir/draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw.dir/draw.cpp.i"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.cpp" > CMakeFiles/hw.dir/draw.cpp.i
+
+src/CMakeFiles/hw.dir/draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw.dir/draw.cpp.s"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.cpp" -o CMakeFiles/hw.dir/draw.cpp.s
+
+src/CMakeFiles/hw.dir/player.cpp.o: src/CMakeFiles/hw.dir/flags.make
+src/CMakeFiles/hw.dir/player.cpp.o: ../src/player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/hw.dir/player.cpp.o"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw.dir/player.cpp.o -c "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.cpp"
+
+src/CMakeFiles/hw.dir/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw.dir/player.cpp.i"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.cpp" > CMakeFiles/hw.dir/player.cpp.i
+
+src/CMakeFiles/hw.dir/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw.dir/player.cpp.s"
+	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.cpp" -o CMakeFiles/hw.dir/player.cpp.s
 
 # Object files for target hw
 hw_OBJECTS = \
 "CMakeFiles/hw.dir/main.cpp.o" \
-"CMakeFiles/hw.dir/testDoxygen.cpp.o"
+"CMakeFiles/hw.dir/input.cpp.o" \
+"CMakeFiles/hw.dir/update.cpp.o" \
+"CMakeFiles/hw.dir/draw.cpp.o" \
+"CMakeFiles/hw.dir/player.cpp.o"
 
 # External object files for target hw
 hw_EXTERNAL_OBJECTS =
 
 src/hw: src/CMakeFiles/hw.dir/main.cpp.o
-src/hw: src/CMakeFiles/hw.dir/testDoxygen.cpp.o
+src/hw: src/CMakeFiles/hw.dir/input.cpp.o
+src/hw: src/CMakeFiles/hw.dir/update.cpp.o
+src/hw: src/CMakeFiles/hw.dir/draw.cpp.o
+src/hw: src/CMakeFiles/hw.dir/player.cpp.o
 src/hw: src/CMakeFiles/hw.dir/build.make
 src/hw: src/CMakeFiles/hw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable hw"
 	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

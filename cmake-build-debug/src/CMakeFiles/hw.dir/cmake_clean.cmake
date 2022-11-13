@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/hw.dir/draw.cpp.o"
+  "CMakeFiles/hw.dir/input.cpp.o"
   "CMakeFiles/hw.dir/main.cpp.o"
-  "CMakeFiles/hw.dir/testDoxygen.cpp.o"
+  "CMakeFiles/hw.dir/player.cpp.o"
+  "CMakeFiles/hw.dir/update.cpp.o"
   "hw"
   "hw.pdb"
 )

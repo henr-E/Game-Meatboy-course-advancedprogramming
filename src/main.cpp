@@ -1,10 +1,12 @@
 #include <iostream>
-#include "testDoxygen.h"
-
-/** \file */
+/**
+ * main
+ */
 int main() {
-    std::cout << "Hello, sure World!" << std::endl;
-    testDoxygen a;
-    a.testDoxy();
+    std::cout << "Dont forget:" << std::endl
+              << "- code inspection/clang-tidy!!: Code > Inspect Code" << std::endl
+              << "- cicleCI" << std::endl
+              << "- clang.format" << std::endl
+              << "- doxygen" << std::endl;
     return 0;
 }

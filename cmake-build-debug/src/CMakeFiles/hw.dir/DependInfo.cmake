@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/draw.cpp.o"
+  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/input.cpp.o"
   "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/main.cpp.o"
-  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/testDoxygen.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/testDoxygen.cpp.o"
+  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/player.cpp.o"
+  "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.cpp" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/src/CMakeFiles/hw.dir/update.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

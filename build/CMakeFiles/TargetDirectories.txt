@@ -1,0 +1,13 @@
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/hw.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/edit_cache.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/rebuild_cache.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/list_install_components.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/install.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/install/local.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/CMakeFiles/install/strip.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/src/CMakeFiles/edit_cache.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/src/CMakeFiles/rebuild_cache.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/src/CMakeFiles/list_install_components.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/src/CMakeFiles/install.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/src/CMakeFiles/install/local.dir
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/build/src/CMakeFiles/install/strip.dir

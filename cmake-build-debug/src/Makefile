@@ -161,68 +161,6 @@ depend:
 	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-src/CMakeFiles/hw.dir/rule:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/hw.dir/rule
-.PHONY : src/CMakeFiles/hw.dir/rule
-
-# Convenience name for target.
-hw: src/CMakeFiles/hw.dir/rule
-.PHONY : hw
-
-# fast build rule for target.
-hw/fast:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/build
-.PHONY : hw/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-testDoxygen.o: testDoxygen.cpp.o
-.PHONY : testDoxygen.o
-
-# target to build an object file
-testDoxygen.cpp.o:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/testDoxygen.cpp.o
-.PHONY : testDoxygen.cpp.o
-
-testDoxygen.i: testDoxygen.cpp.i
-.PHONY : testDoxygen.i
-
-# target to preprocess a source file
-testDoxygen.cpp.i:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/testDoxygen.cpp.i
-.PHONY : testDoxygen.cpp.i
-
-testDoxygen.s: testDoxygen.cpp.s
-.PHONY : testDoxygen.s
-
-# target to generate assembly for a file
-testDoxygen.cpp.s:
-	cd "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/hw.dir/build.make src/CMakeFiles/hw.dir/testDoxygen.cpp.s
-.PHONY : testDoxygen.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -235,13 +173,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... hw"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... testDoxygen.o"
-	@echo "... testDoxygen.i"
-	@echo "... testDoxygen.s"
 .PHONY : help
 
 

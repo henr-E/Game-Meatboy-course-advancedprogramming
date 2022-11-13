@@ -75,6 +75,10 @@ $(function() {
 <div class="textblock"><p >Name: Henri Kerch <br  />
  Student number: s0211160</p>
 <h1><a class="anchor" id="autotoc_md0"></a>
+circleCI</h1>
+<p ><a href="https://app.circleci.com/pipelines/github/AP-Lab-Sessions">https://app.circleci.com/pipelines/github/AP-Lab-Sessions</a> <br  />
+ only admin access </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
 run from terminal</h1>
 <p >cd &lt; directory &gt; <br  />
  mkdir build <br  />
@@ -84,15 +88,15 @@ run from terminal</h1>
  make install <br  />
  ./installed/bin/hw <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 doxygen</h1>
 <p >the OUTPUT_DIRECTORY in the "doxygen config_file" is set to the "doxygen" directory</p><ul>
 <li>###changes in default config_file<ul>
 <li>EXTRACT_ALL = YES</li>
 <li>EXTRACT_PRIVATE = YES</li>
-<li>RECURSIVE = YES</li>
+<li>EXTRACT_PRIV_VIRTUAL = YES</li>
+<li>RECURSIVE = NO</li>
 <li>OUTPUT_DIRECTORY = doxygen</li>
-<li></li>
 </ul>
 </li>
 <li>###install<ul>
@@ -104,9 +108,17 @@ doxygen</h1>
 </ul>
 </li>
 <li>###run doxygen<ul>
-<li>doxygen doxygen/config_file </li>
+<li>doxygen doxygen/config_file</li>
 </ul>
 </li>
+<li>###doxygen documentation <div class="fragment"><div class="line">/**</div>
+<div class="line">* ... text ...</div>
+<div class="line">*/</div>
+<div class="line"> </div>
+<div class="line">///</div>
+<div class="line">/// ... text ...</div>
+<div class="line">///</div>
+</div><!-- fragment --> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

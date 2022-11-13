@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.cpp
+draw.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/draw.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.cpp
+input.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/input.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp
+iostream
+-
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.cpp
+player.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/player.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.cpp
+update.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/update.h
+
