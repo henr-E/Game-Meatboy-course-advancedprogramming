@@ -4,20 +4,53 @@ project(2022_project_henrey_T)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-Wall")
 
-SET(SRC
+# Export compile commands for completion engines (optional)
+# will be found in the cmake-build-debug file
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+if(NOT USE_INSTALL_RESOURCE_PATH)
+    set(RESOURCE_PATH "${PROJECT_SOURCE_DIR}/content/")
+else()
+    set(RESOURCE_PATH "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}/content/")
+endif()
+
+# Find SFML shared libraries
+find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
+
+add_executable(2022_project_henrey_T
         src/main.cpp
-        src/input.cpp
-        src/input.h
-        src/update.cpp
-        src/update.h
-        src/draw.cpp
-        src/draw.h
-        src/player.cpp
-        src/player.h)
+        src/Player.cpp
+        src/Game.cpp
+        src/Stopwatch.cpp
+        src/World.cpp
+        src/Camera.cpp)
 
-ADD_EXECUTABLE(hw ${SRC})
+# Set include directory search paths
+target_include_directories(2022_project_henrey_T
+        PRIVATE
+        "${PROJECT_BINARY_DIR}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/include"
+        )
 
-INSTALL(TARGETS hw DESTINATION bin)
+# Set executable RPATH
+set_target_properties(2022_project_henrey_T
+        PROPERTIES
+        INSTALL_RPATH
+        "${CMAKE_INSTALL_PREFIX}/lib"
+        )
+
+# Link executable to required SFML modules
+target_link_libraries(2022_project_henrey_T sfml-graphics sfml-audio)
+
+# Set executable install location
+install(TARGETS 2022_project_henrey_T DESTINATION bin)
+
+
+# Set install location for resources
+install(DIRECTORY content
+        DESTINATION "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}"
+        )
+
 
 IF (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     SET (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/installed" CACHE PATH "default install path" FORCE)
@@ -25,7 +58,3 @@ ENDIF()
 
 
 
-#include_directories(/usr/local/include)
-#find_package(SFML COMPONENTS system window graphics network audio REQUIRED)
-#include_directories(${SFML_INCLUDE_DIRS})
-#target_link_libraries(2022_project_henrey_T sfml-window sfml-graphics sfml-audio sfml-network)

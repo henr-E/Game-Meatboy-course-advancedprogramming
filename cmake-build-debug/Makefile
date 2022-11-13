@@ -162,72 +162,144 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hw
+# Target rules for targets named 2022_project_henrey_T
 
 # Build rule for target.
-hw: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hw
-.PHONY : hw
+2022_project_henrey_T: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 2022_project_henrey_T
+.PHONY : 2022_project_henrey_T
 
 # fast build rule for target.
-hw/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/build
-.PHONY : hw/fast
+2022_project_henrey_T/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/build
+.PHONY : 2022_project_henrey_T/fast
 
-src/draw.o: src/draw.cpp.o
-.PHONY : src/draw.o
-
-# target to build an object file
-src/draw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/draw.cpp.o
-.PHONY : src/draw.cpp.o
-
-src/draw.i: src/draw.cpp.i
-.PHONY : src/draw.i
-
-# target to preprocess a source file
-src/draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/draw.cpp.i
-.PHONY : src/draw.cpp.i
-
-src/draw.s: src/draw.cpp.s
-.PHONY : src/draw.s
-
-# target to generate assembly for a file
-src/draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/draw.cpp.s
-.PHONY : src/draw.cpp.s
-
-src/input.o: src/input.cpp.o
-.PHONY : src/input.o
+src/Camera.o: src/Camera.cpp.o
+.PHONY : src/Camera.o
 
 # target to build an object file
-src/input.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/input.cpp.o
-.PHONY : src/input.cpp.o
+src/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Camera.cpp.o
+.PHONY : src/Camera.cpp.o
 
-src/input.i: src/input.cpp.i
-.PHONY : src/input.i
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
 
 # target to preprocess a source file
-src/input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/input.cpp.i
-.PHONY : src/input.cpp.i
+src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
 
-src/input.s: src/input.cpp.s
-.PHONY : src/input.s
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
 
 # target to generate assembly for a file
-src/input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/input.cpp.s
-.PHONY : src/input.cpp.s
+src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
+src/Game.o: src/Game.cpp.o
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
+src/Player.o: src/Player.cpp.o
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/Stopwatch.o: src/Stopwatch.cpp.o
+.PHONY : src/Stopwatch.o
+
+# target to build an object file
+src/Stopwatch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Stopwatch.cpp.o
+.PHONY : src/Stopwatch.cpp.o
+
+src/Stopwatch.i: src/Stopwatch.cpp.i
+.PHONY : src/Stopwatch.i
+
+# target to preprocess a source file
+src/Stopwatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Stopwatch.cpp.i
+.PHONY : src/Stopwatch.cpp.i
+
+src/Stopwatch.s: src/Stopwatch.cpp.s
+.PHONY : src/Stopwatch.s
+
+# target to generate assembly for a file
+src/Stopwatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/Stopwatch.cpp.s
+.PHONY : src/Stopwatch.cpp.s
+
+src/World.o: src/World.cpp.o
+.PHONY : src/World.o
+
+# target to build an object file
+src/World.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/World.cpp.o
+.PHONY : src/World.cpp.o
+
+src/World.i: src/World.cpp.i
+.PHONY : src/World.i
+
+# target to preprocess a source file
+src/World.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/World.cpp.i
+.PHONY : src/World.cpp.i
+
+src/World.s: src/World.cpp.s
+.PHONY : src/World.s
+
+# target to generate assembly for a file
+src/World.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/World.cpp.s
+.PHONY : src/World.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -235,7 +307,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -243,56 +315,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/player.o: src/player.cpp.o
-.PHONY : src/player.o
-
-# target to build an object file
-src/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/player.cpp.o
-.PHONY : src/player.cpp.o
-
-src/player.i: src/player.cpp.i
-.PHONY : src/player.i
-
-# target to preprocess a source file
-src/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/player.cpp.i
-.PHONY : src/player.cpp.i
-
-src/player.s: src/player.cpp.s
-.PHONY : src/player.s
-
-# target to generate assembly for a file
-src/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/player.cpp.s
-.PHONY : src/player.cpp.s
-
-src/update.o: src/update.cpp.o
-.PHONY : src/update.o
-
-# target to build an object file
-src/update.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/update.cpp.o
-.PHONY : src/update.cpp.o
-
-src/update.i: src/update.cpp.i
-.PHONY : src/update.i
-
-# target to preprocess a source file
-src/update.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/update.cpp.i
-.PHONY : src/update.cpp.i
-
-src/update.s: src/update.cpp.s
-.PHONY : src/update.s
-
-# target to generate assembly for a file
-src/update.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/src/update.cpp.s
-.PHONY : src/update.cpp.s
 
 # Help Target
 help:
@@ -306,22 +330,25 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... hw"
-	@echo "... src/draw.o"
-	@echo "... src/draw.i"
-	@echo "... src/draw.s"
-	@echo "... src/input.o"
-	@echo "... src/input.i"
-	@echo "... src/input.s"
+	@echo "... 2022_project_henrey_T"
+	@echo "... src/Camera.o"
+	@echo "... src/Camera.i"
+	@echo "... src/Camera.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/Stopwatch.o"
+	@echo "... src/Stopwatch.i"
+	@echo "... src/Stopwatch.s"
+	@echo "... src/World.o"
+	@echo "... src/World.i"
+	@echo "... src/World.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/player.o"
-	@echo "... src/player.i"
-	@echo "... src/player.s"
-	@echo "... src/update.o"
-	@echo "... src/update.i"
-	@echo "... src/update.s"
 .PHONY : help
 
 
