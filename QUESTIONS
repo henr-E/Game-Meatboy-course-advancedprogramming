@@ -1,1 +1,9 @@
-stopwatch in world or in game?
+What does this exactly mean?
+    This is used to ensure that the
+    game logic runs at the same speed,
+    regardless of the speed of the device it is running on
+
+Looking from the point of view that the code should run without sfml:
+    -Does the stopwatch need to be in
+    -how to detect key presses without sfml
+

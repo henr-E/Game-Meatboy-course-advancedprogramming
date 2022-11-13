@@ -7,20 +7,22 @@
 
 
 
-#include "Stopwatch.h"
 #include "Player.h"
 
 class World {
 private:
-
-    Stopwatch time;
     Player player;
 
 public:
-    void simulate(Event event);
-    bool userInput(Event event);
-    void update(double seconds);
+    World();
+
+
+    void keyboardToPlayer(KeyboardInput keyboardInput);
+    void simulate(double seconds);
+
+
     const Player & getPlayer() const;
+    void setPlayer(const Player &player);
 };
 
 

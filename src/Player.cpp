@@ -4,55 +4,87 @@
 
 #include "Player.h"
 Player::Player(){
-    // How fast does Bob move?
-    horizontalSpeed = 20;
 
-    // Associate a texture with the sprite
-    texturePlayer.loadFromFile("../content/meatboy.png");
-    spritePlayer.setTexture(texturePlayer);
+    horizontalSpeed = 100;
+    verticalSpeed = 0;
+
+    gravity = 0.5;
+    onGround = true;
 
     // Set the Bob's starting position
     playerPosition.x = 0;
-    playerPosition.y = 0;
+    playerPosition.y = 850-50;
 
-    leftPressed = false;
-    rightPressed = false;
+    keyboardLeft = false;
+    keyboardRight = false;
 }
 
-
-Sprite Player::getSprite(){
-    return spritePlayer;
+const Vector2f & Player::getPlayerPosition() const{
+ return playerPosition;
 }
 
-void Player::moveLeft(){
-    leftPressed = true;
-}
-
-void Player::moveRight(){
-    rightPressed = true;
-}
-
-void Player::stopLeft(){
-    leftPressed = false;
-}
-
-void Player::stopRight(){
-    rightPressed = false;
+void Player::updateFromKeyboard(KeyboardInput keyboardInput){
+    switch(keyboardInput) {
+      case pressMoveLeft:
+          keyboardLeft = true;
+          break;
+      case releaseMoveLeft:
+          keyboardLeft = false;
+          break;
+      case pressMoveRight:
+          keyboardRight = true;
+          break;
+        case releaseMoveRight:
+          keyboardRight = false;
+          break;
+      case pressJump:
+          if(onGround){
+            keyboardJump = true;
+            onGround = false;
+            verticalSpeed = -100;
+          }
+          break;
+      case releaseJump:
+          keyboardJump = false;
+          break;
+      case noKey:
+          break;
+      default:
+          printf("Failed to load keyboard input");
+          exit(EXIT_FAILURE);
+    }
 }
 
 // Move Bob based on the input this frame,
 // the time elapsed, and the speed
-void Player::update(float elapsedTime){
-    if (rightPressed)
-    {
+void Player::simulate(float elapsedTime){
+    if (keyboardRight){
         playerPosition.x += horizontalSpeed * elapsedTime;
     }
-
-    if (leftPressed)
-    {
+    if (keyboardLeft){
         playerPosition.x -= horizontalSpeed * elapsedTime;
     }
+    if (keyboardJump){
+        verticalSpeed += gravity;
+        playerPosition.y += verticalSpeed * elapsedTime;
+    }
+    checkOnGroundAfterJump();
+    checkHitWall();
 
-    // Now move the sprite to its new position
-    spritePlayer.setPosition(playerPosition);
+}
+
+void Player::checkOnGroundAfterJump(){
+        if (playerPosition.y >= 800){
+            playerPosition.y = 800;
+            verticalSpeed = 0;
+            onGround = true;
+        }
+}
+void Player::checkHitWall(){
+    if (playerPosition.x >= (532-50)){
+        playerPosition.x = 532-50;
+    }
+    if (playerPosition.x <= 0){
+        playerPosition.x = 0;
+    }
 }

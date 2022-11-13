@@ -6,41 +6,15 @@
 
 #IncludeRegexTransform: 
 
-../include/Game.h
-SFML/Graphics.hpp
--
-Player.h
-../include/Player.h
-Stopwatch.h
-../include/Stopwatch.h
-World.h
-../include/World.h
-
 ../include/Player.h
 SFML/Graphics.hpp
 -
-
-../include/Stopwatch.h
-
-../include/World.h
-Stopwatch.h
-../include/Stopwatch.h
-Player.h
-../include/Player.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.cpp
-Game.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/World.cpp
-World.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/World.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp
 iostream
 -
-Game.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Player.cpp
+Player.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Player.h
 
 /opt/homebrew/include/SFML/Config.hpp
 TargetConditionals.h

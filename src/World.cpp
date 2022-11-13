@@ -4,46 +4,24 @@
 
 #include "World.h"
 
-void World::simulate(Event event){
-        userInput(event);
+
+World::World() {}
+
+void World::keyboardToPlayer(KeyboardInput keyboardInput){
+    player.updateFromKeyboard(keyboardInput);
 }
 
-bool World::userInput(Event event)
-{
-    if (event.type == Event::KeyPressed)
-    {
-        // Escape
-        if (event.key.code == Keyboard::Escape)
-            return false;
-
-        // Left arrow
-        if (event.key.code == Keyboard::Left)
-            player.moveLeft();
-
-        // Right arrow
-        if (event.key.code == Keyboard::Right)
-           player.moveRight();
-    }
-
-    if (event.type == Event::KeyReleased)
-    {
-        // Left arrow
-        if (event.key.code == Keyboard::Left)
-            player.stopLeft();
-
-        // Right arrow
-        if (event.key.code == Keyboard::Right)
-           player.stopRight();
-    }
-    return true;
-}
-
-void World::update(double seconds){
-    player.update(seconds);
+void World::simulate(double seconds){
+    player.simulate(seconds);
 }
 const Player & World::getPlayer() const{
     return player;
 }
+
+void World::setPlayer(const Player &player) {
+    World::player = player;
+}
+
 
 
 

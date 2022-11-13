@@ -3,3 +3,10 @@
 //
 
 #include "Stopwatch.h"
+
+Stopwatch::Stopwatch(double simulationTick):simulationTick(simulationTick){}
+
+
+void Stopwatch::restart(){
+
+}

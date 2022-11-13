@@ -10,6 +10,23 @@ CMakeFiles/2022_project_henrey_T.dir/src/Game.cpp.o: \
  ../include/Stopwatch.h \
  ../include/World.h \
  ../src/Game.cpp \
+ /opt/homebrew/include/SFML/Audio.hpp \
+ /opt/homebrew/include/SFML/Audio/AlResource.hpp \
+ /opt/homebrew/include/SFML/Audio/Export.hpp \
+ /opt/homebrew/include/SFML/Audio/InputSoundFile.hpp \
+ /opt/homebrew/include/SFML/Audio/Listener.hpp \
+ /opt/homebrew/include/SFML/Audio/Music.hpp \
+ /opt/homebrew/include/SFML/Audio/OutputSoundFile.hpp \
+ /opt/homebrew/include/SFML/Audio/Sound.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundBuffer.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundFileFactory.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundFileFactory.inl \
+ /opt/homebrew/include/SFML/Audio/SoundFileReader.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundFileWriter.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundRecorder.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundSource.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundStream.hpp \
  /opt/homebrew/include/SFML/Config.hpp \
  /opt/homebrew/include/SFML/Graphics.hpp \
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -166,7 +183,6 @@ CMakeFiles/2022_project_henrey_T.dir/src/Stopwatch.cpp.o: \
  ../src/Stopwatch.cpp
 CMakeFiles/2022_project_henrey_T.dir/src/World.cpp.o: \
  ../include/Player.h \
- ../include/Stopwatch.h \
  ../include/World.h \
  ../src/World.cpp \
  /opt/homebrew/include/SFML/Config.hpp \
@@ -249,6 +265,23 @@ CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o: \
  ../include/Stopwatch.h \
  ../include/World.h \
  ../src/main.cpp \
+ /opt/homebrew/include/SFML/Audio.hpp \
+ /opt/homebrew/include/SFML/Audio/AlResource.hpp \
+ /opt/homebrew/include/SFML/Audio/Export.hpp \
+ /opt/homebrew/include/SFML/Audio/InputSoundFile.hpp \
+ /opt/homebrew/include/SFML/Audio/Listener.hpp \
+ /opt/homebrew/include/SFML/Audio/Music.hpp \
+ /opt/homebrew/include/SFML/Audio/OutputSoundFile.hpp \
+ /opt/homebrew/include/SFML/Audio/Sound.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundBuffer.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundFileFactory.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundFileFactory.inl \
+ /opt/homebrew/include/SFML/Audio/SoundFileReader.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundFileWriter.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundRecorder.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundSource.hpp \
+ /opt/homebrew/include/SFML/Audio/SoundStream.hpp \
  /opt/homebrew/include/SFML/Config.hpp \
  /opt/homebrew/include/SFML/Graphics.hpp \
  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
