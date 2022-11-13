@@ -4,6 +4,9 @@ Project Advanced Programming 2022-2023
 Name: Henri Kerch  
 Student number: s0211160
 
+##circleCI
+https://app.circleci.com/pipelines/github/AP-Lab-Sessions  
+only admin access
 ##run from terminal
 cd < directory >  
 mkdir build  
