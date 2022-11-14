@@ -7,6 +7,15 @@ Student number: s0211160
 ##circleCI
 https://app.circleci.com/pipelines/github/AP-Lab-Sessions  
 only admin access
+
+##git commands
+git add .  
+git commit -m "test"  
+git push  
+git clone < url >  
+git branch -D branch_name (delete branch)  
+git checkout -b branch_name (new branch)  
+git config --list (shows configuration)
 ##run from terminal
 cd < directory >  
 mkdir build  
