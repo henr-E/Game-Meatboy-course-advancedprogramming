@@ -27,7 +27,7 @@ iostream
 -
 
 ../include/Stopwatch.h
-chrono
+ctime
 -
 
 ../include/World.h
@@ -41,20 +41,6 @@ iostream
 -
 unistd.h
 -
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Player.cpp
-Player.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Player.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/World.cpp
-World.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/World.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp
-iostream
--
-Game.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.h
 
 /opt/homebrew/include/SFML/Audio.hpp
 SFML/System.hpp

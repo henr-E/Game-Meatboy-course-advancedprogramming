@@ -37,6 +37,7 @@ private:
     Texture texturePlayer;
 
     World world;
+    Stopwatch stopwatch;
 
     KeyboardInput keyboardInput;
 
