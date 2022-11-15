@@ -18,7 +18,7 @@ public:
 
 
     void keyboardToPlayer(KeyboardInput keyboardInput);
-    void simulate(double seconds);
+    void simulate(float seconds);
 
 
     const Player & getPlayer() const;

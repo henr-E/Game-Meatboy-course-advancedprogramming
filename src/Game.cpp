@@ -51,7 +51,6 @@ void Game::start()
     /*
      * todo make a stopwatch
      */
-
     while (gameWindow.isOpen()){
 
         Event event;
@@ -63,13 +62,12 @@ void Game::start()
             world.keyboardToPlayer(keyboardInput);
         }
         //calculate elapsed time
-        float sec = clock() - stopwatch.getTickClock();
-        //reset the stopwatch
-        stopwatch.setTickClock(clock());
+        float seconds = (clock() - stopwatch.getPrevTime())/CLOCKS_PER_SEC;
+        stopwatch.setPrevTime(clock());
 
-        world.simulate(sec/CLOCKS_PER_SEC);
+        world.simulate(seconds);
 
-//        cout << (float)sec/CLOCKS_PER_SEC <<endl;
+        cout << seconds/CLOCKS_PER_SEC <<endl;
 
         // Now move the sprite to its new position
         spritePlayer.setPosition(world.getPlayer().getPlayerPosition());

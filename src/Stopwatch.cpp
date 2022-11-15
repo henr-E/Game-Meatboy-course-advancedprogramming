@@ -5,15 +5,15 @@
 #include "Stopwatch.h"
 
 Stopwatch::Stopwatch() {
-    tickClock = clock();
+    prev_time = 0;
 }
 
-clock_t Stopwatch::getTickClock() const {
-    return tickClock;
+float Stopwatch::getPrevTime() const {
+    return prev_time;
 }
 
-void Stopwatch::setTickClock(clock_t tickClock) {
-    Stopwatch::tickClock = tickClock;
+void Stopwatch::setPrevTime(float prevTime) {
+    prev_time = prevTime;
 }
 
 

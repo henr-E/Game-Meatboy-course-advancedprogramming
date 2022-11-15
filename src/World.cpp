@@ -11,7 +11,7 @@ void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
 }
 
-void World::simulate(double seconds){
+void World::simulate(float seconds){
     player.simulate(seconds);
 }
 const Player & World::getPlayer() const{

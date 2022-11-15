@@ -10,13 +10,14 @@
 class Stopwatch {
 private:
     // Clock for timing everything
-    clock_t tickClock;
+    float prev_time;
 
 public:
     Stopwatch();
 
-    clock_t getTickClock() const;
-    void setTickClock(clock_t tickClock);
+    float getPrevTime() const;
+
+    void setPrevTime(float prevTime);
 };
 
 
