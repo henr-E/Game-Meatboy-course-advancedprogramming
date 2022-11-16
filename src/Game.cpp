@@ -6,15 +6,21 @@
 #include <iostream>
 
 Game::Game(){
+    screenDimensions.x = 532;
+    screenDimensions.y = 850;
+}
+
+void Game::start(){
+
+    //add player
     world.setPlayer(player);
-
-    gameVideoMode.width = 532;
-    gameVideoMode.height = 850;
-
+    //confiure videoMode
+    gameVideoMode.width = screenDimensions.x;
+    gameVideoMode.height = screenDimensions.y;
+    gameVideoMode.bitsPerPixel = 32;
     // Create and open a window
     gameWindow.create(gameVideoMode, "game", Style::Default);
-    View view(sf::FloatRect(0, 0, 532, 850));
-    gameWindow.setView(view);
+    //change framerate
     gameWindow.setFramerateLimit(60);
 
     // Load a sprite to display
@@ -24,7 +30,8 @@ Game::Game(){
     }
     //configure sprite
     spriteBackground.setTexture(textureBackground);
-    spriteBackground.setPosition(0,0);
+    spriteBackground.setScale(1, (float)screenDimensions.y/textureBackground.getSize().y);
+//    spriteBackground.setPosition(0,0);
 
     // Load sound
     if (!buffer.loadFromFile("../content/bip.wav"))
@@ -36,20 +43,7 @@ Game::Game(){
     texturePlayer.setSmooth(true);
     spritePlayer.setTexture(texturePlayer);
 
-//    // Create a text object
-//    sf::Text hud;
-//    hud.setFont(font);
-//    hud.setCharacterSize(24);
-//    hud.setFillColor(sf::Color::White);
-//    hud.setPosition(10, 10);
 
-}
-
-void Game::start()
-{
-    /*
-     * todo make a stopwatch
-     */
     while (gameWindow.isOpen()){
 
         Event event;
@@ -64,7 +58,10 @@ void Game::start()
 
         // Now move the sprite to its new position
         spritePlayer.setPosition(world.getPlayer().getPlayerPosition());
-        draw();
+
+        loadTestLevel();
+        //creating views
+        updateView();
     }
 }
 
@@ -121,4 +118,43 @@ KeyboardInput Game::userInput(Event event){
             keyboardInput = releaseMoveRight;
     }
     return keyboardInput;
+}
+
+void Game::updateView() {
+    View view;
+
+    view.reset(sf::FloatRect(0, 0, 532, 850));
+//    view.setViewport(FloatRect(0,0,0.5,1.0));
+
+    Vector2f position(screenDimensions.x / 2,screenDimensions.y/2);
+
+    Vector2f playerPosition = world.getPlayer().getPlayerPosition();
+
+    //    cout<< playerPosition.y <<endl;
+    /* coordinates
+     * (0,0)         (532,0)
+     * |_________________|
+     * |
+     * |
+     * |
+     * |________________\
+     * |                |
+     * |________________|
+     * (0,800)         (532,800)
+     */
+    //the position is the left side of meatboy so to get the middle we have to add half of meat boy = 25
+    if(playerPosition.y + 25 < screenDimensions.y / 2){
+        position.y = playerPosition.y + 25;
+    }
+    else{
+        position.y = screenDimensions.y / 2;
+    }
+
+    view.setCenter(position);
+
+    //set the view
+    gameWindow.setView(view);
+}
+
+void Game::loadTestLevel() {
 }

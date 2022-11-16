@@ -18,8 +18,8 @@ void World::simulate(){
     auto nanosecondsAsInt = nanoseconds.count();
 
     stopwatch.setPrevTime(steady_clock::now());
-    double seconds = nanosecondsAsInt/(double)1000000000;
-    cout << seconds <<endl;
+    float seconds = nanosecondsAsInt/(float)1000000000;
+//    cout << seconds <<endl;
 
     player.simulate(seconds);
 }

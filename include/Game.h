@@ -18,6 +18,7 @@ private:
     ///window
     VideoMode gameVideoMode;
     RenderWindow gameWindow;
+    Vector2i screenDimensions;
     /*
      * Texture = image that we use to map on a 2D entity
      * entity + texture = sprite
@@ -45,6 +46,9 @@ public:
     void draw();
     void start();
     KeyboardInput userInput(Event event);
+
+    void updateView();
+    void loadTestLevel();
 };
 
 

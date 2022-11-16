@@ -5,8 +5,8 @@
 #include "Player.h"
 Player::Player(){
 
-    horizontalSpeed = 100;
-    verticalSpeed = 0;
+    horizontalSpeed = 10000;
+    verticalSpeed = 10000;
 
     gravity = 0.5;
     onGround = true;
@@ -64,7 +64,7 @@ void Player::simulate(float elapsedTime){
     if (keyboardLeft){
         playerPosition.x -= horizontalSpeed * elapsedTime;
     }
-    if (keyboardJump){
+    if (keyboardJump){//TODO formule aanpassen voor gravity
         verticalSpeed += gravity;
         playerPosition.y += verticalSpeed * elapsedTime;
     }
