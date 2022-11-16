@@ -11,7 +11,16 @@ void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
 }
 
-void World::simulate(float seconds){
+void World::simulate(){
+    //calculate elapsed time
+    auto diff = steady_clock::now() - stopwatch.getPrevTime();
+    auto nanoseconds = duration_cast<chrono::nanoseconds>(diff);
+    auto nanosecondsAsInt = nanoseconds.count();
+
+    stopwatch.setPrevTime(steady_clock::now());
+    double seconds = nanosecondsAsInt/(double)1000000000;
+    cout << seconds <<endl;
+
     player.simulate(seconds);
 }
 const Player & World::getPlayer() const{

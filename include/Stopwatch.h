@@ -7,17 +7,24 @@
 
 
 #include <ctime>
+#include <chrono>
+
+using namespace std;
+using namespace chrono;
+
 class Stopwatch {
 private:
     // Clock for timing everything
-    float prev_time;
+    time_point<steady_clock> prev_time;
 
 public:
     Stopwatch();
 
-    float getPrevTime() const;
+    time_point<steady_clock> getPrevTime() const;
 
-    void setPrevTime(float prevTime);
+    void setPrevTime(time_point<steady_clock> prevTime);
+
+
 };
 
 

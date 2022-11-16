@@ -5,14 +5,14 @@
 #include "Stopwatch.h"
 
 Stopwatch::Stopwatch() {
-    prev_time = 0;
+    prev_time = steady_clock::now();
 }
 
-float Stopwatch::getPrevTime() const {
+time_point<steady_clock> Stopwatch::getPrevTime() const {
     return prev_time;
 }
 
-void Stopwatch::setPrevTime(float prevTime) {
+void Stopwatch::setPrevTime(time_point<steady_clock> prevTime) {
     prev_time = prevTime;
 }
 

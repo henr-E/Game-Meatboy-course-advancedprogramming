@@ -183,6 +183,7 @@ CMakeFiles/2022_project_henrey_T.dir/src/Stopwatch.cpp.o
  /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Stopwatch.cpp
 CMakeFiles/2022_project_henrey_T.dir/src/World.cpp.o
  ../include/Player.h
+ ../include/Stopwatch.h
  ../include/World.h
  /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/World.cpp
  /opt/homebrew/include/SFML/Config.hpp

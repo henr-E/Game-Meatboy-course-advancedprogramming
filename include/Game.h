@@ -8,9 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "Player.h"
-#include "Stopwatch.h"
 #include "World.h"
-#include "Stopwatch.h"
 ///The code using namespace sf; enables us to omit the prefix sf:: from everywhere in our code.
 using namespace sf;
 using namespace std;
@@ -37,7 +35,6 @@ private:
     Texture texturePlayer;
 
     World world;
-    Stopwatch stopwatch;
 
     KeyboardInput keyboardInput;
 

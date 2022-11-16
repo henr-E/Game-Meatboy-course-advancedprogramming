@@ -4,7 +4,6 @@
 
 #include "Game.h"
 #include <iostream>
-#include<unistd.h>
 
 Game::Game(){
     world.setPlayer(player);
@@ -61,13 +60,7 @@ void Game::start()
             keyboardInput = userInput(event);
             world.keyboardToPlayer(keyboardInput);
         }
-        //calculate elapsed time
-        float seconds = (clock() - stopwatch.getPrevTime())/CLOCKS_PER_SEC;
-        stopwatch.setPrevTime(clock());
-
-        world.simulate(seconds);
-
-        cout << seconds/CLOCKS_PER_SEC <<endl;
+        world.simulate();
 
         // Now move the sprite to its new position
         spritePlayer.setPosition(world.getPlayer().getPlayerPosition());
