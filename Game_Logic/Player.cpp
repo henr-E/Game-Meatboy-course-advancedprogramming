@@ -5,18 +5,21 @@
 #include "Player.h"
 Player::Player(){
 
-    horizontalSpeed = 10000;
-    verticalSpeed = 10000;
+    horizontalSpeed = 1000;
+    verticalSpeed = 100000;
+
+    playerHeight_Width = 32;
 
     gravity = 0.5;
     onGround = true;
 
     // Set the Bob's starting position
     playerPosition.x = 0;
-    playerPosition.y = 850-50;
+    playerPosition.y = 960-playerHeight_Width;
 
     keyboardLeft = false;
     keyboardRight = false;
+    keyboardJump = false;
 }
 
 const Vector2f & Player::getPlayerPosition() const{
@@ -74,15 +77,15 @@ void Player::simulate(float elapsedTime){
 }
 
 void Player::checkOnGroundAfterJump(){
-        if (playerPosition.y >= 800){
-            playerPosition.y = 800;
+        if (playerPosition.y >= 960-playerHeight_Width){
+            playerPosition.y = 960-playerHeight_Width;
             verticalSpeed = 0;
             onGround = true;
         }
 }
 void Player::checkHitWall(){
-    if (playerPosition.x >= (532-50)){
-        playerPosition.x = 532-50;
+    if (playerPosition.x >= (544-playerHeight_Width)){
+        playerPosition.x = 544-playerHeight_Width;
     }
     if (playerPosition.x <= 0){
         playerPosition.x = 0;

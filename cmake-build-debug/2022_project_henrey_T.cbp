@@ -17,26 +17,6 @@
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/local">
-				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/strip">
-				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="2022_project_henrey_T">
 				<Option output="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/2022_project_henrey_T" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
@@ -83,21 +63,11 @@
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install">
+			<Target title="edit_cache">
 				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -113,30 +83,81 @@
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="list_install_components">
 				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
 					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ADVANCED\ PROGRAMMING/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Camera.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Player.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Player.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Player.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Stopwatch.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Stopwatch.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Stopwatch.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/World.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/World.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/World.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp">

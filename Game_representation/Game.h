@@ -5,10 +5,8 @@
 #ifndef INC_2022_PROJECT_HENREY_T_GAME_H
 #define INC_2022_PROJECT_HENREY_T_GAME_H
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
-#include "Player.h"
-#include "World.h"
+#include "inputparser.h"
+#include "../Game_Logic/World.h"
 ///The code using namespace sf; enables us to omit the prefix sf:: from everywhere in our code.
 using namespace sf;
 using namespace std;
@@ -19,7 +17,8 @@ private:
     VideoMode gameVideoMode;
     RenderWindow gameWindow;
     Vector2i screenDimensions;
-    /*
+    InputParser inputParser;
+        /*
      * Texture = image that we use to map on a 2D entity
      * entity + texture = sprite
      * more explanation about sprite and texture on:
@@ -43,12 +42,11 @@ public:
     ///game constructor
     Game();
 
-    void draw();
-    void start();
+    void simulate();
     KeyboardInput userInput(Event event);
 
+    void startingSetup();
     void updateView();
-    void loadTestLevel();
 };
 
 

@@ -19,11 +19,11 @@ find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 
 add_executable(2022_project_henrey_T
         src/main.cpp
-        src/Player.cpp
-        src/Game.cpp
-        src/Stopwatch.cpp
-        src/World.cpp
-        src/Camera.cpp)
+        Game_Logic/Player.cpp
+        Game_representation/Game.cpp
+        Game_Logic/Stopwatch.cpp
+        Game_Logic/World.cpp
+        Game_representation/Camera.cpp Game_representation/inputparser.cpp Game_representation/inputparser.h)
 
 # Set include directory search paths
 target_include_directories(2022_project_henrey_T

@@ -6,40 +6,18 @@
 
 #IncludeRegexTransform: 
 
-../include/Game.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.cpp
+inputparser.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.h
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.h
 SFML/Graphics.hpp
 -
 SFML/Audio.hpp
 -
-Player.h
-../include/Player.h
-World.h
-../include/World.h
-
-../include/Player.h
-SFML/Graphics.hpp
+vector
 -
-iostream
--
-
-../include/Stopwatch.h
-ctime
--
-chrono
--
-
-../include/World.h
-unistd.h
--
-Player.h
-../include/Player.h
-Stopwatch.h
-../include/Stopwatch.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.cpp
-Game.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/Game.h
-iostream
+fstream
 -
 
 /opt/homebrew/include/SFML/Audio.hpp

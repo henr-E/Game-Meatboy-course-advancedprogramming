@@ -22,7 +22,7 @@ enum KeyboardInput{
 };
 
 class Player {
-
+    int playerHeight_Width;
     Vector2f playerPosition;
 
 //    int jumpAngle = 45;

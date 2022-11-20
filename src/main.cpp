@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Game.h"
+#include "../Game_representation/Game.h"
 
-int main(int argc, char* argv[]) {
+int main() {
     std::cout << "Dont forget:" << std::endl
               << "- code inspection/clang-tidy!!: Code > Inspect Code" << std::endl
               << "- cicleCI" << std::endl
@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     // Declare an instance of Engine
     Game g;
     // Start the engine
-    g.start();
+    g.simulate();
     // Quit the Game
 
     return 0;

@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T"
+"/Users/henrikerch/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T" -B "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"
 -- Found SFML 2.5.1 in /opt/homebrew/lib/cmake/SFML
 -- Configuring done
 -- Generating done
