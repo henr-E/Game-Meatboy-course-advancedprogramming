@@ -8,9 +8,12 @@
 #include <iostream>
 #include <algorithm>
 
+
 #include "../Game_Logic/World.h"
 #include "InputParser.h"
 #include "TileMap.h"
+
+
 ///The code using namespace sf; enables us to omit the prefix sf:: from everywhere in our code.
 using namespace sf;
 using namespace std;
@@ -21,6 +24,8 @@ private:
     VideoMode gameVideoMode;
     RenderWindow gameWindow;
     Vector2i screenDimensions;
+
+
     TileMap tileMap;
     InputParser inputParser;
 
@@ -42,7 +47,6 @@ private:
     World world;
 
     KeyboardInput keyboardInput;
-    Collision collision;
 
 public:
     ///game constructor
@@ -54,7 +58,6 @@ public:
     void startingSetup();
     void updateView();
 
-    void updateCollision(int amountOfTilesInWidth);
 
 
 };

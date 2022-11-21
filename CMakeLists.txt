@@ -23,7 +23,7 @@ add_executable(2022_project_henrey_T
         Game_representation/Game.cpp
         Game_Logic/Stopwatch.cpp
         Game_Logic/World.cpp
-        Game_representation/Camera.cpp Game_representation/TileMap.cpp Game_representation/TileMap.h Game_representation/InputParser.cpp Game_representation/InputParser.h)
+        Game_representation/Camera.cpp Game_representation/TileMap.cpp Game_representation/TileMap.h Game_representation/InputParser.cpp Game_representation/InputParser.h Game_Logic/Interval.h)
 
 # Set include directory search paths
 target_include_directories(2022_project_henrey_T

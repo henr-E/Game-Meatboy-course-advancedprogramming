@@ -7,8 +7,10 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
+#include "Interval.h"
+
 using namespace std;
-using namespace sf;
 
 enum KeyboardInput{
     pressMoveLeft,
@@ -20,17 +22,28 @@ enum KeyboardInput{
     esc,
     noKey
 };
-enum Collision{
-    collisionLeft,
-    collisionRight,
-    collisionUp,
-    collisionDown,
-    noCollision
+//enum Collision{
+//    collisionLeft,
+//    collisionRight,
+//    collisionUp,
+//    collisionDown,
+//    noCollision
+//};
+struct Position{
+    float x;
+    float y;
 };
 
 class Player {
+//    Collision collision;
+    Interval interval;
+
     int playerHeight_Width;
-    Vector2f playerPosition;
+    Position playerPosition;
+
+    //this is for collision; the position will not be higher than de values
+    int playerMaximumXRight;
+    int playerMaximumXLeft;
 
 //    int jumpAngle = 45;
 
@@ -51,7 +64,7 @@ class Player {
     ///when the Player hits a wall the horizontal speed must be 0
     bool hitLeftWall;
     bool hitRightWall;
-    bool onGround;
+    bool onTile;
     bool inAir;
 //    ///when the Player hits the ceiling the vertical speed negates: v = -v
 //    bool hitCeiling;
@@ -71,16 +84,17 @@ public:
 
     void updateFromKeyboard(KeyboardInput keyboardInput);
     // We will call this function once every frame
-    void simulate(float elapsedTime, Collision collision);
+    void simulate(float elapsedTime, vector<int> tiles);
 
-    const Vector2f &getPlayerPosition() const;
+    const Position &getPlayerPosition() const;
 
     void checkOnGround();
     void checkHitWall();
     void checkInAir();
     void changeSpeedOnHitWall();
 
-    int getPlayerHeightWidth() const;
+    void calculateCollision(const vector<int> &tiles);
+    void checkCollision();
 };
 
 

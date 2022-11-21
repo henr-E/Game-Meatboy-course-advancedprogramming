@@ -23,7 +23,7 @@ public:
 
 
     void keyboardToPlayer(KeyboardInput keyboardInput);
-    void simulate(Collision collision);
+    void simulate(vector<int> tiles);
 
 
     const Player & getPlayer() const;

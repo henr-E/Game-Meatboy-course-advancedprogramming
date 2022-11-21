@@ -124,6 +124,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Interval.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Player.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>

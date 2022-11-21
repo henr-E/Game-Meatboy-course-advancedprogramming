@@ -43,12 +43,11 @@ void Game::simulate() {
             userInput(event);
             world.keyboardToPlayer(keyboardInput);
         }
-        updateCollision(amountOfTilesInWidth);
 
-        world.simulate(collision);
+        world.simulate(tileMap.getTiles());
 
         // Now move the playerSprite to its new position
-        spritePlayer.setPosition(world.getPlayer().getPlayerPosition());
+        spritePlayer.setPosition(world.getPlayer().getPlayerPosition().x, world.getPlayer().getPlayerPosition().y);
 
         // Rub out the last frame
         gameWindow.clear();
@@ -117,7 +116,8 @@ void Game::updateView() {
 
     Vector2f position(screenDimensions.x / 2, screenDimensions.y / 2);
 
-    Vector2f playerPosition = world.getPlayer().getPlayerPosition();
+//    float Position = world.getPlayer().getPlayerPosition().y;
+    const Position playerPosition = world.getPlayer().getPlayerPosition();
 
     //    cout<< playerPosition.y <<endl;
     /* coordinates
@@ -132,8 +132,8 @@ void Game::updateView() {
      * (0,800)         (532,800)
      */
     // the position is the left side of meatboy so to get the middle we have to add half of meat boy = 25
-    if (playerPosition.y + 25 < screenDimensions.y / 2) {
-        position.y = playerPosition.y + 25;
+    if (playerPosition.y + 16 < screenDimensions.y / 2) {
+        position.y = playerPosition.y + 16;
     } else {
         position.y = screenDimensions.y / 2;
     }
@@ -181,67 +181,6 @@ void Game::userInput(Event event) {
         // Right arrow
         if (event.key.code == Keyboard::Right)
             keyboardInput = releaseMoveRight;
-    }
-}
-
-void Game::updateCollision(int amountOfTilesInWidth) {
-    collision = noCollision;
-
-    int playerPositionX = static_cast<int>(world.getPlayer().getPlayerPosition().x);
-    int playerPositionY = static_cast<int>(world.getPlayer().getPlayerPosition().y) + 32;
-
-
-    /*
-     *
-     * 1002
-     * 0000
-     * 3004
-     *
-     * if the above example is our vertexArray and one tile is 32 pixels
-     * 1 = (0,0)
-     * 3 = (0,64)
-     * 2 = (96,0)
-     * 4 = (96,64)
-     *
-     * in the tileMap vector indexes are:
-     * the indexes are column by column
-     * 1 = 0
-     * 2 = 9
-     * 3 = 2
-     * 4 = 1&
-     *
-     */
-//    cout << playerPositionX <<endl;
-    int rowInTileMap = playerPositionY / 32;
-    int columnInTileMap = playerPositionX / 32;
-
-    //index of tile where player is now
-    //multiply the player row with the width and add amount of columns
-    int currentIndex = columnInTileMap + (rowInTileMap-1) * amountOfTilesInWidth;
-
-    const vector<int> tiles = tileMap.getTiles();
-
-    int rightIndex = currentIndex+1;
-    int leftIndex = currentIndex-1;
-    int upIndex = currentIndex - 17;
-    int downIndex = currentIndex + 17;
-
-    int rightTile = tiles[rightIndex];
-    int leftTile = tiles[leftIndex];
-    int upTile = tiles[upIndex];
-    int downTile = tiles[downIndex];
-
-    if(rightTile == 1){
-        collision = collisionRight;
-    }
-    else if(leftTile == 1){
-        collision = collisionLeft;
-    }
-    else if(upTile == 1){
-        collision = collisionUp;
-    }
-    else if(downTile == 1){
-        collision = collisionDown;
     }
 }
 
