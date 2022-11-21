@@ -294,29 +294,53 @@ Game_representation/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.s
 .PHONY : Game_representation/Game.cpp.s
 
-Game_representation/inputparser.o: Game_representation/inputparser.cpp.o
-.PHONY : Game_representation/inputparser.o
+Game_representation/InputParser.o: Game_representation/InputParser.cpp.o
+.PHONY : Game_representation/InputParser.o
 
 # target to build an object file
-Game_representation/inputparser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/inputparser.cpp.o
-.PHONY : Game_representation/inputparser.cpp.o
+Game_representation/InputParser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.o
+.PHONY : Game_representation/InputParser.cpp.o
 
-Game_representation/inputparser.i: Game_representation/inputparser.cpp.i
-.PHONY : Game_representation/inputparser.i
+Game_representation/InputParser.i: Game_representation/InputParser.cpp.i
+.PHONY : Game_representation/InputParser.i
 
 # target to preprocess a source file
-Game_representation/inputparser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/inputparser.cpp.i
-.PHONY : Game_representation/inputparser.cpp.i
+Game_representation/InputParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.i
+.PHONY : Game_representation/InputParser.cpp.i
 
-Game_representation/inputparser.s: Game_representation/inputparser.cpp.s
-.PHONY : Game_representation/inputparser.s
+Game_representation/InputParser.s: Game_representation/InputParser.cpp.s
+.PHONY : Game_representation/InputParser.s
 
 # target to generate assembly for a file
-Game_representation/inputparser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/inputparser.cpp.s
-.PHONY : Game_representation/inputparser.cpp.s
+Game_representation/InputParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.s
+.PHONY : Game_representation/InputParser.cpp.s
+
+Game_representation/TileMap.o: Game_representation/TileMap.cpp.o
+.PHONY : Game_representation/TileMap.o
+
+# target to build an object file
+Game_representation/TileMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/TileMap.cpp.o
+.PHONY : Game_representation/TileMap.cpp.o
+
+Game_representation/TileMap.i: Game_representation/TileMap.cpp.i
+.PHONY : Game_representation/TileMap.i
+
+# target to preprocess a source file
+Game_representation/TileMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/TileMap.cpp.i
+.PHONY : Game_representation/TileMap.cpp.i
+
+Game_representation/TileMap.s: Game_representation/TileMap.cpp.s
+.PHONY : Game_representation/TileMap.s
+
+# target to generate assembly for a file
+Game_representation/TileMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/TileMap.cpp.s
+.PHONY : Game_representation/TileMap.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -370,9 +394,12 @@ help:
 	@echo "... Game_representation/Game.o"
 	@echo "... Game_representation/Game.i"
 	@echo "... Game_representation/Game.s"
-	@echo "... Game_representation/inputparser.o"
-	@echo "... Game_representation/inputparser.i"
-	@echo "... Game_representation/inputparser.s"
+	@echo "... Game_representation/InputParser.o"
+	@echo "... Game_representation/InputParser.i"
+	@echo "... Game_representation/InputParser.s"
+	@echo "... Game_representation/TileMap.o"
+	@echo "... Game_representation/TileMap.i"
+	@echo "... Game_representation/TileMap.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

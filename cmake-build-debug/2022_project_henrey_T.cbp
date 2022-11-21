@@ -154,10 +154,16 @@
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.h">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp">

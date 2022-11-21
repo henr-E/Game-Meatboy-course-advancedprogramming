@@ -3,7 +3,6 @@
 //
 
 #include "Game.h"
-#include <iostream>
 
 Game::Game() {
     screenDimensions.x = 544;
@@ -12,15 +11,28 @@ Game::Game() {
 
 void Game::simulate() {
     startingSetup();
+    //make level from input
+    vector<int> tiles = inputParser.parse();
+    //get AmountOfTilesInHeight in level
+    int amountOfTilesInHeight = inputParser.getAmountOfTilesInHeight();
+    //get AmountOfTilesInWidth in level
+    int amountOfTilesInWidth = inputParser.getAmountOfTilesInWidth();
 
-    inputParser.parse();
+    //set tiles to tilemap
+    tileMap.setTiles(tiles);
+    //set dimentions in tilemap
+    tileMap.setScreenDimensions(screenDimensions);
+    //set setAmountOfTilesInHeight
+    tileMap.setAmountOfTilesInHeight(amountOfTilesInHeight);
+    //set setAmountOfTilesInWidth
+    tileMap.setAmountOfTilesInWidth(amountOfTilesInWidth);
+
 
     // create the tilemap from the level definition
-    if (!inputParser.load()) {
+    if (!tileMap.load()) {
         printf("Failed to load or make map.");
         exit(EXIT_FAILURE);
     }
-
 
     while (gameWindow.isOpen()) {
         Event event;
@@ -28,10 +40,12 @@ void Game::simulate() {
             if (event.type == sf::Event::Closed) {
                 gameWindow.close();
             }
-            keyboardInput = userInput(event);
+            userInput(event);
             world.keyboardToPlayer(keyboardInput);
         }
-        world.simulate();
+        updateCollision(amountOfTilesInWidth);
+
+        world.simulate(collision);
 
         // Now move the playerSprite to its new position
         spritePlayer.setPosition(world.getPlayer().getPlayerPosition());
@@ -42,7 +56,7 @@ void Game::simulate() {
         // Draw the background
         //gameWindow.draw(spriteBackground);
 
-        gameWindow.draw(inputParser);
+        gameWindow.draw(tileMap);
 
         // Draw the player
         gameWindow.draw(spritePlayer);
@@ -51,11 +65,13 @@ void Game::simulate() {
         gameWindow.display();
 
         // creating views
-//        updateView();
+        updateView();
     }
 }
 
 void Game::startingSetup() {
+    Player player;
+
     // add player
     world.setPlayer(player);
 
@@ -93,46 +109,6 @@ void Game::startingSetup() {
     spritePlayer.setTexture(texturePlayer);
 }
 
-KeyboardInput Game::userInput(Event event) {
-    /*
-     * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
-     * and the player will move even though there are no keys pressed
-     */
-    KeyboardInput keyboardInput = noKey;
-    if (event.type == Event::KeyPressed) {
-        // Escape
-        if (event.key.code == Keyboard::Escape)
-            keyboardInput = esc;
-
-        // Space
-        if (event.key.code == Keyboard::Space)
-            keyboardInput = pressJump;
-
-        // Left arrow
-        if (event.key.code == Keyboard::Left)
-            keyboardInput = pressMoveLeft;
-
-        // Right arrow
-        if (event.key.code == Keyboard::Right)
-            keyboardInput = pressMoveRight;
-    }
-
-    if (event.type == Event::KeyReleased) {
-        // Space
-        if (event.key.code == Keyboard::Left)
-            keyboardInput = releaseJump;
-
-        // Left arrow
-        if (event.key.code == Keyboard::Left)
-            keyboardInput = releaseMoveLeft;
-
-        // Right arrow
-        if (event.key.code == Keyboard::Right)
-            keyboardInput = releaseMoveRight;
-    }
-    return keyboardInput;
-}
-
 void Game::updateView() {
     View view;
 
@@ -167,3 +143,106 @@ void Game::updateView() {
     // set the view
     gameWindow.setView(view);
 }
+
+
+void Game::userInput(Event event) {
+    /*
+     * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
+     * and the player will move even though there are no keys pressed
+     */
+    keyboardInput = noKey;
+    if (event.type == Event::KeyPressed) {
+        // Escape
+        if (event.key.code == Keyboard::Escape)
+            keyboardInput = esc;
+
+        // Space
+        if (event.key.code == Keyboard::Space)
+            keyboardInput = pressJump;
+
+        // Left arrow
+        if (event.key.code == Keyboard::Left)
+            keyboardInput = pressMoveLeft;
+
+        // Right arrow
+        if (event.key.code == Keyboard::Right)
+            keyboardInput = pressMoveRight;
+    }
+
+    if (event.type == Event::KeyReleased) {
+        // Space
+        if (event.key.code == Keyboard::Left)
+            keyboardInput = releaseJump;
+
+        // Left arrow
+        if (event.key.code == Keyboard::Left)
+            keyboardInput = releaseMoveLeft;
+
+        // Right arrow
+        if (event.key.code == Keyboard::Right)
+            keyboardInput = releaseMoveRight;
+    }
+}
+
+void Game::updateCollision(int amountOfTilesInWidth) {
+    collision = noCollision;
+
+    int playerPositionX = static_cast<int>(world.getPlayer().getPlayerPosition().x);
+    int playerPositionY = static_cast<int>(world.getPlayer().getPlayerPosition().y) + 32;
+
+
+    /*
+     *
+     * 1002
+     * 0000
+     * 3004
+     *
+     * if the above example is our vertexArray and one tile is 32 pixels
+     * 1 = (0,0)
+     * 3 = (0,64)
+     * 2 = (96,0)
+     * 4 = (96,64)
+     *
+     * in the tileMap vector indexes are:
+     * the indexes are column by column
+     * 1 = 0
+     * 2 = 9
+     * 3 = 2
+     * 4 = 1&
+     *
+     */
+//    cout << playerPositionX <<endl;
+    int rowInTileMap = playerPositionY / 32;
+    int columnInTileMap = playerPositionX / 32;
+
+    //index of tile where player is now
+    //multiply the player row with the width and add amount of columns
+    int currentIndex = columnInTileMap + (rowInTileMap-1) * amountOfTilesInWidth;
+
+    const vector<int> tiles = tileMap.getTiles();
+
+    int rightIndex = currentIndex+1;
+    int leftIndex = currentIndex-1;
+    int upIndex = currentIndex - 17;
+    int downIndex = currentIndex + 17;
+
+    int rightTile = tiles[rightIndex];
+    int leftTile = tiles[leftIndex];
+    int upTile = tiles[upIndex];
+    int downTile = tiles[downIndex];
+
+    if(rightTile == 1){
+        collision = collisionRight;
+    }
+    else if(leftTile == 1){
+        collision = collisionLeft;
+    }
+    else if(upTile == 1){
+        collision = collisionUp;
+    }
+    else if(downTile == 1){
+        collision = collisionDown;
+    }
+}
+
+

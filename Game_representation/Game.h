@@ -5,8 +5,12 @@
 #ifndef INC_2022_PROJECT_HENREY_T_GAME_H
 #define INC_2022_PROJECT_HENREY_T_GAME_H
 
-#include "inputparser.h"
+#include <iostream>
+#include <algorithm>
+
 #include "../Game_Logic/World.h"
+#include "InputParser.h"
+#include "TileMap.h"
 ///The code using namespace sf; enables us to omit the prefix sf:: from everywhere in our code.
 using namespace sf;
 using namespace std;
@@ -17,7 +21,9 @@ private:
     VideoMode gameVideoMode;
     RenderWindow gameWindow;
     Vector2i screenDimensions;
+    TileMap tileMap;
     InputParser inputParser;
+
         /*
      * Texture = image that we use to map on a 2D entity
      * entity + texture = sprite
@@ -30,23 +36,27 @@ private:
     SoundBuffer buffer;
     Sound sound;
 
-    Player player;
     Sprite spritePlayer;
     Texture texturePlayer;
 
     World world;
 
     KeyboardInput keyboardInput;
+    Collision collision;
 
 public:
     ///game constructor
     Game();
 
     void simulate();
-    KeyboardInput userInput(Event event);
+    void userInput(Event event);
 
     void startingSetup();
     void updateView();
+
+    void updateCollision(int amountOfTilesInWidth);
+
+
 };
 
 

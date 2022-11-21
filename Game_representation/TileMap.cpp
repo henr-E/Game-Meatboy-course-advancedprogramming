@@ -3,63 +3,15 @@
 // source of code from https://www.sfml-dev.org/tutorials/2.5/graphics-vertex-array.php
 //
 
-#include "inputparser.h"
-InputParser::InputParser() {
+#include "TileMap.h"
+TileMap::TileMap() {
     tileset = "../content/tileset2.png";
     tileSize.x = 32;
     tileSize.y = 32;
-    amountOfTilesInHeight = 40;
+    amountOfTilesInHeight = 35;
     amountOfTilesInWidth = 17;
 }
-
-bool InputParser::parse() {
-    // define the level with an array of tile indices
-    tiles = {
-        2,1,2,3,0,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2,
-        2,1,2,3,1,1,2,3,1,1,2,3,3,1,2,3,2
-    };
-    return true;
-}
-bool InputParser::load() {
+bool TileMap::load() {
 
     // load the tileset texture
     if (!m_tileset.loadFromFile(tileset))
@@ -84,11 +36,13 @@ bool InputParser::load() {
     // vertices are added. If vertexCount is less than the current size, existing vertices are removed from the array.
     m_vertices.resize(amountOfTilesInWidth * amountOfTilesInHeight * 4);
 
-    // populate the vertex array, with one quad per tile
-    for (unsigned int i = 0; i < amountOfTilesInWidth; ++i)
-        for (unsigned int j = 0; j < amountOfTilesInHeight; ++j) {
+
+    // TODO rebuild the whole thing ->> 1 for  loop through tiles but make a schets
+    //  populate the vertex array, with one quad per tile
+    for (unsigned int column = 0; column < amountOfTilesInWidth; ++column) {
+        for (unsigned int row = 0; row < amountOfTilesInHeight; ++row) {
             // get the current tile number
-            int tileNumber = tiles[i + j * amountOfTilesInWidth];
+            int tileNumber = tiles[column + row * amountOfTilesInWidth];
 
             // find its position in the tileset texture
             // the tileset is the png with the different tiles (forest, brick, ...)
@@ -96,13 +50,13 @@ bool InputParser::load() {
             int tv = tileNumber / (m_tileset.getSize().x / tileSize.x);
 
             // get a pointer to the current tile's quad
-            Vertex* quad = &m_vertices[(i + j * amountOfTilesInWidth) * 4];
+            Vertex* quad = &m_vertices[(column + row * amountOfTilesInWidth) * 4];
 
             // define its 4 corners
-            quad[0].position = Vector2f(i * tileSize.x, j * tileSize.y);
-            quad[1].position = Vector2f((i + 1) * tileSize.x, j * tileSize.y);
-            quad[2].position = Vector2f((i + 1) * tileSize.x, (j + 1) * tileSize.y);
-            quad[3].position = Vector2f(i * tileSize.x, (j + 1) * tileSize.y);
+            quad[0].position = Vector2f(column * tileSize.x, row * tileSize.y);
+            quad[1].position = Vector2f((column + 1) * tileSize.x, row * tileSize.y);
+            quad[2].position = Vector2f((column + 1) * tileSize.x, (row + 1) * tileSize.y);
+            quad[3].position = Vector2f(column * tileSize.x, (row + 1) * tileSize.y);
 
             // define its 4 texture coordinates
             quad[0].texCoords = Vector2f(tu * tileSize.x, tv * tileSize.y);
@@ -110,10 +64,31 @@ bool InputParser::load() {
             quad[2].texCoords = Vector2f((tu + 1) * tileSize.x, (tv + 1) * tileSize.y);
             quad[3].texCoords = Vector2f(tu * tileSize.x, (tv + 1) * tileSize.y);
         }
+    }
+    /*
+     * if the height of the game is  960 pixels and a tile is 32 pixels
+     * then there can be 960/32 = 30 rows of tiles in our game
+     * As the following formules start making tiles at 0,0 the tiles that are not visible
+     * are below the screen. We want those tiles to be above the screen so when we go up
+     * they will be visible.
+     *
+     * to do so we have to move every tile
+     * so the y value has to go up the screen
+     *
+     * if we have 35 tiles by example, the 5 tiles will be found under the screen
+     * we have to move all tiles with 5*32
+
+    */
+    int tileMovementYValue = (amountOfTilesInHeight - (screenDimensions.y/tileSize.y)) * tileSize.y;
+
+    for (int k = 0; k < m_vertices.getVertexCount(); k++){
+        Vertex* quad = &m_vertices[k];
+        quad->position.y -= tileMovementYValue;
+    }
 
     return true;
 }
-void InputParser::draw(RenderTarget& target, RenderStates states) const {
+void TileMap::draw(RenderTarget& target, RenderStates states) const {
 
     // apply the transform
     states.transform *= getTransform();
@@ -124,4 +99,12 @@ void InputParser::draw(RenderTarget& target, RenderStates states) const {
     // draw the vertex array
     target.draw(m_vertices, states);
 }
-
+const vector<int>& TileMap::getTiles() const { return tiles; }
+void TileMap::setTiles(const vector<int>& tiles) { TileMap::tiles = tiles; }
+void TileMap::setScreenDimensions(const Vector2i& screenDimensions) { TileMap::screenDimensions = screenDimensions; }
+void TileMap::setAmountOfTilesInWidth(int amountOfTilesInWidth) {
+    TileMap::amountOfTilesInWidth = amountOfTilesInWidth;
+}
+void TileMap::setAmountOfTilesInHeight(int amountOfTilesInHeight) {
+    TileMap::amountOfTilesInHeight = amountOfTilesInHeight;
+}

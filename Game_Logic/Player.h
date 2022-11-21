@@ -20,6 +20,13 @@ enum KeyboardInput{
     esc,
     noKey
 };
+enum Collision{
+    collisionLeft,
+    collisionRight,
+    collisionUp,
+    collisionDown,
+    noCollision
+};
 
 class Player {
     int playerHeight_Width;
@@ -38,11 +45,14 @@ class Player {
     /// and will eventually cause the Player to fall back down
     float gravity;
 
-    bool onGround;
+
 //
 //    bool horizontalJump;
     ///when the Player hits a wall the horizontal speed must be 0
-    bool hitWall;
+    bool hitLeftWall;
+    bool hitRightWall;
+    bool onGround;
+    bool inAir;
 //    ///when the Player hits the ceiling the vertical speed negates: v = -v
 //    bool hitCeiling;
 //    ///when the Player lands on the floor the vertical speed must be 0
@@ -61,13 +71,16 @@ public:
 
     void updateFromKeyboard(KeyboardInput keyboardInput);
     // We will call this function once every frame
-    void simulate(float elapsedTime);
+    void simulate(float elapsedTime, Collision collision);
 
     const Vector2f &getPlayerPosition() const;
 
-    void checkOnGroundAfterJump();
+    void checkOnGround();
     void checkHitWall();
+    void checkInAir();
+    void changeSpeedOnHitWall();
 
+    int getPlayerHeightWidth() const;
 };
 
 

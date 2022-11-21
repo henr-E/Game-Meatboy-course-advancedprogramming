@@ -31,7 +31,12 @@
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/inputparser.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.cpp\"",
-  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/inputparser.cpp"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/TileMap.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.cpp"
+},
+{
+  "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.cpp"
 }
 ]
