@@ -31,7 +31,7 @@ vector<int> InputParser::parse() {
                 tiles.push_back(4);
                 myOutputFile << 4;
             }
-            else if (myText[i] == 'o'){
+            else if (myText[i] == '/'){
                 tiles.push_back(0);
                 myOutputFile << 0;
             }

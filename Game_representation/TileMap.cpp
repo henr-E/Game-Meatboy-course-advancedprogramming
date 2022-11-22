@@ -5,7 +5,7 @@
 
 #include "TileMap.h"
 TileMap::TileMap() {
-    tileset = "../content/tileset2.png";
+    tileset = "../content/tileset.png";
     tileSize.x = 32;
     tileSize.y = 32;
     amountOfTilesInHeight = 35;

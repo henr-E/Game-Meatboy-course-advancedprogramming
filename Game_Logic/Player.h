@@ -9,49 +9,26 @@
 #include <iostream>
 
 #include "Interval.h"
-
+#include "structures_enums.h"
 using namespace std;
-
-enum KeyboardInput{
-    pressMoveLeft,
-    pressMoveRight,
-    releaseMoveLeft,
-    releaseMoveRight,
-    pressJump,
-    releaseJump,
-    esc,
-    noKey
-};
-//enum Collision{
-//    collisionLeft,
-//    collisionRight,
-//    collisionUp,
-//    collisionDown,
-//    noCollision
-//};
-struct Position{
-    float x;
-    float y;
-};
-
 class Player {
-//    Collision collision;
     Interval interval;
+    Collision collision;
+    Direction direction;
 
     int playerHeight_Width;
     Position playerPosition;
 
     //this is for collision; the position will not be higher than de values
-    int playerMaximumXRight;
-    int playerMaximumXLeft;
+    int playerMaximumRight;
+    int playerMaximumLeft;
+    int playerMaximumUp;
+    int playerMaximumDown;
 
 //    int jumpAngle = 45;
 
     float verticalSpeed;
     float horizontalSpeed;
-
-//    double maxVerticalSpeed;
-//    double maxHorizontalSpeed;
 
     double acceleration;
     ///applied to gradually slow down the upwards vertical movement after a jump,
@@ -59,17 +36,17 @@ class Player {
     float gravity;
 
 
-//
-//    bool horizontalJump;
     ///when the Player hits a wall the horizontal speed must be 0
     bool hitLeftWall;
     bool hitRightWall;
     bool onTile;
-    bool inAir;
+    bool jumping;
+
+
+
+
 //    ///when the Player hits the ceiling the vertical speed negates: v = -v
 //    bool hitCeiling;
-//    ///when the Player lands on the floor the vertical speed must be 0
-//    bool landingOnFloor;
 
     /// Which direction(s) is the player currently moving in
     bool keyboardLeft;
@@ -88,13 +65,15 @@ public:
 
     const Position &getPlayerPosition() const;
 
-    void checkOnGround();
-    void checkHitWall();
-    void checkInAir();
-    void changeSpeedOnHitWall();
+//    void checkOnTile();
+//    void checkHitWall();
 
-    void calculateCollision(const vector<int> &tiles);
-    void checkCollision();
+//    void changeSpeedOnHitWall();
+
+    void calculateTileCollision(const vector<int> &tiles);
+    void checkTileAndBorderCollision();
+
+    Direction getDirection() const;
 };
 
 

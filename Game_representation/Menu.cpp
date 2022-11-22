@@ -1,15 +1,20 @@
 //
+// Created by henri kerch on 22/11/2022.
+//
+
+#include "Menu.h"
+//
 // Created by henri kerch on 13/11/2022.
 //
 
-#include "Game.h"
+#include "Menu.h"
 
-Game::Game() {
+Menu::Menu() {
     screenDimensions.x = 544;
     screenDimensions.y = 960;
 }
 
-void Game::simulate() {
+void Menu::simulate() {
     startingSetup();
     //make level from input
     vector<int> tiles = inputParser.parse();
@@ -78,7 +83,7 @@ void Game::simulate() {
     }
 }
 
-void Game::startingSetup() {
+void Menu::startingSetup() {
     Player player;
 
     // add player
@@ -95,16 +100,16 @@ void Game::startingSetup() {
     // change framerate
     gameWindow.setFramerateLimit(60);
 
-//    // make sprite and texture background
-//    // Load a sprite to display
-//    if (!textureBackground.loadFromFile("../content/Background.png")) {
-//        printf("Failed to load background into texture.");
-//        exit(EXIT_FAILURE);
-//    }
-//    // configure sprite
-//    spriteBackground.setTexture(textureBackground);
-//    spriteBackground.setScale(1, (float)screenDimensions.y / textureBackground.getSize().y);
-//    //    spriteBackground.setPosition(0,0);
+    //    // make sprite and texture background
+    //    // Load a sprite to display
+    //    if (!textureBackground.loadFromFile("../content/Background.png")) {
+    //        printf("Failed to load background into texture.");
+    //        exit(EXIT_FAILURE);
+    //    }
+    //    // configure sprite
+    //    spriteBackground.setTexture(textureBackground);
+    //    spriteBackground.setScale(1, (float)screenDimensions.y / textureBackground.getSize().y);
+    //    //    spriteBackground.setPosition(0,0);
 
     // Load sound
     if (!buffer.loadFromFile("../content/bip.wav"))
@@ -114,7 +119,7 @@ void Game::startingSetup() {
 
 }
 
-void Game::updateView() {
+void Menu::updateView() {
     View view;
 
     view.reset(sf::FloatRect(0, 0, screenDimensions.x, screenDimensions.y));
@@ -122,7 +127,7 @@ void Game::updateView() {
 
     Vector2f position(screenDimensions.x / 2, screenDimensions.y / 2);
 
-//    float Position = world.getPlayer().getPlayerPosition().y;
+    //    float Position = world.getPlayer().getPlayerPosition().y;
     const Position playerPosition = world.getPlayer().getPlayerPosition();
 
     //    cout<< playerPosition.y <<endl;
@@ -151,7 +156,7 @@ void Game::updateView() {
 }
 
 
-void Game::userInput(Event event) {
+void Menu::userInput(Event event) {
     /*
      * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
      * and the player will move even though there are no keys pressed
@@ -190,5 +195,4 @@ void Game::userInput(Event event) {
             keyboardInput = releaseMoveRight;
     }
 }
-
-
+Menu::Menu() {}

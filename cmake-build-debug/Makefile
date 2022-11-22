@@ -318,6 +318,30 @@ Game_representation/InputParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.s
 .PHONY : Game_representation/InputParser.cpp.s
 
+Game_representation/Menu.o: Game_representation/Menu.cpp.o
+.PHONY : Game_representation/Menu.o
+
+# target to build an object file
+Game_representation/Menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Menu.cpp.o
+.PHONY : Game_representation/Menu.cpp.o
+
+Game_representation/Menu.i: Game_representation/Menu.cpp.i
+.PHONY : Game_representation/Menu.i
+
+# target to preprocess a source file
+Game_representation/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Menu.cpp.i
+.PHONY : Game_representation/Menu.cpp.i
+
+Game_representation/Menu.s: Game_representation/Menu.cpp.s
+.PHONY : Game_representation/Menu.s
+
+# target to generate assembly for a file
+Game_representation/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Menu.cpp.s
+.PHONY : Game_representation/Menu.cpp.s
+
 Game_representation/TileMap.o: Game_representation/TileMap.cpp.o
 .PHONY : Game_representation/TileMap.o
 
@@ -397,6 +421,9 @@ help:
 	@echo "... Game_representation/InputParser.o"
 	@echo "... Game_representation/InputParser.i"
 	@echo "... Game_representation/InputParser.s"
+	@echo "... Game_representation/Menu.o"
+	@echo "... Game_representation/Menu.i"
+	@echo "... Game_representation/Menu.s"
 	@echo "... Game_representation/TileMap.o"
 	@echo "... Game_representation/TileMap.i"
 	@echo "... Game_representation/TileMap.s"

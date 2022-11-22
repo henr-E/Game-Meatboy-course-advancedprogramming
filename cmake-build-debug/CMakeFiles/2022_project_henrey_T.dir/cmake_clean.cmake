@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Camera.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.o"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Menu.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/TileMap.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o"
 )

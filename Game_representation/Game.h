@@ -8,7 +8,6 @@
 #include <iostream>
 #include <algorithm>
 
-
 #include "../Game_Logic/World.h"
 #include "InputParser.h"
 #include "TileMap.h"
@@ -24,6 +23,7 @@ private:
     VideoMode gameVideoMode;
     RenderWindow gameWindow;
     Vector2i screenDimensions;
+
 
 
     TileMap tileMap;

@@ -10,56 +10,60 @@
 #include <iostream>
 using namespace std;
 
+struct CoordinateInterval{
+    int leftValue;
+    int rightValue;
+    int upValue;
+    int downValue;
+};
 class Interval {
 private:
-    vector<int> allDivisible;
+    vector<int> allDivisibleX;
+    vector<int> allDivisibleY;
 public:
     Interval() {
-        int sum = 0;
         /*
      * in case of screenwidth 544 and tilewidth 32
      * the vector will look like 0,32,64,96, 128, ...., 512, 544
          */
+        int sum = 0;
         while(sum <= 544){
-            allDivisible.push_back(sum);
+            allDivisibleX.push_back(sum);
             sum += 32;
         }
-    }
-    /*
-     * for a given Y coordinate for example 33,456 this function is going to find the interval in the
-     * tileMap so the interval for this example is (32,64)
-     */
-    int calculateLeft(float number){
-        for(int div = 0; div < allDivisible.size(); ++div){
-            int a = allDivisible[div];
-            int b = allDivisible[div + 1];
-            if (number == a){
-                return a;
-            }
-            else if (number == b){
-                return b;
-            }
-            else if (a < number and number < b){
-                return a;
-            }
+        int sum2 = 0;
+        while(sum2 <= 960){
+            allDivisibleY.push_back(sum2);
+            sum2 += 32;
         }
     }
     /*
-     * for a given Y coordinate for example 33,456 this function is going to find the interval in the
+     * for a given X coordinate for example 33,456 this function is going to find the interval in the
      * tileMap so the interval for this example is (32,64)
      */
-    int calculateRight(float number){
-        for(int div = 0; div < allDivisible.size(); ++div){
-            int a = allDivisible[div];
-            int b = allDivisible[div + 1];
-            if (number == a){
-                return a;
+    CoordinateInterval calculateLeftRight(float number){
+        CoordinateInterval coordinateInterval;
+
+        for(int div = 0; div < allDivisibleX.size(); ++div){
+            int a = allDivisibleX[div];
+            int b = allDivisibleX[div + 1];
+            if ((a <= number and number < b)){
+                coordinateInterval.leftValue = a;
+                coordinateInterval.rightValue = b;
+                return coordinateInterval;
             }
-            else if (number == b){
-                return b;
-            }
-            else if (a < number and number < b){
-                return b;
+        }
+    }
+    CoordinateInterval calculateUpDown(float number){
+        CoordinateInterval coordinateInterval;
+
+        for(int div = 0; div < allDivisibleY.size(); ++div) {
+            int a = allDivisibleY[div];
+            int b = allDivisibleY[div + 1];
+            if(a <= number and number < b){
+                coordinateInterval.upValue = a;
+                coordinateInterval.downValue = b;
+                return coordinateInterval;
             }
         }
     }

@@ -12,10 +12,6 @@ vector
 iostream
 -
 
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Player.cpp
-Player.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Player.h
-
 /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Player.h
 SFML/Graphics.hpp
 -
@@ -29,10 +25,6 @@ ctime
 -
 chrono
 -
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/World.cpp
-World.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/World.h
 
 /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/World.h
 unistd.h
@@ -57,6 +49,8 @@ InputParser.h
 /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.h
 TileMap.h
 /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.h
+menu.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/menu.h
 
 /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.h
 vector
@@ -70,6 +64,12 @@ iostream
 SFML/Graphics.hpp
 -
 SFML/Audio.hpp
+-
+
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/menu.h
+SFML/Graphics.hpp
+-
+iostream
 -
 
 /Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp
