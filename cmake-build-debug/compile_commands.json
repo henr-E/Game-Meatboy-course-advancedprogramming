@@ -11,8 +11,8 @@
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.cpp\"",
-  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.cpp"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Windows/Game.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Game.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Game.cpp"
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
@@ -26,22 +26,22 @@
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Camera.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera.cpp\"",
-  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera.cpp"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Camera/Camera.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera/Camera.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera/Camera.cpp"
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/TileMap.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.cpp\"",
-  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/TileMap.cpp"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/TileMap.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.cpp"
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputParser.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.cpp\"",
-  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputParser.cpp"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.cpp"
 },
 {
   "directory": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Menu.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Menu.cpp\"",
-  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Menu.cpp"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug\" -I\"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/include\" -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Windows/Menu.cpp.o -c \"/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Menu.cpp\"",
+  "file": "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Menu.cpp"
 }
 ]

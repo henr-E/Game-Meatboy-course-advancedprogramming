@@ -24,6 +24,7 @@ Player::Player() {
     direction = facingRight;
 
     jumping = false;
+    playerWon = false;
 
     keyboardLeft = false;
     keyboardRight = false;
@@ -55,8 +56,16 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
         keyboardRight = false;
         break;
     case pressJump:
-        keyboardJump = true;
+        // how bigger the absolute value of verticalSpeed how higher player jumps
+        // playerPosition.y += verticalSpeed * elapsedTime;
+        if (collision.collisionDown){
 
+        }
+        if(onTile or !jumping or hitLeftWall or hitRightWall or collision.collisionLeft or collision.collisionRight){
+            verticalSpeed = -100;
+            jumping = true;
+            onTile = false;
+        }
 
         /*
          * the verticalspeed must be changed here and not in the simulate function
@@ -64,20 +73,17 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
          * even if user released space. This means that if the verticalSpeed would be changed in
          * player.sumulate(), the speed would be overwritten every time and would never change
          */
-        // how bigger the absolute value of verticalSpeed how higher player jumps
-        // playerPosition.y += verticalSpeed * elapsedTime;
-        if(!jumping or hitLeftWall or hitRightWall){
-            verticalSpeed = -100;
-        }
         break;
     case releaseJump:
-        keyboardJump = false;
+//        keyboardJump = false;
         break;
     case noKey:
         break;
     default:
         printf("Failed to load keyboard input");
         exit(EXIT_FAILURE);
+    case esc:
+        break;
     }
 }
 
@@ -90,7 +96,10 @@ void Player::simulate(float elapsedTime, vector<int> tiles) {
     if (keyboardLeft) {
         playerPosition.x -= horizontalSpeed * elapsedTime;
     }
-    if (keyboardJump) { // TODO formule aanpassen voor gravity
+
+
+    if (jumping) { // TODO formule aanpassen voor gravity
+
         /*
          * 3 cases:
          * 1 = on a tile/against right or left wall on tile
@@ -101,7 +110,7 @@ void Player::simulate(float elapsedTime, vector<int> tiles) {
 
             verticalSpeed += gravity;
             playerPosition.y += verticalSpeed * elapsedTime;
-            jumping = true;
+
 //            // if the player is against the right wall and not on a tile
 //            if (hitRightWall) {
 //                playerPosition.x -= verticalSpeed * elapsedTime;
@@ -114,41 +123,32 @@ void Player::simulate(float elapsedTime, vector<int> tiles) {
 
 
     }
+
     checkTileAndBorderCollision();
     calculateTileCollision(tiles);
 
 }
-
-//void Player::changeSpeedOnHitWall() {
-//    if (hitLeftWall or hitRightWall) {
-//        horizontalSpeed = 0;
-//    }
-//}
 void Player::checkTileAndBorderCollision() {
-
-    if(onTile){
-        jumping = false;
-    }
 
     // collisionRight
     if (playerPosition.x >= playerMaximumRight - 32 and collision.collisionRight) {
         playerPosition.x = playerMaximumRight - 32;
     }
     // collisionLeft
-    if (playerPosition.x < playerMaximumLeft and collision.collisionLeft) {
+    if (playerPosition.x <= playerMaximumLeft and collision.collisionLeft) {
         playerPosition.x = playerMaximumLeft;
     }
 
 
     // tileCollisionUp
-    if (playerPosition.y < playerMaximumUp and collision.collisionUp) {
+    if (playerPosition.y <= playerMaximumUp and collision.collisionUp) {
         playerPosition.y = playerMaximumUp;
     }
     // tileCollisionDown
-    if (playerPosition.y > playerMaximumDown - 32  and collision.collisionDown) {
+    if (playerPosition.y >= playerMaximumDown - 32  and collision.collisionDown) {
         playerPosition.y = playerMaximumDown - 32;
     }
-
+    //todo jump onTile doesnt work
     if (collision.collisionDown){
         onTile = true;
     }
@@ -162,6 +162,8 @@ void Player::checkTileAndBorderCollision() {
         verticalSpeed = 0;
         onTile = true;
     }
+
+
 
     // collisionRightWall
     if (playerPosition.x > (544 - playerHeight_Width)) {
@@ -265,6 +267,9 @@ void Player::calculateTileCollision(const vector<int>& tiles) {
     int upValue = interval.calculateUpDown(playerPosition.y).upValue;
     int downValue = interval.calculateUpDown(playerPosition.y).downValue;
 
+    if (currentTile == 0){
+        playerWon = true;
+    }
     // check if player is not against right wall
     //-32 because the player is 32 in width
     if (rightTile == 1 and playerPosition.x < (544 - 32)) {
@@ -287,16 +292,22 @@ void Player::calculateTileCollision(const vector<int>& tiles) {
         collision.collisionDown = true;
     }
 
-    if (rightTile != 1 and leftTile != 1 and upTile != 1 and downTile != 1) {
-        playerMaximumRight = 544;
-        playerMaximumLeft = 0;
-        playerMaximumDown = 960 - 32;
-        playerMaximumUp = 0;
-
-        collision.collisionUp = false;
-        collision.collisionDown = false;
+    if (rightTile != 1){
         collision.collisionRight = false;
+        playerMaximumRight = 544;
+    }
+    if(leftTile != 1){
         collision.collisionLeft = false;
+        playerMaximumLeft = 0;
+    }
+    if(upTile != 1){
+        collision.collisionUp = false;
+        playerMaximumUp = 0;
+    }
+    if(downTile != 1) {
+        collision.collisionDown = false;
+        playerMaximumDown = 960 - 32;
     }
 }
 Direction Player::getDirection() const { return direction; }
+bool Player::isPlayerWon() const { return playerWon; }

@@ -3,7 +3,11 @@ What does this exactly mean?
     game logic runs at the same speed,
     regardless of the speed of the device it is running on
 
-Looking from the point of view that the code should run without sfml:
-    -Does the stopwatch need to be in
-    -how to detect key presses without sfml
 
+question about jump
+
+
+i give the tilemap to the player -> is this okey?
+
+moet je menu en game laten overerven van een window class zodat er maar
+1 window is of mogen we 2 windows gebruiken

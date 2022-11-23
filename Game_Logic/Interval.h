@@ -1,21 +1,14 @@
 //
 // Created by henri kerch on 21/11/2022.
 //
-
+#pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_ROUND_H
 #define INC_2022_PROJECT_HENREY_T_ROUND_H
 
-#endif // INC_2022_PROJECT_HENREY_T_ROUND_H
 #include <vector>
-#include <iostream>
+#include "structures_enums_std_include.h"
 using namespace std;
 
-struct CoordinateInterval{
-    int leftValue;
-    int rightValue;
-    int upValue;
-    int downValue;
-};
 class Interval {
 private:
     vector<int> allDivisibleX;
@@ -68,3 +61,4 @@ public:
         }
     }
 };
+#endif // INC_2022_PROJECT_HENREY_T_ROUND_H

@@ -1,18 +1,15 @@
-#include <iostream>
-#include "../Game_representation/Game.h"
+#include "../Game_representation/StateManager.h"
+#include "iostream"
+using namespace std;
 
 int main() {
     std::cout << "Dont forget:" << std::endl
               << "- code inspection/clang-tidy!!: Code > Inspect Code" << std::endl
               << "- cicleCI" << std::endl
               << "- clang.format" << std::endl
-              << "- doxygen" << std::endl;
+              << "- doxygen" << std::endl
+              << "- NO RAW POINTERS" << std::endl;
 
-    // Declare an instance of Engine
-    Game g;
-    // Start the engine
-    g.simulate();
-    // Quit the Game
-
+    StartGame();
     return 0;
 }

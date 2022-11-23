@@ -1,15 +1,13 @@
 //
 // Created by henri kerch on 13/11/2022.
 //
+#pragma once
 
 #ifndef INC_2022_PROJECT_HENREY_T_PLAYER_H
 #define INC_2022_PROJECT_HENREY_T_PLAYER_H
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-
 #include "Interval.h"
-#include "structures_enums.h"
+#include "structures_enums_std_include.h"
 using namespace std;
 class Player {
     Interval interval;
@@ -41,6 +39,8 @@ class Player {
     bool hitRightWall;
     bool onTile;
     bool jumping;
+
+    bool playerWon;
 
 
 
@@ -74,8 +74,8 @@ public:
     void checkTileAndBorderCollision();
 
     Direction getDirection() const;
+    bool isPlayerWon() const;
 };
-
 
 
 #endif //INC_2022_PROJECT_HENREY_T_PLAYER_H
