@@ -1,6 +1,6 @@
-#include "../Game_representation/StateManager.h"
+#include "../Game_representation/Game.h"
 #include "iostream"
-using namespace std;
+#include "memory"
 
 int main() {
     std::cout << "Dont forget:" << std::endl
@@ -10,6 +10,8 @@ int main() {
               << "- doxygen" << std::endl
               << "- NO RAW POINTERS" << std::endl;
 
-    StartGame();
+    shared_ptr<Game> g = make_shared<Game>();
+    g->run();
+
     return 0;
 }

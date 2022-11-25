@@ -148,10 +148,10 @@
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/structures_enums_std_include.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera/Camera.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Camera/Camera.h">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.cpp">
@@ -166,19 +166,28 @@
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/StateManager.h">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/LevelState.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Game.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/LevelState.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Game.h">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/MenuState.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Menu.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/MenuState.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Windows/Menu.h">
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/State.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/State.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/StateManager.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/StateManager.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp">

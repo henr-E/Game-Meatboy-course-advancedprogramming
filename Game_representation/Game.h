@@ -13,45 +13,31 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
-#include "../../Game_Logic/World.h"
-#include "../InputToGame/InputParser.h"
-#include "../InputToGame/TileMap.h"
+#include "States/StateManager.h"
 
 using namespace sf;
 using namespace std;
 
 class Game {
 private:
+
+
     //sfml elements
     VideoMode sfVideoMode;
-    RenderWindow sfWindow;
+    shared_ptr<RenderWindow> sfWindow = make_shared<RenderWindow>();
+
+    StateManager stateManager;
+    FunctionCallTo functionCallTo;
+
     SoundBuffer buffer;
     Sound sound;
     Music music;
 
     Vector2i screenDimensions;
 
-    //sfml elements
-    Sprite spritePlayer;
-    Texture texturePlayer;
-
-    //selfmade classes/structs
-    KeyboardInput keyboardInput;
-    InputParser inputParser;
-    TileMap tileMap;
-    World world;
-
-    Text t;
-
-    //variables
-    int chosenLevel;
-
 public:
     Game();
-    int simulate();
-    void userInput(Event event);
-    void setChosenLevel(int chosenLevel);
-    void drawPlayerWin();
+    void run();
 };
 
 

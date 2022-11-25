@@ -1,48 +1,13 @@
 //
-// Created by henri kerch on 22/11/2022.
+// Created by henri kerch on 24/11/2022.
 //
 
-#include "Menu.h"
-
-Menu::Menu() {
-    screenDimensions.x = 544;
-    screenDimensions.y = 960;
-
-    // confiure videoMode
-    sfVideoMode.width = screenDimensions.x;
-    sfVideoMode.height = screenDimensions.y;
-
-    //  Create and open a window
-    sfWindow.create(sfVideoMode, "game");
-
-    // change framerate
-    sfWindow.setFramerateLimit(60);
-
-    cout << "ownWindowConstructor"<< endl;
-
-
-    if (!music.openFromFile("../content/music.ogg"))
-        exit(EXIT_FAILURE);
-    music.play();
-
-    music.setLoop(true);
-    music.setVolume(50);
-
-
-    //    // Load sound
-    //    if (!buffer.loadFromFile("../content/bip.wav"))
-    //        exit(EXIT_FAILURE);
-    //    sound.setBuffer(buffer);
-    //    sound.play();
-
-    cout << "MenuConstructor"<< endl;
-    allTexts = {level1, level2, level3, level4, level5};
-
-    chosenLevel = 0;
+#include "MenuState.h"
+MenuState::MenuState(){
+    startUp();
 }
-Menu::~Menu() {}
 
-int Menu::simulate() {
+void MenuState::startUp() {
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
         printf("Failed to load background into texture.");
@@ -50,8 +15,6 @@ int Menu::simulate() {
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);
-    spriteBackground.setScale(1, (float)screenDimensions.y / textureBackground.getSize().y);
-    //    spriteBackground.setPosition(0,0);
 
     //load font
     if(!font.loadFromFile("../content/Fonts/Herculanum.ttf")){
@@ -59,38 +22,11 @@ int Menu::simulate() {
     }
 
     makeTexts();
-
-    while (sfWindow.isOpen()) {
-        Event event;
-        while (sfWindow.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                sfWindow.close();
-                return 0;
-            }
-            if(userInput() == 0){
-                sfWindow.close();
-                return 0;
-            }
-        }
-
-
-        // Rub out the last frame
-        sfWindow.clear();
-
-        sfWindow.draw(spriteBackground);
-
-        sfWindow.draw(welcomeText);
-        for(const Text& text: allTexts) {
-            sfWindow.draw(text);
-        }
-
-        // Show everything we have just drawn
-        sfWindow.display();
-    }
 }
-int Menu::userInput() {
+
+void MenuState::getUserInput(Event event) {
     //get mousePosition
-    mousePosition = Mouse::getPosition(sfWindow); // window is a sf::OwnWindow
+    mousePosition = Mouse::getPosition(*sfWindow.get()); // window is a sf::OwnWindow
 
     //check if mouse is on text
     for(int t = 0; t < allTexts.size(); t++){
@@ -102,16 +38,17 @@ int Menu::userInput() {
 
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 chosenLevel = t+1;
-                return 0;
+                transition = true;
+                break;
             }
         }
         else{
             text.setFillColor(Color::White);
         }
     }
-    return 1;
 }
-void Menu::makeTexts() {
+
+void MenuState::makeTexts() {
 
     int positionX = 544/2;
     int positionY = 960/3;
@@ -144,7 +81,7 @@ void Menu::makeTexts() {
     welcomeText.setStyle(sf::Text::Bold | sf::Text::Underlined);
 
 
-
+    allTexts = {level1, level2, level3, level4, level5};
 
     for(int t = 0; t < allTexts.size(); t++){
         Text &text = allTexts[t];
@@ -160,5 +97,21 @@ void Menu::makeTexts() {
         text.setStyle(sf::Text::Bold | sf::Text::Underlined);
     }
 }
-int Menu::getChosenLevel() const { return chosenLevel; }
 
+void MenuState::draw() {
+    // Rub out the last frame
+    sfWindow->clear();
+
+    sfWindow->draw(spriteBackground);
+
+    sfWindow->draw(welcomeText);
+    for(const Text& text: allTexts) {
+        sfWindow->draw(text);
+    }
+
+    // Show everything we have just drawn
+    sfWindow->display();
+}
+void MenuState::simulate() {
+    State::simulate();
+}

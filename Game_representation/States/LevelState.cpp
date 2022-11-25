@@ -1,42 +1,12 @@
 //
-// Created by henri kerch on 13/11/2022.
+// Created by henri kerch on 24/11/2022.
 //
 
-#include "Game.h"
-Game::Game() {
-    screenDimensions.x = 544;
-    screenDimensions.y = 960;
-
-    // confiure videoMode
-    sfVideoMode.width = screenDimensions.x;
-    sfVideoMode.height = screenDimensions.y;
-
-    //  Create and open a window
-    sfWindow.create(sfVideoMode, "game");
-
-    // change framerate
-    sfWindow.setFramerateLimit(60);
-
-    cout << "ownWindowConstructor"<< endl;
-
-
-    if (!music.openFromFile("../content/music.ogg"))
-        exit(EXIT_FAILURE);
-    music.play();
-
-    music.setLoop(true);
-    music.setVolume(50);
-
-
-    //    // Load sound
-    //    if (!buffer.loadFromFile("../content/bip.wav"))
-    //        exit(EXIT_FAILURE);
-    //    sound.setBuffer(buffer);
-    //    sound.play();
-    cout << "GameConstructor"<< endl;
+#include "LevelState.h"
+LevelState::LevelState() {
+    startUp();
 }
-
-int Game::simulate() {
+void LevelState::startUp() {
     // make Player
     Player player;
     // add player
@@ -48,6 +18,7 @@ int Game::simulate() {
     int amountOfTilesInHeight = inputParser.getAmountOfTilesInHeight();
     //get AmountOfTilesInWidth in level
     int amountOfTilesInWidth = inputParser.getAmountOfTilesInWidth();
+
 
     //set tiles to tilemap
     tileMap.setTiles(tiles);
@@ -65,58 +36,20 @@ int Game::simulate() {
         exit(EXIT_FAILURE);
     }
 
-    while (sfWindow.isOpen()) {
-        Event event;
-        while (sfWindow.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                sfWindow.close();
-                return 0;
-            }
-            userInput(event);
-            if(keyboardInput == esc){
-                sfWindow.close();
-                return 0;
-            }
-            world.keyboardToPlayer(keyboardInput);
-//            if(world.getPlayer().isPlayerWon()){
-//                drawPlayerWin();
-//                if(keyboardInput == esc) {
-//                    sfWindow.close();
-//                }
-//            }
-        }
-        //simulate world
-        world.simulate(tileMap.getTiles());
-
-        // Now move the playerSprite to its new position
-        spritePlayer.setPosition(world.getPlayer().getPlayerPosition().x, world.getPlayer().getPlayerPosition().y);
-
-        // Rub out the last frame
-        sfWindow.clear();
-
-        //draw tileMap
-        sfWindow.draw(tileMap);
-
-        // make sprite and texture player
-        // Associate a texture with the sprite
-        // using 2 different sprites
-        if (world.getPlayer().getDirection() == facingRight){
-            texturePlayer.loadFromFile("../content/meatboy.png");
-        }else{
-            texturePlayer.loadFromFile("../content/meatboy_mirror.png");
-        }
-        texturePlayer.setSmooth(true);
-        spritePlayer.setTexture(texturePlayer);
-
-        // Draw the player
-        sfWindow.draw(spritePlayer);
-
-        // Show everything we have just drawn
-        sfWindow.display();
+    //load background
+    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
+        printf("Failed to load background into texture.");
+        exit(EXIT_FAILURE);
     }
+    // configure sprite
+    spriteBackground.setTexture(textureBackground);
+    spriteBackground.setScale(1, (float)screenDimensions.y / textureBackground.getSize().y);
+    //    spriteBackground.setPosition(0,0);
 }
 
-void Game::userInput(Event event) {
+
+
+void LevelState::getUserInput(Event event) {
     /*
      * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
      * and the player will move even though there are no keys pressed
@@ -125,7 +58,8 @@ void Game::userInput(Event event) {
     if (event.type == Event::KeyPressed) {
         // Escape
         if (event.key.code == Keyboard::Escape){
-            keyboardInput = esc;
+            transition = true;
+            return;
         }
         // Space
         if (event.key.code == Keyboard::Space)
@@ -153,9 +87,46 @@ void Game::userInput(Event event) {
         if (event.key.code == Keyboard::Right)
             keyboardInput = releaseMoveRight;
     }
+    //pass keyboard to player
+    world.keyboardToPlayer(keyboardInput);
 }
-void Game::setChosenLevel(int chosenLevel) { Game::chosenLevel = chosenLevel; }
-void Game::drawPlayerWin() {
+
+void LevelState::draw() {
+    // Now move the playerSprite to its new position
+    spritePlayer.setPosition(world.getPlayer().getPlayerPosition().x, world.getPlayer().getPlayerPosition().y);
+
+    // Rub out the last frame
+    sfWindow->clear();
+
+
+    sfWindow->draw(spriteBackground);
+
+    //draw tileMap
+    sfWindow->draw(tileMap);
+
+    // make sprite and texture player
+    // Associate a texture with the sprite
+    // using 2 different sprites
+    if (world.getPlayer().getDirection() == facingRight){
+        texturePlayer.loadFromFile("../content/meatboy.png");
+    }else{
+        texturePlayer.loadFromFile("../content/meatboy_mirror.png");
+    }
+    texturePlayer.setSmooth(true);
+    spritePlayer.setTexture(texturePlayer);
+
+    // Draw the player
+    sfWindow->draw(spritePlayer);
+
+    // Show everything we have just drawn
+    sfWindow->display();
+
+
+
+    /*
+     * IF PLAYER WINNNN
+     */
+    /*
     Font font;
 
     //load font
@@ -168,7 +139,7 @@ void Game::drawPlayerWin() {
     t.setFont(font);
     t.setString("You Won! Press escape.");
 
-    /*
+
      * the position decides where the first character of the string will be
      * one character = 32 pixels
      * if the string is 10 characters
@@ -178,7 +149,7 @@ void Game::drawPlayerWin() {
      * so if we want to center it =>
      * 544/2 - 10*32/2
      *
-     */
+
     //position is position of first character
     int positionX = 544/2;
 
@@ -191,5 +162,12 @@ void Game::drawPlayerWin() {
     // set the text style
     t.setStyle(sf::Text::Bold | sf::Text::Underlined);
 
+
     sfWindow.draw(t);
+    */
 }
+void LevelState::simulate() {
+    //run world
+    world.simulate(tileMap.getTiles());
+}
+

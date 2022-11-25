@@ -3,6 +3,7 @@
 //
 
 #include "InputParser.h"
+#include <cstdlib>
 InputParser::InputParser() {
     amountOfTilesInWidth = 0;
     amountOfTilesInHeight = 0;
@@ -19,6 +20,9 @@ vector<int> InputParser::parse() {
     ofstream myOutputFile("../levels/OutputLevel1.txt");
 
 
+    /*
+     * look into the tileset.png, the number that should be output is the same as the tilenuùber in the tilesetpng
+     */
     // Use a while loop together with the getline() function to read the file line by line
     while (getline (myFile, myText)) {
         amountOfTilesInHeight +=1;
@@ -28,8 +32,8 @@ vector<int> InputParser::parse() {
                 myOutputFile << 1;
             }
             else if (myText[i] == '.'){
-                tiles.push_back(4);
-                myOutputFile << 4;
+                tiles.push_back(8);
+                myOutputFile << 8;
             }
             else if (myText[i] == '/'){
                 tiles.push_back(0);

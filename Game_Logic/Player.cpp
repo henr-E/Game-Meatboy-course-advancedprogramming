@@ -68,7 +68,7 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
         }
 
         /*
-         * the verticalspeed must be changed here and not in the simulate function
+         * the verticalspeed must be changed here and not in the run function
          * because if user presses 'space', the loop is going to keep simulating the player
          * even if user released space. This means that if the verticalSpeed would be changed in
          * player.sumulate(), the speed would be overwritten every time and would never change
