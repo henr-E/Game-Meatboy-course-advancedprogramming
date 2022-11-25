@@ -10,7 +10,7 @@ MenuState::MenuState(){
 void MenuState::startUp() {
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
-        printf("Failed to load background into texture.");
+        cout << ("Failed to load background into texture.") << endl;
 
     }
     // configure sprite
@@ -18,7 +18,7 @@ void MenuState::startUp() {
 
     //load font
     if(!font.loadFromFile("../content/Fonts/Herculanum.ttf")){
-        printf("Failed to load font.");
+        cout << printf("Failed to load font.") << endl;
     }
 
     makeTexts();

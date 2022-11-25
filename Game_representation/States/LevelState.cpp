@@ -32,12 +32,12 @@ void LevelState::startUp() {
 
     // create the tilemap from the level definition
     if (!tileMap.load()) {
-        printf("Failed to load or make map.");
+        cout << "Failed to load or make map." << endl;
     }
 
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
-        printf("Failed to load background into texture.");
+        cout << "Failed to load background into texture."<< endl;
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);

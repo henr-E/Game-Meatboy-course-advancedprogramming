@@ -80,7 +80,7 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
     case noKey:
         break;
     default:
-        printf("Failed to load keyboard input");
+        cout << "Failed to load keyboard input" << endl;
     case esc:
         break;
     }

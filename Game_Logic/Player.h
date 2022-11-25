@@ -7,6 +7,7 @@
 #define INC_2022_PROJECT_HENREY_T_PLAYER_H
 
 #include "Interval.h"
+#include "iostream"
 #include "structures_enums_std_include.h"
 using namespace std;
 class Player {
