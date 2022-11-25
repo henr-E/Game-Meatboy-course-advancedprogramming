@@ -81,7 +81,6 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
         break;
     default:
         printf("Failed to load keyboard input");
-        exit(EXIT_FAILURE);
     case esc:
         break;
     }
@@ -224,10 +223,10 @@ void Player::calculateTileCollision(const vector<int>& tiles) {
     int currentTile = tiles[currentIndex];
 
 
-    int rightTile = NULL;
-    int leftTile = NULL;
-    int upTile = NULL;
-    int downTile = NULL;
+    int rightTile = 100;
+    int leftTile = 100;
+    int upTile = 100;
+    int downTile = 100;
 
 
     if (playerPosition.x < (544 - 32)) {

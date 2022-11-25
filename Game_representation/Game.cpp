@@ -20,7 +20,7 @@ Game::Game(){
     stateManager.setSfWindow(sfWindow);
 
     //    if (!music.openFromFile("../content/music.ogg"))
-    //        exit(EXIT_FAILURE);
+
     //    music.play();
     //
     //    music.setLoop(true);
@@ -29,7 +29,7 @@ Game::Game(){
 
     //    // Load sound
     //    if (!buffer.loadFromFile("../content/bip.wav"))
-    //        exit(EXIT_FAILURE);
+
     //    sound.setBuffer(buffer);
     //    sound.play();
 }

@@ -11,14 +11,14 @@ void MenuState::startUp() {
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
         printf("Failed to load background into texture.");
-        exit(EXIT_FAILURE);
+
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);
 
     //load font
     if(!font.loadFromFile("../content/Fonts/Herculanum.ttf")){
-        exit(EXIT_FAILURE);
+        printf("Failed to load font.");
     }
 
     makeTexts();
