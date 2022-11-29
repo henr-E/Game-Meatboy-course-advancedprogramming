@@ -3,49 +3,32 @@
 //
 
 #include "LevelState.h"
-LevelState::LevelState() {
-    startUp();
-}
+LevelState::LevelState() { startUp(); }
 void LevelState::startUp() {
     // make Player
     Player player;
     // add player
     world.setPlayer(player);
 
-    //make level from input
-    vector<int> tiles = inputParser.parse();
-    //get AmountOfTilesInHeight in level
-    int amountOfTilesInHeight = inputParser.getAmountOfTilesInHeight();
-    //get AmountOfTilesInWidth in level
-    int amountOfTilesInWidth = inputParser.getAmountOfTilesInWidth();
+    updatePlayerPosition();
 
+    // make level from input
+    inputParser.parse();
 
-    //set tiles to tilemap
-    tileMap.setTiles(tiles);
-    //set dimentions in tilemap
-    tileMap.setScreenDimensions(screenDimensions);
-    //set setAmountOfTilesInHeight
-    tileMap.setAmountOfTilesInHeight(amountOfTilesInHeight);
-    //set setAmountOfTilesInWidth
-    tileMap.setAmountOfTilesInWidth(amountOfTilesInWidth);
+    //
+    //    // create the tilemap from the level definition
+    //    if (!tileMap.load()) {
+    //        cout << "Failed to load or make map." << endl;
+    //    }
 
-
-    // create the tilemap from the level definition
-    if (!tileMap.load()) {
-        cout << "Failed to load or make map." << endl;
-    }
-
-    //load background
+    // load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
-        cout << "Failed to load background into texture."<< endl;
+        cout << "Failed to load background into texture." << endl;
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);
     spriteBackground.setScale(1, (float)screenDimensions.y / textureBackground.getSize().y);
-    //    spriteBackground.setPosition(0,0);
 }
-
-
 
 void LevelState::getUserInput(Event event) {
     /*
@@ -55,7 +38,7 @@ void LevelState::getUserInput(Event event) {
     keyboardInput = noKey;
     if (event.type == Event::KeyPressed) {
         // Escape
-        if (event.key.code == Keyboard::Escape){
+        if (event.key.code == Keyboard::Escape) {
             transition = true;
             return;
         }
@@ -85,41 +68,39 @@ void LevelState::getUserInput(Event event) {
         if (event.key.code == Keyboard::Right)
             keyboardInput = releaseMoveRight;
     }
-    //pass keyboard to player
+    // pass keyboard to player
     world.keyboardToPlayer(keyboardInput);
 }
 
 void LevelState::draw() {
-    // Now move the playerSprite to its new position
-    spritePlayer.setPosition(world.getPlayer().getPlayerPosition().x, world.getPlayer().getPlayerPosition().y);
 
     // Rub out the last frame
     sfWindow->clear();
 
-
     sfWindow->draw(spriteBackground);
 
-    //draw tileMap
-    sfWindow->draw(tileMap);
+    // draw tileMap
+    //    sfWindow->draw(tileMap);
 
     // make sprite and texture player
     // Associate a texture with the sprite
     // using 2 different sprites
-    if (world.getPlayer().getDirection() == facingRight){
+    if (world.getPlayer().getDirection() == facingRight) {
         texturePlayer.loadFromFile("../content/meatboy.png");
-    }else{
+    } else {
         texturePlayer.loadFromFile("../content/meatboy_mirror.png");
     }
     texturePlayer.setSmooth(true);
     spritePlayer.setTexture(texturePlayer);
 
+    // convert coordinates to pixels
+    Position p = camera.coordinatesToPixel(playerRect.left, playerRect.top);
+    // Now move the playerSprite to its new position
+    spritePlayer.setPosition(p.x, p.y);
     // Draw the player
     sfWindow->draw(spritePlayer);
-
     // Show everything we have just drawn
     sfWindow->display();
-
-
 
     /*
      * IF PLAYER WINNNN
@@ -164,7 +145,114 @@ void LevelState::draw() {
     */
 }
 void LevelState::simulate() {
-    //run world
-    world.simulate(tileMap.getTiles());
+    // update player position to rectangle
+    updatePlayerPosition();
+
+    // calculate collision
+    checkCollision();
+
+    // run world
+    world.simulate(collision);
 }
 
+void LevelState::checkCollision() {
+    vector<vector<Tile>> tiles = inputParser.getTiles();
+
+    float playerX = world.getPlayer().getPlayerPosition().x;
+    float playerY = world.getPlayer().getPlayerPosition().y;
+
+    int rowsize = tiles.size();
+
+    // list begins with index 0 so -1
+    int currentPlayerRow = rowsize - floor(abs(playerY + 1) / 0.125);
+    int currentPlayerColumn = floor(abs(playerX + 1) / 0.125);
+
+
+    Tile currentTile, upTile, downTile, leftTile, leftDownTile, leftUpperTile, rightTile, rightUpperTile, rightDownTile;
+
+    if (currentPlayerRow < tiles.size() and currentPlayerRow > 0 and currentPlayerColumn > 0 and
+        currentPlayerColumn < tiles[0].size()) {
+        // get tile where current tile is at
+        currentTile = tiles[currentPlayerRow][currentPlayerColumn];
+
+        // define all tiles
+        upTile = tiles[currentPlayerRow + 1][currentPlayerColumn];
+        downTile = tiles[currentPlayerRow - 1][currentPlayerColumn];
+
+        leftTile = tiles[currentPlayerRow][currentPlayerColumn - 1];
+        leftDownTile = tiles[currentPlayerRow + 1][currentPlayerColumn - 1];
+        leftUpperTile = tiles[currentPlayerRow - 1][currentPlayerColumn - 1];
+
+        rightTile = tiles[currentPlayerRow][currentPlayerColumn + 1];
+        rightUpperTile = tiles[currentPlayerRow - 1][currentPlayerColumn + 1];
+        rightDownTile = tiles[currentPlayerRow + 1][currentPlayerColumn + 1];
+
+
+        collision.setAllFalse();
+        if (rightTile.tileType != none and playerRect.intersects(rightTile.tileRect)) {
+
+            collision.collisionRight = true;
+        }
+        if (leftTile.tileType != none and playerRect.intersects(leftTile.tileRect)) {
+            collision.collisionLeft = true;
+        }
+        if (upTile.tileType != none and playerRect.intersects(upTile.tileRect)) {
+            collision.collisionUp = true;
+        }
+        if (downTile.tileType != none and playerRect.intersects(downTile.tileRect)) {
+            collision.collisionDown = true;
+        }
+        if (leftUpperTile.tileType != none and playerRect.intersects(leftUpperTile.tileRect)) {
+            collision.collisionUpperLeft = true;
+        }
+        if (rightUpperTile.tileType != none and playerRect.intersects(rightUpperTile.tileRect)) {
+            collision.collisionUpperRight = true;
+        }
+        if (leftDownTile.tileType != none and playerRect.intersects(leftDownTile.tileRect)) {
+            collision.collisionDownLeft = true;
+        }
+        if (rightDownTile.tileType != none and playerRect.intersects(rightDownTile.tileRect)) {
+            collision.collisionDownRight = true;
+        }
+    }
+}
+
+void LevelState::updateView() {
+    View view;
+
+    view.reset(sf::FloatRect(0, 0, screenDimensions.x, screenDimensions.y));
+    //    view.setViewport(FloatRect(0,0,0.5,1.0));
+
+    Vector2f position(screenDimensions.x / 2, screenDimensions.y / 2);
+
+    //    float Position = world.getPlayer().getPlayerPosition().y;
+    const Position playerPosition = world.getPlayer().getPlayerPosition();
+
+    //    cout<< playerPosition.y <<endl;
+    /* coordinates
+     * (0,0)         (532,0)
+     * |_________________|
+     * |
+     * |
+     * |
+     * |________________\
+     * |                |
+     * |________________|
+     * (0,800)         (532,800)
+     */
+    // the position is the left side of meatboy so to get the middle we have to add half of meat boy = 25
+    if (playerPosition.y + 16 < screenDimensions.y / 2) {
+        position.y = playerPosition.y + 16;
+    } else {
+        position.y = screenDimensions.y / 2;
+    }
+
+    view.setCenter(position);
+
+    // set the view
+    sfWindow->setView(view);
+}
+void LevelState::updatePlayerPosition() {
+    playerRect.top = world.getPlayer().getPlayerPosition().y;
+    playerRect.left = world.getPlayer().getPlayerPosition().x;
+}

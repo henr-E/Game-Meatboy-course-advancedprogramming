@@ -174,6 +174,30 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/build
 .PHONY : 2022_project_henrey_T/fast
 
+Game_Logic/Camera.o: Game_Logic/Camera.cpp.o
+.PHONY : Game_Logic/Camera.o
+
+# target to build an object file
+Game_Logic/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o
+.PHONY : Game_Logic/Camera.cpp.o
+
+Game_Logic/Camera.i: Game_Logic/Camera.cpp.i
+.PHONY : Game_Logic/Camera.i
+
+# target to preprocess a source file
+Game_Logic/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.i
+.PHONY : Game_Logic/Camera.cpp.i
+
+Game_Logic/Camera.s: Game_Logic/Camera.cpp.s
+.PHONY : Game_Logic/Camera.s
+
+# target to generate assembly for a file
+Game_Logic/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.s
+.PHONY : Game_Logic/Camera.cpp.s
+
 Game_Logic/Player.o: Game_Logic/Player.cpp.o
 .PHONY : Game_Logic/Player.o
 
@@ -293,30 +317,6 @@ Game_representation/InputToGame/InputParser.s: Game_representation/InputToGame/I
 Game_representation/InputToGame/InputParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.s
 .PHONY : Game_representation/InputToGame/InputParser.cpp.s
-
-Game_representation/InputToGame/TileMap.o: Game_representation/InputToGame/TileMap.cpp.o
-.PHONY : Game_representation/InputToGame/TileMap.o
-
-# target to build an object file
-Game_representation/InputToGame/TileMap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/TileMap.cpp.o
-.PHONY : Game_representation/InputToGame/TileMap.cpp.o
-
-Game_representation/InputToGame/TileMap.i: Game_representation/InputToGame/TileMap.cpp.i
-.PHONY : Game_representation/InputToGame/TileMap.i
-
-# target to preprocess a source file
-Game_representation/InputToGame/TileMap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/TileMap.cpp.i
-.PHONY : Game_representation/InputToGame/TileMap.cpp.i
-
-Game_representation/InputToGame/TileMap.s: Game_representation/InputToGame/TileMap.cpp.s
-.PHONY : Game_representation/InputToGame/TileMap.s
-
-# target to generate assembly for a file
-Game_representation/InputToGame/TileMap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/TileMap.cpp.s
-.PHONY : Game_representation/InputToGame/TileMap.cpp.s
 
 Game_representation/States/LevelState.o: Game_representation/States/LevelState.cpp.o
 .PHONY : Game_representation/States/LevelState.o
@@ -451,6 +451,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... 2022_project_henrey_T"
+	@echo "... Game_Logic/Camera.o"
+	@echo "... Game_Logic/Camera.i"
+	@echo "... Game_Logic/Camera.s"
 	@echo "... Game_Logic/Player.o"
 	@echo "... Game_Logic/Player.i"
 	@echo "... Game_Logic/Player.s"
@@ -466,9 +469,6 @@ help:
 	@echo "... Game_representation/InputToGame/InputParser.o"
 	@echo "... Game_representation/InputToGame/InputParser.i"
 	@echo "... Game_representation/InputToGame/InputParser.s"
-	@echo "... Game_representation/InputToGame/TileMap.o"
-	@echo "... Game_representation/InputToGame/TileMap.i"
-	@echo "... Game_representation/InputToGame/TileMap.s"
 	@echo "... Game_representation/States/LevelState.o"
 	@echo "... Game_representation/States/LevelState.i"
 	@echo "... Game_representation/States/LevelState.s"

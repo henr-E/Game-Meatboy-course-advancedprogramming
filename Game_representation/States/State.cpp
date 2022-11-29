@@ -5,7 +5,7 @@
 #include "State.h"
 State::State() {
     screenDimensions.x = 544;
-    screenDimensions.y = 960;
+    screenDimensions.y = 1024;
 }
 
 void State::getUserInput(Event event) {}

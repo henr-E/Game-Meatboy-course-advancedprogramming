@@ -16,11 +16,7 @@ void StateManager::setEvent(const Event& event) {
     StateManager::event = event;
 }
 
-void StateManager::setFunctionCallTo(FunctionCallTo functionCallTo) {
-    StateManager::functionCallTo = functionCallTo;
-
-}
-void StateManager::simulate() {
+void StateManager::simulate(FunctionCallTo functionCallTo) {
     if (functionCallTo == INPUT){
         state->getUserInput(event);
         checkTransition();

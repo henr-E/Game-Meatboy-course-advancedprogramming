@@ -127,10 +127,10 @@
 			"sourceIndexes" : 
 			[
 				0,
-				6,
 				7,
 				8,
-				11,
+				9,
+				10,
 				12,
 				16,
 				17,
@@ -208,10 +208,10 @@
 			"sourceIndexes" : 
 			[
 				0,
-				6,
 				7,
 				8,
-				11,
+				9,
+				10,
 				12,
 				16,
 				17,
@@ -229,8 +229,8 @@
 				3,
 				4,
 				5,
-				9,
-				10,
+				6,
+				11,
 				13,
 				14,
 				15,
@@ -274,6 +274,11 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Game_Logic/Camera.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Game_Logic/Player.cpp",
 			"sourceGroupIndex" : 0
@@ -292,24 +297,19 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Game_representation/InputToGame/InputParser.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "Game_Logic/Camera.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Game_representation/InputToGame/TileMap.h",
+			"path" : "Game_representation/InputToGame/InputParser.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Game_representation/InputToGame/InputParser.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game_representation/InputToGame/TileMap.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

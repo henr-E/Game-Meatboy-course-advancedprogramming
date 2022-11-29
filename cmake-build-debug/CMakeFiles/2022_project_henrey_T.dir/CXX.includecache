@@ -6,121 +6,21 @@
 
 #IncludeRegexTransform: 
 
-../Game_Logic/Interval.h
-vector
--
-structures_enums_std_include.h
-../Game_Logic/structures_enums_std_include.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.cpp
+InputParser.h
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.h
 
-../Game_Logic/Player.h
-Interval.h
-../Game_Logic/Interval.h
-structures_enums_std_include.h
-../Game_Logic/structures_enums_std_include.h
-
-../Game_Logic/Stopwatch.h
-ctime
--
-chrono
--
-
-../Game_Logic/World.h
-vector
--
-iostream
--
-Player.h
-../Game_Logic/Player.h
-Stopwatch.h
-../Game_Logic/Stopwatch.h
-
-../Game_Logic/structures_enums_std_include.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/structures_enums_std_include.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.cpp
-Game.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.h
-vector
--
+/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.h
 fstream
 -
 iostream
 -
-SFML/Graphics.hpp
--
-SFML/Audio.hpp
--
-States/StateManager.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/StateManager.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.h
 vector
 -
-fstream
--
-iostream
--
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.h
-SFML/Graphics.hpp
--
 SFML/Audio.hpp
 -
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/LevelState.h
-State.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/State.h
-../Game_Logic/Player.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game_Logic/Player.h
-../Game_Logic/World.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game_Logic/World.h
-../InputToGame/InputParser.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.h
-../InputToGame/TileMap.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.h
-../../Game_Logic/structures_enums_std_include.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/structures_enums_std_include.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/MenuState.h
-State.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/State.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/State.h
 SFML/Graphics.hpp
 -
-SFML/Audio.hpp
--
-memory
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/memory
-iostream
--
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/StateManager.cpp
-StateManager.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/StateManager.h
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/StateManager.h
-MenuState.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/MenuState.h
-LevelState.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/LevelState.h
-State.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/State.h
-SFML/Graphics.hpp
--
-SFML/Audio.hpp
--
-
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/main.cpp
-../Game_representation/Game.h
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/Game.h
-iostream
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/iostream
-memory
-/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/src/memory
 
 /opt/homebrew/include/SFML/Audio.hpp
 SFML/System.hpp

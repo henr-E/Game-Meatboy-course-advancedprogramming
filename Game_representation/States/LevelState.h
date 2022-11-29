@@ -6,12 +6,13 @@
 #define INC_2022_PROJECT_HENREY_T_LEVELSTATE_H
 
 #include "State.h"
+#include <cmath>
 
 #include "../Game_Logic/Player.h"
 #include "../Game_Logic/World.h"
 #include "../InputToGame/InputParser.h"
-#include "../InputToGame/TileMap.h"
 #include "../../Game_Logic/structures_enums_std_include.h"
+#include "../../Game_Logic/Camera.h"
 
 class LevelState:public State {
 private:
@@ -22,20 +23,29 @@ private:
     Sprite spritePlayer;
     Texture texturePlayer;
 
+    Rect<float> playerRect;
+
+
+    Camera camera;
+
     //selfmade classes/structs
     World world;
     KeyboardInput keyboardInput;
     InputParser inputParser;
-    TileMap tileMap;
 
-
+    Collision collision;
 
 public:
     LevelState();
     virtual void getUserInput(Event event);
     virtual void draw();
     virtual void simulate();
+
+    void checkCollision();
     void startUp();
+
+    void updateView();
+    void updatePlayerPosition();
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_LEVELSTATE_H

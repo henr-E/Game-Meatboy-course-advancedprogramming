@@ -18,12 +18,6 @@ class Player {
     int playerHeight_Width;
     Position playerPosition;
 
-    //this is for collision; the position will not be higher than de values
-    int playerMaximumRight;
-    int playerMaximumLeft;
-    int playerMaximumUp;
-    int playerMaximumDown;
-
 //    int jumpAngle = 45;
 
     float verticalSpeed;
@@ -38,7 +32,6 @@ class Player {
     ///when the Player hits a wall the horizontal speed must be 0
     bool hitLeftWall;
     bool hitRightWall;
-    bool onTile;
     bool jumping;
 
     bool playerWon;
@@ -62,7 +55,7 @@ public:
 
     void updateFromKeyboard(KeyboardInput keyboardInput);
     // We will call this function once every frame
-    void simulate(float elapsedTime, vector<int> tiles);
+    void simulate(float elapsedTime, const Collision &c);
 
     const Position &getPlayerPosition() const;
 
@@ -71,8 +64,8 @@ public:
 
 //    void changeSpeedOnHitWall();
 
-    void calculateTileCollision(const vector<int> &tiles);
-    void checkTileAndBorderCollision();
+    void checkTileAndBorderCollision(const Collision &c);
+
 
     Direction getDirection() const;
     bool isPlayerWon() const;

@@ -24,16 +24,16 @@ add_executable(2022_project_henrey_T
         Game_Logic/Stopwatch.h
         Game_Logic/structures_enums_std_include.h
         Game_Logic/World.h
+        Game_Logic/Camera.h
 
         Game_Logic/Player.cpp
         Game_Logic/Stopwatch.cpp
         Game_Logic/World.cpp
+        Game_Logic/Camera.cpp
+
 
         Game_representation/InputToGame/InputParser.h
-        Game_representation/InputToGame/TileMap.h
-
         Game_representation/InputToGame/InputParser.cpp
-        Game_representation/InputToGame/TileMap.cpp
 
         Game_representation/States/LevelState.h
         Game_representation/States/MenuState.h

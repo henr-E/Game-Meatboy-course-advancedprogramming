@@ -11,7 +11,7 @@ void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
 }
 
-void World::simulate(vector<int> tiles){
+void World::simulate(Collision c){
     //calculate elapsed time
     auto diff = steady_clock::now() - stopwatch.getPrevTime();
     auto nanoseconds = duration_cast<chrono::nanoseconds>(diff);
@@ -19,9 +19,8 @@ void World::simulate(vector<int> tiles){
 
     stopwatch.setPrevTime(steady_clock::now());
     float seconds = nanosecondsAsInt/(float)1000000000;
-//    cout << seconds <<endl;
 
-    player.simulate(seconds, tiles);
+    player.simulate(seconds, c);
 }
 const Player & World::getPlayer() const{
     return player;

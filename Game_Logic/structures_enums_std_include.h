@@ -27,12 +27,29 @@ struct Position{
     float x;
     float y;
 };
-struct Collision {
+class Collision {
+public:
     bool collisionLeft = false;
     bool collisionRight = false;
     bool collisionUp = false;
     bool collisionDown = false;
-    bool noCollision = false;
+
+    bool collisionUpperLeft = false;
+    bool collisionUpperRight = false;
+    bool collisionDownLeft = false;
+    bool collisionDownRight = false;
+
+    void setAllFalse(){
+        collisionLeft = false;
+        collisionRight = false;
+        collisionUp = false;
+        collisionDown = false;
+
+        collisionUpperLeft = false;
+        collisionUpperRight = false;
+        collisionDownLeft = false;
+        collisionDownRight = false;
+    }
 };
 enum Direction{
     facingRight,

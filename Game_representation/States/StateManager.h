@@ -30,16 +30,14 @@ private:
     Event event;
 
     CurrentState currentState;
-    FunctionCallTo functionCallTo;
 
 public:
     StateManager();
 
-    void simulate();
+    void simulate(FunctionCallTo functionCallTo);
     void checkTransition();
 
     void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
-    void setFunctionCallTo(FunctionCallTo functionCallTo);
     void setEvent(const Event& event);
 };
 

@@ -124,6 +124,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Camera.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Camera.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_Logic/Interval.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
@@ -158,12 +164,6 @@
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/InputParser.h">
-			<Option target="2022_project_henrey_T"/>
-		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.cpp">
-			<Option target="2022_project_henrey_T"/>
-		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/InputToGame/TileMap.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/Game_representation/States/LevelState.cpp">

@@ -5,7 +5,7 @@
 #include "Game.h"
 Game::Game(){
     screenDimensions.x = 544;
-    screenDimensions.y = 960;
+    screenDimensions.y = 1024;
 
     // confiure videoMode
     sfVideoMode.width = screenDimensions.x;
@@ -19,12 +19,12 @@ Game::Game(){
 
     stateManager.setSfWindow(sfWindow);
 
-    //    if (!music.openFromFile("../content/music.ogg"))
-
-    //    music.play();
-    //
-    //    music.setLoop(true);
-    //    music.setVolume(50);
+//        if (!music.openFromFile("../content/music.ogg")){}
+//
+//        music.play();
+//
+//        music.setLoop(true);
+//        music.setVolume(50);
 
 
     //    // Load sound
@@ -46,15 +46,12 @@ void Game::run() {
             }
 
             functionCallTo = INPUT;
-            stateManager.setFunctionCallTo(functionCallTo);
-            stateManager.simulate();
+            stateManager.simulate(functionCallTo);
         }
         functionCallTo = SIMULATE;
-        stateManager.setFunctionCallTo(functionCallTo);
-        stateManager.simulate();
+        stateManager.simulate(functionCallTo);
 
         functionCallTo = DRAW;
-        stateManager.setFunctionCallTo(functionCallTo);
-        stateManager.simulate();
+        stateManager.simulate(functionCallTo);
     }
 }
