@@ -30,7 +30,9 @@ void LevelState::startUp() {
     spriteBackground.setScale(1, (float)screenDimensions.y / textureBackground.getSize().y);
 }
 
-void LevelState::getUserInput(Event event) {
+void LevelState::getUserInput(Event &event) {
+    cout << "event in LEvelstate = " << &event <<endl;
+
     /*
      * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
      * and the player will move even though there are no keys pressed
@@ -170,8 +172,8 @@ void LevelState::checkCollision() {
 
     Tile currentTile, upTile, downTile, leftTile, leftDownTile, leftUpperTile, rightTile, rightUpperTile, rightDownTile;
 
-    if (currentPlayerRow < tiles.size() and currentPlayerRow > 0 and currentPlayerColumn > 0 and
-        currentPlayerColumn < tiles[0].size()) {
+    if (currentPlayerRow + 1 < tiles.size() and currentPlayerRow-1 > 0 and
+        currentPlayerColumn + 1 < tiles[0].size() and currentPlayerColumn-1 > 0) {
         // get tile where current tile is at
         currentTile = tiles[currentPlayerRow][currentPlayerColumn];
 

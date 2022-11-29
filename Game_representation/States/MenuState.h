@@ -27,7 +27,7 @@ private:
 
 public:
     MenuState();
-    virtual void getUserInput(Event event);
+    virtual void getUserInput(Event &event);
     virtual void draw();
     virtual void simulate();
     void startUp();

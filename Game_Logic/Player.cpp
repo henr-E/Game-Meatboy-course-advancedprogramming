@@ -8,8 +8,6 @@ Player::Player() {
     horizontalSpeed = 0;
     verticalSpeed = 0;
 
-    playerHeight_Width = 32;
-
     gravity = 2;
     // Set the Bob's starting position
     playerPosition.x = -1;
@@ -33,7 +31,7 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
         direction = facingLeft;
         if (!hitLeftWall) {
             keyboardLeft = true;
-            horizontalSpeed = 100;
+            horizontalSpeed = 0.5;
         }
         break;
     case releaseMoveLeft:
@@ -43,11 +41,13 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
         direction = facingRight;
         if (!hitRightWall) {
             keyboardRight = true;
-            horizontalSpeed = 100;
+            horizontalSpeed = 0.5;
+            cout << "keyboardRight = true" <<endl;
         }
         break;
     case releaseMoveRight:
         keyboardRight = false;
+        cout << "keyboardRight = false" <<endl;
         break;
     case pressJump:
         // how bigger the absolute value of verticalSpeed how higher player jumps
@@ -77,7 +77,7 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
 // Move Bob based on the input this frame,
 // the time elapsed, and the speed
 void Player::simulate(float elapsedTime, const Collision &c) {
-    if (keyboardRight and !c.collisionRight) {
+    if (keyboardRight and !c.collisionRight ) {
         playerPosition.x += horizontalSpeed * elapsedTime;
     }
 
@@ -109,9 +109,19 @@ void Player::simulate(float elapsedTime, const Collision &c) {
     checkTileAndBorderCollision(c);
 }
 void Player::checkTileAndBorderCollision(const Collision &c) {
+    /*
+     * (-1,-1)         (1,-1)
+     * _______________
+     * |              |
+     * |
+     * |
+     * |
+     * |______________|
+     * (-1,1)          (1,1)
+     */
     // collisionWithGround
-    if (playerPosition.y > -1) {
-        playerPosition.y = -1;
+    if (playerPosition.y > 1) {
+        playerPosition.y = 1;
         verticalSpeed = 0;
     }
 
@@ -119,11 +129,13 @@ void Player::checkTileAndBorderCollision(const Collision &c) {
     if (playerPosition.x > 1) {
         playerPosition.x = 1;
         hitRightWall = true;
+        horizontalSpeed = 0;
     }
     // collisionLeftWall
     if (playerPosition.x < -1) {
         playerPosition.x = -1;
         hitLeftWall = true;
+        horizontalSpeed = 0;
     }
     // no collisionWithWalls
     if (-1 < playerPosition.x and playerPosition.x < 1) {

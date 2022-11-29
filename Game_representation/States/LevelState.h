@@ -37,7 +37,7 @@ private:
 
 public:
     LevelState();
-    virtual void getUserInput(Event event);
+    virtual void getUserInput(Event &event);
     virtual void draw();
     virtual void simulate();
 

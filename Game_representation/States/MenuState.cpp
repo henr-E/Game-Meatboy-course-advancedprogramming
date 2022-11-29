@@ -24,7 +24,7 @@ void MenuState::startUp() {
     makeTexts();
 }
 
-void MenuState::getUserInput(Event event) {
+void MenuState::getUserInput(Event &event) {
     //get mousePosition
     mousePosition = Mouse::getPosition(*sfWindow.get()); // window is a sf::OwnWindow
 

@@ -38,9 +38,11 @@ void Game::run() {
     //statemanager is made and the statemanager makes a manuState
     while (sfWindow->isOpen()) {
         Event event;
-        stateManager.setEvent(event);
 
         while (sfWindow->pollEvent(event)) {
+            //it is necasary to pass the event after the second while loop
+            //because the pollEvent function changes the event
+            stateManager.setEvent(event);
             if (event.type == sf::Event::Closed) {
                 sfWindow->close();
             }

@@ -8,7 +8,7 @@ State::State() {
     screenDimensions.y = 1024;
 }
 
-void State::getUserInput(Event event) {}
+void State::getUserInput(Event &event) {}
 void State::draw() {}
 void State::simulate() {}
 bool State::isTransition() const { return transition; }

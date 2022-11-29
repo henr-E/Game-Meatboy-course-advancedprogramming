@@ -25,7 +25,9 @@ enum FunctionCallTo{
 class StateManager {
 private:
     shared_ptr<RenderWindow> sfWindow;
-    shared_ptr<State> state = make_shared<MenuState>();
+    shared_ptr<State> state = make_shared<LevelState>();
+    //TODO CHANGE BACK
+//    shared_ptr<State> state = make_shared<MenuState>();
 
     Event event;
 
@@ -38,7 +40,7 @@ public:
     void checkTransition();
 
     void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
-    void setEvent(const Event& event);
+    void setEvent(Event& event);
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STATEMANAGER_H

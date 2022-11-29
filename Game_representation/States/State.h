@@ -20,7 +20,7 @@ public:
     void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
     const shared_ptr<RenderWindow>& getSfWindow() const;
 
-    virtual void getUserInput(Event event);
+    virtual void getUserInput(Event &event);
     virtual void draw();
     virtual void simulate();
 
