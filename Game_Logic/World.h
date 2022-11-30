@@ -9,8 +9,11 @@
 #include <vector>
 #include <iostream>
 
+#include <cmath>
+
 #include "Player.h"
 #include "Stopwatch.h"
+#include "Rectangle.h"
 
 using namespace std;
 using namespace chrono;
@@ -20,12 +23,16 @@ private:
     Player player;
     Stopwatch stopwatch;
 
+    Collision collision;
+
 public:
     World();
 
+    void checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles);
+    void checkCollisionWallsBotom();
 
     void keyboardToPlayer(KeyboardInput keyboardInput);
-    void simulate(Collision c);
+    void simulate(vector<vector<Rectangle>> tiles);
 
 
     const Player & getPlayer() const;

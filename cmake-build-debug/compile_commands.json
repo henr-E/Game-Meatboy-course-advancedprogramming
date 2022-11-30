@@ -53,5 +53,10 @@
   "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug -I/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/include -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.cpp",
   "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.cpp"
+},
+{
+  "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug -I/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/include -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp",
+  "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp"
 }
 ]

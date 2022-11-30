@@ -6,7 +6,7 @@
 #define INC_2022_PROJECT_HENREY_T_LEVELSTATE_H
 
 #include "State.h"
-#include <cmath>
+
 
 #include "../Game_Logic/Player.h"
 #include "../Game_Logic/World.h"
@@ -23,9 +23,6 @@ private:
     Sprite spritePlayer;
     Texture texturePlayer;
 
-    Rect<float> playerRect;
-
-
     Camera camera;
 
     //selfmade classes/structs
@@ -33,19 +30,16 @@ private:
     KeyboardInput keyboardInput;
     InputParser inputParser;
 
-    Collision collision;
-
 public:
     LevelState();
     virtual void getUserInput(Event &event);
     virtual void draw();
+    void drawTiles();
     virtual void simulate();
 
-    void checkCollision();
     void startUp();
 
     void updateView();
-    void updatePlayerPosition();
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_LEVELSTATE_H

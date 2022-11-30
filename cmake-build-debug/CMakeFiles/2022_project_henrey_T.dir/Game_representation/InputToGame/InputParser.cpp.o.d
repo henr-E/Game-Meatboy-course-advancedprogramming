@@ -520,4 +520,6 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser
   /opt/homebrew/include/SFML/Graphics/Glsl.inl \
   /opt/homebrew/include/SFML/Graphics/Sprite.hpp \
   /opt/homebrew/include/SFML/Graphics/Text.hpp \
-  /opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp
+  /opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/../Game_Logic/Rectangle.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/../Game_Logic/structures_enums_std_include.h

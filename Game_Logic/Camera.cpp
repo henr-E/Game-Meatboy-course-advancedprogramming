@@ -9,6 +9,6 @@ Position Camera::coordinatesToPixel(float xOld, float yOld) {
     yOld += 1;
 
     p.x = xOld * 544 / 2;
-    p.y = 1024 - (yOld * 544 / 2);
+    p.y = 1024 - yOld * 544 / 2;
     return p;
 }

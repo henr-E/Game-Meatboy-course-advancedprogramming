@@ -5,7 +5,7 @@
 #ifndef INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H
 #define INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H
 
-enum KeyboardInput{
+enum KeyboardInput {
     pressMoveLeft,
     pressMoveRight,
     releaseMoveLeft,
@@ -16,14 +16,15 @@ enum KeyboardInput{
     noKey
 };
 
-struct CoordinateInterval{
+struct CoordinateInterval {
     int leftValue;
     int rightValue;
     int upValue;
     int downValue;
 };
 
-struct Position{
+class Position {
+public:
     float x;
     float y;
 };
@@ -39,7 +40,11 @@ public:
     bool collisionDownLeft = false;
     bool collisionDownRight = false;
 
-    void setAllFalse(){
+    bool collisionRightWall = false;
+    bool collisionLeftWall= false;
+    bool collisionBottom = false;
+
+    void setAllFalse() {
         collisionLeft = false;
         collisionRight = false;
         collisionUp = false;
@@ -49,17 +54,16 @@ public:
         collisionUpperRight = false;
         collisionDownLeft = false;
         collisionDownRight = false;
+
+        collisionRightWall = false;
+        collisionLeftWall= false;
+        collisionBottom = false;
     }
 };
-enum Direction{
-    facingRight,
-    facingLeft
-};
+enum Direction { facingRight, facingLeft };
 
-enum MouseInput {
-    rightClick,
-    leftClick,
-    noClick
-};
+enum MouseInput { rightClick, leftClick, noClick };
+
+enum TileType { girlfriend, block, other };
 
 #endif // INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H

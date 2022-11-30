@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o.d"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o"

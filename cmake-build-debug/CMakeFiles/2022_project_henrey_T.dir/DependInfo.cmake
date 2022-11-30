@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o.d"
+  "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/World.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Game.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o.d"

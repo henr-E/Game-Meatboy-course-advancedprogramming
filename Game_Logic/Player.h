@@ -6,17 +6,11 @@
 #ifndef INC_2022_PROJECT_HENREY_T_PLAYER_H
 #define INC_2022_PROJECT_HENREY_T_PLAYER_H
 
-#include "Interval.h"
 #include "iostream"
-#include "structures_enums_std_include.h"
+#include "Rectangle.h"
 using namespace std;
-class Player {
-    Interval interval;
-    Collision collision;
+class Player : Rectangle{
     Direction direction;
-
-    int playerHeight_Width;
-    Position playerPosition;
 
 //    int jumpAngle = 45;
 
@@ -29,46 +23,45 @@ class Player {
     float gravity;
 
 
-    ///when the Player hits a wall the horizontal speed must be 0
-    bool hitLeftWall;
-    bool hitRightWall;
+
     bool jumping;
 
     bool playerWon;
-
-
-
-
-//    ///when the Player hits the ceiling the vertical speed negates: v = -v
-//    bool hitCeiling;
 
     /// Which direction(s) is the player currently moving in
     bool keyboardLeft;
     bool keyboardRight;
     bool keyboardJump;
 
+    Collision collision;
+
 
 public:
-
     // We will set Bob up in the constructor
     Player();
 
     void updateFromKeyboard(KeyboardInput keyboardInput);
+
     // We will call this function once every frame
-    void simulate(float elapsedTime, const Collision &c);
+    void simulate(float elapsedTime);
 
-    const Position &getPlayerPosition() const;
+    const Position & getPlayerLeftUpperPosition() const;
 
-//    void checkOnTile();
-//    void checkHitWall();
-
-//    void changeSpeedOnHitWall();
-
-    void checkTileAndBorderCollision(const Collision &c);
-
+    void checkTileAndBorderCollision();
 
     Direction getDirection() const;
     bool isPlayerWon() const;
+
+    virtual bool intersects(const Rectangle &that);
+
+
+    virtual Position getLeftUpperCorner() const;
+    virtual void setLeftUpperCorner(Position leftUpperCorner);
+
+    virtual Position getRightDownCorner() const;
+    virtual void setRightDownCorner(Position rightDownCorner);
+
+    void setCollision(const Collision& collision);
 };
 
 

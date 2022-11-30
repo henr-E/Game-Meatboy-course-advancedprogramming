@@ -13,13 +13,13 @@ void StateManager::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
 }
 
 void StateManager::setEvent(Event& event) {
-    cout << "event in StatemanagerSETTER = " << &event <<endl;
+//    cout << "event in StatemanagerSETTER = " << &event <<endl;
     StateManager::event = event;
 }
 
 void StateManager::simulate(FunctionCallTo functionCallTo) {
     if (functionCallTo == INPUT){
-        cout << "event in Statemanager = " << &event <<endl;
+//        cout << "event in Statemanager = " << &event <<endl;
         state->getUserInput(event);
         checkTransition();
     }

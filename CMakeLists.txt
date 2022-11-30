@@ -46,7 +46,7 @@ add_executable(2022_project_henrey_T
 
         Game_representation/Game.h
         Game_representation/Game.cpp
-        Game_representation/States/StateManager.cpp Game_representation/States/StateManager.h)
+        Game_representation/States/StateManager.cpp Game_representation/States/StateManager.h Game_Logic/Rectangle.cpp Game_Logic/Rectangle.h)
 
 # Set include directory search paths
 target_include_directories(2022_project_henrey_T

@@ -11,27 +11,24 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include "../Game_Logic/Rectangle.h"
 
 using namespace sf;
 using namespace std;
 
-enum TileType { girlfriend, block, none };
-struct Tile {
-    Rect<float> tileRect;
-    TileType tileType;
-};
+
 
 class InputParser {
 private:
-    vector<vector<Tile>> tiles;
+    vector<vector<Rectangle>> tiles;
     Vector2i screenDimensions;
     float tileSize;
 
 public:
     InputParser();
-    void parse();
+    void parse(int levelNumb);
 
-    const vector<vector<Tile>>& getTiles() const;
+    const vector<vector<Rectangle>> & getTiles() const;
     const Vector2i& getScreenDimensions() const;
 };
 

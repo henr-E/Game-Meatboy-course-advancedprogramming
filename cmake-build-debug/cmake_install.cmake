@@ -43,7 +43,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/2022_project_henrey_T")
     execute_process(COMMAND /usr/bin/install_name_tool
       -delete_rpath "/opt/homebrew/lib"
-      -add_rpath "/usr/local/lib"
+      -add_rpath "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/installed/lib"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/2022_project_henrey_T")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" -u -r "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/2022_project_henrey_T")
@@ -53,14 +53,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/share/2022_project_henrey_T/content")
+   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/installed/share/2022_project_henrey_T/content")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/share/2022_project_henrey_T" TYPE DIRECTORY FILES "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/content")
+  file(INSTALL DESTINATION "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/installed/share/2022_project_henrey_T" TYPE DIRECTORY FILES "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/content")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

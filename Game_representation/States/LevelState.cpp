@@ -10,16 +10,8 @@ void LevelState::startUp() {
     // add player
     world.setPlayer(player);
 
-    updatePlayerPosition();
-
     // make level from input
-    inputParser.parse();
-
-    //
-    //    // create the tilemap from the level definition
-    //    if (!tileMap.load()) {
-    //        cout << "Failed to load or make map." << endl;
-    //    }
+    inputParser.parse(1);
 
     // load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
@@ -31,7 +23,7 @@ void LevelState::startUp() {
 }
 
 void LevelState::getUserInput(Event &event) {
-    cout << "event in LEvelstate = " << &event <<endl;
+//    cout << "event in LEvelstate = " << &event <<endl;
 
     /*
      * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
@@ -81,8 +73,7 @@ void LevelState::draw() {
 
     sfWindow->draw(spriteBackground);
 
-    // draw tileMap
-    //    sfWindow->draw(tileMap);
+    drawTiles();
 
     // make sprite and texture player
     // Associate a texture with the sprite
@@ -95,8 +86,9 @@ void LevelState::draw() {
     texturePlayer.setSmooth(true);
     spritePlayer.setTexture(texturePlayer);
 
+    Position position = world.getPlayer().getPlayerLeftUpperPosition();
     // convert coordinates to pixels
-    Position p = camera.coordinatesToPixel(playerRect.left, playerRect.top);
+    Position p = camera.coordinatesToPixel(position.x, position.y);
     // Now move the playerSprite to its new position
     spritePlayer.setPosition(p.x, p.y);
     // Draw the player
@@ -146,77 +138,52 @@ void LevelState::draw() {
     sfWindow.draw(t);
     */
 }
-void LevelState::simulate() {
-    // update player position to rectangle
-    updatePlayerPosition();
+#include <unistd.h>
+void LevelState::drawTiles() {
+    auto tiles = inputParser.getTiles();
+    for(auto const &row : tiles){
+        for(auto const &rect : row){
+            Texture textureTile;
+            Sprite spriteTile;
 
-    // calculate collision
-    checkCollision();
+            float XLeft = rect.getLeftUpperCorner().x;
+            float XRight = rect.getRightDownCorner().x;
 
-    // run world
-    world.simulate(collision);
-}
+            float YUp = rect.getLeftUpperCorner().y;
+            float YDown = rect.getRightDownCorner().y;
 
-void LevelState::checkCollision() {
-    vector<vector<Tile>> tiles = inputParser.getTiles();
+            if(rect.getTileType() == other){
+                if (textureTile.loadFromFile("../content/tileset.png", IntRect(160, 0, 32, 32))){
 
-    float playerX = world.getPlayer().getPlayerPosition().x;
-    float playerY = world.getPlayer().getPlayerPosition().y;
+                }
+            }
 
-    int rowsize = tiles.size();
+            else if(rect.getTileType() == girlfriend){
+                if (textureTile.loadFromFile("../content/tileset.png", IntRect(0, 0, 32, 32))){
 
-    // list begins with index 0 so -1
-    int currentPlayerRow = rowsize - floor(abs(playerY + 1) / 0.125);
-    int currentPlayerColumn = floor(abs(playerX + 1) / 0.125);
+                }
+            }
+            else if(rect.getTileType() == block){
+                if (textureTile.loadFromFile("../content/tileset.png", IntRect(64, 0, 32, 32))){
 
+                }
+            }
 
-    Tile currentTile, upTile, downTile, leftTile, leftDownTile, leftUpperTile, rightTile, rightUpperTile, rightDownTile;
+            spriteTile.setTexture(textureTile);
 
-    if (currentPlayerRow + 1 < tiles.size() and currentPlayerRow-1 > 0 and
-        currentPlayerColumn + 1 < tiles[0].size() and currentPlayerColumn-1 > 0) {
-        // get tile where current tile is at
-        currentTile = tiles[currentPlayerRow][currentPlayerColumn];
+            //transform coordinates
+            Position p = camera.coordinatesToPixel(XLeft, YUp);
 
-        // define all tiles
-        upTile = tiles[currentPlayerRow + 1][currentPlayerColumn];
-        downTile = tiles[currentPlayerRow - 1][currentPlayerColumn];
+            spriteTile.setPosition(p.x, p.y);
 
-        leftTile = tiles[currentPlayerRow][currentPlayerColumn - 1];
-        leftDownTile = tiles[currentPlayerRow + 1][currentPlayerColumn - 1];
-        leftUpperTile = tiles[currentPlayerRow - 1][currentPlayerColumn - 1];
-
-        rightTile = tiles[currentPlayerRow][currentPlayerColumn + 1];
-        rightUpperTile = tiles[currentPlayerRow - 1][currentPlayerColumn + 1];
-        rightDownTile = tiles[currentPlayerRow + 1][currentPlayerColumn + 1];
-
-
-        collision.setAllFalse();
-        if (rightTile.tileType != none and playerRect.intersects(rightTile.tileRect)) {
-
-            collision.collisionRight = true;
-        }
-        if (leftTile.tileType != none and playerRect.intersects(leftTile.tileRect)) {
-            collision.collisionLeft = true;
-        }
-        if (upTile.tileType != none and playerRect.intersects(upTile.tileRect)) {
-            collision.collisionUp = true;
-        }
-        if (downTile.tileType != none and playerRect.intersects(downTile.tileRect)) {
-            collision.collisionDown = true;
-        }
-        if (leftUpperTile.tileType != none and playerRect.intersects(leftUpperTile.tileRect)) {
-            collision.collisionUpperLeft = true;
-        }
-        if (rightUpperTile.tileType != none and playerRect.intersects(rightUpperTile.tileRect)) {
-            collision.collisionUpperRight = true;
-        }
-        if (leftDownTile.tileType != none and playerRect.intersects(leftDownTile.tileRect)) {
-            collision.collisionDownLeft = true;
-        }
-        if (rightDownTile.tileType != none and playerRect.intersects(rightDownTile.tileRect)) {
-            collision.collisionDownRight = true;
+            sfWindow->draw(spriteTile);
         }
     }
+}
+
+void LevelState::simulate() {
+    // run world
+    world.simulate(inputParser.getTiles());
 }
 
 void LevelState::updateView() {
@@ -227,8 +194,8 @@ void LevelState::updateView() {
 
     Vector2f position(screenDimensions.x / 2, screenDimensions.y / 2);
 
-    //    float Position = world.getPlayer().getPlayerPosition().y;
-    const Position playerPosition = world.getPlayer().getPlayerPosition();
+    //    float Position = world.getPlayer().getPlayerLeftUpperPosition().y;
+    const Position playerPosition = world.getPlayer().getPlayerLeftUpperPosition();
 
     //    cout<< playerPosition.y <<endl;
     /* coordinates
@@ -253,8 +220,4 @@ void LevelState::updateView() {
 
     // set the view
     sfWindow->setView(view);
-}
-void LevelState::updatePlayerPosition() {
-    playerRect.top = world.getPlayer().getPlayerPosition().y;
-    playerRect.left = world.getPlayer().getPlayerPosition().x;
 }

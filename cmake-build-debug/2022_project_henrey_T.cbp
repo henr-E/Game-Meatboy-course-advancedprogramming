@@ -139,6 +139,12 @@
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>

@@ -222,6 +222,30 @@ Game_Logic/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.s
 .PHONY : Game_Logic/Player.cpp.s
 
+Game_Logic/Rectangle.o: Game_Logic/Rectangle.cpp.o
+.PHONY : Game_Logic/Rectangle.o
+
+# target to build an object file
+Game_Logic/Rectangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o
+.PHONY : Game_Logic/Rectangle.cpp.o
+
+Game_Logic/Rectangle.i: Game_Logic/Rectangle.cpp.i
+.PHONY : Game_Logic/Rectangle.i
+
+# target to preprocess a source file
+Game_Logic/Rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i
+.PHONY : Game_Logic/Rectangle.cpp.i
+
+Game_Logic/Rectangle.s: Game_Logic/Rectangle.cpp.s
+.PHONY : Game_Logic/Rectangle.s
+
+# target to generate assembly for a file
+Game_Logic/Rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s
+.PHONY : Game_Logic/Rectangle.cpp.s
+
 Game_Logic/Stopwatch.o: Game_Logic/Stopwatch.cpp.o
 .PHONY : Game_Logic/Stopwatch.o
 
@@ -457,6 +481,9 @@ help:
 	@echo "... Game_Logic/Player.o"
 	@echo "... Game_Logic/Player.i"
 	@echo "... Game_Logic/Player.s"
+	@echo "... Game_Logic/Rectangle.o"
+	@echo "... Game_Logic/Rectangle.i"
+	@echo "... Game_Logic/Rectangle.s"
 	@echo "... Game_Logic/Stopwatch.o"
 	@echo "... Game_Logic/Stopwatch.i"
 	@echo "... Game_Logic/Stopwatch.s"

@@ -223,6 +223,20 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.s
 
+CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
+CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o: ../Game_Logic/Rectangle.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp
+
+CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i
+
+CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s
+
 # Object files for target 2022_project_henrey_T
 2022_project_henrey_T_OBJECTS = \
 "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o" \
@@ -235,7 +249,8 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o"
+"CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o" \
+"CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o"
 
 # External object files for target 2022_project_henrey_T
 2022_project_henrey_T_EXTERNAL_OBJECTS =
@@ -251,13 +266,14 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o
+2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/build.make
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-audio.2.5.1.dylib
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-window.2.5.1.dylib
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-system.2.5.1.dylib
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable 2022_project_henrey_T"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable 2022_project_henrey_T"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/2022_project_henrey_T.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
