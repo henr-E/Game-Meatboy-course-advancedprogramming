@@ -13,6 +13,8 @@ void LevelState::startUp() {
     // make level from input
     inputParser.parse(1);
 
+    tiles = inputParser.getTiles();
+
     // load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
         cout << "Failed to load background into texture." << endl;
@@ -140,11 +142,11 @@ void LevelState::draw() {
 }
 #include <unistd.h>
 void LevelState::drawTiles() {
-    auto tiles = inputParser.getTiles();
+    Texture textureTile;
+    Sprite spriteTile;
+
     for(auto const &row : tiles){
         for(auto const &rect : row){
-            Texture textureTile;
-            Sprite spriteTile;
 
             float XLeft = rect.getLeftUpperCorner().x;
             float XRight = rect.getRightDownCorner().x;

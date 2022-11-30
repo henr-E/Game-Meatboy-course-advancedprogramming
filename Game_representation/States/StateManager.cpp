@@ -5,7 +5,7 @@
 #include "StateManager.h"
 
 StateManager::StateManager() {
-    currentState = levelstate;
+    currentState = menustate;
 }
 void StateManager::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
     StateManager::sfWindow = sfWindow;

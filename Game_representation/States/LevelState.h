@@ -25,6 +25,7 @@ private:
 
     Camera camera;
 
+    vector<vector<Rectangle>> tiles;
     //selfmade classes/structs
     World world;
     KeyboardInput keyboardInput;

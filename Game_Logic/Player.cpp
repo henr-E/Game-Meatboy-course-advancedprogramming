@@ -29,24 +29,25 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
     switch (keyboardInput) {
     case pressMoveLeft:
         direction = facingLeft;
-        if (!collision.collisionLeftWall) {
-            keyboardLeft = true;
-            horizontalSpeed = 0.5;
-        }
+        keyboardLeft = true;
+        horizontalSpeed = 0.5;
         break;
+
     case releaseMoveLeft:
         keyboardLeft = false;
         break;
+
     case pressMoveRight:
         direction = facingRight;
-        if (!collision.collisionRightWall) {
-            keyboardRight = true;
-            horizontalSpeed = 0.5;
-        }
+        keyboardRight = true;
+        horizontalSpeed = 0.5;
         break;
+
     case releaseMoveRight:
         keyboardRight = false;
         break;
+
+
     case pressJump:
         // how bigger the absolute value of verticalSpeed how higher player jumps
         // playerPosition.y += verticalSpeed * elapsedTime;
@@ -55,8 +56,9 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
             jumping = true;
         }
         break;
+
     case releaseJump:
-        //keyboardJump = false;
+        keyboardJump = false;
     case noKey:
         break;
     default:
@@ -74,10 +76,12 @@ void Player::simulate(float elapsedTime) {
         leftUpperCorner.x += horizontalSpeed * elapsedTime;
         rightDownCorner.x += horizontalSpeed * elapsedTime;
     }
-
     if (keyboardLeft and !collision.collisionLeft and !collision.collisionLeftWall) {
         leftUpperCorner.x -= horizontalSpeed * elapsedTime;
         rightDownCorner.x -= horizontalSpeed * elapsedTime;
+    }
+    if(collision.collisionRightWall or collision.collisionLeftWall){
+        horizontalSpeed = 0;
     }
     if (jumping){
         if(!collision.collisionUp or !collision.collisionDown){
