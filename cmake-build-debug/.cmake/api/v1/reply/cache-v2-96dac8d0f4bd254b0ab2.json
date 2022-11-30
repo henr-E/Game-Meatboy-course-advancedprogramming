@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"
+			"value" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"
 		},
 		{
 			"name" : "2022_project_henrey_T_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T"
+			"value" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug"
+			"value" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -230,7 +230,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/Library/Developer/CommandLineTools/usr/bin/c++"
 		},
 		{
@@ -326,7 +326,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/Library/Developer/CommandLineTools/usr/bin/cc"
 		},
 		{
@@ -408,18 +408,6 @@
 			],
 			"type" : "STRING",
 			"value" : "-O2 -g -DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_DEPENDS_USE_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : "FALSE"
 		},
 		{
 			"name" : "CMAKE_DLLTOOL",
@@ -663,7 +651,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T"
+			"value" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -691,7 +679,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/Users/henrikerch/Desktop/ADVANCED PROGRAMMING/2022-project-henrey-T/cmake-build-debug/installed"
+			"value" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/installed"
 		},
 		{
 			"name" : "CMAKE_LINKER",
