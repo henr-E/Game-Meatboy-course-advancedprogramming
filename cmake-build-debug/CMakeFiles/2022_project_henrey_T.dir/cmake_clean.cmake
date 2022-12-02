@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "2022_project_henrey_T"
   "2022_project_henrey_T.pdb"
-  "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o"
-  "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o"
@@ -23,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o.d"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o.d"
 )

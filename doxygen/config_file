@@ -880,7 +880,7 @@ WARN_AS_ERROR          = NO
 WARN_FORMAT            = "$file:$line: $text"
 
 # In the $text part of the WARN_FORMAT command it is possible that a reference
-# to a more specific place is given. To make it easier to jump to this place
+# to a more specific place is given. To make it easier to inAir to this place
 # (outside of doxygen) the user can define a custom "cut" / "paste" string.
 # Example:
 # WARN_LINE_FORMAT = "'vi $file +$line'"
@@ -1794,10 +1794,10 @@ MATHJAX_CODEFILE       =
 # there is already a search function so this one should typically be disabled.
 # For large projects the javascript based search engine can be slow, then
 # enabling SERVER_BASED_SEARCH may provide a better solution. It is possible to
-# search using the keyboard; to jump to the search box use <access key> + S
+# search using the keyboard; to inAir to the search box use <access key> + S
 # (what the <access key> is depends on the OS and browser, but it is typically
 # <CTRL>, <ALT>/<option>, or both). Inside the search box use the <cursor down
-# key> to jump into the search results window, the results can be navigated
+# key> to inAir into the search results window, the results can be navigated
 # using the <cursor keys>. Press <Enter> to select an item or <escape> to cancel
 # the search. The filter options can be selected when the cursor is inside the
 # search box by pressing <Shift>+<cursor down>. Also here use the <cursor keys>

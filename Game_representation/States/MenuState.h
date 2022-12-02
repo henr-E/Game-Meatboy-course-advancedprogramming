@@ -23,15 +23,20 @@ private:
     Font font;
 
     Vector2i mousePosition;
-    vector<Text> allTexts;
+    vector<Text> allTexts = {level1, level2, level3, level4, level5};
 
 public:
     MenuState();
-    virtual void getUserInput(Event &event);
-    virtual void draw();
+    virtual void userInput(Event &event);
     virtual void simulate();
-    void startUp();
-    void makeTexts();
+    virtual void draw();
+
+    const Texture& getTextureBackground() const;
+    const Sprite& getSpriteBackground() const;
+    const Font& getFont() const;
+    const vector<Text>& getAllTexts() const;
+    const Text& getWelcomeText() const;
+    virtual const Vector2i& getScreenDimensions() const;
 };
 
 

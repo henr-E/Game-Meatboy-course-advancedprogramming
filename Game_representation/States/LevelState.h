@@ -6,8 +6,6 @@
 #define INC_2022_PROJECT_HENREY_T_LEVELSTATE_H
 
 #include "State.h"
-
-
 #include "../Game_Logic/Player.h"
 #include "../Game_Logic/World.h"
 #include "../InputToGame/InputParser.h"
@@ -33,13 +31,18 @@ private:
 
 public:
     LevelState();
-    virtual void getUserInput(Event &event);
-    virtual void draw();
-    void drawTiles();
+    virtual void userInput(Event &event);
     virtual void simulate();
+    virtual void draw();
 
-    void startUp();
-
+    virtual const Vector2i& getScreenDimensions() const;
+    const Texture& getTextureBackground() const;
+    const Sprite& getSpriteBackground() const;
+    const Sprite& getSpritePlayer() const;
+    const Texture& getTexturePlayer() const;
+    const vector<vector<Rectangle>>& getTiles() const;
+    const World& getWorld() const;
+    const Camera& getCamera() const;
     void updateView();
 };
 

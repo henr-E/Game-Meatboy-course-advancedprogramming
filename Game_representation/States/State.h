@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "memory"
-
+#include "../View.h"
 #include <iostream>
 
 using namespace sf;
@@ -20,9 +20,10 @@ public:
     void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
     const shared_ptr<RenderWindow>& getSfWindow() const;
 
-    virtual void getUserInput(Event &event);
-    virtual void draw();
+    virtual void userInput(Event &event);
     virtual void simulate();
+
+    virtual void draw();
 
     bool isTransition() const;
     void setTransition(bool transition);
@@ -30,16 +31,15 @@ public:
     int getChosenLevel() const;
     void setChosenLevel(int chosenLevel);
 
+    virtual const Vector2i& getScreenDimensions() const;
 
 protected:
+    ownView::View view;
+
     int chosenLevel;
     bool transition;
     Vector2i screenDimensions;
     shared_ptr<RenderWindow> sfWindow;
-    Texture textureBackground;
-    Sprite spriteBackground;
-
-
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STATE_H

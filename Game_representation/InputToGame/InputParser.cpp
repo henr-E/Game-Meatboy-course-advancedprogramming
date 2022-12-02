@@ -103,26 +103,6 @@ void InputParser::parse(int levelNumb) {
         leftUpperY += tileSize;
         rightDownY += tileSize;
     }
-
-//    //there can be 32 tiles on the screen
-//    int amountOfTilesY = 17;
-//    //substract amount of tiles with the amount of tiles visible on the screen
-//    int amountOfTilesOutOfScreen = amountOfTilesY - 32;
-//    //buffervalue is the value we need to add to the y coordinates to get all the rows above the
-//    //onderkant of the screen
-//    float bufferValue = amountOfTilesOutOfScreen * tileSize;
-//    for (auto &row: tiles){
-//        for (auto &column: row){
-//            Position leftUpperCorner = column.getLeftUpperCorner();
-//            Position rightDownCorner = column.getRightDownCorner();
-//
-//            leftUpperCorner.y -= bufferValue;
-//            rightDownCorner.y -= bufferValue;
-//
-//            column.setLeftUpperCorner(leftUpperCorner);
-//            column.setRightDownCorner(rightDownCorner);
-//        }
-//    }
     // Close the file
     myFile.close();
 }

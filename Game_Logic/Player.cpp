@@ -7,18 +7,18 @@ Player::Player() {
 
     horizontalSpeed = 0;
     verticalSpeed = 0;
+    acceleration = 0.01;
+    gravity = 0.01;
 
-    gravity = 2;
-    // Set the Bob's starting position
+    // set rectangle members
     leftUpperCorner.x = -1;
     leftUpperCorner.y = -0.875;
-
     rightDownCorner.x = -0.875;
     rightDownCorner.y = -1;
+    tileHeightWidth = 2.f/17.f;
 
     direction = facingRight;
 
-    jumping = false;
     playerWon = false;
 
     keyboardLeft = false;
@@ -47,14 +47,18 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
         keyboardRight = false;
         break;
 
-
     case pressJump:
-        // how bigger the absolute value of verticalSpeed how higher player jumps
-        // playerPosition.y += verticalSpeed * elapsedTime;
-        if(!jumping or collision.collisionLeftWall or collision.collisionRightWall or collision.collisionLeft or collision.collisionRight){
-            verticalSpeed = -100;
-            jumping = true;
+        if(verticalSpeed == 0){
+            keyboardJump = true;
+            verticalSpeed = -0.5;
+            acceleration = 0.01;
+            horizontalSpeed = 0;
         }
+//        if((collision.collisionRight or collision.collisionLeft) and !collision.collisionDown){
+//            keyboardJump = true;
+//            horizontalSpeed = 0.5;
+//            acceleration = 0.01;
+//        }
         break;
 
     case releaseJump:
@@ -72,43 +76,44 @@ void Player::updateFromKeyboard(KeyboardInput keyboardInput) {
 // the time elapsed, and the speed
 void Player::simulate(float elapsedTime) {
 
-    if (keyboardRight and !collision.collisionRight and !collision.collisionRightWall) {
-        leftUpperCorner.x += horizontalSpeed * elapsedTime;
-        rightDownCorner.x += horizontalSpeed * elapsedTime;
+    if (keyboardRight and !collision.collisionRight) {
+        float add = horizontalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2))/2;
+        leftUpperCorner.x += add;
+        rightDownCorner.x += add;
     }
-    if (keyboardLeft and !collision.collisionLeft and !collision.collisionLeftWall) {
-        leftUpperCorner.x -= horizontalSpeed * elapsedTime;
-        rightDownCorner.x -= horizontalSpeed * elapsedTime;
-    }
-    if(collision.collisionRightWall or collision.collisionLeftWall){
-        horizontalSpeed = 0;
-    }
-    if (jumping){
-        if(!collision.collisionUp or !collision.collisionDown){
-            verticalSpeed += gravity;
-            leftUpperCorner.y += verticalSpeed * elapsedTime;
-            rightDownCorner.y += verticalSpeed * elapsedTime;
-        }else if (collision.collisionUp){
-            verticalSpeed = -verticalSpeed;
-        }else if (collision.collisionDown){
-            verticalSpeed = 0;
-            jumping = false;
-        }
+    if (keyboardLeft and !collision.collisionLeft) {
+        float add = horizontalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2))/2;
+        leftUpperCorner.x -= add;
+        rightDownCorner.x -= add;
     }
 
-//            // if the player is against the right wall and not on a tile
-//            if (hitRightWall) {
-//                playerPosition.x -= verticalSpeed * elapsedTime;
-//            }
-//            // if the player is against the left wall and not on a tile
-//            //else if because player can never be on rightwall and leftwall at the same time
-//            else if (hitLeftWall) {
-//                playerPosition.x += verticalSpeed * elapsedTime;
-//            }
+    float add = verticalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2)) / 2;
+    verticalSpeed += gravity;
 
-    checkTileAndBorderCollision();
-}
-void Player::checkTileAndBorderCollision() {
+    //landing
+    if(collision.collisionDown and verticalSpeed >= 0){
+        verticalSpeed = 0;
+        acceleration = 0;
+    }
+
+
+    leftUpperCorner.y -= add;
+    rightDownCorner.y -= add;
+
+//    if((collision.collisionRight or collision.collisionLeft) and !collision.collisionDown){
+//        add = horizontalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2))/2;
+//
+//        if(collision.collisionRight){
+//            leftUpperCorner.x -= add;
+//            rightDownCorner.x -= add;
+//        }
+//        if(collision.collisionLeft){
+//            leftUpperCorner.x += add;
+//            rightDownCorner.x += add;
+//        }
+//    }
+
+
     /*
      * (-1,-1)         (1,-1)
      * _______________
@@ -119,24 +124,21 @@ void Player::checkTileAndBorderCollision() {
      * |______________|
      * (-1,1)          (1,1)
      */
-    // collisionWithGround
-    if (collision.collisionBottom) {
-        leftUpperCorner.y = -0.875;;
-        rightDownCorner.y = -1;
-        verticalSpeed = 0;
+    if (collision.collisionUp){
+        verticalSpeed = -verticalSpeed;
     }
 
-    // collisionRightWall
-    if (collision.collisionRightWall) {
-        horizontalSpeed = 0;
-    }
-    // collisionLeftWall
-    if (collision.collisionLeftWall) {
+//    //check hit bottom
+//    if(rightDownCorner.y < -1){
+//        rightDownCorner.y = -1;
+//        leftUpperCorner.y = -1 + (2.f/17.f);
+//    }
+    if(collision.collisionRight or collision.collisionLeft){
         horizontalSpeed = 0;
     }
 }
 
-bool Player::intersects(const Rectangle& that) {
+bool Player::intersects(const Rectangle& that, CheckCollision checkCollision) {
 
     /*
      *  _______
@@ -152,17 +154,53 @@ bool Player::intersects(const Rectangle& that) {
 
     float thatYUp= that.getLeftUpperCorner().y;
     float thatYDown= that.getRightDownCorner().y;
-    bool intersection = false;
-    //playerTile collision on X
-    if(thatXLeft <= leftUpperCorner.x and leftUpperCorner.x <= thatXRight
-        and thatYDown <= leftUpperCorner.y and leftUpperCorner.y <= thatYUp){
-        intersection = true;
+
+    float playerXLeft= leftUpperCorner.x;
+    float playerXRight= rightDownCorner.x;
+
+    float playerYUp= leftUpperCorner.y;
+    float playerYDown= rightDownCorner.y;
+
+
+    //check the 4 player corners
+
+    //check LEFT DOWN CORNER
+    if(thatXLeft <= playerXLeft and playerXLeft <= thatXRight
+        and thatYDown <= playerYDown and playerYDown <= thatYUp){
+        return true;
     }
-    if(thatXLeft <= rightDownCorner.x and rightDownCorner.x <= thatXRight
-        and thatYDown <= rightDownCorner.y and rightDownCorner.y <= thatYUp){
-        intersection = true;
+    //check Right DOWN CORNER
+    if(thatXLeft <= playerXRight and playerXRight <= thatXRight
+        and thatYDown <= playerYDown and playerYDown <= thatYUp){
+        return true;
     }
-    return intersection;
+
+    //check LEFT UP CORNER
+    if(thatXLeft <= playerXLeft and playerXLeft <= thatXRight
+        and thatYDown <= playerYUp and playerYUp <= thatYUp){
+        return true;
+    }
+    //check Right UP CORNER
+    if(thatXLeft <= playerXRight and playerXRight <= thatXRight
+        and thatYDown <= playerYUp and playerYUp <= thatYUp){
+        return true;
+    }
+    return false;
+
+
+
+
+
+//    //playerTile collision on X
+//    if(thatXLeft <= leftUpperCorner.x and leftUpperCorner.x <= thatXRight
+//        and thatYDown <= leftUpperCorner.y and leftUpperCorner.y <= thatYUp){
+//        return true;
+//    }
+//    if(thatXLeft <= rightDownCorner.x and rightDownCorner.x <= thatXRight
+//        and thatYDown <= rightDownCorner.y and rightDownCorner.y <= thatYUp){
+//        return true;
+//    }
+//    return false;
 }
 
 
@@ -177,4 +215,6 @@ void Player::setLeftUpperCorner(Position leftUpperCorner) { Rectangle::setLeftUp
 Position Player::getRightDownCorner() const { return Rectangle::getRightDownCorner(); }
 void Player::setRightDownCorner(Position rightDownCorner) { Rectangle::setRightDownCorner(rightDownCorner); }
 void Player::setCollision(const Collision& collision) { Player::collision = collision; }
-
+float Player::getTileHeightWidth() const {
+    return tileHeightWidth;
+}

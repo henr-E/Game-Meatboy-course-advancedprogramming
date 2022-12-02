@@ -38,43 +38,46 @@ void World::setPlayer(const Player &player) {
 }
 
 void World::checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles) {
-    float playerX = player.getPlayerLeftUpperPosition().x;
-    float playerY = player.getPlayerLeftUpperPosition().y;
+    float playerXUp = player.getPlayerLeftUpperPosition().x;
+    float playerYUp = player.getPlayerLeftUpperPosition().y;
 
-    int amountOfRows = tiles.size();
+    float playerX = playerXUp + player.getTileHeightWidth()/2;
+    float playerY = playerYUp + player.getTileHeightWidth()/2;
 
+//    auto a = (playerX + 1.f) / (2.f/17.f);
     // list begins with index 0 so -1
-    int currentPlayerRow = floor(abs(playerY + 1) / 2/17);
-    int currentPlayerColumn = floor(abs(playerX + 1) / 2/17);
+    int currentPlayerRow = floor((playerY+ 1.f) / (2.f/17.f)) - 1;
+    int currentPlayerColumn = floor((playerX + 1.f) / (2.f/17.f));
 
-
+    cout << "currentPlayerRow " << currentPlayerRow <<endl;
+    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
     Rectangle currentTile{}, upTile{}, downTile{}, leftTile{}, leftDownTile{}, leftUpperTile{}, rightTile{}, rightUpperTile{}, rightDownTile{};
 
     //all row + 1
-    if (currentPlayerRow + 1 < tiles.size()){
+    if (currentPlayerRow + 1 <= tiles.size()-1){
         upTile = tiles[currentPlayerRow + 1][currentPlayerColumn];
 
         if(currentPlayerColumn - 1 > 0) {
-            leftDownTile = tiles[currentPlayerRow + 1][currentPlayerColumn - 1];
+            leftUpperTile = tiles[currentPlayerRow + 1][currentPlayerColumn - 1];
         }
         if(currentPlayerColumn + 1 < tiles[0].size()) {
-            rightDownTile = tiles[currentPlayerRow + 1][currentPlayerColumn + 1];
+            rightUpperTile = tiles[currentPlayerRow + 1][currentPlayerColumn + 1];
         }
     }
     //all row -1
-    if(currentPlayerRow - 1 > 0){
+    if(currentPlayerRow - 1 >= 0){
         downTile = tiles[currentPlayerRow - 1][currentPlayerColumn];
 
         if(currentPlayerColumn - 1 > 0) {
-            leftUpperTile = tiles[currentPlayerRow - 1][currentPlayerColumn - 1];
+            leftDownTile = tiles[currentPlayerRow - 1][currentPlayerColumn - 1];
         }
         if(currentPlayerColumn + 1 < tiles[0].size()) {
-            rightUpperTile = tiles[currentPlayerRow - 1][currentPlayerColumn + 1];
+            rightDownTile = tiles[currentPlayerRow - 1][currentPlayerColumn + 1];
 
         }
     }
     //all just rows
-    if(currentPlayerColumn + 1 < tiles[0].size()){
+    if(currentPlayerColumn + 1 <= tiles[0].size()-1){
         rightTile = tiles[currentPlayerRow][currentPlayerColumn + 1];
         if(currentPlayerColumn - 1 > 0) {
             leftTile = tiles[currentPlayerRow][currentPlayerColumn - 1];
@@ -84,30 +87,33 @@ void World::checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles) {
 //        // get tile where current tile is at
 //        currentTile = tiles[currentPlayerRow][currentPlayerColumn];
 
-    if (rightTile.getTileType() != other and player.intersects(rightTile)) {
-        cout <<"COLLISIONRIGHT"<<endl;
+    if (rightTile.getTileType() == block and player.intersects(rightTile, Right)) {
+//        cout << "collision RIGHT"<< endl;
         collision.collisionRight = true;
     }
-    if (leftTile.getTileType() != other and player.intersects(leftTile)) {
+    if (leftTile.getTileType() == block and player.intersects(leftTile, Left)) {
         collision.collisionLeft = true;
+//        cout << "collision LEFT"<< endl;
     }
-    if (upTile.getTileType() != other and player.intersects(upTile)) {
+    if (upTile.getTileType() == block and player.intersects(upTile, Up)) {
+        collision.collisionUp = true;
+//        cout << "collision UP"<< endl;
+    }
+    if (downTile.getTileType() == block and player.intersects(downTile, Down)) {
+        collision.collisionDown = true;
+//        cout << "collision DOWN"<< endl;
+    }
+    if (leftUpperTile.getTileType() == block  and player.intersects(leftUpperTile, Left)) {
         collision.collisionUp = true;
     }
-    if (downTile.getTileType() != other and player.intersects(downTile)) {
+    if (rightUpperTile.getTileType() == block  and player.intersects(rightUpperTile, Right)) {
+        collision.collisionUp = true;
+    }
+    if (leftDownTile.getTileType() == block  and player.intersects(leftDownTile,Up)) {
         collision.collisionDown = true;
     }
-    if (leftUpperTile.getTileType() != other and player.intersects(leftUpperTile)) {
-        collision.collisionUpperLeft = true;
-    }
-    if (rightUpperTile.getTileType() != other and player.intersects(rightUpperTile)) {
-        collision.collisionUpperRight = true;
-    }
-    if (leftDownTile.getTileType() != other and player.intersects(leftDownTile)) {
-        collision.collisionDownLeft = true;
-    }
-    if (rightDownTile.getTileType() != other and player.intersects(rightDownTile)) {
-        collision.collisionDownRight = true;
+    if (rightDownTile.getTileType() == block  and player.intersects(rightDownTile,Down)) {
+        collision.collisionDown = true;
     }
 }
 void World::checkCollisionWallsBotom(){
@@ -119,24 +125,15 @@ void World::checkCollisionWallsBotom(){
 
     // collisionWithGround
     if (YDown <= -1) {
-        collision.collisionBottom = true;
+        collision.collisionDown = true;
     }
-    else{
-        collision.collisionBottom = false;
-    }
-    // collisionRightWall
+     // collisionRightWall
     if (XRight >= 1) {
-        collision.collisionRightWall = true;
-    }
-    else{
-        collision.collisionRightWall = false;
+        collision.collisionRight = true;
     }
     // collisionLeftWall
     if (XLeft <= -1) {
-        collision.collisionLeftWall = true;
-    }
-    else{
-        collision.collisionLeftWall = false;
+        collision.collisionLeft = true;
     }
 }
 

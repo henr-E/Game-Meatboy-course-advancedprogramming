@@ -27,10 +27,10 @@ public:
     TileType getTileType() const;
     void setTileType(TileType tileType);
 
-    float getTileHeightWidth() const;
+    virtual float getTileHeightWidth() const;
     void setTileHeightWidth(float tileHeightWidth);
 
-    virtual bool intersects(const Rectangle &that);
+    virtual bool intersects(const Rectangle &that, CheckCollision checkCollision);
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_RECTANGLE_H

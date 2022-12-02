@@ -19,8 +19,7 @@ void StateManager::setEvent(Event& event) {
 
 void StateManager::simulate(FunctionCallTo functionCallTo) {
     if (functionCallTo == INPUT){
-//        cout << "event in Statemanager = " << &event <<endl;
-        state->getUserInput(event);
+        state->userInput(event);
         checkTransition();
     }
     if (functionCallTo == DRAW){
@@ -34,12 +33,13 @@ void StateManager::simulate(FunctionCallTo functionCallTo) {
 void StateManager::checkTransition() {
     if (state->isTransition()){
         if(currentState == menustate){
-            cout << "sfwindow before trans    " << sfWindow <<endl;
             int chosenLevel = state->getChosenLevel();
+
             shared_ptr<State> newState = make_shared<LevelState>();
             state = newState;
-            state->setChosenLevel(chosenLevel);
             currentState = levelstate;
+
+            state->setChosenLevel(chosenLevel);
         }
         else if(currentState == levelstate){
             shared_ptr<State> newState = make_shared<MenuState>();
@@ -47,7 +47,6 @@ void StateManager::checkTransition() {
             currentState = menustate;
         }
         state->setSfWindow(sfWindow);
-        cout << "sfwindow after trans    " << state->getSfWindow() <<endl;
         state->setTransition(false);
     }
 }

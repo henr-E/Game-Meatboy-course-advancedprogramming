@@ -14,7 +14,15 @@ class Camera {
 private:
 
 public:
-    Position coordinatesToPixel(float x, float y);
+    Position coordinatesToPixel(float xOld, float yOld){
+        Position p{};
+        xOld += 1;
+        yOld += 1;
+
+        p.x = xOld * 544 / 2;
+        p.y = 1024 - yOld * 544 / 2;
+        return p;
+    };
 };
 
 

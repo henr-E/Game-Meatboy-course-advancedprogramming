@@ -11,4 +11,4 @@ TileType Rectangle::getTileType() const { return tileType; }
 void Rectangle::setTileType(TileType tileType) { Rectangle::tileType = tileType; }
 float Rectangle::getTileHeightWidth() const { return tileHeightWidth; }
 void Rectangle::setTileHeightWidth(float tileHeightWidth) { Rectangle::tileHeightWidth = tileHeightWidth; }
-bool Rectangle::intersects(const Rectangle& that) {}
+bool Rectangle::intersects(const Rectangle& that, CheckCollision checkCollision) {}

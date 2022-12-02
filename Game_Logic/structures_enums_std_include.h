@@ -40,9 +40,9 @@ public:
     bool collisionDownLeft = false;
     bool collisionDownRight = false;
 
-    bool collisionRightWall = false;
-    bool collisionLeftWall= false;
-    bool collisionBottom = false;
+//    bool collisionRightWall = false;
+//    bool collisionLeftWall= false;
+//    bool collisionBottom = false;
 
     void setAllFalse() {
         collisionLeft = false;
@@ -55,9 +55,9 @@ public:
         collisionDownLeft = false;
         collisionDownRight = false;
 
-        collisionRightWall = false;
-        collisionLeftWall= false;
-        collisionBottom = false;
+//        collisionRightWall = false;
+//        collisionLeftWall= false;
+//        collisionBottom = false;
     }
 };
 enum Direction { facingRight, facingLeft };
@@ -66,4 +66,16 @@ enum MouseInput { rightClick, leftClick, noClick };
 
 enum TileType { girlfriend, block, other };
 
+enum CheckCollision {Up, Down, Left, Right};
+
+enum CurrentState {
+    levelstate,
+    menustate
+};
+
+enum FunctionCallTo{
+    DRAW,
+    INPUT,
+    SIMULATE
+};
 #endif // INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H

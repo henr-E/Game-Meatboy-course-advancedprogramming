@@ -9,28 +9,15 @@
 #include "State.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-
-enum CurrentState {
-    levelstate,
-    menustate
-};
-
-enum FunctionCallTo{
-    DRAW,
-    INPUT,
-    SIMULATE
-};
+#include "../../Game_Logic/structures_enums_std_include.h"
 
 
 class StateManager {
 private:
     shared_ptr<RenderWindow> sfWindow;
-    shared_ptr<State> state = make_shared<LevelState>();
-    //TODO CHANGE BACK
-//    shared_ptr<State> state = make_shared<MenuState>();
+    shared_ptr<State> state = make_shared<MenuState>();
 
     Event event;
-
     CurrentState currentState;
 
 public:

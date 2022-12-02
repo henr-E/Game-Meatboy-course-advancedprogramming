@@ -8,6 +8,7 @@
 
 #include "iostream"
 #include "Rectangle.h"
+#include <cmath>
 using namespace std;
 class Player : Rectangle{
     Direction direction;
@@ -17,16 +18,13 @@ class Player : Rectangle{
     float verticalSpeed;
     float horizontalSpeed;
 
-    double acceleration;
-    ///applied to gradually slow down the upwards vertical movement after a jump,
+    float acceleration;
+    ///applied to gradually slow down the upwards vertical movement after a inAir,
     /// and will eventually cause the Player to fall back down
     float gravity;
 
-
-
-    bool jumping;
-
     bool playerWon;
+
 
     /// Which direction(s) is the player currently moving in
     bool keyboardLeft;
@@ -47,12 +45,11 @@ public:
 
     const Position & getPlayerLeftUpperPosition() const;
 
-    void checkTileAndBorderCollision();
 
     Direction getDirection() const;
     bool isPlayerWon() const;
 
-    virtual bool intersects(const Rectangle &that);
+    virtual bool intersects(const Rectangle &that, CheckCollision checkCollision);
 
 
     virtual Position getLeftUpperCorner() const;
@@ -60,6 +57,9 @@ public:
 
     virtual Position getRightDownCorner() const;
     virtual void setRightDownCorner(Position rightDownCorner);
+
+    virtual float getTileHeightWidth() const;
+
 
     void setCollision(const Collision& collision);
 };

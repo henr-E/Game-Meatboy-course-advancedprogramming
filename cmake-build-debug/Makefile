@@ -174,30 +174,6 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/build
 .PHONY : 2022_project_henrey_T/fast
 
-Game_Logic/Camera.o: Game_Logic/Camera.cpp.o
-.PHONY : Game_Logic/Camera.o
-
-# target to build an object file
-Game_Logic/Camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.o
-.PHONY : Game_Logic/Camera.cpp.o
-
-Game_Logic/Camera.i: Game_Logic/Camera.cpp.i
-.PHONY : Game_Logic/Camera.i
-
-# target to preprocess a source file
-Game_Logic/Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.i
-.PHONY : Game_Logic/Camera.cpp.i
-
-Game_Logic/Camera.s: Game_Logic/Camera.cpp.s
-.PHONY : Game_Logic/Camera.s
-
-# target to generate assembly for a file
-Game_Logic/Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Camera.cpp.s
-.PHONY : Game_Logic/Camera.cpp.s
-
 Game_Logic/Player.o: Game_Logic/Player.cpp.o
 .PHONY : Game_Logic/Player.o
 
@@ -438,6 +414,30 @@ Game_representation/States/StateManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.s
 .PHONY : Game_representation/States/StateManager.cpp.s
 
+Game_representation/View.o: Game_representation/View.cpp.o
+.PHONY : Game_representation/View.o
+
+# target to build an object file
+Game_representation/View.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o
+.PHONY : Game_representation/View.cpp.o
+
+Game_representation/View.i: Game_representation/View.cpp.i
+.PHONY : Game_representation/View.i
+
+# target to preprocess a source file
+Game_representation/View.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.i
+.PHONY : Game_representation/View.cpp.i
+
+Game_representation/View.s: Game_representation/View.cpp.s
+.PHONY : Game_representation/View.s
+
+# target to generate assembly for a file
+Game_representation/View.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.s
+.PHONY : Game_representation/View.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -475,9 +475,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... 2022_project_henrey_T"
-	@echo "... Game_Logic/Camera.o"
-	@echo "... Game_Logic/Camera.i"
-	@echo "... Game_Logic/Camera.s"
 	@echo "... Game_Logic/Player.o"
 	@echo "... Game_Logic/Player.i"
 	@echo "... Game_Logic/Player.s"
@@ -508,6 +505,9 @@ help:
 	@echo "... Game_representation/States/StateManager.o"
 	@echo "... Game_representation/States/StateManager.i"
 	@echo "... Game_representation/States/StateManager.s"
+	@echo "... Game_representation/View.o"
+	@echo "... Game_representation/View.i"
+	@echo "... Game_representation/View.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
