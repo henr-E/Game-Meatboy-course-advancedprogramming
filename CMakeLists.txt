@@ -20,13 +20,11 @@ find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 add_executable(2022_project_henrey_T
         src/main.cpp
         Game_Logic/Player.h
-        Game_Logic/Stopwatch.h
         Game_Logic/structures_enums_std_include.h
         Game_Logic/World.h
         Game_Logic/Camera.h
 
         Game_Logic/Player.cpp
-        Game_Logic/Stopwatch.cpp
         Game_Logic/World.cpp
 
 
@@ -44,7 +42,7 @@ add_executable(2022_project_henrey_T
 
         Game_representation/Game.h
         Game_representation/Game.cpp
-        Game_representation/States/StateManager.cpp Game_representation/States/StateManager.h Game_Logic/Rectangle.cpp Game_Logic/Rectangle.h Game_Logic/Model.h Game_representation/View.cpp Game_representation/View.h)
+        Game_representation/States/StateManager.cpp Game_representation/States/StateManager.h Game_Logic/Rectangle.cpp Game_Logic/Rectangle.h Game_Logic/Model.h Game_representation/View.cpp Game_representation/View.h Game_Logic/Stopwatch.h Game_Logic/Stopwatch.cpp Game_Logic/AbstractFactory.h Game_representation/ConcreteFactory.cpp Game_representation/ConcreteFactory.h)
 
 # Set include directory search paths
 target_include_directories(2022_project_henrey_T

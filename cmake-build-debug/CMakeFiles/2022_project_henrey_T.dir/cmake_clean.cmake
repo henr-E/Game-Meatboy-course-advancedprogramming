@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o.d"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o"
+  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o"

@@ -19,15 +19,9 @@ void World::simulate(vector<vector<Rectangle>> tiles){
     checkCollisionWallsBotom();
     player.setCollision(collision);
 
-    //calculate elapsed time
-    auto diff = steady_clock::now() - stopwatch.getPrevTime();
-    auto nanoseconds = duration_cast<chrono::nanoseconds>(diff);
-    auto nanosecondsAsInt = nanoseconds.count();
+    float elapsed = stopwatch->getDifference();
 
-    stopwatch.setPrevTime(steady_clock::now());
-    float seconds = nanosecondsAsInt/(float)1000000000;
-
-    player.simulate(seconds);
+    player.simulate(elapsed);
 }
 const Player & World::getPlayer() const{
     return player;
@@ -49,8 +43,8 @@ void World::checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles) {
     int currentPlayerRow = floor((playerY+ 1.f) / (2.f/17.f)) - 1;
     int currentPlayerColumn = floor((playerX + 1.f) / (2.f/17.f));
 
-    cout << "currentPlayerRow " << currentPlayerRow <<endl;
-    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
+//    cout << "currentPlayerRow " << currentPlayerRow <<endl;
+//    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
     Rectangle currentTile{}, upTile{}, downTile{}, leftTile{}, leftDownTile{}, leftUpperTile{}, rightTile{}, rightUpperTile{}, rightDownTile{};
 
     //all row + 1

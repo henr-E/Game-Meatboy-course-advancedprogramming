@@ -12,8 +12,8 @@
 #include <cmath>
 
 #include "Player.h"
-#include "Stopwatch.h"
 #include "Rectangle.h"
+#include "Stopwatch.h"
 
 using namespace std;
 using namespace chrono;
@@ -21,7 +21,7 @@ using namespace chrono;
 class World {
 private:
     Player player;
-    Stopwatch stopwatch;
+    shared_ptr<Stopwatch> stopwatch = Stopwatch::getInstance();
 
     Collision collision;
 
@@ -33,7 +33,6 @@ public:
 
     void keyboardToPlayer(KeyboardInput keyboardInput);
     void simulate(vector<vector<Rectangle>> tiles);
-
 
     const Player & getPlayer() const;
     void setPlayer(const Player &player);

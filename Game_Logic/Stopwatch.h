@@ -1,31 +1,41 @@
 //
-// Created by henri kerch on 13/11/2022.
+// Created by henri kerch on 04/12/2022.
 //
-#pragma once
+
 #ifndef INC_2022_PROJECT_HENREY_T_STOPWATCH_H
 #define INC_2022_PROJECT_HENREY_T_STOPWATCH_H
 
 #include <ctime>
 #include <chrono>
+#include "iostream"
+#include "memory"
 
 using namespace std;
 using namespace chrono;
 
 class Stopwatch {
-private:
+public:
     // Clock for timing everything
     time_point<steady_clock> prev_time;
 
+    static shared_ptr<Stopwatch> instance_;
+
 public:
     Stopwatch();
+    /**
+     * not clonable
+     */
+    Stopwatch(Stopwatch&other) = delete;
 
-    time_point<steady_clock> getPrevTime() const;
+    /**
+     * not assignable
+     */
+    void operator=(const Stopwatch&) = delete;
 
-    void setPrevTime(time_point<steady_clock> prevTime);
+    float getDifference();
 
+    static shared_ptr<Stopwatch>& getInstance();
 
 };
 
-
-
-#endif //INC_2022_PROJECT_HENREY_T_STOPWATCH_H
+#endif // INC_2022_PROJECT_HENREY_T_STOPWATCH_H
