@@ -41,7 +41,7 @@ void InputParser::parse(int levelNumb) {
     float rightDownY = -1;
     // loop backwards through the list so the first line of text is
     // actually the first row of tiles at the bottom of the screen
-    for (int line = lines.size()-1; line >= 0; --line) {
+    for (int line = lines.size()-1; line >= 31; --line) {
         // make a tileVector
         vector<Rectangle> tileRow;
         // loop through every character in the line

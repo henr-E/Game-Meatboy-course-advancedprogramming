@@ -10,7 +10,7 @@ LevelState::LevelState() {
     world.setPlayer(player);
 
     // make level from input
-    inputParser.parse(2);
+    inputParser.parse(1);
 
     tiles = inputParser.getTiles();
 

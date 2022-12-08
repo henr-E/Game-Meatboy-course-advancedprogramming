@@ -74,7 +74,7 @@ void ownView::View::drawTiles(vector<vector<Rectangle>> tiles, Camera &camera) {
 
     }
 
-
+    int i = 0;
     for(auto const &row : tiles){
         for(auto const &rect : row){
 
@@ -96,7 +96,10 @@ void ownView::View::drawTiles(vector<vector<Rectangle>> tiles, Camera &camera) {
 
             spriteTile.setPosition(p.x, p.y);
 
-            sfWindow->draw(spriteTile);
+            if(i < 10){
+                sfWindow->draw(spriteTile);
+            }
+            i++;
         }
     }
 }

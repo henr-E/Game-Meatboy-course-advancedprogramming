@@ -7,7 +7,7 @@ Player::Player() {
 
     horizontalSpeed = 0;
     verticalSpeed = 0;
-    acceleration = 0.01;
+    acceleration = 0.1;
     gravity = 0.01;
 
     // set rectangle members
@@ -15,6 +15,7 @@ Player::Player() {
     leftUpperCorner.y = -0.875;
     rightDownCorner.x = -0.875;
     rightDownCorner.y = -1;
+    //player height width
     tileHeightWidth = 2.f/17.f;
 
     direction = facingRight;
@@ -90,6 +91,7 @@ void Player::simulate(float elapsedTime) {
     float add = verticalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2)) / 2;
     verticalSpeed += gravity;
 
+    //todo should jump hirozontally until speed is 0
     //landing
     if(collision.collisionDown and verticalSpeed >= 0){
         verticalSpeed = 0;

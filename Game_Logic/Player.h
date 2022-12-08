@@ -60,7 +60,6 @@ public:
 
     virtual float getTileHeightWidth() const;
 
-
     void setCollision(const Collision& collision);
 };
 
