@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug -I/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/include -isystem /opt/homebrew/include
+CXX_INCLUDES = -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14
 

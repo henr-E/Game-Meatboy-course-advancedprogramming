@@ -524,20 +524,35 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o: \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/MenuState.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/State.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../View.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/structures_enums_std_include.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Rectangle.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/World.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/View.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Camera.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/structures_enums_std_include.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/World.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Player.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Stopwatch.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Camera.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/AbstractFactory.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Models/PlayerModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Models/Model.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Models/../structures_enums_std_include.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Models/../Subject.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Observer.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Models/GoalModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Models/WallModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../../Game_Logic/Stopwatch.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/LevelState.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/../Game_Logic/Player.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/../Game_Logic/World.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../InputToGame/InputParser.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/../Game_Logic/Rectangle.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../../Game_Logic/World.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../../Game_Logic/structures_enums_std_include.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../../Game_Logic/Camera.h
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../../Game_Logic/Camera.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../ConcreteFactory.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/AbstractFactory.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Observer.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/View.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../InputToGame/InputParser.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../InputToGame/../../Game_Logic/Models/WallModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../InputToGame/../../Game_Logic/Models/GoalModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/../Views/../InputToGame/../../Game_Logic/structures_enums_std_include.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/memory.h

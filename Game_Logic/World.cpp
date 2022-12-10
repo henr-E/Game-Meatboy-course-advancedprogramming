@@ -4,36 +4,32 @@
 
 #include "World.h"
 
-#include <utility>
-
-
-World::World() {}
-
+void World::setUp(vector<vector<WallModel>>& tiles1) {
+    tiles = tiles1;
+    player = abstractFactory->createPlayer();
+    goal = abstractFactory->createGoal();
+    wall = abstractFactory->createWalls(tiles);
+}
 void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
 }
 
-void World::simulate(vector<vector<Rectangle>> tiles){
+void World::updatePlayerModel(){
     collision.setAllFalse();
-    checkCollisionWithTiles(tiles);
+    checkCollisionWithTiles();
     checkCollisionWallsBotom();
     player.setCollision(collision);
-
     float elapsed = stopwatch->getDifference();
-
     player.simulate(elapsed);
 }
-const Player & World::getPlayer() const{
-    return player;
+void World::updateViews() {
+    wall.updateObservers();
+    goal.updateObservers();
+    player.updateObservers();
 }
-
-void World::setPlayer(const Player &player) {
-    World::player = player;
-}
-
-void World::checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles) {
-    float playerXUp = player.getPlayerLeftUpperPosition().x;
-    float playerYUp = player.getPlayerLeftUpperPosition().y;
+void World::checkCollisionWithTiles() {
+    float playerXUp = player.getLeftUpperCorner().x;
+    float playerYUp = player.getLeftUpperCorner().y;
 
     float playerX = playerXUp + player.getTileHeightWidth()/2;
     float playerY = playerYUp + player.getTileHeightWidth()/2;
@@ -45,7 +41,7 @@ void World::checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles) {
 
 //    cout << "currentPlayerRow " << currentPlayerRow <<endl;
 //    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
-    Rectangle currentTile{}, upTile{}, downTile{}, leftTile{}, leftDownTile{}, leftUpperTile{}, rightTile{}, rightUpperTile{}, rightDownTile{};
+    WallModel currentTile{}, upTile{}, downTile{}, leftTile{}, leftDownTile{}, leftUpperTile{}, rightTile{}, rightUpperTile{}, rightDownTile{};
 
     //all row + 1
     if (currentPlayerRow + 1 <= tiles.size()-1){
@@ -130,5 +126,6 @@ void World::checkCollisionWallsBotom(){
         collision.collisionLeft = true;
     }
 }
-
-
+void World::setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactory) {
+    World::abstractFactory = abstractFactory;
+}

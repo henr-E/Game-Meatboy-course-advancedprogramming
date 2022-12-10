@@ -517,12 +517,16 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o: \
   /opt/homebrew/include/SFML/Audio/SoundFileWriter.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Rectangle.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/World.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Player.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/AbstractFactory.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Models/PlayerModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Models/Model.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Models/../structures_enums_std_include.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Models/GoalModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Models/WallModel.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Stopwatch.h \
   /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/../Game_Logic/Camera.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/unistd.h \

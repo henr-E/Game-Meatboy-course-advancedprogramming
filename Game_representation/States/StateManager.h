@@ -1,7 +1,7 @@
 //
 // Created by henri kerch on 25/11/2022.
 //
-
+#pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_STATEMANAGER_H
 #define INC_2022_PROJECT_HENREY_T_STATEMANAGER_H
 #include "MenuState.h"

@@ -3,7 +3,7 @@
 //
 
 #include "InputParser.h"
-
+//todo check for two girlfriends becauase hten level is wrong
 InputParser::InputParser() {
     screenDimensions.x = 544;
     screenDimensions.y = 1024;
@@ -41,14 +41,14 @@ void InputParser::parse(int levelNumb) {
     float rightDownY = -1;
     // loop backwards through the list so the first line of text is
     // actually the first row of tiles at the bottom of the screen
-    for (int line = lines.size()-1; line >= 31; --line) {
+    for (int line = lines.size()-1; line >= 0; --line) {
         // make a tileVector
-        vector<Rectangle> tileRow;
+        vector<WallModel> tileRow;
         // loop through every character in the line
         for (int column = 0; column <= 16; column++) {
             if (lines[line][column] == '#') {
                 // make a tile
-                Rectangle t;
+                WallModel t;
                 // set tileType
                 t.setTileType(block);
                 t.setTileHeightWidth(tileSize);
@@ -68,16 +68,16 @@ void InputParser::parse(int levelNumb) {
                 tileRow.push_back(t);
             } else if (lines[line][column] == '.') {
                 // make a tile
-                Rectangle t;
+                WallModel t;
                 // set tileType
                 t.setTileType(other);
                 // add rect to tileRow
                 tileRow.push_back(t);
             } else if (lines[line][column]== '&') {
                 // make a tile
-                Rectangle t;
+                WallModel t;
                 // set tileType
-                t.setTileType(block);
+                t.setTileType(girlfriend);
                 t.setTileHeightWidth(tileSize);
                 // set position
                 Position leftUpper;
@@ -106,5 +106,5 @@ void InputParser::parse(int levelNumb) {
     // Close the file
     myFile.close();
 }
-const vector<vector<Rectangle>> & InputParser::getTiles() const { return tiles; }
+const vector<vector<WallModel>> & InputParser::getTiles() const { return tiles; }
 const Vector2i& InputParser::getScreenDimensions() const { return screenDimensions; }

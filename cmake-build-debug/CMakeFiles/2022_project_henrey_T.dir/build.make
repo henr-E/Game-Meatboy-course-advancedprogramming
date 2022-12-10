@@ -83,38 +83,10 @@ CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp -o CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.s
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o: ../Game_Logic/Player.cpp
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.cpp
-
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.i
-
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.s
-
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o: ../Game_Logic/World.cpp
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/World.cpp
-
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/World.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.i
-
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/World.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.s
-
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o: ../Game_representation/InputToGame/InputParser.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/InputParser.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.i: cmake_force
@@ -128,7 +100,7 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o: ../Game_representation/States/LevelState.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/LevelState.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.i: cmake_force
@@ -142,7 +114,7 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.s
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o: ../Game_representation/States/MenuState.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/MenuState.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.i: cmake_force
@@ -156,7 +128,7 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.s:
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o: ../Game_representation/States/State.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/State.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.i: cmake_force
@@ -170,7 +142,7 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.s: cma
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o: ../Game_representation/Game.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Game.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.i: cmake_force
@@ -184,7 +156,7 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.s: cmake_force
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o: ../Game_representation/States/StateManager.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.i: cmake_force
@@ -195,52 +167,52 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.s
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o: ../Game_Logic/Rectangle.cpp
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o: ../Game_representation/Views/PlayerView.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.cpp
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.i
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.s
 
-CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
-CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o: ../Game_representation/View.cpp
-CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/View.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o: ../Game_representation/Views/WallView.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.cpp
 
-CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/View.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.i
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.i
 
-CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/View.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.s
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.s
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o: ../Game_Logic/Stopwatch.cpp
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o: ../Game_representation/Views/GoalView.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.cpp
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.i
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.i
 
-CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.s
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.s
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o: ../Game_representation/ConcreteFactory.cpp
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/ConcreteFactory.cpp
 
 CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.i: cmake_force
@@ -251,45 +223,58 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/ConcreteFactory.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.s
 
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o: CMakeFiles/2022_project_henrey_T.dir/flags.make
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o: ../Game_representation/scroller.cpp
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o: CMakeFiles/2022_project_henrey_T.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o -MF CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o.d -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp
+
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp > CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.i
+
+CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.s
+
 # Object files for target 2022_project_henrey_T
 2022_project_henrey_T_OBJECTS = \
 "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o" \
 "CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o" \
-"CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o"
+"CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o" \
+"CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o" \
+"CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o" \
+"CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o" \
+"CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o"
 
 # External object files for target 2022_project_henrey_T
 2022_project_henrey_T_EXTERNAL_OBJECTS =
 
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o
-2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o
-2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/LevelState.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/MenuState.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/State.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/Game.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.o
-2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o
-2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o
-2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o
+2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o
+2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o
+2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o
+2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/build.make
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-audio.2.5.1.dylib
+2022_project_henrey_T: liblogicLibrary_meatBoy.a
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-window.2.5.1.dylib
 2022_project_henrey_T: /opt/homebrew/lib/libsfml-system.2.5.1.dylib
 2022_project_henrey_T: CMakeFiles/2022_project_henrey_T.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable 2022_project_henrey_T"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable 2022_project_henrey_T"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/2022_project_henrey_T.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

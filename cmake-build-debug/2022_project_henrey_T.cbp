@@ -17,6 +17,46 @@
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="logicLibrary_meatBoy">
+				<Option output="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/liblogicLibrary_meatBoy.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 logicLibrary_meatBoy"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="logicLibrary_meatBoy/fast">
+				<Option output="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/liblogicLibrary_meatBoy.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 logicLibrary_meatBoy/fast"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="2022_project_henrey_T">
 				<Option output="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/2022_project_henrey_T" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"/>
@@ -24,8 +64,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"/>
-					<Add directory="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/include"/>
 					<Add directory="/opt/homebrew/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
@@ -47,8 +85,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug"/>
-					<Add directory="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/include"/>
 					<Add directory="/opt/homebrew/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
@@ -125,40 +161,52 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/AbstractFactory.h">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.h">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Model.h">
-			<Option target="2022_project_henrey_T"/>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/GoalModel.h">
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.cpp">
-			<Option target="2022_project_henrey_T"/>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/Model.cpp">
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.h">
-			<Option target="2022_project_henrey_T"/>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/Model.h">
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.cpp">
-			<Option target="2022_project_henrey_T"/>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/PlayerModel.cpp">
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.h">
-			<Option target="2022_project_henrey_T"/>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/PlayerModel.h">
+			<Option target="logicLibrary_meatBoy"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/WallModel.h">
+			<Option target="logicLibrary_meatBoy"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Observer.h">
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.cpp">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.h">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Subject.cpp">
+			<Option target="logicLibrary_meatBoy"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Subject.h">
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/World.cpp">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/World.h">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/structures_enums_std_include.h">
-			<Option target="2022_project_henrey_T"/>
+			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/ConcreteFactory.cpp">
 			<Option target="2022_project_henrey_T"/>
@@ -202,10 +250,28 @@
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/States/StateManager.h">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/View.cpp">
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/View.h">
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/View.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.cpp">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.h">
+			<Option target="2022_project_henrey_T"/>
+		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp">

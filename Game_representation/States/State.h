@@ -1,13 +1,13 @@
 //
 // Created by henri kerch on 24/11/2022.
 //
-
+#pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_STATE_H
 #define INC_2022_PROJECT_HENREY_T_STATE_H
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
+#include "../Views/View.h"
 #include "memory"
-#include "../View.h"
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 #include <iostream>
 
 using namespace sf;
@@ -34,7 +34,6 @@ public:
     virtual const Vector2i& getScreenDimensions() const;
 
 protected:
-    ownView::View view;
 
     int chosenLevel;
     bool transition;

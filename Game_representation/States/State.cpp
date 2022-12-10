@@ -14,7 +14,6 @@ void State::simulate() {}
 bool State::isTransition() const { return transition; }
 void State::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
     State::sfWindow = sfWindow;
-    view.setSfWindow(sfWindow);
 }
 int State::getChosenLevel() const { return chosenLevel; }
 void State::setChosenLevel(int chosenLevel) { State::chosenLevel = chosenLevel; }

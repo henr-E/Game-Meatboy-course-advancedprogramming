@@ -4,10 +4,26 @@
 
 #ifndef INC_2022_PROJECT_HENREY_T_CONCRETEFACTORY_H
 #define INC_2022_PROJECT_HENREY_T_CONCRETEFACTORY_H
+
 #include "../Game_Logic/AbstractFactory.h"
+#include "../Game_Logic/Observer.h"
+#include "Views/GoalView.h"
+#include "Views/PlayerView.h"
+#include "Views/View.h"
+#include "Views/WallView.h"
+#include "memory.h"
 class ConcreteFactory: public AbstractFactory {
+private:
+    shared_ptr<RenderWindow> sfWindow;
+
 public:
-    virtual void createPlayer(World& world);
+
+    explicit ConcreteFactory(const shared_ptr<RenderWindow>& sfWindow);
+    PlayerModel createPlayer() override;
+    GoalModel createGoal() override;
+    WallModel createWalls(vector<vector<WallModel>> tiles) override;
+
+
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_CONCRETEFACTORY_H

@@ -4,7 +4,67 @@
 
 #include "MenuState.h"
 MenuState::MenuState(){
-    view.setUpMenuState(textureBackground, spriteBackground, font, welcomeText,allTexts);
+
+    //load background
+    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
+        cout << ("Failed to load background into texture.") << endl;
+
+    }
+    // configure sprite
+    spriteBackground.setTexture(textureBackground);
+
+    //load font
+    if(!font.loadFromFile("../content/Fonts/Herculanum.ttf")){
+        cout << printf("Failed to load font.") << endl;
+    }
+
+    makeTexts();
+}
+
+void MenuState::makeTexts() {
+
+    int positionX = 544/2;
+    int positionY = 960/3;
+
+    // select the font
+    welcomeText.setFont(font);
+    welcomeText.setString("WELCOME TO MEAT BOY!");
+
+    /*
+     * the position decides where the first character of the string will be
+     * one character = 32 pixels
+     * if the string is 10 characters
+     * then 10*32 is the length of the string
+     * 10*32/2 is the length of half the string
+     *
+     * so if we want to center it =>
+     * 544/2 - 10*32/2
+     *
+     */
+    //position is position of first character
+
+    welcomeText.setPosition(positionX - (12.5/2*32),64);
+
+    // set the character size
+    welcomeText.setCharacterSize(32);
+    // set the color
+    welcomeText.setFillColor(Color::Red);
+    // set the text style
+    welcomeText.setStyle(sf::Text::Bold | sf::Text::Underlined);
+
+    for(int t = 0; t < allTexts.size(); t++){
+        Text &text = allTexts[t];
+
+        text.setFont(font);
+        text.setString("LEVEL " + to_string(t+1));
+
+        text.setPosition(positionX - (5/2*32),positionY);
+        positionY += 100;
+
+        text.setCharacterSize(32);
+        text.setFillColor(Color::White);
+        text.setStyle(sf::Text::Bold | sf::Text::Underlined);
+    }
 }
 
 void MenuState::userInput(Event &event) {
@@ -35,7 +95,18 @@ void MenuState::simulate() {
     State::simulate();
 }
 void MenuState::draw() {
-    view.drawMenuState(spriteBackground, welcomeText,allTexts);
+    // Rub out the last frame
+    sfWindow->clear();
+
+    sfWindow->draw(spriteBackground);
+
+    sfWindow->draw(welcomeText);
+    for(const Text& text: allTexts) {
+        sfWindow->draw(text);
+    }
+
+    // Show everything we have just drawn
+    sfWindow->display();
 }
 const Texture& MenuState::getTextureBackground() const { return textureBackground; }
 const Sprite& MenuState::getSpriteBackground() const { return spriteBackground; }

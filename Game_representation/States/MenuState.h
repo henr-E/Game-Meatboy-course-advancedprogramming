@@ -1,7 +1,7 @@
 //
 // Created by henri kerch on 24/11/2022.
 //
-
+#pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_MENUSTATE_H
 #define INC_2022_PROJECT_HENREY_T_MENUSTATE_H
 
@@ -30,6 +30,7 @@ public:
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();
+    void makeTexts();
 
     const Texture& getTextureBackground() const;
     const Sprite& getSpriteBackground() const;

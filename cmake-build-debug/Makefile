@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named logicLibrary_meatBoy
+
+# Build rule for target.
+logicLibrary_meatBoy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logicLibrary_meatBoy
+.PHONY : logicLibrary_meatBoy
+
+# fast build rule for target.
+logicLibrary_meatBoy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/build
+.PHONY : logicLibrary_meatBoy/fast
+
+#=============================================================================
 # Target rules for targets named 2022_project_henrey_T
 
 # Build rule for target.
@@ -174,60 +187,60 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/build
 .PHONY : 2022_project_henrey_T/fast
 
-Game_Logic/Player.o: Game_Logic/Player.cpp.o
-.PHONY : Game_Logic/Player.o
+Game_Logic/Models/Model.o: Game_Logic/Models/Model.cpp.o
+.PHONY : Game_Logic/Models/Model.o
 
 # target to build an object file
-Game_Logic/Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.o
-.PHONY : Game_Logic/Player.cpp.o
+Game_Logic/Models/Model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.o
+.PHONY : Game_Logic/Models/Model.cpp.o
 
-Game_Logic/Player.i: Game_Logic/Player.cpp.i
-.PHONY : Game_Logic/Player.i
+Game_Logic/Models/Model.i: Game_Logic/Models/Model.cpp.i
+.PHONY : Game_Logic/Models/Model.i
 
 # target to preprocess a source file
-Game_Logic/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.i
-.PHONY : Game_Logic/Player.cpp.i
+Game_Logic/Models/Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.i
+.PHONY : Game_Logic/Models/Model.cpp.i
 
-Game_Logic/Player.s: Game_Logic/Player.cpp.s
-.PHONY : Game_Logic/Player.s
+Game_Logic/Models/Model.s: Game_Logic/Models/Model.cpp.s
+.PHONY : Game_Logic/Models/Model.s
 
 # target to generate assembly for a file
-Game_Logic/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Player.cpp.s
-.PHONY : Game_Logic/Player.cpp.s
+Game_Logic/Models/Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.s
+.PHONY : Game_Logic/Models/Model.cpp.s
 
-Game_Logic/Rectangle.o: Game_Logic/Rectangle.cpp.o
-.PHONY : Game_Logic/Rectangle.o
+Game_Logic/Models/PlayerModel.o: Game_Logic/Models/PlayerModel.cpp.o
+.PHONY : Game_Logic/Models/PlayerModel.o
 
 # target to build an object file
-Game_Logic/Rectangle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.o
-.PHONY : Game_Logic/Rectangle.cpp.o
+Game_Logic/Models/PlayerModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.o
+.PHONY : Game_Logic/Models/PlayerModel.cpp.o
 
-Game_Logic/Rectangle.i: Game_Logic/Rectangle.cpp.i
-.PHONY : Game_Logic/Rectangle.i
+Game_Logic/Models/PlayerModel.i: Game_Logic/Models/PlayerModel.cpp.i
+.PHONY : Game_Logic/Models/PlayerModel.i
 
 # target to preprocess a source file
-Game_Logic/Rectangle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.i
-.PHONY : Game_Logic/Rectangle.cpp.i
+Game_Logic/Models/PlayerModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.i
+.PHONY : Game_Logic/Models/PlayerModel.cpp.i
 
-Game_Logic/Rectangle.s: Game_Logic/Rectangle.cpp.s
-.PHONY : Game_Logic/Rectangle.s
+Game_Logic/Models/PlayerModel.s: Game_Logic/Models/PlayerModel.cpp.s
+.PHONY : Game_Logic/Models/PlayerModel.s
 
 # target to generate assembly for a file
-Game_Logic/Rectangle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Rectangle.cpp.s
-.PHONY : Game_Logic/Rectangle.cpp.s
+Game_Logic/Models/PlayerModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.s
+.PHONY : Game_Logic/Models/PlayerModel.cpp.s
 
 Game_Logic/Stopwatch.o: Game_Logic/Stopwatch.cpp.o
 .PHONY : Game_Logic/Stopwatch.o
 
 # target to build an object file
 Game_Logic/Stopwatch.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Stopwatch.cpp.o
 .PHONY : Game_Logic/Stopwatch.cpp.o
 
 Game_Logic/Stopwatch.i: Game_Logic/Stopwatch.cpp.i
@@ -235,7 +248,7 @@ Game_Logic/Stopwatch.i: Game_Logic/Stopwatch.cpp.i
 
 # target to preprocess a source file
 Game_Logic/Stopwatch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Stopwatch.cpp.i
 .PHONY : Game_Logic/Stopwatch.cpp.i
 
 Game_Logic/Stopwatch.s: Game_Logic/Stopwatch.cpp.s
@@ -243,15 +256,39 @@ Game_Logic/Stopwatch.s: Game_Logic/Stopwatch.cpp.s
 
 # target to generate assembly for a file
 Game_Logic/Stopwatch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/Stopwatch.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Stopwatch.cpp.s
 .PHONY : Game_Logic/Stopwatch.cpp.s
+
+Game_Logic/Subject.o: Game_Logic/Subject.cpp.o
+.PHONY : Game_Logic/Subject.o
+
+# target to build an object file
+Game_Logic/Subject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Subject.cpp.o
+.PHONY : Game_Logic/Subject.cpp.o
+
+Game_Logic/Subject.i: Game_Logic/Subject.cpp.i
+.PHONY : Game_Logic/Subject.i
+
+# target to preprocess a source file
+Game_Logic/Subject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Subject.cpp.i
+.PHONY : Game_Logic/Subject.cpp.i
+
+Game_Logic/Subject.s: Game_Logic/Subject.cpp.s
+.PHONY : Game_Logic/Subject.s
+
+# target to generate assembly for a file
+Game_Logic/Subject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Subject.cpp.s
+.PHONY : Game_Logic/Subject.cpp.s
 
 Game_Logic/World.o: Game_Logic/World.cpp.o
 .PHONY : Game_Logic/World.o
 
 # target to build an object file
 Game_Logic/World.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/World.cpp.o
 .PHONY : Game_Logic/World.cpp.o
 
 Game_Logic/World.i: Game_Logic/World.cpp.i
@@ -259,7 +296,7 @@ Game_Logic/World.i: Game_Logic/World.cpp.i
 
 # target to preprocess a source file
 Game_Logic/World.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/World.cpp.i
 .PHONY : Game_Logic/World.cpp.i
 
 Game_Logic/World.s: Game_Logic/World.cpp.s
@@ -267,7 +304,7 @@ Game_Logic/World.s: Game_Logic/World.cpp.s
 
 # target to generate assembly for a file
 Game_Logic/World.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/World.cpp.s
 .PHONY : Game_Logic/World.cpp.s
 
 Game_representation/ConcreteFactory.o: Game_representation/ConcreteFactory.cpp.o
@@ -438,29 +475,101 @@ Game_representation/States/StateManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/States/StateManager.cpp.s
 .PHONY : Game_representation/States/StateManager.cpp.s
 
-Game_representation/View.o: Game_representation/View.cpp.o
-.PHONY : Game_representation/View.o
+Game_representation/Views/GoalView.o: Game_representation/Views/GoalView.cpp.o
+.PHONY : Game_representation/Views/GoalView.o
 
 # target to build an object file
-Game_representation/View.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.o
-.PHONY : Game_representation/View.cpp.o
+Game_representation/Views/GoalView.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o
+.PHONY : Game_representation/Views/GoalView.cpp.o
 
-Game_representation/View.i: Game_representation/View.cpp.i
-.PHONY : Game_representation/View.i
+Game_representation/Views/GoalView.i: Game_representation/Views/GoalView.cpp.i
+.PHONY : Game_representation/Views/GoalView.i
 
 # target to preprocess a source file
-Game_representation/View.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.i
-.PHONY : Game_representation/View.cpp.i
+Game_representation/Views/GoalView.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.i
+.PHONY : Game_representation/Views/GoalView.cpp.i
 
-Game_representation/View.s: Game_representation/View.cpp.s
-.PHONY : Game_representation/View.s
+Game_representation/Views/GoalView.s: Game_representation/Views/GoalView.cpp.s
+.PHONY : Game_representation/Views/GoalView.s
 
 # target to generate assembly for a file
-Game_representation/View.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/View.cpp.s
-.PHONY : Game_representation/View.cpp.s
+Game_representation/Views/GoalView.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.s
+.PHONY : Game_representation/Views/GoalView.cpp.s
+
+Game_representation/Views/PlayerView.o: Game_representation/Views/PlayerView.cpp.o
+.PHONY : Game_representation/Views/PlayerView.o
+
+# target to build an object file
+Game_representation/Views/PlayerView.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o
+.PHONY : Game_representation/Views/PlayerView.cpp.o
+
+Game_representation/Views/PlayerView.i: Game_representation/Views/PlayerView.cpp.i
+.PHONY : Game_representation/Views/PlayerView.i
+
+# target to preprocess a source file
+Game_representation/Views/PlayerView.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.i
+.PHONY : Game_representation/Views/PlayerView.cpp.i
+
+Game_representation/Views/PlayerView.s: Game_representation/Views/PlayerView.cpp.s
+.PHONY : Game_representation/Views/PlayerView.s
+
+# target to generate assembly for a file
+Game_representation/Views/PlayerView.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.s
+.PHONY : Game_representation/Views/PlayerView.cpp.s
+
+Game_representation/Views/WallView.o: Game_representation/Views/WallView.cpp.o
+.PHONY : Game_representation/Views/WallView.o
+
+# target to build an object file
+Game_representation/Views/WallView.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o
+.PHONY : Game_representation/Views/WallView.cpp.o
+
+Game_representation/Views/WallView.i: Game_representation/Views/WallView.cpp.i
+.PHONY : Game_representation/Views/WallView.i
+
+# target to preprocess a source file
+Game_representation/Views/WallView.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.i
+.PHONY : Game_representation/Views/WallView.cpp.i
+
+Game_representation/Views/WallView.s: Game_representation/Views/WallView.cpp.s
+.PHONY : Game_representation/Views/WallView.s
+
+# target to generate assembly for a file
+Game_representation/Views/WallView.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.s
+.PHONY : Game_representation/Views/WallView.cpp.s
+
+Game_representation/scroller.o: Game_representation/scroller.cpp.o
+.PHONY : Game_representation/scroller.o
+
+# target to build an object file
+Game_representation/scroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o
+.PHONY : Game_representation/scroller.cpp.o
+
+Game_representation/scroller.i: Game_representation/scroller.cpp.i
+.PHONY : Game_representation/scroller.i
+
+# target to preprocess a source file
+Game_representation/scroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.i
+.PHONY : Game_representation/scroller.cpp.i
+
+Game_representation/scroller.s: Game_representation/scroller.cpp.s
+.PHONY : Game_representation/scroller.s
+
+# target to generate assembly for a file
+Game_representation/scroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.s
+.PHONY : Game_representation/scroller.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -499,15 +608,19 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... 2022_project_henrey_T"
-	@echo "... Game_Logic/Player.o"
-	@echo "... Game_Logic/Player.i"
-	@echo "... Game_Logic/Player.s"
-	@echo "... Game_Logic/Rectangle.o"
-	@echo "... Game_Logic/Rectangle.i"
-	@echo "... Game_Logic/Rectangle.s"
+	@echo "... logicLibrary_meatBoy"
+	@echo "... Game_Logic/Models/Model.o"
+	@echo "... Game_Logic/Models/Model.i"
+	@echo "... Game_Logic/Models/Model.s"
+	@echo "... Game_Logic/Models/PlayerModel.o"
+	@echo "... Game_Logic/Models/PlayerModel.i"
+	@echo "... Game_Logic/Models/PlayerModel.s"
 	@echo "... Game_Logic/Stopwatch.o"
 	@echo "... Game_Logic/Stopwatch.i"
 	@echo "... Game_Logic/Stopwatch.s"
+	@echo "... Game_Logic/Subject.o"
+	@echo "... Game_Logic/Subject.i"
+	@echo "... Game_Logic/Subject.s"
 	@echo "... Game_Logic/World.o"
 	@echo "... Game_Logic/World.i"
 	@echo "... Game_Logic/World.s"
@@ -532,9 +645,18 @@ help:
 	@echo "... Game_representation/States/StateManager.o"
 	@echo "... Game_representation/States/StateManager.i"
 	@echo "... Game_representation/States/StateManager.s"
-	@echo "... Game_representation/View.o"
-	@echo "... Game_representation/View.i"
-	@echo "... Game_representation/View.s"
+	@echo "... Game_representation/Views/GoalView.o"
+	@echo "... Game_representation/Views/GoalView.i"
+	@echo "... Game_representation/Views/GoalView.s"
+	@echo "... Game_representation/Views/PlayerView.o"
+	@echo "... Game_representation/Views/PlayerView.i"
+	@echo "... Game_representation/Views/PlayerView.s"
+	@echo "... Game_representation/Views/WallView.o"
+	@echo "... Game_representation/Views/WallView.i"
+	@echo "... Game_representation/Views/WallView.s"
+	@echo "... Game_representation/scroller.o"
+	@echo "... Game_representation/scroller.i"
+	@echo "... Game_representation/scroller.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

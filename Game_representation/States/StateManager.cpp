@@ -13,7 +13,6 @@ void StateManager::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
 }
 
 void StateManager::setEvent(Event& event) {
-//    cout << "event in StatemanagerSETTER = " << &event <<endl;
     StateManager::event = event;
 }
 

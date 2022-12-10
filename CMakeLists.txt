@@ -17,15 +17,30 @@ endif()
 # Find SFML shared libraries
 find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 
-add_executable(2022_project_henrey_T
-        src/main.cpp
-        Game_Logic/Player.h
+add_library(logicLibrary_meatBoy
         Game_Logic/structures_enums_std_include.h
-        Game_Logic/World.h
         Game_Logic/Camera.h
 
-        Game_Logic/Player.cpp
+        Game_Logic/World.h
         Game_Logic/World.cpp
+
+        Game_Logic/Models/Model.h
+        Game_Logic/Stopwatch.h
+        Game_Logic/Stopwatch.cpp
+        Game_Logic/AbstractFactory.h
+
+        Game_Logic/Models/PlayerModel.h
+        Game_Logic/Models/WallModel.h
+        Game_Logic/Models/GoalModel.h
+        Game_Logic/Models/PlayerModel.cpp
+
+        Game_Logic/Observer.h
+        Game_Logic/Subject.cpp
+        Game_Logic/Subject.h
+        Game_Logic/Models/Model.cpp)
+
+add_executable(2022_project_henrey_T
+        src/main.cpp
 
 
         Game_representation/InputToGame/InputParser.h
@@ -42,28 +57,40 @@ add_executable(2022_project_henrey_T
 
         Game_representation/Game.h
         Game_representation/Game.cpp
-        Game_representation/States/StateManager.cpp Game_representation/States/StateManager.h Game_Logic/Rectangle.cpp Game_Logic/Rectangle.h Game_Logic/Model.h Game_representation/View.cpp Game_representation/View.h Game_Logic/Stopwatch.h Game_Logic/Stopwatch.cpp Game_Logic/AbstractFactory.h Game_representation/ConcreteFactory.cpp Game_representation/ConcreteFactory.h)
+        Game_representation/States/StateManager.cpp
+        Game_representation/States/StateManager.h
 
-# Set include directory search paths
-target_include_directories(2022_project_henrey_T
-        PRIVATE
-        "${PROJECT_BINARY_DIR}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/include"
-        )
+        Game_representation/Views/View.h
 
-# Set executable RPATH
-set_target_properties(2022_project_henrey_T
-        PROPERTIES
-        INSTALL_RPATH
-        "${CMAKE_INSTALL_PREFIX}/lib"
-        )
+        Game_representation/ConcreteFactory.h
+
+        Game_representation/Views/PlayerView.cpp
+        Game_representation/Views/PlayerView.h
+        Game_representation/Views/WallView.cpp
+        Game_representation/Views/WallView.h
+        Game_representation/Views/GoalView.cpp
+        Game_representation/Views/GoalView.h
+        Game_representation/ConcreteFactory.cpp Game_representation/scroller.cpp)
+
+### Set include directory search paths
+#target_include_directories(2022_project_henrey_T
+#        PRIVATE
+#        "${PROJECT_BINARY_DIR}"
+#        "${CMAKE_CURRENT_SOURCE_DIR}/include"
+#        )
+#
+## Set executable RPATH
+#set_target_properties(2022_project_henrey_T
+#        PROPERTIES
+#        INSTALL_RPATH
+#        "${CMAKE_INSTALL_PREFIX}/lib"
+#        )
 
 # Link executable to required SFML modules
-target_link_libraries(2022_project_henrey_T sfml-graphics sfml-audio)
+target_link_libraries(2022_project_henrey_T sfml-graphics sfml-audio logicLibrary_meatBoy)
 
 # Set executable install location
 install(TARGETS 2022_project_henrey_T DESTINATION bin)
-
 
 # Set install location for resources
 install(DIRECTORY content

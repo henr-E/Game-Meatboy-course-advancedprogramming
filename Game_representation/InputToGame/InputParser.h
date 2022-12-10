@@ -11,16 +11,16 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
-#include "../Game_Logic/Rectangle.h"
-
+#include "../../Game_Logic/Models/WallModel.h"
+#include "../../Game_Logic/Models/GoalModel.h"
+#include "../../Game_Logic/structures_enums_std_include.h"
 using namespace sf;
 using namespace std;
 
 
-
 class InputParser {
 private:
-    vector<vector<Rectangle>> tiles;
+    vector<vector<WallModel>> tiles;
     Vector2i screenDimensions;
     float tileSize;
 
@@ -28,7 +28,7 @@ public:
     InputParser();
     void parse(int levelNumb);
 
-    const vector<vector<Rectangle>> & getTiles() const;
+    const vector<vector<WallModel>> & getTiles() const;
     const Vector2i& getScreenDimensions() const;
 };
 

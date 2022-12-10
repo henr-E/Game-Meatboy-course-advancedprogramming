@@ -8,34 +8,46 @@
 
 #include <vector>
 #include <iostream>
-
 #include <cmath>
 
-#include "Player.h"
-#include "Rectangle.h"
+#include "AbstractFactory.h"
+
+#include "Models/GoalModel.h"
+#include "Models/PlayerModel.h"
+#include "Models/WallModel.h"
+
+
 #include "Stopwatch.h"
+#include "structures_enums_std_include.h"
 
 using namespace std;
 using namespace chrono;
 
 class World {
 private:
-    Player player;
-    shared_ptr<Stopwatch> stopwatch = Stopwatch::getInstance();
 
     Collision collision;
+    shared_ptr<Stopwatch> stopwatch = Stopwatch::getInstance();
+    shared_ptr<AbstractFactory> abstractFactory;
+
+    PlayerModel player;
+    WallModel wall;
+    GoalModel goal;
+
+    vector<vector<WallModel>> tiles;
 
 public:
-    World();
 
-    void checkCollisionWithTiles(const vector<vector<Rectangle>> &tiles);
+    void setUp(vector<vector<WallModel>>& tiles);
+    void checkCollisionWithTiles();
     void checkCollisionWallsBotom();
 
     void keyboardToPlayer(KeyboardInput keyboardInput);
-    void simulate(vector<vector<Rectangle>> tiles);
 
-    const Player & getPlayer() const;
-    void setPlayer(const Player &player);
+    void updatePlayerModel();
+    void updateViews();
+
+    void setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactory);
 };
 
 

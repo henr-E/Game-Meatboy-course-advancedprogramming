@@ -421,7 +421,11 @@ CMakeFiles/2022_project_henrey_T.dir/Game_Logic/World.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Player.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Rectangle.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/structures_enums_std_include.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.h
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/AbstractFactory.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/PlayerModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/Model.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/../structures_enums_std_include.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/GoalModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/WallModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Stopwatch.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/structures_enums_std_include.h
