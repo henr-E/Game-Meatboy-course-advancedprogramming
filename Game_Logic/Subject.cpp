@@ -16,3 +16,4 @@ void Subject::updateObservers() {
         observer->update();
     }
 }
+const vector<shared_ptr<Observer>>& Subject::getObserverList() const { return observerList; }

@@ -15,10 +15,10 @@ using namespace std;
 
 class State {
 public:
-    State();
+    explicit State(const shared_ptr<RenderWindow>& sfWindow);
 
-    void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
-    const shared_ptr<RenderWindow>& getSfWindow() const;
+    //    void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
+//    const shared_ptr<RenderWindow>& getSfWindow() const;
 
     virtual void userInput(Event &event);
     virtual void simulate();

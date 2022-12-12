@@ -3,6 +3,8 @@
 //
 
 #include "PlayerView.h"
+
+PlayerView::PlayerView(const shared_ptr<RenderWindow>& sfWindow) : View(sfWindow) {}
 void PlayerView::update() {
 
     // make sprite and texture player
@@ -18,13 +20,16 @@ void PlayerView::update() {
 
     spritePlayer.setTexture(texturePlayer);
 
-    Position position = model.getLeftUpperCorner();
     // convert coordinates to pixels
-    Position p = camera.coordinatesToPixel(position.x, position.y);
+    Position p = camera.coordinatesToPixel(playerPosition.x, playerPosition.y);
     // Now move the playerSprite to its new position
     spritePlayer.setPosition(p.x, p.y);
     // Draw the player
     sfWindow->draw(spritePlayer);
-}
+    cout << "sfwindow in playerVie" << sfWindow <<endl;
 
-PlayerView::PlayerView(ownModel::Model& model) : View(model) {}
+    sfWindow->display();
+}
+void PlayerView::updateData(Position position) {
+    playerPosition = position;
+}

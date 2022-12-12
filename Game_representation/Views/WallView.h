@@ -15,8 +15,9 @@ private:
     Camera camera;
     vector<vector<WallModel>> tiles;
 public:
-    WallView(ownModel::Model& model, const vector<vector<WallModel>>& tiles);
+    WallView(const shared_ptr<RenderWindow>& sfWindow, const vector<vector<WallModel>>& tiles);
     void update() override;
+    void updateData(Position position) override;
 
     void setUp();
     void drawTiles();

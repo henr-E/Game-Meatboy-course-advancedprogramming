@@ -26,7 +26,7 @@ private:
     VideoMode sfVideoMode;
     shared_ptr<RenderWindow> sfWindow = make_shared<RenderWindow>();
 
-    StateManager stateManager;
+    shared_ptr<StateManager> stateManager;
     FunctionCallTo functionCallTo;
 
     SoundBuffer buffer;

@@ -6,20 +6,14 @@
 #define INC_2022_PROJECT_HENREY_T_OBSERVER_H
 
 #include "memory"
+#include "structures_enums_std_include.h"
 using namespace std;
-//forward declaration
-namespace ownModel{
-    class Model;
-}
-
 
 class Observer {
 public:
-    explicit Observer(ownModel::Model& model) : model(model) {}
+    Observer() = default;
     virtual void update() = 0;
-
-protected:
-    ownModel::Model& model;
+    virtual void updateData(Position position) = 0;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_OBSERVER_H

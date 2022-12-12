@@ -12,10 +12,12 @@ private:
     Texture texturePlayer;
     Camera camera;
 
-public:
-    explicit PlayerView(ownModel::Model& model);
-    void update() override;
+    Position playerPosition;
 
+public:
+    explicit PlayerView(const shared_ptr<RenderWindow>& sfWindow);
+    void update() override;
+    void updateData(Position position) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERVIEW_H

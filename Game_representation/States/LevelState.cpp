@@ -3,7 +3,8 @@
 //
 
 #include "LevelState.h"
-LevelState::LevelState() {
+LevelState::LevelState(const shared_ptr<RenderWindow>& sfWindow) : State(sfWindow) {
+
     // make level from input
     inputParser.parse(2);
 

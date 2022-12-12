@@ -17,7 +17,8 @@ Game::Game(){
     // change framerate
     sfWindow->setFramerateLimit(60);
 
-    stateManager.setSfWindow(sfWindow);
+    shared_ptr<StateManager> stateManager1 = make_shared<StateManager>(sfWindow);
+    stateManager = stateManager1;
 
 //        if (!music.openFromFile("../content/music.ogg")){}
 //
@@ -42,18 +43,18 @@ void Game::run() {
         while (sfWindow->pollEvent(event)) {
             //it is necasary to pass the event after the second while loop
             //because the pollEvent function changes the event
-            stateManager.setEvent(event);
+            stateManager->setEvent(event);
             if (event.type == sf::Event::Closed) {
                 sfWindow->close();
             }
 
             functionCallTo = INPUT;
-            stateManager.simulate(functionCallTo);
+            stateManager->simulate(functionCallTo);
         }
         functionCallTo = SIMULATE;
-        stateManager.simulate(functionCallTo);
+        stateManager->simulate(functionCallTo);
 
         functionCallTo = DRAW;
-        stateManager.simulate(functionCallTo);
+        stateManager->simulate(functionCallTo);
     }
 }

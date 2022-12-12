@@ -3,5 +3,7 @@
 //
 
 #include "GoalView.h"
-GoalView::GoalView(ownModel::Model& model) : View(model) {}
+
 void GoalView::update() { }
+GoalView::GoalView(const shared_ptr<RenderWindow>& sfWindow) : View(sfWindow) {}
+void GoalView::updateData(Position position) {}

@@ -3,8 +3,7 @@
 //
 
 #include "WallView.h"
-
-WallView::WallView(ownModel::Model& model, const vector<vector<WallModel>>& tiles) : View(model), tiles(tiles) {
+WallView::WallView(const shared_ptr<RenderWindow>& sfWindow, const vector<vector<WallModel>>& tiles): View(sfWindow), tiles(tiles) {
     setUp();
 }
 
@@ -17,11 +16,16 @@ void WallView::setUp() {
     spriteBackground.setTexture(textureBackground);
 
     spriteBackground.setScale(1, (float)1024 / textureBackground.getSize().y);
+
+
 }
 
 
 void WallView::update() {
     sfWindow->clear();
+    sfWindow->draw(spriteBackground);
+
+    cout << "sfwindow in wallView" << sfWindow <<endl;
     drawTiles();
 }
 
@@ -45,18 +49,18 @@ void WallView::drawTiles() {
     }
 
     for(auto const &row : tiles){
-        for(auto const &rect : row){
+        for(auto const & wallModel : row){
 
-            float XLeft = rect.getLeftUpperCorner().x;
-            float YUp = rect.getLeftUpperCorner().y;
+            float XLeft = wallModel.getLeftUpperCorner().x;
+            float YUp = wallModel.getLeftUpperCorner().y;
 
-            if(rect.getTileType() == other){
+            if(wallModel.getTileType() == other){
                 spriteTile.setTexture(textureTileOther);
             }
-            else if(rect.getTileType() == girlfriend){
+            else if(wallModel.getTileType() == girlfriend){
                 spriteTile.setTexture(textureTileGirl);
             }
-            else if(rect.getTileType() == block){
+            else if(wallModel.getTileType() == block){
                 spriteTile.setTexture(textureTileBlock);
             }
 
@@ -70,3 +74,4 @@ void WallView::drawTiles() {
         }
     }
 }
+void WallView::updateData(Position position) {}

@@ -18,6 +18,7 @@ public:
     void removeObserver(shared_ptr<Observer> observer);
 protected:
     virtual void updateObservers();
+    virtual const vector<shared_ptr<Observer>>& getObserverList() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_SUBJECT_H

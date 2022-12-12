@@ -10,10 +10,6 @@ class WallModel: public ownModel::Model{
 public:
     WallModel() {}
 
-    WallModel& operator=(const WallModel& that) {
-        return *this;
-    }
-
     const Position& getLeftUpperCorner() const override{
         return leftUpperCorner;
     }

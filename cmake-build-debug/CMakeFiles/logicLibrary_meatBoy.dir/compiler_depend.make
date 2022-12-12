@@ -1443,6 +1443,7 @@ CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Subject.cpp.o: ../Game_Logic/Subj
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/assert.h \
+  ../Game_Logic/structures_enums_std_include.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bits \
@@ -1988,10 +1989,10 @@ CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/World.cpp.o: ../Game_Logic/World.
   ../Game_Logic/structures_enums_std_include.h \
   ../Game_Logic/Subject.h \
   ../Game_Logic/Observer.h \
+  ../Game_Logic/structures_enums_std_include.h \
   ../Game_Logic/Models/GoalModel.h \
   ../Game_Logic/Models/WallModel.h \
-  ../Game_Logic/Stopwatch.h \
-  ../Game_Logic/structures_enums_std_include.h
+  ../Game_Logic/Stopwatch.h
 
 
 ../Game_Logic/World.h:

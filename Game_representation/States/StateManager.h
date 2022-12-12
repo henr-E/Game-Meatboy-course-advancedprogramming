@@ -15,13 +15,13 @@
 class StateManager {
 private:
     shared_ptr<RenderWindow> sfWindow;
-    shared_ptr<State> state = make_shared<MenuState>();
+    shared_ptr<State> state;
 
     Event event;
     CurrentState currentState;
 
 public:
-    StateManager();
+    explicit StateManager(const shared_ptr<RenderWindow>& sfWindow);
 
     void simulate(FunctionCallTo functionCallTo);
     void checkTransition();

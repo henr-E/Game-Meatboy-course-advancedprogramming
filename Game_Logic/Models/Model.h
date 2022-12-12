@@ -23,11 +23,16 @@ namespace ownModel {
 
         virtual const Position& getLeftUpperCorner() const;
         virtual void setLeftUpperCorner(const Position& leftUpperCorner);
+
         virtual const Position& getRightDownCorner() const;
         virtual void setRightDownCorner(const Position& rightDownCorner);
+
         virtual TileType getTileType() const;
         virtual void setTileType(const TileType& tileType);
+
         virtual float getTileHeightWidth() const;
         virtual void setTileHeightWidth(const float& tileHeightWidth);
+
+        const vector<shared_ptr<Observer>>& getObserverList() const override;
     };
 }

@@ -26,7 +26,7 @@ private:
     vector<Text> allTexts = {level1, level2, level3, level4, level5};
 
 public:
-    MenuState();
+    explicit MenuState(const shared_ptr<RenderWindow>& sfWindow);
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();

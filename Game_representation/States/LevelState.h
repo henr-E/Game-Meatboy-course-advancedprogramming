@@ -21,7 +21,7 @@ private:
     InputParser inputParser;
 
 public:
-    LevelState();
+    explicit LevelState(const shared_ptr<RenderWindow>& sfWindow);
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();

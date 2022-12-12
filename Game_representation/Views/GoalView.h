@@ -7,8 +7,9 @@
 #include "View.h"
 class GoalView : public ownView::View{
 public:
-    explicit GoalView(ownModel::Model& model);
+    explicit GoalView(const shared_ptr<RenderWindow>& sfWindow);
     void update() override;
+    void updateData(Position position) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_GOALVIEW_H
