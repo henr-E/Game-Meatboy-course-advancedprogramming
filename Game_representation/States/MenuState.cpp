@@ -4,7 +4,8 @@
 
 #include "MenuState.h"
 MenuState::MenuState(const shared_ptr<RenderWindow>& sfWindow) : State(sfWindow) {
-
+    screenDimensions.x = 544;
+    screenDimensions.y = 1024;
 
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
@@ -114,4 +115,3 @@ const Sprite& MenuState::getSpriteBackground() const { return spriteBackground; 
 const Font& MenuState::getFont() const { return font; }
 const vector<Text>& MenuState::getAllTexts() const { return allTexts; }
 const Text& MenuState::getWelcomeText() const { return welcomeText; }
-const Vector2i& MenuState::getScreenDimensions() const { return screenDimensions; }

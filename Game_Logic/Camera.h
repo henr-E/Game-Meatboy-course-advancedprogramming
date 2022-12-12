@@ -12,17 +12,18 @@ using namespace std;
 
 class Camera {
 private:
-
+    Position screenDimensions;
 public:
     Position coordinatesToPixel(float xOld, float yOld){
         Position p{};
         xOld += 1;
         yOld += 1;
 
-        p.x = xOld * 544 / 2;
-        p.y = 1024 - yOld * 544 / 2;
+        p.x = xOld * screenDimensions.x / 2;
+        p.y = screenDimensions.y - yOld * screenDimensions.x / 2;
         return p;
     };
+    void setScreenDimensions(const Position& screenDimensions) { Camera::screenDimensions = screenDimensions; }
 };
 
 

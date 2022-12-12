@@ -10,12 +10,18 @@ LevelState::LevelState(const shared_ptr<RenderWindow>& sfWindow) : State(sfWindo
 
     tiles = inputParser.getTiles();
 
+    screenDimensions = inputParser.getScreenDimensions();
+
     shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(sfWindow);
 
     //add absstractFactory
     world.setAbstractFactory(conc);
-    //make player goal wall
+    //pass screendimentions to world
+    world.setScreenDimensions(screenDimensions);
+    //pass tiles to world
     world.setUp(tiles);
+    //pass tileSize to world
+    world.setTileSize(inputParser.getTileSize());
 }
 
 void LevelState::userInput(Event &event) {
@@ -68,5 +74,3 @@ void LevelState::simulate() {
 void LevelState::draw() {
     world.updateViews();
 }
-
-const Vector2i& LevelState::getScreenDimensions() const { return screenDimensions; }

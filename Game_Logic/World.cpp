@@ -6,9 +6,9 @@
 
 void World::setUp(vector<vector<WallModel>>& tiles1) {
     tiles = tiles1;
-    player = abstractFactory->createPlayer();
-    goal = abstractFactory->createGoal();
-    wall = abstractFactory->createWalls(tiles);
+    player = abstractFactory->createPlayer(screenDimensions);
+    goal = abstractFactory->createGoal(screenDimensions);
+    wall = abstractFactory->createWalls(tiles, screenDimensions);
 }
 void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
@@ -33,16 +33,15 @@ void World::updateViews() {
     player.updateObservers();
 }
 void World::checkCollisionWithTiles() {
+
     float playerXUp = player.getLeftUpperCorner().x;
     float playerYUp = player.getLeftUpperCorner().y;
 
     float playerX = playerXUp + player.getTileHeightWidth()/2;
     float playerY = playerYUp + player.getTileHeightWidth()/2;
 
-//    auto a = (playerX + 1.f) / (2.f/17.f);
-    // list begins with index 0 so -1
-    int currentPlayerRow = floor((playerY+ 1.f) / (2.f/17.f)) - 1;
-    int currentPlayerColumn = floor((playerX + 1.f) / (2.f/17.f));
+    int currentPlayerRow = floor((playerY+ 1.f) / tileSize) - 1;
+    int currentPlayerColumn = floor((playerX + 1.f) / tileSize);
 
 //    cout << "currentPlayerRow " << currentPlayerRow <<endl;
 //    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
@@ -134,3 +133,5 @@ void World::checkCollisionWallsBotom(){
 void World::setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactory) {
     World::abstractFactory = abstractFactory;
 }
+void World::setScreenDimensions(const Position& screenDimensions) { World::screenDimensions = screenDimensions; }
+void World::setTileSize(float tileSize) { World::tileSize = tileSize; }

@@ -3,7 +3,10 @@
 //
 
 #include "WallView.h"
-WallView::WallView(const shared_ptr<RenderWindow>& sfWindow, const vector<vector<WallModel>>& tiles): View(sfWindow), tiles(tiles) {
+
+WallView::WallView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow,
+                   const vector<vector<WallModel>>& tiles): View(screenDimensions, sfWindow), tiles(tiles) {
+    camera.setScreenDimensions(screenDimensions);
     setUp();
 }
 
@@ -16,8 +19,6 @@ void WallView::setUp() {
     spriteBackground.setTexture(textureBackground);
 
     spriteBackground.setScale(1, (float)1024 / textureBackground.getSize().y);
-
-
 }
 
 
@@ -75,3 +76,4 @@ void WallView::drawTiles() {
     }
 }
 void WallView::updateData(Position position) {}
+

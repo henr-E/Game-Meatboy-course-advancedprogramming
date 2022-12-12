@@ -12,9 +12,9 @@
 class AbstractFactory{
 public:
     AbstractFactory() = default;
-    virtual PlayerModel createPlayer() = 0;
-    virtual GoalModel createGoal() = 0;
-    virtual WallModel createWalls(vector<vector<WallModel>> tiles) = 0;
+    virtual PlayerModel createPlayer(Position screenDimensions) = 0;
+    virtual GoalModel createGoal(Position screenDimensions) = 0;
+    virtual WallModel createWalls(vector<vector<WallModel>> tiles, Position screenDimensions) = 0;
 };
 
 

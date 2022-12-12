@@ -25,7 +25,6 @@ public:
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();
-    virtual const Vector2i& getScreenDimensions() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_LEVELSTATE_H

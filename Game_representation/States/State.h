@@ -31,13 +31,13 @@ public:
     int getChosenLevel() const;
     void setChosenLevel(int chosenLevel);
 
-    virtual const Vector2i& getScreenDimensions() const;
+    virtual const Position& getScreenDimensions() const;
 
 protected:
 
     int chosenLevel;
     bool transition;
-    Vector2i screenDimensions;
+    Position screenDimensions;
     shared_ptr<RenderWindow> sfWindow;
 };
 

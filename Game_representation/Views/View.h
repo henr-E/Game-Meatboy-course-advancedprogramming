@@ -20,9 +20,11 @@ using namespace std;
 namespace ownView {
     class View : public Observer {
     public:
-        explicit View(const shared_ptr<RenderWindow>& sfWindow) : sfWindow(sfWindow) {}
+        View(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow)
+            : screenDimensions(screenDimensions), sfWindow(sfWindow) {}
 
     protected:
+        Position screenDimensions;
         shared_ptr<RenderWindow> sfWindow;
         virtual void setSfWindow(const shared_ptr<RenderWindow>& sfWindowNew) { View::sfWindow = sfWindowNew; }
     };

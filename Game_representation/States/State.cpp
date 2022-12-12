@@ -3,10 +3,7 @@
 //
 
 #include "State.h"
-State::State(const shared_ptr<RenderWindow>& sfWindow) : sfWindow(sfWindow) {
-    screenDimensions.x = 544;
-    screenDimensions.y = 1024;
-}
+State::State(const shared_ptr<RenderWindow>& sfWindow) : sfWindow(sfWindow) {}
 
 void State::userInput(Event &event) {}
 void State::draw() {}
@@ -19,4 +16,4 @@ int State::getChosenLevel() const { return chosenLevel; }
 void State::setChosenLevel(int chosenLevel) { State::chosenLevel = chosenLevel; }
 void State::setTransition(bool transition) { State::transition = transition; }
 //const shared_ptr<RenderWindow>& State::getSfWindow() const { return sfWindow; }
-const Vector2i& State::getScreenDimensions() const { return screenDimensions; }
+const Position& State::getScreenDimensions() const { return screenDimensions; }

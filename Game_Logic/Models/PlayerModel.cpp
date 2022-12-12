@@ -7,13 +7,26 @@ PlayerModel::PlayerModel() {
     verticalSpeed = 0;
     acceleration = 0.1;
     gravity = 0.01;
+
+    /**
+     * if there are 17 tiles in width then the size of one tile is 2/17 because the
+     * coodinate system is [-1,1]
+     *
+     * 2/17 in coordinates = 32 in pixels
+     * => 32/272 = (2/17)
+     *
+     * but player is 26 pixels
+     * => 26/272
+     */
+    tileHeightWidth = 26.f/272.f;
+
+
     // set rectangle members
     leftUpperCorner.x = -1;
-    leftUpperCorner.y = -0.875;
-    rightDownCorner.x = -0.875;
+    leftUpperCorner.y = -1 + tileHeightWidth;
+    rightDownCorner.x = -1 + tileHeightWidth;
     rightDownCorner.y = -1;
-    //player height width
-    tileHeightWidth = 2.f/17.f;
+
 
     direction = facingRight;
 
@@ -82,7 +95,7 @@ void PlayerModel::simulate(float elapsedTime) {
         rightDownCorner.x -= add;
     }
 
-    float add = verticalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2)) / 2;
+
     verticalSpeed += gravity;
 
     //todo should jump hirozontally until speed is 0
@@ -92,7 +105,7 @@ void PlayerModel::simulate(float elapsedTime) {
         acceleration = 0;
     }
 
-
+    float add = verticalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2)) / 2;
     leftUpperCorner.y -= add;
     rightDownCorner.y -= add;
 
@@ -124,11 +137,7 @@ void PlayerModel::simulate(float elapsedTime) {
         verticalSpeed = -verticalSpeed;
     }
 
-    //    //check hit bottom
-    //    if(rightDownCorner.y < -1){
-    //        rightDownCorner.y = -1;
-    //        leftUpperCorner.y = -1 + (2.f/17.f);
-    //    }
+
     if(collision.collisionRight or collision.collisionLeft){
         horizontalSpeed = 0;
     }

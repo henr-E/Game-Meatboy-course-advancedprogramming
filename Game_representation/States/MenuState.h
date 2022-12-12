@@ -37,7 +37,6 @@ public:
     const Font& getFont() const;
     const vector<Text>& getAllTexts() const;
     const Text& getWelcomeText() const;
-    virtual const Vector2i& getScreenDimensions() const;
 };
 
 

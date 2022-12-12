@@ -5,5 +5,6 @@
 #include "GoalView.h"
 
 void GoalView::update() { }
-GoalView::GoalView(const shared_ptr<RenderWindow>& sfWindow) : View(sfWindow) {}
 void GoalView::updateData(Position position) {}
+GoalView::GoalView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow)
+    : View(screenDimensions, sfWindow) {}

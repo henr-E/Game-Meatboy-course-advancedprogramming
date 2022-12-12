@@ -5,19 +5,9 @@
 #include "InputParser.h"
 //todo check for two girlfriends becauase hten level is wrong
 InputParser::InputParser() {
-    screenDimensions.x = 544;
-    screenDimensions.y = 1024;
-
-    /*
-     * there can be 16 tiles in width
-     * 544 / 32 = 17 = amount of tiles in width
-     * we have 544/17 = tiles of width 32
-     *
-     * we have 2/17 = tiles of width 0.117...
-     *
-     * */
-
-    tileSize = 2.f/17.f;
+    screenDimensions.x = 0;
+    screenDimensions.y = 0;
+    tileSize = 0;
 }
 
 void InputParser::parse(int levelNumb) {
@@ -33,6 +23,24 @@ void InputParser::parse(int levelNumb) {
         auto s = string(myText);
         lines.emplace_back(s);
     }
+    //the string will show how long a row is
+    screenDimensions.x = lines[0].size() * 32;
+    //amount of strings will show how many rows there are
+    screenDimensions.y = lines.size() * 32;
+
+    /**
+     * We use a grid system, this means that when converted, the size of a tile has
+     * to be 32x32 so we need to check how many tiles there are to know the size
+     *
+     * if the screen is width 544
+     * then 544/32 = 17 => 17 tiles
+     *
+     * 17 tiles => 2/17 = size of tile in coordinate system
+     *
+     * so the size of a tile is 2/(screenDimenstionsX/32)
+     */
+
+    tileSize = 2.f/(screenDimensions.x/32);
 
     // set begin of positions
     float leftUpperX = -1;
@@ -106,5 +114,7 @@ void InputParser::parse(int levelNumb) {
     // Close the file
     myFile.close();
 }
+
 const vector<vector<WallModel>> & InputParser::getTiles() const { return tiles; }
-const Vector2i& InputParser::getScreenDimensions() const { return screenDimensions; }
+const Position& InputParser::getScreenDimensions() const { return screenDimensions; }
+float InputParser::getTileSize() const { return tileSize; }

@@ -4,7 +4,11 @@
 
 #include "PlayerView.h"
 
-PlayerView::PlayerView(const shared_ptr<RenderWindow>& sfWindow) : View(sfWindow) {}
+PlayerView::PlayerView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow)
+    : View(screenDimensions, sfWindow) {
+    camera.setScreenDimensions(screenDimensions);
+}
+
 void PlayerView::update() {
 
     // make sprite and texture player
@@ -33,3 +37,4 @@ void PlayerView::update() {
 void PlayerView::updateData(Position position) {
     playerPosition = position;
 }
+

@@ -21,7 +21,7 @@ using namespace std;
 class InputParser {
 private:
     vector<vector<WallModel>> tiles;
-    Vector2i screenDimensions;
+    Position screenDimensions;
     float tileSize;
 
 public:
@@ -29,7 +29,8 @@ public:
     void parse(int levelNumb);
 
     const vector<vector<WallModel>> & getTiles() const;
-    const Vector2i& getScreenDimensions() const;
+    const Position& getScreenDimensions() const;
+    float getTileSize() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_INPUTPARSER_H

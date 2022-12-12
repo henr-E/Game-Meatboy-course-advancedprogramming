@@ -15,7 +15,7 @@ private:
     Position playerPosition;
 
 public:
-    explicit PlayerView(const shared_ptr<RenderWindow>& sfWindow);
+    PlayerView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow);
     void update() override;
     void updateData(Position position) override;
 };
