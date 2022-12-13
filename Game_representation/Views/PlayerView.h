@@ -13,11 +13,12 @@ private:
     Camera camera;
 
     Position playerPosition;
+    Direction playerDirection;
 
 public:
     PlayerView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow);
     void update() override;
-    void updateData(Position position) override;
+    void updateData(Position position, Direction direction) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERVIEW_H

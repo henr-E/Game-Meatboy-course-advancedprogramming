@@ -27,7 +27,7 @@ void World::updateViews() {
     goal.updateObservers();
 
     for(auto &observer: player.getObserverList()){
-        observer->updateData(player.getLeftUpperCorner());
+        observer->updateData(player.getLeftUpperCorner(), player.getDirection());
     }
 
     player.updateObservers();

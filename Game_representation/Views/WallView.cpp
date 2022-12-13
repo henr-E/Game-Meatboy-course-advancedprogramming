@@ -26,7 +26,6 @@ void WallView::update() {
     sfWindow->clear();
     sfWindow->draw(spriteBackground);
 
-    cout << "sfwindow in wallView" << sfWindow <<endl;
     drawTiles();
 }
 
@@ -75,5 +74,5 @@ void WallView::drawTiles() {
         }
     }
 }
-void WallView::updateData(Position position) {}
+void WallView::updateData(Position position, Direction direction) {}
 

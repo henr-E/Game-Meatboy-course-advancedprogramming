@@ -22,6 +22,8 @@ class PlayerModel: public ownModel::Model{
     /// Which direction(s) is the player currently moving in
     bool keyboardLeft;
     bool keyboardRight;
+    bool jumpWallLeft;
+    bool jumpWallRight;
 
     Collision collision;
 

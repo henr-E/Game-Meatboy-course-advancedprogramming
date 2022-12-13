@@ -13,7 +13,7 @@ class Observer {
 public:
     Observer() = default;
     virtual void update() = 0;
-    virtual void updateData(Position position) = 0;
+    virtual void updateData(Position position, Direction direction) = 0;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_OBSERVER_H
