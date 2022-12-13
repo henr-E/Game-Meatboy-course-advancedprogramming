@@ -6,11 +6,14 @@
 LevelState::LevelState(const shared_ptr<RenderWindow>& sfWindow) : State(sfWindow) {
 
     // make level from input
-    inputParser.parse(2);
+    inputParser.parse(3);
 
     tiles = inputParser.getTiles();
 
     screenDimensions = inputParser.getScreenDimensions();
+
+    camera->setScreenDimensions(screenDimensions);
+    camera->setAmountOfTilesUnderScreen(inputParser.getAmountOfTilesUnderScreen());
 
     shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(sfWindow);
 
@@ -73,4 +76,36 @@ void LevelState::simulate() {
 
 void LevelState::draw() {
     world.updateViews();
+
+}
+
+void LevelState::moveScreen() {
+    View view = sfWindow->getView();
+
+    view.reset(sf::FloatRect(0, 0, screenDimensions.x, screenDimensions.y));
+
+    Vector2f position(screenDimensions.x / 2, screenDimensions.y / 2);
+
+    //    float Position = world.getPlayer().getPlayerLeftUpperPosition().y;
+    const Position playerPosition = world.getPlayer().getLeftUpperCorner();
+
+    /* coordinates
+     * (0,0)         (532,0)
+     * |_________________|
+     * |
+     * |
+     * |
+     * |________________\
+     * |                |
+     * |________________|
+     * (0,800)         (532,800)
+     */
+    // the position is the left side of meatboy so to get the middle we have to add half of meat boy = 25
+    if (playerPosition.y + 16 < screenDimensions.y / 2) {
+        position.y = playerPosition.y + 16;
+    } else {
+        position.y = screenDimensions.y / 2;
+    }
+
+    view.setCenter(position);
 }

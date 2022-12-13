@@ -8,6 +8,7 @@ InputParser::InputParser() {
     screenDimensions.x = 0;
     screenDimensions.y = 0;
     tileSize = 0;
+    amountOfTilesUnderScreen = 0;
 }
 
 void InputParser::parse(int levelNumb) {
@@ -23,10 +24,13 @@ void InputParser::parse(int levelNumb) {
         auto s = string(myText);
         lines.emplace_back(s);
     }
-    //the string will show how long a row is
+    //the string will show how many columns there are
     screenDimensions.x = lines[0].size() * 32;
     //amount of strings will show how many rows there are
     screenDimensions.y = lines.size() * 32;
+
+    //amount of inputlines - amount of lines that fit in 1024
+    amountOfTilesUnderScreen = lines.size() - (1024.f/32.f) ;
 
     /**
      * We use a grid system, this means that when converted, the size of a tile has
@@ -44,9 +48,10 @@ void InputParser::parse(int levelNumb) {
 
     // set begin of positions
     float leftUpperX = -1;
-    float leftUpperY = -0.875;
-    float rightDownX = -0.875;
+    float leftUpperY = -1 + tileSize;
+    float rightDownX = -1 + tileSize;
     float rightDownY = -1;
+
     // loop backwards through the list so the first line of text is
     // actually the first row of tiles at the bottom of the screen
     for (int line = lines.size()-1; line >= 0; --line) {
@@ -79,6 +84,19 @@ void InputParser::parse(int levelNumb) {
                 WallModel t;
                 // set tileType
                 t.setTileType(other);
+                t.setTileHeightWidth(tileSize);
+                // set position
+                Position leftUpper;
+                leftUpper.x = leftUpperX;
+                leftUpper.y = leftUpperY;
+                // set position
+                Position rightDown;
+                rightDown.x = rightDownX;
+                rightDown.y = rightDownY;
+                // set position
+                t.setLeftUpperCorner(leftUpper);
+                t.setRightDownCorner(rightDown);
+
                 // add rect to tileRow
                 tileRow.push_back(t);
             } else if (lines[line][column]== '&') {
@@ -106,7 +124,7 @@ void InputParser::parse(int levelNumb) {
         }
         tiles.push_back(tileRow);
         leftUpperX = -1;
-        rightDownX = -0.875;
+        rightDownX = -1 + tileSize;
 
         leftUpperY += tileSize;
         rightDownY += tileSize;
@@ -118,3 +136,4 @@ void InputParser::parse(int levelNumb) {
 const vector<vector<WallModel>> & InputParser::getTiles() const { return tiles; }
 const Position& InputParser::getScreenDimensions() const { return screenDimensions; }
 float InputParser::getTileSize() const { return tileSize; }
+int InputParser::getAmountOfTilesUnderScreen() const { return amountOfTilesUnderScreen; }

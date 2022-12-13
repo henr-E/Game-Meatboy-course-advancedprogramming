@@ -6,9 +6,9 @@
 
 void World::setUp(vector<vector<WallModel>>& tiles1) {
     tiles = tiles1;
-    player = abstractFactory->createPlayer(screenDimensions);
-    goal = abstractFactory->createGoal(screenDimensions);
-    wall = abstractFactory->createWalls(tiles, screenDimensions);
+    player = abstractFactory->createPlayer();
+    goal = abstractFactory->createGoal();
+    wall = abstractFactory->createWalls(tiles);
 }
 void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
@@ -135,3 +135,4 @@ void World::setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactor
 }
 void World::setScreenDimensions(const Position& screenDimensions) { World::screenDimensions = screenDimensions; }
 void World::setTileSize(float tileSize) { World::tileSize = tileSize; }
+const PlayerModel& World::getPlayer() const { return player; }

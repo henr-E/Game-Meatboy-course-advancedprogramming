@@ -139,13 +139,28 @@ CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/Model.cpp -o CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.s
 
+CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o: CMakeFiles/logicLibrary_meatBoy.dir/flags.make
+CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o: ../Game_Logic/Camera.cpp
+CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o: CMakeFiles/logicLibrary_meatBoy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o -MF CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o.d -o CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp
+
+CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp > CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.i
+
+CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp -o CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.s
+
 # Object files for target logicLibrary_meatBoy
 logicLibrary_meatBoy_OBJECTS = \
 "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/World.cpp.o" \
 "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Stopwatch.cpp.o" \
 "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.o" \
 "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Subject.cpp.o" \
-"CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.o"
+"CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.o" \
+"CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o"
 
 # External object files for target logicLibrary_meatBoy
 logicLibrary_meatBoy_EXTERNAL_OBJECTS =
@@ -155,9 +170,10 @@ liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Stopwa
 liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.o
 liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Subject.cpp.o
 liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.o
+liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o
 liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/build.make
 liblogicLibrary_meatBoy.a: CMakeFiles/logicLibrary_meatBoy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library liblogicLibrary_meatBoy.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library liblogicLibrary_meatBoy.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/logicLibrary_meatBoy.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/logicLibrary_meatBoy.dir/link.txt --verbose=$(VERBOSE)
 

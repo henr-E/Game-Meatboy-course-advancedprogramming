@@ -33,7 +33,7 @@ private:
     Sound sound;
     Music music;
 
-    Vector2i screenDimensions;
+    Vector2i windowDimentions;
 
 public:
     Game();

@@ -4,9 +4,8 @@
 
 #include "WallView.h"
 
-WallView::WallView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow,
-                   const vector<vector<WallModel>>& tiles): View(screenDimensions, sfWindow), tiles(tiles) {
-    camera.setScreenDimensions(screenDimensions);
+WallView::WallView(const shared_ptr<RenderWindow>& sfWindow,
+                   const vector<vector<WallModel>>& tiles): View(sfWindow), tiles(tiles) {
     setUp();
 }
 
@@ -36,7 +35,7 @@ void WallView::drawTiles() {
 
     Sprite spriteTile;
 
-    if (textureTileOther.loadFromFile("../content/tileset.png", IntRect(160, 0, 32, 32))){
+    if (textureTileOther.loadFromFile("../content/tileset.png", IntRect(256, 0, 32, 32))){
 
     }
 
@@ -63,13 +62,9 @@ void WallView::drawTiles() {
             else if(wallModel.getTileType() == block){
                 spriteTile.setTexture(textureTileBlock);
             }
-
             //transform coordinates
-            Position p = camera.coordinatesToPixel(XLeft, YUp);
-
+            Position p = camera->coordinatesToPixel(XLeft, YUp);
             spriteTile.setPosition(p.x, p.y);
-
-
             sfWindow->draw(spriteTile);
         }
     }

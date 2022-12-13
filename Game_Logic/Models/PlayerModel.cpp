@@ -68,12 +68,14 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
 
         if(!collision.collisionDown){
             if(collision.collisionRight){
-                horizontalSpeed = 0.5;
+                horizontalSpeed = 1.5;
                 jumpWallRight = true;
+                direction = facingLeft;
             }
             if(collision.collisionLeft){
-                horizontalSpeed = 0.5;
+                horizontalSpeed = 1.5;
                 jumpWallLeft = true;
+                direction = facingRight;
             }
         }
 
@@ -101,7 +103,7 @@ void PlayerModel::simulate(float elapsedTime) {
         jumpWallRight = false;
     }
 
-    if (((keyboardRight and !collision.collisionRight) or jumpWallLeft) and !jumpWallRight) {
+    if ((keyboardRight and !collision.collisionRight) or jumpWallLeft) {
 //        cout << "jumpLEFT = " << jumpWallLeft <<endl;
 //        cout << "acceleration" << acceleration <<endl;
 //        cout << "horizontalSpeed" << horizontalSpeed <<endl;
@@ -109,7 +111,7 @@ void PlayerModel::simulate(float elapsedTime) {
         leftUpperCorner.x += add;
         rightDownCorner.x += add;
     }
-    if (((keyboardLeft and !collision.collisionLeft) or jumpWallRight) and !jumpWallLeft){
+    if ((keyboardLeft and !collision.collisionLeft) or jumpWallRight){
 //        cout << "jumpRIGHT = " << jumpWallRight <<endl;
         float add = horizontalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2))/2;
         leftUpperCorner.x -= add;
@@ -136,12 +138,12 @@ void PlayerModel::simulate(float elapsedTime) {
      * |______________|
      * (-1,1)          (1,1)
      */
-    if (collision.collisionUp){
+    if (collision.collisionUp and verticalSpeed < 0){
+        //collision up can only occur when verticalspeed is negative so we make it positive
         verticalSpeed = -verticalSpeed;
     }
 
-
-    if((collision.collisionRight or collision.collisionLeft) and !jumpWallLeft  and !jumpWallRight ){
+    if((collision.collisionRight or collision.collisionLeft) and !jumpWallLeft and !jumpWallRight ){
         horizontalSpeed = 0;
     }
 }

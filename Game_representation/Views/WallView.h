@@ -12,10 +12,10 @@ private:
     Texture textureBackground;
     Sprite spriteBackground;
 
-    Camera camera;
+    shared_ptr<Camera> camera = Camera::getInstance();
     vector<vector<WallModel>> tiles;
 public:
-    WallView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow,
+    WallView(const shared_ptr<RenderWindow>& sfWindow,
              const vector<vector<WallModel>>& tiles);
     void update() override;
     void updateData(Position position, Direction direction) override;

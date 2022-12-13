@@ -121,8 +121,7 @@
 				15,
 				17,
 				19,
-				21,
-				22
+				21
 			]
 		}
 	],
@@ -215,8 +214,7 @@
 				15,
 				17,
 				19,
-				21,
-				22
+				21
 			]
 		},
 		{
@@ -358,12 +356,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Game_representation/ConcreteFactory.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game_representation/scroller.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

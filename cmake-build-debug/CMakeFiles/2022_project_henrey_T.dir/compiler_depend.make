@@ -5427,8 +5427,6 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o: .
   ../Game_Logic/Models/GoalModel.h \
   ../Game_Logic/structures_enums_std_include.h
 
-CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o: ../Game_representation/scroller.cpp
-
 CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o: ../src/main.cpp \
   ../Game_representation/Game.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
@@ -6155,8 +6153,6 @@ CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o: ../src/main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_def.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_suseconds_t.h:
-
-../Game_representation/scroller.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_key_t.h:
 

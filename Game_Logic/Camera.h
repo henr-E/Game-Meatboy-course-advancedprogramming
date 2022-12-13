@@ -11,21 +11,23 @@
 using namespace std;
 
 class Camera {
-private:
-    Position screenDimensions;
 public:
-    Position coordinatesToPixel(float xOld, float yOld){
-        Position p{};
-        xOld += 1;
-        yOld += 1;
+    static shared_ptr<Camera> instance_;
 
-        p.x = xOld * screenDimensions.x / 2;
-        p.y = screenDimensions.y - yOld * screenDimensions.x / 2;
-        return p;
-    };
-    void setScreenDimensions(const Position& screenDimensions) { Camera::screenDimensions = screenDimensions; }
+    Position screenDimensions;
+    int amountOfTilesUnderScreen;
+    void setAmountOfTilesUnderScreen(int amountOfTilesUnderScreen);
+
+public:
+    Camera();
+    Camera(Camera& other) = delete;
+
+    void operator=(const Camera&) = delete;
+
+    static const shared_ptr<Camera>& getInstance();
+
+    Position coordinatesToPixel(float xOld, float yOld);
+    void setScreenDimensions(const Position& screenDimensions);
 };
-
-
 
 #endif //INC_2022_PROJECT_HENREY_T_CAMERA_H

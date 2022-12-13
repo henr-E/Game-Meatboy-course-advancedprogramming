@@ -18,7 +18,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/GoalView.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/GoalView.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/PlayerView.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o.d"
-  "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o.d"
   "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp" "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o" "gcc" "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o.d"
   )
 

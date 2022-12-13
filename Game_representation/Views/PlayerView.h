@@ -10,13 +10,13 @@ class PlayerView : public ownView::View{
 private:
     Sprite spritePlayer;
     Texture texturePlayer;
-    Camera camera;
+    shared_ptr<Camera> camera = Camera::getInstance();
 
     Position playerPosition;
     Direction playerDirection;
 
 public:
-    PlayerView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow);
+    PlayerView(const shared_ptr<RenderWindow>& sfWindow);
     void update() override;
     void updateData(Position position, Direction direction) override;
 };

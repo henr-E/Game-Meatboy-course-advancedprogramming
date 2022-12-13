@@ -37,7 +37,7 @@ add_library(logicLibrary_meatBoy
         Game_Logic/Observer.h
         Game_Logic/Subject.cpp
         Game_Logic/Subject.h
-        Game_Logic/Models/Model.cpp)
+        Game_Logic/Models/Model.cpp Game_Logic/Camera.cpp)
 
 add_executable(2022_project_henrey_T
         src/main.cpp
@@ -70,7 +70,7 @@ add_executable(2022_project_henrey_T
         Game_representation/Views/WallView.h
         Game_representation/Views/GoalView.cpp
         Game_representation/Views/GoalView.h
-        Game_representation/ConcreteFactory.cpp Game_representation/scroller.cpp)
+        Game_representation/ConcreteFactory.cpp)
 
 ### Set include directory search paths
 #target_include_directories(2022_project_henrey_T

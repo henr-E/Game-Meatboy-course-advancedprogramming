@@ -163,6 +163,9 @@
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/AbstractFactory.h">
 			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
+		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp">
+			<Option target="logicLibrary_meatBoy"/>
+		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.h">
 			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
@@ -269,9 +272,6 @@
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/Views/WallView.h">
-			<Option target="2022_project_henrey_T"/>
-		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp">
 			<Option target="2022_project_henrey_T"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp">

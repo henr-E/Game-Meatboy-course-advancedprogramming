@@ -21,8 +21,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/PlayerView.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.o.d"
-  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o"
-  "CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o.d"
   "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o"
   "CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o.d"
 )

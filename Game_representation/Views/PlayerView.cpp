@@ -4,10 +4,8 @@
 
 #include "PlayerView.h"
 
-PlayerView::PlayerView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow)
-    : View(screenDimensions, sfWindow) {
-    camera.setScreenDimensions(screenDimensions);
-}
+PlayerView::PlayerView(const shared_ptr<RenderWindow>& sfWindow)
+    : View(sfWindow) {}
 
 void PlayerView::update() {
 
@@ -25,7 +23,7 @@ void PlayerView::update() {
     spritePlayer.setTexture(texturePlayer);
 
     // convert coordinates to pixels
-    Position p = camera.coordinatesToPixel(playerPosition.x, playerPosition.y);
+    Position p = camera->coordinatesToPixel(playerPosition.x, playerPosition.y);
     // Now move the playerSprite to its new position
     spritePlayer.setPosition(p.x, p.y);
     // Draw the player

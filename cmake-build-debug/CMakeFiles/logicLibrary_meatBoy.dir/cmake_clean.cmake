@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o"
+  "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o.d"
   "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.o"
   "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/Model.cpp.o.d"
   "CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.o"

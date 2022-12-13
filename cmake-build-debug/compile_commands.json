@@ -26,6 +26,11 @@
 },
 {
   "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp",
+  "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.cpp"
+},
+{
+  "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp",
   "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp"
 },
@@ -78,10 +83,5 @@
   "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/ConcreteFactory.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/ConcreteFactory.cpp",
   "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/ConcreteFactory.cpp"
-},
-{
-  "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp",
-  "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/scroller.cpp"
 }
 ]

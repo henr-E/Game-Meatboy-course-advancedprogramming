@@ -7,7 +7,7 @@
 #include "View.h"
 class GoalView : public ownView::View{
 public:
-    GoalView(const Position& screenDimensions, const shared_ptr<RenderWindow>& sfWindow);
+    GoalView(const shared_ptr<RenderWindow>& sfWindow);
     void update() override;
     void updateData(Position position, Direction direction) override;
 };

@@ -23,6 +23,7 @@ private:
     vector<vector<WallModel>> tiles;
     Position screenDimensions;
     float tileSize;
+    int amountOfTilesUnderScreen;
 
 public:
     InputParser();
@@ -31,6 +32,7 @@ public:
     const vector<vector<WallModel>> & getTiles() const;
     const Position& getScreenDimensions() const;
     float getTileSize() const;
+    int getAmountOfTilesUnderScreen() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_INPUTPARSER_H

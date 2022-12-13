@@ -187,6 +187,30 @@ logicLibrary_meatBoy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/build
 .PHONY : 2022_project_henrey_T/fast
 
+Game_Logic/Camera.o: Game_Logic/Camera.cpp.o
+.PHONY : Game_Logic/Camera.o
+
+# target to build an object file
+Game_Logic/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.o
+.PHONY : Game_Logic/Camera.cpp.o
+
+Game_Logic/Camera.i: Game_Logic/Camera.cpp.i
+.PHONY : Game_Logic/Camera.i
+
+# target to preprocess a source file
+Game_Logic/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.i
+.PHONY : Game_Logic/Camera.cpp.i
+
+Game_Logic/Camera.s: Game_Logic/Camera.cpp.s
+.PHONY : Game_Logic/Camera.s
+
+# target to generate assembly for a file
+Game_Logic/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.s
+.PHONY : Game_Logic/Camera.cpp.s
+
 Game_Logic/Models/Model.o: Game_Logic/Models/Model.cpp.o
 .PHONY : Game_Logic/Models/Model.o
 
@@ -547,30 +571,6 @@ Game_representation/Views/WallView.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/Views/WallView.cpp.s
 .PHONY : Game_representation/Views/WallView.cpp.s
 
-Game_representation/scroller.o: Game_representation/scroller.cpp.o
-.PHONY : Game_representation/scroller.o
-
-# target to build an object file
-Game_representation/scroller.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.o
-.PHONY : Game_representation/scroller.cpp.o
-
-Game_representation/scroller.i: Game_representation/scroller.cpp.i
-.PHONY : Game_representation/scroller.i
-
-# target to preprocess a source file
-Game_representation/scroller.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.i
-.PHONY : Game_representation/scroller.cpp.i
-
-Game_representation/scroller.s: Game_representation/scroller.cpp.s
-.PHONY : Game_representation/scroller.s
-
-# target to generate assembly for a file
-Game_representation/scroller.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2022_project_henrey_T.dir/build.make CMakeFiles/2022_project_henrey_T.dir/Game_representation/scroller.cpp.s
-.PHONY : Game_representation/scroller.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -609,6 +609,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... 2022_project_henrey_T"
 	@echo "... logicLibrary_meatBoy"
+	@echo "... Game_Logic/Camera.o"
+	@echo "... Game_Logic/Camera.i"
+	@echo "... Game_Logic/Camera.s"
 	@echo "... Game_Logic/Models/Model.o"
 	@echo "... Game_Logic/Models/Model.i"
 	@echo "... Game_Logic/Models/Model.s"
@@ -654,9 +657,6 @@ help:
 	@echo "... Game_representation/Views/WallView.o"
 	@echo "... Game_representation/Views/WallView.i"
 	@echo "... Game_representation/Views/WallView.s"
-	@echo "... Game_representation/scroller.o"
-	@echo "... Game_representation/scroller.i"
-	@echo "... Game_representation/scroller.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

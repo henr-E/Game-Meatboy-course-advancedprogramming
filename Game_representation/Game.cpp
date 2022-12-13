@@ -4,12 +4,12 @@
 
 #include "Game.h"
 Game::Game(){
-    screenDimensions.x = 544;
-    screenDimensions.y = 1024;
+    windowDimentions.x = 544;
+    windowDimentions.y = 1024;
 
     // confiure videoMode
-    sfVideoMode.width = screenDimensions.x;
-    sfVideoMode.height = screenDimensions.y;
+    sfVideoMode.width = windowDimentions.x;
+    sfVideoMode.height = windowDimentions.y;
 
     //  Create and open a window
     sfWindow->create(sfVideoMode, "game");

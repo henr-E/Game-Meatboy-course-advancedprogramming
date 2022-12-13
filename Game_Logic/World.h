@@ -28,6 +28,7 @@ private:
 
     Position screenDimensions;
     Collision collision;
+
     shared_ptr<Stopwatch> stopwatch = Stopwatch::getInstance();
     shared_ptr<AbstractFactory> abstractFactory;
 
@@ -53,6 +54,8 @@ public:
 
     void setScreenDimensions(const Position& screenDimensions);
     void setTileSize(float tileSize);
+
+    const PlayerModel& getPlayer() const;
 };
 
 
