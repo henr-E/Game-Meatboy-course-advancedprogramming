@@ -76,36 +76,41 @@ void LevelState::simulate() {
 
 void LevelState::draw() {
     world.updateViews();
-
+    moveScreen();
 }
 
 void LevelState::moveScreen() {
+    bool moveAllowed = true;
     View view = sfWindow->getView();
 
-    view.reset(sf::FloatRect(0, 0, screenDimensions.x, screenDimensions.y));
+    Vector2f oldViewPosition = view.getCenter();
+    Vector2f position(544.f / 2, 1024.f / 2);
 
-    Vector2f position(screenDimensions.x / 2, screenDimensions.y / 2);
+    float x = world.getPlayer().getLeftUpperCorner().x;
+    float y = world.getPlayer().getLeftUpperCorner().y;
 
-    //    float Position = world.getPlayer().getPlayerLeftUpperPosition().y;
-    const Position playerPosition = world.getPlayer().getLeftUpperCorner();
+    const Position playerPosition = camera->coordinatesToPixel(x,y);
 
-    /* coordinates
-     * (0,0)         (532,0)
-     * |_________________|
-     * |
-     * |
-     * |
-     * |________________\
-     * |                |
-     * |________________|
-     * (0,800)         (532,800)
-     */
-    // the position is the left side of meatboy so to get the middle we have to add half of meat boy = 25
-    if (playerPosition.y + 16 < screenDimensions.y / 2) {
-        position.y = playerPosition.y + 16;
-    } else {
-        position.y = screenDimensions.y / 2;
+    view.reset(sf::FloatRect(0, 0, 544.f, 1024.f));
+
+    //if goal is in the view, we stop moving the view
+    if ((oldViewPosition.y + 1024.f/2) >= screenDimensions.y){
+        moveAllowed = false;
     }
-
+    /*
+     * playerposition has to be lower than eighty procent of the screen
+     * "lower" because the uppder left corner of the screen is (0,0)
+     *
+     * if the player has reached 80 procent the view has to make the same steps as the player
+     * so if the player moves 5 up, the view needs to move 5 up
+     */
+    if(moveAllowed){
+        float eightyPercentageHeight = 1024.f-((1024.f*80.f)/100.f);
+        if (playerPosition.y <= eightyPercentageHeight) {
+            position.y = playerPosition.y;
+        }
+    }
+    //todo: remember this is the center!
     view.setCenter(position);
+    sfWindow->setView(view);
 }

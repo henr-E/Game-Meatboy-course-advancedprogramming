@@ -4,6 +4,7 @@
 
 #include "Game.h"
 Game::Game(){
+    //TODO moeten we verschillende breetes kunnen ondersteuenn voor grotere levels?
     windowDimentions.x = 544;
     windowDimentions.y = 1024;
 

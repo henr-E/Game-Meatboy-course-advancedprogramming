@@ -15,15 +15,15 @@ Position Camera::coordinatesToPixel(float xOld, float yOld) {
      * these tiles are below the game screen so we have to move all the tiles up
      * so that these 6 tiles will become the bottom of our screen
      */
-    float tileSize = 2.f/(screenDimensions.x/32);
-    yOld += tileSize * amountOfTilesUnderScreen;
+//    float tileSize = 2.f/(screenDimensions.x/32);
+//    yOld += tileSize * 2;
 
     Position p{};
     xOld += 1;
     yOld += 1;
 
     p.x = xOld * screenDimensions.x / 2;
-    p.y = screenDimensions.y - yOld * screenDimensions.x / 2;
+    p.y = 1024 - yOld * screenDimensions.x / 2;
 
     return p;
 }

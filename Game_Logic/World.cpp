@@ -13,7 +13,6 @@ void World::setUp(vector<vector<WallModel>>& tiles1) {
 void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player.updateFromKeyboard(keyboardInput);
 }
-
 void World::updatePlayerModel(){
     collision.setAllFalse();
     checkCollisionWithTiles();
