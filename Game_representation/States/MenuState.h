@@ -4,8 +4,12 @@
 #pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_MENUSTATE_H
 #define INC_2022_PROJECT_HENREY_T_MENUSTATE_H
-
 #include "State.h"
+/**
+ * forward declaration of statemanager
+ * include of statemanager in .cpp
+ */
+class StateManager;
 class MenuState: public State {
 private:
     //sfml elements
@@ -26,7 +30,8 @@ private:
     vector<Text> allTexts = {level1, level2, level3, level4, level5};
 
 public:
-    explicit MenuState(const shared_ptr<RenderWindow>& sfWindow);
+    MenuState(StateManager& stateManager);
+    virtual ~MenuState() override;
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();

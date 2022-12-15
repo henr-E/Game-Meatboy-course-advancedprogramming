@@ -8,32 +8,7 @@
 #include "Model.h"
 class GoalModel: public ownModel::Model{
 public:
-    virtual const Position& getLeftUpperCorner() const override{
-        return leftUpperCorner;
-    }
-    virtual const Position& getRightDownCorner() const override{
-        return rightDownCorner;
-    }
-    virtual float getTileHeightWidth() const override{
-        return tileHeightWidth;
-    }
-    virtual TileType getTileType() const override{
-        return tileType;
-    }
-
-
-    virtual void setLeftUpperCorner(const Position& leftUpperCorner) override{
-        Model::leftUpperCorner = leftUpperCorner;
-    }
-    virtual void setRightDownCorner(const Position& rightDownCorner) override{
-        Model::rightDownCorner = rightDownCorner;
-    }
-    void setTileHeightWidth(const float& tileHeightWidthNew) override{
-        Model::tileHeightWidth = tileHeightWidthNew;
-    }
-    virtual void setTileType(const TileType& tileType1) override{
-        Model::tileType = tileType1;
-    }
+    GoalModel();
 };
 
 

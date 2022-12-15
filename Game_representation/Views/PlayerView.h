@@ -8,15 +8,11 @@
 #include "../../Game_Logic/Camera.h"
 class PlayerView : public ownView::View{
 private:
-    Sprite spritePlayer;
-    Texture texturePlayer;
-    shared_ptr<Camera> camera = Camera::getInstance();
-
-    Position playerPosition;
     Direction playerDirection;
 
 public:
-    PlayerView(const shared_ptr<RenderWindow>& sfWindow);
+    PlayerView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
+    ~PlayerView() override;
     void update() override;
     void updateData(Position position, Direction direction) override;
 };

@@ -4,9 +4,10 @@
 #pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_STATEMANAGER_H
 #define INC_2022_PROJECT_HENREY_T_STATEMANAGER_H
-#include "MenuState.h"
+
 #include "LevelState.h"
-#include "State.h"
+#include "MenuState.h"
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "../../Game_Logic/structures_enums_std_include.h"
@@ -18,16 +19,17 @@ private:
     shared_ptr<State> state;
 
     Event event;
-    CurrentState currentState;
 
 public:
     explicit StateManager(const shared_ptr<RenderWindow>& sfWindow);
-
+    virtual ~StateManager();
     void simulate(FunctionCallTo functionCallTo);
-    void checkTransition();
 
-    void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
+
+    void setState(const shared_ptr<State>& state);
     void setEvent(Event& event);
+
+    const shared_ptr<RenderWindow>& getSfWindow() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STATEMANAGER_H

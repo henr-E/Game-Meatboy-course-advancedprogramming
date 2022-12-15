@@ -18,6 +18,7 @@ namespace ownModel {
 
     public:
         Model();
+        virtual ~Model() override;
 
         virtual void updateObservers() override;
 

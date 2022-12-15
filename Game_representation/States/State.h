@@ -10,13 +10,14 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+
 using namespace sf;
 using namespace std;
-
+class StateManager;
 class State {
 public:
-    explicit State(const shared_ptr<RenderWindow>& sfWindow);
-
+    State(StateManager& stateManager);
+    virtual ~State();
     //    void setSfWindow(shared_ptr<RenderWindow>& sfWindow);
 //    const shared_ptr<RenderWindow>& getSfWindow() const;
 
@@ -25,20 +26,15 @@ public:
 
     virtual void draw();
 
-    bool isTransition() const;
-    void setTransition(bool transition);
-
-    int getChosenLevel() const;
-    void setChosenLevel(int chosenLevel);
-
     virtual const Position& getScreenDimensions() const;
 
 protected:
-
+    /**
+     * hold a reference to the stateManager to change the state
+     */
+    StateManager& stateManager;
     int chosenLevel;
-    bool transition;
     Position screenDimensions;
-    shared_ptr<RenderWindow> sfWindow;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STATE_H

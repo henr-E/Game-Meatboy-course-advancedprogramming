@@ -19,9 +19,10 @@ private:
 public:
 
     explicit ConcreteFactory(const shared_ptr<RenderWindow>& sfWindow);
-    PlayerModel createPlayer() override;
-    GoalModel createGoal() override;
-    WallModel createWalls(vector<vector<WallModel>> tiles) override;
+    ~ConcreteFactory() override;
+    shared_ptr<PlayerModel> createPlayer() override;
+    shared_ptr<GoalModel> createGoal(inputRectangles tile) override;
+    shared_ptr<WallModel> createWall(inputRectangles tile) override;
 
 
 };

@@ -28,51 +28,25 @@ class PlayerModel: public ownModel::Model{
     Collision collision;
 
     Position previousLeftUpperCorner;
-
 public:
 
     void updateObservers() override;
 
     PlayerModel();
 
+    ~PlayerModel() override;
+
     void updateFromKeyboard(KeyboardInput keyboardInput);
 
     void simulate(float elapsedTime);
 
-
     Direction getDirection() const;
 
-    bool intersects(const Model &that, CheckCollision checkCollision);
+    bool intersects(const shared_ptr<Model>& that);
 
     void setCollision(const Collision& collision);
 
     const Position& getPreviousLeftUpperCorner() const;
 
-    const Position& getLeftUpperCorner() const override{
-        return leftUpperCorner;
-    }
-    const Position& getRightDownCorner() const override{
-        return rightDownCorner;
-    }
-    float getTileHeightWidth() const override{
-        return tileHeightWidth;
-    }
-    TileType getTileType() const override{
-        return tileType;
-    }
-
-
-    void setLeftUpperCorner(const Position& leftUpperCorner) override{
-        Model::leftUpperCorner = leftUpperCorner;
-    }
-    void setRightDownCorner(const Position& rightDownCorner) override{
-        Model::rightDownCorner = rightDownCorner;
-    }
-    void setTileHeightWidth(const float& tileHeightWidthNew) override{
-        Model::tileHeightWidth = tileHeightWidthNew;
-    }
-    void setTileType(const TileType& tileType1) override{
-        Model::tileType = tileType1;
-    }
 };
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERMODEL_H

@@ -20,4 +20,7 @@ shared_ptr<Stopwatch>& Stopwatch::getInstance() {
         instance_ = s;
     }
     return instance_;
+}
+Stopwatch::~Stopwatch(){
+
 };

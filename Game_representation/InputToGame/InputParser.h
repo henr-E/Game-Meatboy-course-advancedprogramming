@@ -20,19 +20,40 @@ using namespace std;
 
 class InputParser {
 private:
-    vector<vector<WallModel>> tiles;
+    vector<vector<inputRectangles>> tiles;
     Position screenDimensions;
     float tileSize;
-    int amountOfTilesUnderScreen;
 
 public:
+    /**
+     * default constructor
+     */
     InputParser();
+    virtual ~InputParser();
+    /**
+     * parses the level that is given
+     * takes input from "levels" directory and makes level
+     * @param levelNumb
+     */
     void parse(int levelNumb);
 
-    const vector<vector<WallModel>> & getTiles() const;
+    /**
+     *
+     * @return walls
+     */
+    const vector<vector<inputRectangles>> & getTiles() const;
+    /**
+     *
+     * @return screenDimensions that were generated from the input
+     * this is not the same as windowDimensions
+     *
+     */
     const Position& getScreenDimensions() const;
+    /**
+     *
+     * @return tileSize
+     */
     float getTileSize() const;
-    int getAmountOfTilesUnderScreen() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_INPUTPARSER_H

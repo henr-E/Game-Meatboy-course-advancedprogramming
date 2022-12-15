@@ -5,29 +5,62 @@
 #ifndef INC_2022_PROJECT_HENREY_T_CAMERA_H
 #define INC_2022_PROJECT_HENREY_T_CAMERA_H
 
-#include <iostream>
 #include "structures_enums_std_include.h"
+#include <iostream>
 
 using namespace std;
-
+/**
+ * I used the singleton pattern so I can set the screenDimensions 1 time
+ * and use the camera in all the views.
+ */
 class Camera {
 public:
     static shared_ptr<Camera> instance_;
-
     Position screenDimensions;
-    int amountOfTilesUnderScreen;
-    void setAmountOfTilesUnderScreen(int amountOfTilesUnderScreen);
+    bool viewMoved;
 
 public:
+    /**
+     * constructor
+     */
     Camera();
+    virtual ~Camera();
+    /**
+     * not clonable
+     * @param other
+     */
     Camera(Camera& other) = delete;
 
+    /**
+     * no copy constructor
+     */
     void operator=(const Camera&) = delete;
 
+    /**
+     *
+     * @return Instance
+     */
     static const shared_ptr<Camera>& getInstance();
 
+    /**
+     * converts coordinates to pixels
+     * @param xOld
+     * @param yOld
+     * @return Position
+     */
     Position coordinatesToPixel(float xOld, float yOld);
+    /**
+     *
+     * @param screenDimensions
+     */
     void setScreenDimensions(const Position& screenDimensions);
+
+    /**
+     * moves the view
+     */
+    Position moveScreen(Position viewPosition, Position playerPosition, Position prevPlayerPosition);
+
+    bool isViewMoved() const;
 };
 
-#endif //INC_2022_PROJECT_HENREY_T_CAMERA_H
+#endif // INC_2022_PROJECT_HENREY_T_CAMERA_H

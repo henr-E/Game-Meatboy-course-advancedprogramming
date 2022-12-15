@@ -3,7 +3,10 @@
 //
 
 #include "MenuState.h"
-MenuState::MenuState(const shared_ptr<RenderWindow>& sfWindow) : State(sfWindow) {
+#include "StateManager.h"
+MenuState::MenuState(StateManager& stateManager)
+    : State(stateManager) {
+
     screenDimensions.x = 544;
     screenDimensions.y = 1024;
 
@@ -71,7 +74,7 @@ void MenuState::makeTexts() {
 
 void MenuState::userInput(Event &event) {
     //get mousePosition
-    mousePosition = Mouse::getPosition(*sfWindow.get()); // window is a sf::OwnWindow
+    mousePosition = Mouse::getPosition(*stateManager.getSfWindow()); // window is a sf::OwnWindow
 
     //check if mouse is on text
     for(int t = 0; t < allTexts.size(); t++){
@@ -83,7 +86,8 @@ void MenuState::userInput(Event &event) {
 
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 chosenLevel = t+1;
-                transition = true;
+                shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel);
+                stateManager.setState(newState);
                 break;
             }
         }
@@ -94,9 +98,10 @@ void MenuState::userInput(Event &event) {
 }
 
 void MenuState::simulate() {
-    State::simulate();
+
 }
 void MenuState::draw() {
+    auto sfWindow = stateManager.getSfWindow();
     // Rub out the last frame
     sfWindow->clear();
 
@@ -115,3 +120,4 @@ const Sprite& MenuState::getSpriteBackground() const { return spriteBackground; 
 const Font& MenuState::getFont() const { return font; }
 const vector<Text>& MenuState::getAllTexts() const { return allTexts; }
 const Text& MenuState::getWelcomeText() const { return welcomeText; }
+MenuState::~MenuState() {}

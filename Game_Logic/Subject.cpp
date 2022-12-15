@@ -12,9 +12,10 @@ void Subject::removeObserver(shared_ptr<Observer> observer) {
     //there is only on observer in our case so you can just delete the first instead of looping
     observerList.erase(observerList.begin());
 }
-void Subject::updateObservers() {
+void Subject::updateObservers(){
     for(const auto &observer: observerList){
         observer->update();
     }
 }
 const vector<shared_ptr<Observer>>& Subject::getObserverList() const { return observerList; }
+Subject::~Subject() {}

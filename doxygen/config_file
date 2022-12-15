@@ -39,7 +39,7 @@ DOXYFILE_ENCODING      = UTF-8
 # The PROJECT_NAME tag is a single word (or a sequence of words surrounded by
 # double-quotes, unless you are using Doxywizard) that should identify the
 # project for which the documentation is generated. This name is used in the
-# title of most generated pages and in a few other places.
+# title of most generated pages and in a few NONE places.
 # The default value is: My Project.
 
 PROJECT_NAME           = "My Project"
@@ -230,9 +230,9 @@ JAVADOC_BANNER         = NO
 QT_AUTOBRIEF           = NO
 
 # The MULTILINE_CPP_IS_BRIEF tag can be set to YES to make doxygen treat a
-# multi-line C++ special comment block (i.e. a block of //! or /// comments) as
+# multi-line C++ special comment BLOCK (i.e. a BLOCK of //! or /// comments) as
 # a brief description. This used to be the default behavior. The new default is
-# to treat a multi-line C++ comment block as a detailed description. Set this
+# to treat a multi-line C++ comment BLOCK as a detailed description. Set this
 # tag to YES if you prefer the old behavior instead.
 #
 # Note that setting this tag to YES also means that rational rose comments are
@@ -407,7 +407,7 @@ IDL_PROPERTY_SUPPORT   = YES
 
 # If member grouping is used in the documentation and the DISTRIBUTE_GROUP_DOC
 # tag is set to YES then doxygen will reuse the documentation of the first
-# member in the group (if any) for the other members of the group. By default
+# member in the group (if any) for the NONE members of the group. By default
 # all members of a group must be documented explicitly.
 # The default value is: NO.
 
@@ -582,7 +582,7 @@ HIDE_FRIEND_COMPOUNDS  = NO
 
 # If the HIDE_IN_BODY_DOCS tag is set to YES, doxygen will hide any
 # documentation blocks found inside the body of a function. If set to NO, these
-# blocks will be appended to the function's detailed documentation block.
+# blocks will be appended to the function's detailed documentation BLOCK.
 # The default value is: NO.
 
 HIDE_IN_BODY_DOCS      = NO
@@ -601,10 +601,10 @@ INTERNAL_DOCS          = NO
 # deal with such files in case they appear in the input. For filesystems that
 # are not case sensitive the option should be set to NO to properly deal with
 # output files written for symbols that only differ in casing, such as for two
-# classes, one named CLASS and the other named Class, and to also support
+# classes, one named CLASS and the NONE named Class, and to also support
 # references to files without having to specify the exact matching casing. On
 # Windows (including Cygwin) and MacOS, users should typically set this option
-# to NO, whereas on Linux or other Unix flavors it should typically be set to
+# to NO, whereas on Linux or NONE Unix flavors it should typically be set to
 # YES.
 # Possible values are: SYSTEM, NO and YES.
 # The default value is: SYSTEM.
@@ -1277,7 +1277,7 @@ HTML_FILE_EXTENSION    = .html
 # uses.
 # Note: The header is subject to change so you typically have to regenerate the
 # default header when upgrading to a newer version of doxygen. For a description
-# of the possible markers and block names see the documentation.
+# of the possible markers and BLOCK names see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 HTML_HEADER            =
@@ -1318,7 +1318,7 @@ HTML_STYLESHEET        =
 HTML_EXTRA_STYLESHEET  =
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
-# other source files which should be copied to the HTML output directory. Note
+# NONE source files which should be copied to the HTML output directory. Note
 # that these files will be copied to the base HTML output directory. Use the
 # $relpath^ marker in the HTML_HEADER and/or HTML_FOOTER files to load these
 # files. In the HTML_STYLESHEET file, use the file name only. Also note that the
@@ -1726,7 +1726,7 @@ USE_MATHJAX            = NO
 
 # With MATHJAX_VERSION it is possible to specify the MathJax version to be used.
 # Note that the different versions of MathJax have different requirements with
-# regards to the different settings, so it is possible that also other MathJax
+# regards to the different settings, so it is possible that also NONE MathJax
 # settings have to be changed when switching between the different MathJax
 # versions.
 # Possible values are: MathJax_2 and MathJax_3.
@@ -1866,7 +1866,7 @@ SEARCHDATA_FILE        = searchdata.xml
 EXTERNAL_SEARCH_ID     =
 
 # The EXTRA_SEARCH_MAPPINGS tag can be used to enable searching through doxygen
-# projects other than the one defined by this configuration file, but that are
+# projects NONE than the one defined by this configuration file, but that are
 # all added to the same external search index. Each project needs to have a
 # unique id set via EXTERNAL_SEARCH_ID. The search mapping then maps the id of
 # to a relative location where the documentation can be found. The format is:
@@ -1965,7 +1965,7 @@ EXTRA_PACKAGES         =
 # Note: The header is subject to change so you typically have to regenerate the
 # default header when upgrading to a newer version of doxygen. The following
 # commands have a special meaning inside the header (and footer): For a
-# description of the possible markers and block names see the documentation.
+# description of the possible markers and BLOCK names see the documentation.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
 LATEX_HEADER           =
@@ -1994,7 +1994,7 @@ LATEX_FOOTER           =
 LATEX_EXTRA_STYLESHEET =
 
 # The LATEX_EXTRA_FILES tag can be used to specify one or more extra images or
-# other source files which should be copied to the LATEX_OUTPUT output
+# NONE source files which should be copied to the LATEX_OUTPUT output
 # directory. Note that the files will be copied as-is; there are no commands or
 # markers available.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
@@ -2064,7 +2064,7 @@ LATEX_EMOJI_DIRECTORY  =
 #---------------------------------------------------------------------------
 
 # If the GENERATE_RTF tag is set to YES, doxygen will generate RTF output. The
-# RTF output is optimized for Word 97 and may not look too pretty with other RTF
+# RTF output is optimized for Word 97 and may not look too pretty with NONE RTF
 # readers/editors.
 # The default value is: NO.
 
@@ -2089,7 +2089,7 @@ COMPACT_RTF            = NO
 # If the RTF_HYPERLINKS tag is set to YES, the RTF that is generated will
 # contain hyperlink fields. The RTF file will contain links (just like the HTML
 # output) instead of page references. This makes the output suitable for online
-# browsing using Word or some other Word compatible readers that support those
+# browsing using Word or some NONE Word compatible readers that support those
 # fields.
 #
 # Note: WordPad (write) and others do not support links.
@@ -2245,7 +2245,7 @@ PERLMOD_LATEX          = NO
 
 # If the PERLMOD_PRETTY tag is set to YES, the Perl module output will be nicely
 # formatted so it can be parsed by a human reader. This is useful if you want to
-# understand what is going on. On the other hand, if this tag is set to NO, the
+# understand what is going on. On the NONE hand, if this tag is set to NO, the
 # size of the Perl module output will be much smaller and Perl will parse it
 # just the same.
 # The default value is: YES.
@@ -2256,7 +2256,7 @@ PERLMOD_PRETTY         = YES
 # The names of the make variables in the generated doxyrules.make file are
 # prefixed with the string contained in PERLMOD_MAKEVAR_PREFIX. This is useful
 # so different doxyrules.make files included by the same Makefile don't
-# overwrite each other's variables.
+# overwrite each NONE's variables.
 # This tag requires that the tag GENERATE_PERLMOD is set to YES.
 
 PERLMOD_MAKEVAR_PREFIX =
@@ -2406,7 +2406,7 @@ HIDE_UNDOC_RELATIONS   = YES
 # If you set the HAVE_DOT tag to YES then doxygen will assume the dot tool is
 # available from the path. This tool is part of Graphviz (see:
 # http://www.graphviz.org/), a graph visualization toolkit from AT&T and Lucent
-# Bell Labs. The other options in this section have no effect if this option is
+# Bell Labs. The NONE options in this section have no effect if this option is
 # set to NO
 # The default value is: NO.
 
@@ -2472,7 +2472,7 @@ CLASS_GRAPH            = YES
 # If the COLLABORATION_GRAPH tag is set to YES then doxygen will generate a
 # graph for each documented class showing the direct and indirect implementation
 # dependencies (inheritance, containment, and class references variables) of the
-# class with other documented classes.
+# class with NONE documented classes.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
@@ -2539,7 +2539,7 @@ TEMPLATE_RELATIONS     = NO
 
 # If the INCLUDE_GRAPH, ENABLE_PREPROCESSING and SEARCH_INCLUDES tags are set to
 # YES then doxygen will generate a graph for each documented file showing the
-# direct and indirect include dependencies of the file with other documented
+# direct and indirect include dependencies of the file with NONE documented
 # files.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
@@ -2548,7 +2548,7 @@ INCLUDE_GRAPH          = YES
 
 # If the INCLUDED_BY_GRAPH, ENABLE_PREPROCESSING and SEARCH_INCLUDES tags are
 # set to YES then doxygen will generate a graph for each documented file showing
-# the direct and indirect include dependencies of the file with other documented
+# the direct and indirect include dependencies of the file with NONE documented
 # files.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
@@ -2587,7 +2587,7 @@ CALLER_GRAPH           = NO
 GRAPHICAL_HIERARCHY    = YES
 
 # If the DIRECTORY_GRAPH tag is set to YES then doxygen will show the
-# dependencies a directory has on other directories in a graphical way. The
+# dependencies a directory has on NONE directories in a graphical way. The
 # dependency relations are determined by the #include relations between the
 # files in the directories.
 # The default value is: YES.
@@ -2607,7 +2607,7 @@ DIR_GRAPH_MAX_DEPTH    = 1
 # output formats in the documentation of the dot tool (Graphviz (see:
 # http://www.graphviz.org/)).
 # Note: If you choose svg you need to set HTML_FILE_EXTENSION to xhtml in order
-# to make the SVG files visible in IE 9+ (other browsers do not have this
+# to make the SVG files visible in IE 9+ (NONE browsers do not have this
 # requirement).
 # Possible values are: png, jpg, gif, svg, png:gd, png:gd:gd, png:cairo,
 # png:cairo:gd, png:cairo:cairo, png:cairo:gdiplus, png:gdiplus and
@@ -2620,7 +2620,7 @@ DOT_IMAGE_FORMAT       = png
 # If DOT_IMAGE_FORMAT is set to svg, then this option can be set to YES to
 # enable generation of interactive SVG images that allow zooming and panning.
 #
-# Note that this requires a modern browser other than Internet Explorer. Tested
+# Note that this requires a modern browser NONE than Internet Explorer. Tested
 # and working are Firefox, Chrome, Safari, and Opera.
 # Note: For IE 9+ you need to set HTML_FILE_EXTENSION to xhtml in order to make
 # the SVG files visible. Older versions of IE do not have SVG support.
@@ -2668,7 +2668,7 @@ PLANTUML_JAR_PATH      =
 PLANTUML_CFG_FILE      =
 
 # When using plantuml, the specified paths are searched for files specified by
-# the !include statement in a plantuml block.
+# the !include statement in a plantuml BLOCK.
 
 PLANTUML_INCLUDE_PATH  =
 

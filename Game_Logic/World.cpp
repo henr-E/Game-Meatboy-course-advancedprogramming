@@ -4,117 +4,143 @@
 
 #include "World.h"
 
-void World::setUp(vector<vector<WallModel>>& tiles1) {
-    tiles = tiles1;
+void World::setUp(vector<vector<inputRectangles>> tiles) {
     player = abstractFactory->createPlayer();
-    goal = abstractFactory->createGoal();
-    wall = abstractFactory->createWalls(tiles);
+
+    /**
+     * turn the inputparser inputrectangles into wallModels with views
+     */
+    for(const vector<inputRectangles>& tilerow: tiles){
+        vector<shared_ptr<WallModel>> wallModelRow;
+        for(const inputRectangles& wall: tilerow){
+            if(wall.tileType == BLOCK){
+                shared_ptr<WallModel> wallModel = abstractFactory->createWall(wall);
+                wallModelRow.push_back(wallModel);
+            }else{
+                wallModelRow.push_back(nullptr);
+                if(wall.tileType == GIRL){
+                    goal = abstractFactory->createGoal(wall);
+
+                }else if(wall.tileType != NONE){
+                    //TODO throw exception
+                }
+            }
+        }
+        walls.push_back(wallModelRow);
+    }
 }
 void World::keyboardToPlayer(KeyboardInput keyboardInput){
-    player.updateFromKeyboard(keyboardInput);
+    player->updateFromKeyboard(keyboardInput);
 }
 void World::updatePlayerModel(){
     collision.setAllFalse();
     checkCollisionWithTiles();
     checkCollisionWallsBotom();
-    player.setCollision(collision);
+    player->setCollision(collision);
     float elapsed = stopwatch->getDifference();
-    player.simulate(elapsed);
+    player->simulate(elapsed);
 }
 void World::updateViews() {
-    wall.updateObservers();
-    goal.updateObservers();
-
-    for(auto &observer: player.getObserverList()){
-        observer->updateData(player.getLeftUpperCorner(), player.getDirection());
+    for(const vector<shared_ptr<WallModel>>& wallRow: walls) {
+        for (shared_ptr<WallModel> wall : wallRow) {
+            if (wall != nullptr) {
+                wall->updateObservers();
+            }
+        }
     }
-
-    player.updateObservers();
+    for(auto &observer: player->getObserverList()){
+        observer->updateData(player->getLeftUpperCorner(), player->getDirection());
+    }
+    player->updateObservers();
+    goal->updateObservers();
 }
 void World::checkCollisionWithTiles() {
 
-    float playerXUp = player.getLeftUpperCorner().x;
-    float playerYUp = player.getLeftUpperCorner().y;
+    float playerXUp = player->getLeftUpperCorner().x;
+    float playerYUp = player->getLeftUpperCorner().y;
 
-    float playerX = playerXUp + player.getTileHeightWidth()/2;
-    float playerY = playerYUp + player.getTileHeightWidth()/2;
+    float playerX = playerXUp + player->getTileHeightWidth() / 2;
+    float playerY = playerYUp + player->getTileHeightWidth() / 2;
 
-    int currentPlayerRow = floor((playerY+ 1.f) / tileSize) - 1;
+    int currentPlayerRow = floor((playerY + 1.f) / tileSize) - 1;
     int currentPlayerColumn = floor((playerX + 1.f) / tileSize);
 
-//    cout << "currentPlayerRow " << currentPlayerRow <<endl;
-//    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
-    WallModel currentTile{}, upTile{}, downTile{}, leftTile{}, leftDownTile{}, leftUpperTile{}, rightTile{}, rightUpperTile{}, rightDownTile{};
+    //    cout << "currentPlayerRow " << currentPlayerRow <<endl;
+    //    cout << "currentPlayerColumn " << currentPlayerColumn<<endl;
+    shared_ptr<WallModel> currentTile{}, upTile{}, downTile{}, leftTile{}, leftDownTile{}, leftUpperTile{}, rightTile{},
+        rightUpperTile{}, rightDownTile{};
 
-    //all row + 1
-    if (currentPlayerRow + 1 <= tiles.size()-1){
-        upTile = tiles[currentPlayerRow + 1][currentPlayerColumn];
+    // all row + 1
+    if (currentPlayerRow + 1 <= walls.size() - 1) {
+        upTile = walls[currentPlayerRow + 1][currentPlayerColumn];
 
-        if(currentPlayerColumn - 1 > 0) {
-            leftUpperTile = tiles[currentPlayerRow + 1][currentPlayerColumn - 1];
+        if (currentPlayerColumn - 1 > 0) {
+            leftUpperTile = walls[currentPlayerRow + 1][currentPlayerColumn - 1];
         }
-        if(currentPlayerColumn + 1 < tiles[0].size()) {
-            rightUpperTile = tiles[currentPlayerRow + 1][currentPlayerColumn + 1];
-        }
-    }
-    //all row -1
-    if(currentPlayerRow - 1 >= 0){
-        downTile = tiles[currentPlayerRow - 1][currentPlayerColumn];
-
-        if(currentPlayerColumn - 1 > 0) {
-            leftDownTile = tiles[currentPlayerRow - 1][currentPlayerColumn - 1];
-        }
-        if(currentPlayerColumn + 1 < tiles[0].size()) {
-            rightDownTile = tiles[currentPlayerRow - 1][currentPlayerColumn + 1];
-
+        if (currentPlayerColumn + 1 < walls[0].size()) {
+            rightUpperTile = walls[currentPlayerRow + 1][currentPlayerColumn + 1];
         }
     }
-    //all just rows
-    if(currentPlayerColumn + 1 <= tiles[0].size()-1){
-        rightTile = tiles[currentPlayerRow][currentPlayerColumn + 1];
-        if(currentPlayerColumn - 1 > 0) {
-            leftTile = tiles[currentPlayerRow][currentPlayerColumn - 1];
+    // all row -1
+    if (currentPlayerRow - 1 >= 0) {
+        downTile = walls[currentPlayerRow - 1][currentPlayerColumn];
+
+        if (currentPlayerColumn - 1 > 0) {
+            leftDownTile = walls[currentPlayerRow - 1][currentPlayerColumn - 1];
+        }
+        if (currentPlayerColumn + 1 < walls[0].size()) {
+            rightDownTile = walls[currentPlayerRow - 1][currentPlayerColumn + 1];
+        }
+    }
+    // all just rows
+    if (currentPlayerColumn + 1 <= walls[0].size() - 1) {
+        rightTile = walls[currentPlayerRow][currentPlayerColumn + 1];
+        if (currentPlayerColumn - 1 > 0) {
+            leftTile = walls[currentPlayerRow][currentPlayerColumn - 1];
         }
     }
 
-//        // get tile where current tile is at
-//        currentTile = tiles[currentPlayerRow][currentPlayerColumn];
+    if (currentPlayerColumn == 10) {
+    }
+//    cout << "currentPlayerRowIN WORLD == " << currentPlayerRow
+//         << "  currentPlayerColumn in world == " << currentPlayerColumn << endl;
+    //        // get tile where current tile is at
+    //        currentTile = walls[currentPlayerRow][currentPlayerColumn];
 
-    if (rightTile.getTileType() == block and player.intersects(rightTile, Right)) {
-//        cout << "collision RIGHT"<< endl;
+    if (rightTile != nullptr and player->intersects(rightTile)) {
         collision.collisionRight = true;
     }
-    if (leftTile.getTileType() == block and player.intersects(leftTile, Left)) {
+    if (leftTile != nullptr and player->intersects(leftTile)) {
         collision.collisionLeft = true;
 //        cout << "collision LEFT"<< endl;
     }
-    if (upTile.getTileType() == block and player.intersects(upTile, Up)) {
+    if (upTile != nullptr and player->intersects(upTile)) {
         collision.collisionUp = true;
 //        cout << "collision UP"<< endl;
     }
-    if (downTile.getTileType() == block and player.intersects(downTile, Down)) {
+    if (downTile != nullptr and player->intersects(downTile)) {
         collision.collisionDown = true;
 //        cout << "collision DOWN"<< endl;
     }
-    if (leftUpperTile.getTileType() == block  and player.intersects(leftUpperTile, Left)) {
-        collision.collisionUp = true;
-    }
-    if (rightUpperTile.getTileType() == block  and player.intersects(rightUpperTile, Right)) {
-        collision.collisionUp = true;
-    }
-    if (leftDownTile.getTileType() == block  and player.intersects(leftDownTile,Up)) {
-        collision.collisionDown = true;
-    }
-    if (rightDownTile.getTileType() == block  and player.intersects(rightDownTile,Down)) {
-        collision.collisionDown = true;
-    }
+//    if (leftUpperTile != nullptr  and player->intersects(leftUpperTile, Left)) {
+//        collision.collisionUp = true;
+//    }
+//    if (rightUpperTile != nullptr  and player->intersects(rightUpperTile, Right)) {
+//        collision.collisionUp = true;
+//    }
+//    if (leftDownTile != nullptr  and player->intersects(leftDownTile,Up)) {
+//        collision.collisionDown = true;
+//    }
+//    if (leftDownTile != nullptr  and player->intersects(rightDownTile,Check)) {
+//        collision.collisionDown = true;
+//    }
 }
 void World::checkCollisionWallsBotom(){
-    float XLeft= player.getLeftUpperCorner().x;
-    float XRight= player.getRightDownCorner().x;
+    float XLeft= player->getLeftUpperCorner().x;
+    float XRight= player->getRightDownCorner().x;
 
-    float YUp= player.getLeftUpperCorner().y;
-    float YDown= player.getRightDownCorner().y;
+    float YUp= player->getLeftUpperCorner().y;
+    float YDown= player->getRightDownCorner().y;
 
     // collisionWithGround
     if (YDown <= -1) {
@@ -134,4 +160,8 @@ void World::setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactor
 }
 void World::setScreenDimensions(const Position& screenDimensions) { World::screenDimensions = screenDimensions; }
 void World::setTileSize(float tileSize) { World::tileSize = tileSize; }
-const PlayerModel& World::getPlayer() const { return player; }
+
+World::World() {}
+World::~World() {}
+const shared_ptr<PlayerModel>& World::getPlayer() const { return player; }
+const shared_ptr<GoalModel>& World::getGoal() const { return goal; }

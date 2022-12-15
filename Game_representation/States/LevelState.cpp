@@ -3,31 +3,41 @@
 //
 
 #include "LevelState.h"
-LevelState::LevelState(const shared_ptr<RenderWindow>& sfWindow) : State(sfWindow) {
+#include "StateManager.h"
 
-//    screenMoved = false;
+LevelState::LevelState(StateManager& stateManager, int chosenLevel)
+    : State(stateManager), chosenLevel(chosenLevel) {
 
-//    View view = sfWindow->getView();
-//    Vector2f oldViewPosition = view.getCenter();
+    cout << "Level " <<chosenLevel <<" is started." <<endl;
 
+    startup(chosenLevel);
+    //load background
+    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
+        cout << ("Failed to load background into texture.") << endl;
+
+    }
+    // configure sprite
+    spriteBackground.setTexture(textureBackground);
+}
+
+void LevelState::startup(int chosenLevel) {
 
     // make level from input
-    inputParser.parse(3);
+    inputParser.parse(chosenLevel);
 
-    tiles = inputParser.getTiles();
+    vector<vector<inputRectangles>> tiles = inputParser.getTiles();
 
     screenDimensions = inputParser.getScreenDimensions();
 
     camera->setScreenDimensions(screenDimensions);
-    camera->setAmountOfTilesUnderScreen(inputParser.getAmountOfTilesUnderScreen());
 
-    shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(sfWindow);
+    shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(stateManager.getSfWindow());
 
     //add absstractFactory
     world.setAbstractFactory(conc);
     //pass screendimentions to world
     world.setScreenDimensions(screenDimensions);
-    //pass tiles to world
+    //pass wallTiles to world
     world.setUp(tiles);
     //pass tileSize to world
     world.setTileSize(inputParser.getTileSize());
@@ -42,7 +52,8 @@ void LevelState::userInput(Event &event) {
     if (event.type == Event::KeyPressed) {
         // Escape
         if (event.key.code == Keyboard::Escape) {
-            transition = true;
+            shared_ptr<State> newState = make_shared<MenuState>(stateManager);
+            stateManager.setState(newState);
             return;
         }
         // Space
@@ -78,67 +89,63 @@ void LevelState::userInput(Event &event) {
 void LevelState::simulate() {
     // run world
     world.updatePlayerModel();
-    checkPlayerDeath();
+    moveScreen();
+////TODO controleren of werkt
+
+    //start level again
+    if(checkPlayerDeath()){
+        shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel);
+        stateManager.setState(newState);
+    }
+    //start next level
+    if(world.getPlayer()->intersects(world.getGoal())){
+        shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel + 1);
+        stateManager.setState(newState);
+    }
+
+}
+void LevelState::moveScreen(){
+    auto view = stateManager.getSfWindow()->getView();
+    Position viewPosition;
+    viewPosition.x = view.getCenter().x;
+    viewPosition.y = view.getCenter().y;
+
+    Position p = world.getPlayer()->getLeftUpperCorner();
+    Position prevP = world.getPlayer()->getPreviousLeftUpperCorner();
+    //todo move screen
+    Position newViewPosition = camera->moveScreen(viewPosition, p, prevP);
+
+    Vector2f finalViewPosition;
+    finalViewPosition.x = newViewPosition.x;
+    finalViewPosition.y = newViewPosition.y;
+
+    //remember this is the center!
+    view.setCenter(finalViewPosition);
+    stateManager.getSfWindow()->setView(view);
+}
+//TODO
+bool LevelState::checkPlayerDeath() {
+    //check if view is moved otherwise its the beginning of the game
+    bool viewMoved = camera->isViewMoved();
+    //get player position in pixels
+    Position playerY = camera->coordinatesToPixel(world.getPlayer()->getRightDownCorner().x, world.getPlayer()->getRightDownCorner().y);
+    //get view position
+    auto viewCenter = stateManager.getSfWindow()->getView().getCenter();
+
+    if(playerY.y > (viewCenter.y + 1050.f/2)){
+        return true;
+    }
+    return false;
 }
 
-void LevelState::checkPlayerDeath() {
-//    if(world.getPlayer().getRightDownCorner().y > (newViewPosition.y + 1024.f/2) and screenMoved){
-//        transition = true;
-//    }
-}
 
 void LevelState::draw() {
+//    cout << "AMOUNT OF POINTERS TO WINDOW " << stateManager.getSfWindow().use_count() <<endl;
+
+    stateManager.getSfWindow()->clear();
+    stateManager.getSfWindow()->draw(spriteBackground);
     world.updateViews();
-    moveScreen();
+    stateManager.getSfWindow()->display();
 }
 
-void LevelState::moveScreen() {
-    View view = sfWindow->getView();
-
-    Vector2f viewPosition = view.getCenter();
-//    Vector2f position(544.f / 2, 1024.f / 2);
-
-    float x = world.getPlayer().getLeftUpperCorner().x;
-    float y = world.getPlayer().getLeftUpperCorner().y;
-
-    float prevX = world.getPlayer().getPreviousLeftUpperCorner().x;
-    float prevY = world.getPlayer().getPreviousLeftUpperCorner().y;
-
-    const Position playerPosition = camera->coordinatesToPixel(x,y);
-    const Position prevPlayerPosition = camera->coordinatesToPixel(prevX, prevY);
-
-    Position positionDifference = playerPosition - prevPlayerPosition;
-//    view.reset(sf::FloatRect(0, 0, 544.f, 1024.f));
-
-    /*
-     * playerposition has to be lower than eighty procent of the screen
-     * "lower" because the uppder left corner of the screen is (0,0)
-     *
-     * if the player has reached 80 procent the view has to make the same steps as the player
-     * so if the player moves 5 up, the view needs to move 5 up
-     */
-    /*
-     * screendimensions.x= 1376
-     * ------------------- - (1376 - 1024)
-     *
-     *
-     * -------------------0
-     *
-     *
-     *
-     *
-     * -------------------1024
-     */
-    float maximumViewHeight = -(screenDimensions.y - 1024);
-    if ((viewPosition.y - 1024.f/2) >= maximumViewHeight){
-        float eightyPercentageHeight = 1024.f-((1024.f*80.f)/100.f);
-        //if player is in 80% and the difference is positive
-        //if the differene is negative, the player is going down and the screen shouldnt move
-        if (playerPosition.y <= eightyPercentageHeight and positionDifference.y > 0) {
-            viewPosition.y -= positionDifference.y;
-        }
-    }
-    //todo: remember this is the center!
-    view.setCenter(viewPosition);
-    sfWindow->setView(view);
-}
+LevelState::~LevelState() {}

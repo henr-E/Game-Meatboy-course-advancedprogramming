@@ -4,7 +4,22 @@
 
 #include "GoalView.h"
 
-void GoalView::update() { }
-void GoalView::updateData(Position position, Direction direction) {}
-GoalView::GoalView(const shared_ptr<RenderWindow>& sfWindow)
-    : View(sfWindow) {}
+GoalView::GoalView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow)
+    : View(modelPosition, modelTileType, sfWindow) {
+
+    if (modelTexture.loadFromFile("../content/tileset.png", IntRect(0, 0, 32, 32))){
+        //TODO throw exception
+    }
+    modelSprite.setTexture(modelTexture);
+}
+
+GoalView::~GoalView() {}
+
+void GoalView::update() {
+    //transform coordinates
+    Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);
+    modelSprite.setPosition(p.x, p.y);
+    sfWindow->draw(modelSprite);
+}
+void GoalView::updateData(Position position, Direction direction){}
+

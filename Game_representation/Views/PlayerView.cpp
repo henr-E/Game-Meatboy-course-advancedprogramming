@@ -4,8 +4,8 @@
 
 #include "PlayerView.h"
 
-PlayerView::PlayerView(const shared_ptr<RenderWindow>& sfWindow)
-    : View(sfWindow) {}
+PlayerView::PlayerView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow)
+    : View(modelPosition, modelTileType, sfWindow) {}
 
 void PlayerView::update() {
 
@@ -14,25 +14,23 @@ void PlayerView::update() {
     // using 2 different sprites
 
     if (playerDirection == facingRight) {
-        texturePlayer.loadFromFile("../content/meatboy.png");
+        modelTexture.loadFromFile("../content/meatboy.png");
     } else {
-        texturePlayer.loadFromFile("../content/meatboyMirror.png");
+        modelTexture.loadFromFile("../content/meatboyMirror.png");
     }
-    texturePlayer.setSmooth(true);
+    modelTexture.setSmooth(true);
 
-    spritePlayer.setTexture(texturePlayer);
+    modelSprite.setTexture(modelTexture);
 
     // convert coordinates to pixels
-    Position p = camera->coordinatesToPixel(playerPosition.x, playerPosition.y);
+    Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);
     // Now move the playerSprite to its new position
-    spritePlayer.setPosition(p.x, p.y);
+    modelSprite.setPosition(p.x, p.y);
     // Draw the player
-    sfWindow->draw(spritePlayer);
-
-    sfWindow->display();
+    sfWindow->draw(modelSprite);
 }
 void PlayerView::updateData(Position position, Direction direction) {
-    playerPosition = position;
+    modelPosition = position;
     playerDirection = direction;
 }
-
+PlayerView::~PlayerView() {}

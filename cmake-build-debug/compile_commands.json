@@ -31,6 +31,16 @@
 },
 {
   "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/WallModel.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/WallModel.cpp",
+  "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/WallModel.cpp"
+},
+{
+  "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/GoalModel.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/GoalModel.cpp",
+  "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/GoalModel.cpp"
+},
+{
+  "directory": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /opt/homebrew/include -Wall -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14 -o CMakeFiles/2022_project_henrey_T.dir/src/main.cpp.o -c /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp",
   "file": "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/src/main.cpp"
 },

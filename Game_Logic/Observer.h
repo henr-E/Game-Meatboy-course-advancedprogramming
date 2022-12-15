@@ -12,6 +12,7 @@ using namespace std;
 class Observer {
 public:
     Observer() = default;
+    virtual ~Observer() {}
     virtual void update() = 0;
     virtual void updateData(Position position, Direction direction) = 0;
 };

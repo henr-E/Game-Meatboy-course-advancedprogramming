@@ -15,13 +15,12 @@ using namespace chrono;
 
 class Stopwatch {
 public:
-    // Clock for timing everything
     time_point<steady_clock> prev_time;
-
     static shared_ptr<Stopwatch> instance_;
 
 public:
     Stopwatch();
+    virtual ~Stopwatch();
     /**
      * not clonable
      */
@@ -32,8 +31,16 @@ public:
      */
     void operator=(const Stopwatch&) = delete;
 
+    /**
+     *
+     * @return difference in time between two clock ticks in a float
+     */
     float getDifference();
 
+    /**
+     *
+     * @return instance
+     */
     static shared_ptr<Stopwatch>& getInstance();
 
 };

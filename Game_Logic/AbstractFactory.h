@@ -11,10 +11,14 @@
 
 class AbstractFactory{
 public:
+    /**
+     * default constructor
+     */
     AbstractFactory() = default;
-    virtual PlayerModel createPlayer() = 0;
-    virtual GoalModel createGoal() = 0;
-    virtual WallModel createWalls(vector<vector<WallModel>> tiles) = 0;
+    virtual ~AbstractFactory() {}
+    virtual shared_ptr<PlayerModel> createPlayer() = 0;
+    virtual shared_ptr<GoalModel> createGoal(inputRectangles tile) = 0;
+    virtual shared_ptr<WallModel> createWall(inputRectangles tile) = 0;
 };
 
 

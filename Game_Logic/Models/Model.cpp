@@ -14,3 +14,4 @@ void ownModel::Model::setTileType(const TileType& tileType) { Model::tileType = 
 float ownModel::Model::getTileHeightWidth() const { return tileHeightWidth; }
 void ownModel::Model::setTileHeightWidth(const float& tileHeightWidth) { Model::tileHeightWidth = tileHeightWidth; }
 const vector<shared_ptr<Observer>>& ownModel::Model::getObserverList() const { return Subject::getObserverList(); }
+ownModel::Model::~Model() {}

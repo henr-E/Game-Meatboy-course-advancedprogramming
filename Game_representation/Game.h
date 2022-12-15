@@ -37,6 +37,7 @@ private:
 
 public:
     Game();
+    virtual ~Game();
     void run();
 };
 

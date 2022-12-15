@@ -11,28 +11,64 @@
 #include "../../Game_Logic/Camera.h"
 #include "../ConcreteFactory.h"
 
-class LevelState:public State {
+/**
+ * forward declaration of statemanager
+ * include of statemanager in .cpp
+ */
+class StateManager;
+class LevelState: public State {
 private:
-    //selfmade classes/structs
+    //sfml elements
+    Texture textureBackground;
+    Sprite spriteBackground;
+
+    // selfmade classes/structs
     World world;
     KeyboardInput keyboardInput;
 
-    vector<vector<WallModel>> tiles;
     InputParser inputParser;
 
     shared_ptr<Camera> camera = Camera::getInstance();
+
+    int chosenLevel;
 
 //    bool screenMoved;
 //    Vector2f newViewPosition{};
 
 public:
-    explicit LevelState(const shared_ptr<RenderWindow>& sfWindow);
+    /**
+     * constructor
+     * @param sfWindow
+     */
+    LevelState(StateManager& stateManager, int chosenLevel);
+    virtual ~LevelState() override;
+    /**
+     *
+     */
+     void startup(int chosenLevel);
+    /**
+     * event is passed to this method
+     * the event holds which keys are pressed
+     * @param event
+     */
     virtual void userInput(Event &event);
+    /**
+     * updates the playerModel
+     */
     virtual void simulate();
+    /**
+     * calls method in world that updates the views
+     */
     virtual void draw();
 
+
+    /**
+     *
+     */
+    bool checkPlayerDeath();
+    bool checkPlayerReachGoal();
+
     void moveScreen();
-    void checkPlayerDeath();
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_LEVELSTATE_H

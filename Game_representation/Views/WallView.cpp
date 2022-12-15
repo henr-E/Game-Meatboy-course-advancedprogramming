@@ -4,70 +4,26 @@
 
 #include "WallView.h"
 
-WallView::WallView(const shared_ptr<RenderWindow>& sfWindow,
-                   const vector<vector<WallModel>>& tiles): View(sfWindow), tiles(tiles) {
-    setUp();
-}
 
-void WallView::setUp() {
-    // load background
-    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
-        cout << "Failed to load background into texture." << endl;
+WallView::WallView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow)
+    : View(modelPosition, modelTileType, sfWindow) {
+    if (modelTexture.loadFromFile("../content/tileset.png", IntRect(64, 0, 32, 32))){
+        //TODO throw exception
     }
-    // configure sprite
-    spriteBackground.setTexture(textureBackground);
+    modelSprite.setTexture(modelTexture);
 
-    spriteBackground.setScale(1, (float)1024 / textureBackground.getSize().y);
 }
 
+WallView::~WallView() {}
 
 void WallView::update() {
-    sfWindow->clear();
-    sfWindow->draw(spriteBackground);
+    //transform coordinates
+    Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);
+    modelSprite.setPosition(p.x, p.y);
 
-    drawTiles();
+    sfWindow->draw(modelSprite);
 }
+void WallView::updateData(Position position, Direction direction){}
 
-void WallView::drawTiles() {
-    Texture textureTileOther;
-    Texture textureTileGirl;
-    Texture textureTileBlock;
 
-    Sprite spriteTile;
-
-    if (textureTileOther.loadFromFile("../content/tileset.png", IntRect(256, 0, 32, 32))){
-
-    }
-
-    if (textureTileGirl.loadFromFile("../content/tileset.png", IntRect(0, 0, 32, 32))){
-
-    }
-
-    if (textureTileBlock.loadFromFile("../content/tileset.png", IntRect(64, 0, 32, 32))){
-
-    }
-
-    for(auto const &row : tiles){
-        for(auto const & wallModel : row){
-
-            float XLeft = wallModel.getLeftUpperCorner().x;
-            float YUp = wallModel.getLeftUpperCorner().y;
-
-            if(wallModel.getTileType() == other){
-                spriteTile.setTexture(textureTileOther);
-            }
-            else if(wallModel.getTileType() == girlfriend){
-                spriteTile.setTexture(textureTileGirl);
-            }
-            else if(wallModel.getTileType() == block){
-                spriteTile.setTexture(textureTileBlock);
-            }
-            //transform coordinates
-            Position p = camera->coordinatesToPixel(XLeft, YUp);
-            spriteTile.setPosition(p.x, p.y);
-            sfWindow->draw(spriteTile);
-        }
-    }
-}
-void WallView::updateData(Position position, Direction direction) {}
 
