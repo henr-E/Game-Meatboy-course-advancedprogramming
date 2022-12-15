@@ -25,6 +25,14 @@ struct CoordinateInterval {
 
 class Position {
 public:
+
+    Position operator-(const Position& that) const {
+        Position newPos{};
+        newPos.x = that.x - this->x;
+        newPos.y = that.y - this->y;
+        return newPos;
+    }
+
     float x;
     float y;
 };

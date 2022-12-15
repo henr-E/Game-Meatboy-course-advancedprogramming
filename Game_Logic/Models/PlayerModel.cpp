@@ -30,14 +30,14 @@ PlayerModel::PlayerModel() {
 
     direction = facingRight;
 
-
-
+    previousLeftUpperCorner = leftUpperCorner;
 
     keyboardLeft = false;
     keyboardRight = false;
     jumpWallLeft = false;
     jumpWallRight = false;
 }
+
 void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
     switch (keyboardInput) {
     case pressMoveLeft:
@@ -93,6 +93,7 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
 
 
 void PlayerModel::simulate(float elapsedTime) {
+    previousLeftUpperCorner = leftUpperCorner;
     //landing
     if(collision.collisionDown and verticalSpeed > 0){
         verticalSpeed = 0;
@@ -145,6 +146,7 @@ void PlayerModel::simulate(float elapsedTime) {
     if((collision.collisionRight or collision.collisionLeft) and !jumpWallLeft and !jumpWallRight ){
         horizontalSpeed = 0;
     }
+
 }
 
 bool PlayerModel::intersects(const Model& that, CheckCollision checkCollision) {
@@ -200,3 +202,4 @@ Direction PlayerModel::getDirection() const { return direction; }
 
 void PlayerModel::setCollision(const Collision& collisionNew) { collision = collisionNew; }
 void PlayerModel::updateObservers() { Model::updateObservers(); }
+const Position& PlayerModel::getPreviousLeftUpperCorner() const { return previousLeftUpperCorner; }

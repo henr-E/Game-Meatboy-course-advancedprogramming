@@ -27,11 +27,11 @@ class PlayerModel: public ownModel::Model{
 
     Collision collision;
 
+    Position previousLeftUpperCorner;
+
 public:
 
     void updateObservers() override;
-
-
 
     PlayerModel();
 
@@ -46,6 +46,7 @@ public:
 
     void setCollision(const Collision& collision);
 
+    const Position& getPreviousLeftUpperCorner() const;
 
     const Position& getLeftUpperCorner() const override{
         return leftUpperCorner;
@@ -73,8 +74,5 @@ public:
     void setTileType(const TileType& tileType1) override{
         Model::tileType = tileType1;
     }
-
-
-
 };
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERMODEL_H

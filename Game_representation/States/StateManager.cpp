@@ -29,6 +29,7 @@ void StateManager::simulate(FunctionCallTo functionCallTo) {
     }
     if (functionCallTo == SIMULATE){
         state->simulate();
+        checkTransition();
     }
 }
 

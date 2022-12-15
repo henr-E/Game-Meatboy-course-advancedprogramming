@@ -22,12 +22,17 @@ private:
 
     shared_ptr<Camera> camera = Camera::getInstance();
 
+//    bool screenMoved;
+//    Vector2f newViewPosition{};
+
 public:
     explicit LevelState(const shared_ptr<RenderWindow>& sfWindow);
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();
+
     void moveScreen();
+    void checkPlayerDeath();
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_LEVELSTATE_H
