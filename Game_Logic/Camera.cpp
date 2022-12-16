@@ -85,8 +85,14 @@ void Camera::moveScreenAtEighty(CameraPositions& cameraPositions, Position playe
 }
 
 void Camera::moveScreen(CameraPositions& cameraPositions){
-    cameraPositions.viewPosition.y -= 0.01;
-    cameraPositions.backgroundPosition.y -= 0.01;
+
+    //maximumViewHeight is actually the amount of walls that are above the window
+    float maximumViewHeight = -(screenDimensions.y - 1024);
+    if ((cameraPositions.viewPosition.y - 1024.f/2) >= maximumViewHeight){
+        cameraPositions.viewPosition.y -= 0.150;
+        cameraPositions.backgroundPosition.y -= 0.150;
+
+    }
 }
 
 

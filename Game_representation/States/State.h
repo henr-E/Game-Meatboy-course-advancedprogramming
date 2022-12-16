@@ -26,15 +26,12 @@ public:
 
     virtual void draw();
 
-    virtual const Position& getScreenDimensions() const;
-
 protected:
     /**
      * hold a reference to the stateManager to change the state
      */
     StateManager& stateManager;
     int chosenLevel;
-    Position screenDimensions;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STATE_H

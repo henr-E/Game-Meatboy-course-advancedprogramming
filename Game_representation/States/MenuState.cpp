@@ -7,9 +7,6 @@
 MenuState::MenuState(StateManager& stateManager)
     : State(stateManager) {
 
-    screenDimensions.x = 544;
-    screenDimensions.y = 1024;
-
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
         cout << ("Failed to load background into texture.") << endl;

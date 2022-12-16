@@ -14,12 +14,17 @@ LevelState::LevelState(StateManager& stateManager, int chosenLevel)
 }
 
 void LevelState::startup(int chosenLevel) {
+
+    sf::View view = stateManager.getSfWindow()->getView();
+    view.setCenter(544.f/2, 1024.f/2);
+    stateManager.getSfWindow()->setView(view);
+
     // make level from input
     inputParser.parse(chosenLevel);
 
     vector<vector<inputRectangles>> tiles = inputParser.getTiles();
 
-    screenDimensions = inputParser.getScreenDimensions();
+    Position screenDimensions = inputParser.getScreenDimensions();
 
     camera->setScreenDimensions(screenDimensions);
 
@@ -27,8 +32,6 @@ void LevelState::startup(int chosenLevel) {
 
     //add absstractFactory
     world.setAbstractFactory(conc);
-    //pass screendimentions to world
-    world.setScreenDimensions(screenDimensions);
     //pass wallTiles to world
     world.setUp(tiles);
     //pass tileSize to world
@@ -97,11 +100,13 @@ void LevelState::simulate() {
     if(checkPlayerDeath()){
         shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel);
         stateManager.setState(newState);
+        return;
     }
     //start next level
     if(world.getPlayer()->intersects(world.getGoal())){
         shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel + 1);
         stateManager.setState(newState);
+        return;
     }
 
 }
@@ -119,9 +124,9 @@ void LevelState::moveScreen(){
     positions.backgroundPosition = backgroundLeftUpCorner;
 
     camera->moveScreenAtEighty(positions, playerPosition, prevPlayerPosition);
-//    if(inputParser.getMoveScreen() == MOVE){
-//        camera->moveScreen(positions);
-//    }
+    if(inputParser.getMoveScreen() == MOVE){
+        camera->moveScreen(positions);
+    }
 
     //remember this is the center!
     view.setCenter(positions.viewPosition.x, positions.viewPosition.y);
@@ -134,11 +139,11 @@ bool LevelState::checkPlayerDeath() {
     //check if view is moved otherwise its the beginning of the game
     bool viewMoved = camera->isViewMoved();
     //get player position in pixels
-    Position playerY = camera->coordinatesToPixel(world.getPlayer()->getRightDownCorner().x, world.getPlayer()->getRightDownCorner().y);
+    Position playerY = camera->coordinatesToPixel(world.getPlayer()->getLeftUpperCorner().x, world.getPlayer()->getLeftUpperCorner().y);
     //get view position
     auto viewCenter = stateManager.getSfWindow()->getView().getCenter();
 
-    if(playerY.y > (viewCenter.y + 1050.f/2)){
+    if(playerY.y > (viewCenter.y + 1024.f/2)){
         return true;
     }
     return false;

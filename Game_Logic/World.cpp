@@ -29,6 +29,7 @@ void World::setUp(vector<vector<inputRectangles>> tiles) {
         walls.push_back(wallModelRow);
     }
 }
+
 void World::keyboardToPlayer(KeyboardInput keyboardInput){
     player->updateFromKeyboard(keyboardInput);
 }
@@ -170,7 +171,6 @@ void World::checkCollisionWallsBotom(){
 void World::setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactory) {
     World::abstractFactory = abstractFactory;
 }
-void World::setScreenDimensions(const Position& screenDimensions) { World::screenDimensions = screenDimensions; }
 void World::setTileSize(float tileSize) { World::tileSize = tileSize; }
 
 World::World() {}

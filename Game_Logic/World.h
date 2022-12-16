@@ -25,8 +25,6 @@ using namespace chrono;
 
 class World {
 private:
-
-    Position screenDimensions;
     Collision collision;
 
     shared_ptr<Stopwatch> stopwatch = Stopwatch::getInstance();
@@ -82,11 +80,6 @@ public:
      */
     void setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactory);
 
-    /**
-     * sets the screendimentions
-     * @param screenDimensions
-     */
-    void setScreenDimensions(const Position& screenDimensions);
     /**
      * sets the tileSize
      * @param tileSize

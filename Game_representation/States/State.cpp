@@ -13,7 +13,4 @@ void State::simulate() {}
 //void State::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
 //    State::sfWindow = sfWindow;
 //}
-
-//const shared_ptr<RenderWindow>& State::getSfWindow() const { return sfWindow; }
-const Position& State::getScreenDimensions() const { return screenDimensions; }
 State::~State() {}

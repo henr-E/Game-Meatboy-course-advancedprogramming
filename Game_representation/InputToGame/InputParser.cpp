@@ -4,7 +4,7 @@
 
 #include "InputParser.h"
 InputParser::InputParser() {
-    screenDimensions.x = 0;
+    screenDimensions.x = 544;
     screenDimensions.y = 0;
     tileSize = 0;
 }
@@ -22,10 +22,6 @@ void InputParser::parse(int levelNumb) {
         auto s = string(myText);
         lines.emplace_back(s);
     }
-
-    //the first one will define movement so the screendimensions need to be ficed
-    //the string will show how many columns there are
-    screenDimensions.x = lines[1].size() * 32;
     //amount of strings will show how many rows there are
     screenDimensions.y = (lines.size() - 1) * 32;
 
@@ -36,7 +32,6 @@ void InputParser::parse(int levelNumb) {
     }else{
         cout << "No movement of level was found in the configurationFile => using move" << endl;
         moveScreen = DEFAULT;
-        screenDimensions.x = lines[0].size() * 32;
         screenDimensions.y = (lines.size()) * 32;
     }
 
@@ -76,6 +71,9 @@ void InputParser::parse(int levelNumb) {
         if(lines[line].empty()){
             cout << "An empty line was given in the configurationFile => ignoring line" << endl;
         }else{
+            if(lines[line].size() > 17){
+                cout << "A row in the configurationFile is longer than allowed, the amount of tiles in a row is 17 => taking first 17 and ignoring the rest" << endl;
+            }
             // make a tileVector
             vector<inputRectangles> tileRow;
             // loop through every character in the line
