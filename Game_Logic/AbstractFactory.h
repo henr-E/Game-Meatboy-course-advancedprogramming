@@ -15,7 +15,7 @@ public:
      * default constructor
      */
     AbstractFactory() = default;
-    virtual ~AbstractFactory() {}
+    virtual ~AbstractFactory() = default;
     virtual shared_ptr<PlayerModel> createPlayer() = 0;
     virtual shared_ptr<GoalModel> createGoal(inputRectangles tile) = 0;
     virtual shared_ptr<WallModel> createWall(inputRectangles tile) = 0;

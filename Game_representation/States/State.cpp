@@ -9,8 +9,3 @@ State::State(StateManager& stateManager)
 void State::userInput(Event &event) {}
 void State::draw() {}
 void State::simulate() {}
-
-//void State::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
-//    State::sfWindow = sfWindow;
-//}
-State::~State() {}

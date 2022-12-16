@@ -58,9 +58,7 @@
 				11,
 				13,
 				15,
-				16,
-				17,
-				18
+				16
 			]
 		}
 	],
@@ -100,9 +98,7 @@
 				11,
 				13,
 				15,
-				16,
-				17,
-				18
+				16
 			]
 		}
 	],
@@ -197,18 +193,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Game_Logic/Camera.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game_Logic/Models/WallModel.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Game_Logic/Models/GoalModel.cpp",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -7,9 +7,26 @@
 #include "View.h"
 class GoalView : public ownView::View{
 public:
+    /**
+     * constructor
+     * @param modelPosition
+     * @param modelTileType
+     * @param sfWindow
+     */
     GoalView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
-    ~GoalView() override;
+    /**
+     * destructor
+     */
+    ~GoalView() override = default;
+    /**
+     * draws the goal on the screen
+     */
     void update() override;
+    /**
+     * update data from model
+     * @param position
+     * @param direction
+     */
     void updateData(Position position, Direction direction) override;
 };
 

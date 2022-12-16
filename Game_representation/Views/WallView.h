@@ -9,9 +9,26 @@
 #include "../../Game_Logic/Camera.h"
 class WallView : public ownView::View{
 public:
+    /**
+     * constructor
+     * @param modelPosition
+     * @param modelTileType
+     * @param sfWindow
+     */
     WallView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
-    ~WallView() override;
+    /**
+     * destructor
+     */
+    ~WallView() override = default;
+    /**
+     * draws wall
+     */
     void update() override;
+    /**
+     * update data from model
+     * @param position
+     * @param direction
+     */
     void updateData(Position position, Direction direction) override;
 };
 

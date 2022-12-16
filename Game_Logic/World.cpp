@@ -165,8 +165,6 @@ void World::setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactor
 }
 void World::setTileSize(float tileSize) { World::tileSize = tileSize; }
 
-World::World() {}
-World::~World() {}
 const shared_ptr<PlayerModel>& World::getPlayer() const { return player; }
 const shared_ptr<GoalModel>& World::getGoal() const { return goal; }
 void World::setBottomViewY(float bottomViewY) { World::bottomViewY = bottomViewY; }

@@ -19,14 +19,7 @@ using namespace std;
 
 namespace ownView {
     class View : public Observer {
-    public:
-        View(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow)
-            : modelPosition(modelPosition), modelTileType(modelTileType), sfWindow(sfWindow) {}
-
     protected:
-        void update() override = 0;
-        void updateData(Position position, Direction direction) override = 0;
-
         Sprite modelSprite;
         Texture modelTexture;
 
@@ -36,6 +29,26 @@ namespace ownView {
         TileType modelTileType;
 
         shared_ptr<RenderWindow> sfWindow;
+
+    public:
+        /**
+         * constructor
+         * @param modelPosition
+         * @param modelTileType
+         * @param sfWindow
+         */
+        View(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow)
+            : modelPosition(modelPosition), modelTileType(modelTileType), sfWindow(sfWindow) {}
+        /**
+         * draw to screen
+         */
+        void update() override = 0;
+        /**
+         * updates any data from model
+         * @param position
+         * @param direction
+         */
+        void updateData(Position position, Direction direction) override = 0;
     };
 }
 

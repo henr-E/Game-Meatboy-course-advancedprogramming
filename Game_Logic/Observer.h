@@ -11,9 +11,23 @@ using namespace std;
 
 class Observer {
 public:
+    /**
+     * constructor
+     */
     Observer() = default;
-    virtual ~Observer() {}
+    /**
+     * destructor
+     */
+    virtual ~Observer() = default;
+    /**
+     * update the observer
+     */
     virtual void update() = 0;
+    /**
+     * updates the data
+     * @param position
+     * @param direction
+     */
     virtual void updateData(Position position, Direction direction) = 0;
 };
 

@@ -17,11 +17,29 @@ private:
     shared_ptr<RenderWindow> sfWindow;
 
 public:
-
+    /**
+     * constructor
+     * @param sfWindow
+     */
     explicit ConcreteFactory(const shared_ptr<RenderWindow>& sfWindow);
+    /**
+     * destructor
+     */
     ~ConcreteFactory() override;
+    /**
+     * creates a playerModel with a Playerview
+     * @return playerModel
+     */
     shared_ptr<PlayerModel> createPlayer() override;
+    /**
+     * creates a goalModel with a goalView
+     * @return goalModel
+     */
     shared_ptr<GoalModel> createGoal(inputRectangles tile) override;
+    /**
+     * creates a wallModel with a wallView
+     * @return wallModel
+     */
     shared_ptr<WallModel> createWall(inputRectangles tile) override;
 
 

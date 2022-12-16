@@ -16,8 +16,11 @@ public:
     /**
      * constructor
      */
-    Subject();
-    virtual ~Subject();
+    Subject() = default;
+    /**
+     * destructor
+     */
+    virtual ~Subject() = default;
     /**
      * add an observer
      * @param observer

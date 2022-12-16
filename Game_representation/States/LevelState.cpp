@@ -137,8 +137,8 @@ void LevelState::moveScreen(){
 }
 //TODO
 bool LevelState::checkPlayerDeath() {
-    //check if view is moved otherwise its the beginning of the game
-    bool viewMoved = camera->isViewMoved();
+//    //check if view is moved otherwise its the beginning of the game
+//    bool viewMoved = camera->isViewMoved();
     //get player position in pixels
     Position playerY = camera->coordinatesToPixel(world.getPlayer()->getLeftUpperCorner().x, world.getPlayer()->getLeftUpperCorner().y);
     //get view position
@@ -159,5 +159,3 @@ void LevelState::draw() {
     world.updateViews();
     stateManager.getSfWindow()->display();
 }
-
-LevelState::~LevelState() {}

@@ -8,8 +8,8 @@
 #include "Model.h"
 class GoalModel: public ownModel::Model{
 public:
-    GoalModel();
+    GoalModel() = default;
+    ~GoalModel() override = default;
 };
-
 
 #endif // INC_2022_PROJECT_HENREY_T_GOALMODEL_H

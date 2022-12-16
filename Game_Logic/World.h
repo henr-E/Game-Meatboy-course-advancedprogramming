@@ -9,14 +9,10 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-
 #include "AbstractFactory.h"
-
 #include "Models/GoalModel.h"
 #include "Models/PlayerModel.h"
 #include "Models/WallModel.h"
-
-
 #include "Stopwatch.h"
 #include "structures_enums_std_include.h"
 
@@ -39,8 +35,14 @@ private:
     float bottomViewY;
 
 public:
-    World();
-    virtual ~World();
+    /**
+     * constructor
+     */
+    World() = default;
+    /**
+     * destructor
+     */
+    virtual ~World() = default;
     /**
      * create player, goal and walls
      * @param tiles
@@ -54,13 +56,11 @@ public:
      * check Collision with walls and botom
      */
     void checkCollisionWallsBotom();
-
     /**
      * the world passes the keyboardinput to the player
      * @param keyboardInput
      */
     void keyboardToPlayer(KeyboardInput keyboardInput);
-
     /**
      * resets collision and checks new collisions
      * calculate elapsed time and  update the playerModel
@@ -70,7 +70,6 @@ public:
      * update view of wall, goal and player
      */
     void updateViews();
-
     /**
      * a setter for abstract factory
      * the levelstate passes a concrete factory to the world
@@ -80,16 +79,13 @@ public:
      * @param abstractFactory
      */
     void setAbstractFactory(const shared_ptr<AbstractFactory>& abstractFactory);
-
     /**
      * sets the tileSize
      * @param tileSize
      */
     void setTileSize(float tileSize);
-
     const shared_ptr<PlayerModel>& getPlayer() const;
     const shared_ptr<GoalModel>& getGoal() const;
-
     void setBottomViewY(float bottomViewY);
 };
 

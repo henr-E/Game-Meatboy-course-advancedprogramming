@@ -211,30 +211,6 @@ Game_Logic/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Camera.cpp.s
 .PHONY : Game_Logic/Camera.cpp.s
 
-Game_Logic/Models/GoalModel.o: Game_Logic/Models/GoalModel.cpp.o
-.PHONY : Game_Logic/Models/GoalModel.o
-
-# target to build an object file
-Game_Logic/Models/GoalModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/GoalModel.cpp.o
-.PHONY : Game_Logic/Models/GoalModel.cpp.o
-
-Game_Logic/Models/GoalModel.i: Game_Logic/Models/GoalModel.cpp.i
-.PHONY : Game_Logic/Models/GoalModel.i
-
-# target to preprocess a source file
-Game_Logic/Models/GoalModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/GoalModel.cpp.i
-.PHONY : Game_Logic/Models/GoalModel.cpp.i
-
-Game_Logic/Models/GoalModel.s: Game_Logic/Models/GoalModel.cpp.s
-.PHONY : Game_Logic/Models/GoalModel.s
-
-# target to generate assembly for a file
-Game_Logic/Models/GoalModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/GoalModel.cpp.s
-.PHONY : Game_Logic/Models/GoalModel.cpp.s
-
 Game_Logic/Models/Model.o: Game_Logic/Models/Model.cpp.o
 .PHONY : Game_Logic/Models/Model.o
 
@@ -282,30 +258,6 @@ Game_Logic/Models/PlayerModel.s: Game_Logic/Models/PlayerModel.cpp.s
 Game_Logic/Models/PlayerModel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/PlayerModel.cpp.s
 .PHONY : Game_Logic/Models/PlayerModel.cpp.s
-
-Game_Logic/Models/WallModel.o: Game_Logic/Models/WallModel.cpp.o
-.PHONY : Game_Logic/Models/WallModel.o
-
-# target to build an object file
-Game_Logic/Models/WallModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/WallModel.cpp.o
-.PHONY : Game_Logic/Models/WallModel.cpp.o
-
-Game_Logic/Models/WallModel.i: Game_Logic/Models/WallModel.cpp.i
-.PHONY : Game_Logic/Models/WallModel.i
-
-# target to preprocess a source file
-Game_Logic/Models/WallModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/WallModel.cpp.i
-.PHONY : Game_Logic/Models/WallModel.cpp.i
-
-Game_Logic/Models/WallModel.s: Game_Logic/Models/WallModel.cpp.s
-.PHONY : Game_Logic/Models/WallModel.s
-
-# target to generate assembly for a file
-Game_Logic/Models/WallModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/Game_Logic/Models/WallModel.cpp.s
-.PHONY : Game_Logic/Models/WallModel.cpp.s
 
 Game_Logic/Stopwatch.o: Game_Logic/Stopwatch.cpp.o
 .PHONY : Game_Logic/Stopwatch.o
@@ -660,18 +612,12 @@ help:
 	@echo "... Game_Logic/Camera.o"
 	@echo "... Game_Logic/Camera.i"
 	@echo "... Game_Logic/Camera.s"
-	@echo "... Game_Logic/Models/GoalModel.o"
-	@echo "... Game_Logic/Models/GoalModel.i"
-	@echo "... Game_Logic/Models/GoalModel.s"
 	@echo "... Game_Logic/Models/Model.o"
 	@echo "... Game_Logic/Models/Model.i"
 	@echo "... Game_Logic/Models/Model.s"
 	@echo "... Game_Logic/Models/PlayerModel.o"
 	@echo "... Game_Logic/Models/PlayerModel.i"
 	@echo "... Game_Logic/Models/PlayerModel.s"
-	@echo "... Game_Logic/Models/WallModel.o"
-	@echo "... Game_Logic/Models/WallModel.i"
-	@echo "... Game_Logic/Models/WallModel.s"
 	@echo "... Game_Logic/Stopwatch.o"
 	@echo "... Game_Logic/Stopwatch.i"
 	@echo "... Game_Logic/Stopwatch.s"

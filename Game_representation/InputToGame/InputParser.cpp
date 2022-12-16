@@ -26,12 +26,12 @@ void InputParser::parse(int levelNumb) {
     screenDimensions.y = (lines.size() - 1) * 32;
 
     if (lines[0] == "MOVE"){
-        moveScreen = MOVE;
+        moveScreenInput = MOVE;
     }else if (lines[0] == "NOMOVE"){
-        moveScreen = NOMOVE;
+        moveScreenInput = NOMOVE;
     }else{
         cout << "No movement of level was found in the configurationFile => using move" << endl;
-        moveScreen = DEFAULT;
+        moveScreenInput = DEFAULT;
         screenDimensions.y = (lines.size()) * 32;
     }
 
@@ -60,7 +60,7 @@ void InputParser::parse(int levelNumb) {
     /*
      * if moveScreenAtEighty input is default we have one line less in the configurationFile
      */
-    if(moveScreen != DEFAULT){
+    if(moveScreenInput != DEFAULT){
         forLoopEnd = 1;
     }
 
@@ -178,5 +178,4 @@ void InputParser::parse(int levelNumb) {
 const vector<vector<inputRectangles>>  & InputParser::getTiles() const { return tiles; }
 const Position& InputParser::getScreenDimensions() const { return screenDimensions; }
 float InputParser::getTileSize() const { return tileSize; }
-InputParser::~InputParser() {}
-MoveScreen InputParser::getMoveScreen() const { return moveScreen; }
+MoveScreen InputParser::getMoveScreen() const { return moveScreenInput; }

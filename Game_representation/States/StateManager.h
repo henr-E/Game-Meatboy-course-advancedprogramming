@@ -17,18 +17,37 @@ class StateManager {
 private:
     shared_ptr<RenderWindow> sfWindow;
     shared_ptr<State> state;
-
     Event event;
 
 public:
+    /**
+     *
+     * @param sfWindow
+     */
     explicit StateManager(const shared_ptr<RenderWindow>& sfWindow);
-    virtual ~StateManager();
+    /**
+     *
+     */
+    virtual ~StateManager() = default;
+    /**
+     * run draw, input and simulate of game
+     * @param functionCallTo
+     */
     void simulate(FunctionCallTo functionCallTo);
-
-
+    /**
+     *
+     * @param state
+     */
     void setState(const shared_ptr<State>& state);
+    /**
+     *
+     * @param event
+     */
     void setEvent(Event& event);
-
+    /**
+     *
+     * @return sfWindow
+     */
     const shared_ptr<RenderWindow>& getSfWindow() const;
 };
 

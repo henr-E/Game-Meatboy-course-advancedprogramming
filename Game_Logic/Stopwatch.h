@@ -19,8 +19,14 @@ public:
     static shared_ptr<Stopwatch> instance_;
 
 public:
+    /**
+     * constructor
+     */
     Stopwatch();
-    virtual ~Stopwatch();
+    /**
+     * destructor
+     */
+    virtual ~Stopwatch() = default;
     /**
      * not clonable
      */

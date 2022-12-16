@@ -3,7 +3,6 @@
 //
 
 #include "Subject.h"
-Subject::Subject() {}
 
 void Subject::addObserver(shared_ptr<Observer> observer) {
     observerList.push_back(observer);
@@ -18,4 +17,3 @@ void Subject::updateObservers(){
     }
 }
 const vector<shared_ptr<Observer>>& Subject::getObserverList() const { return observerList; }
-Subject::~Subject() {}

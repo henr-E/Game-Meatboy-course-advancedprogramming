@@ -19,6 +19,7 @@ PlayerModel::PlayerModel() {
     jumpWallLeft = false;
     jumpWallRight = false;
 }
+PlayerModel::~PlayerModel() {}
 
 void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
     switch (keyboardInput) {
@@ -197,9 +198,6 @@ bool PlayerModel::intersects(const shared_ptr<Model>& that) {
 }
 
 Direction PlayerModel::getDirection() const { return direction; }
-
 void PlayerModel::setCollision(const Collision& collisionNew) { collision = collisionNew; }
-void PlayerModel::updateObservers() { Model::updateObservers(); }
 const Position& PlayerModel::getPreviousLeftUpperCorner() const { return previousLeftUpperCorner; }
-PlayerModel::~PlayerModel() {}
-float PlayerModel::getVerticalSpeed() const { return verticalSpeed; }
+

@@ -169,9 +169,6 @@
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Camera.h">
 			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/GoalModel.cpp">
-			<Option target="logicLibrary_meatBoy"/>
-		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/GoalModel.h">
 			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
@@ -185,9 +182,6 @@
 			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/PlayerModel.h">
-			<Option target="logicLibrary_meatBoy"/>
-		</Unit>
-		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/WallModel.cpp">
 			<Option target="logicLibrary_meatBoy"/>
 		</Unit>
 		<Unit filename="/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_Logic/Models/WallModel.h">

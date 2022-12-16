@@ -18,7 +18,15 @@ enum KeyboardInput {
 
 class Position {
 public:
-    Position() {}
+    /**
+     * constructor
+     */
+    Position() = default;
+    /**
+     * constructor
+     * @param x
+     * @param y
+     */
     Position(float x, float y) : x(x), y(y) {}
 
     /**
@@ -36,6 +44,7 @@ public:
     float x;
     float y;
 };
+
 class Collision {
 public:
     bool collisionLeft = false;
@@ -43,44 +52,17 @@ public:
     bool collisionUp = false;
     bool collisionDown = false;
 
-//    bool collisionUpperLeft = false;
-//    bool collisionUpperRight = false;
-//    bool collisionDownLeft = false;
-//    bool collisionDownRight = false;
-
-//    bool collisionRightWall = false;
-//    bool collisionLeftWall= false;
-//    bool collisionBottom = false;
-
     void setAllFalse() {
         collisionLeft = false;
         collisionRight = false;
         collisionUp = false;
         collisionDown = false;
-
-//        collisionUpperLeft = false;
-//        collisionUpperRight = false;
-//        collisionDownLeft = false;
-//        collisionDownRight = false;
-
-//        collisionRightWall = false;
-//        collisionLeftWall= false;
-//        collisionBottom = false;
     }
 };
 
 enum Direction { facingRight, facingLeft };
 
-enum MouseInput { rightClick, leftClick, noClick };
-
 enum TileType { GIRL, BLOCK, NONE, PLAYER };
-
-enum CheckCollision {Up, Down, Left, Right, Check};
-
-enum CurrentState {
-    levelstate,
-    menustate
-};
 
 enum FunctionCallTo{
     DRAW,

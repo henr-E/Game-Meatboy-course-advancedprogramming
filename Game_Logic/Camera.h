@@ -17,45 +17,49 @@ class Camera {
 public:
     static shared_ptr<Camera> instance_;
     Position screenDimensions;
-    bool viewMoved;
 
 public:
     /**
      * constructor
      */
-    Camera();
+    Camera() = default;
+    /**
+     * destructor
+     */
     virtual ~Camera();
     /**
      * not clonable
      * @param other
      */
     Camera(Camera& other) = delete;
-
     /**
      * no copy constructor
      */
     void operator=(const Camera&) = delete;
-
     /**
      *
      * @return Instance
      */
     static const shared_ptr<Camera>& getInstance();
-
     /**
      * converts coordinates to pixels
      * @param xOld
      * @param yOld
-     * @return Position
+     * @return coordinates from pixels
      */
     Position coordinatesToPixel(float xOld, float yOld);
+    /**
+     *
+     * @param xOld
+     * @param yOld
+     * @return pixels from coordinates
+     */
     Position pixelToCoordinates(float xOld, float yOld);
     /**
      *
      * @param screenDimensions
      */
     void setScreenDimensions(const Position& screenDimensions);
-
      /**
       * gets a camerapositions struct
         * this struct has a viewPosition and a backgroundPosition
@@ -65,10 +69,11 @@ public:
       * @param prevPlayerPosition
       */
     void moveScreenAtEighty(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition);
-
+    /**
+     * move View
+     * @param cameraPositions
+     */
     void moveScreen(CameraPositions& cameraPositions);
-
-    bool isViewMoved() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_CAMERA_H

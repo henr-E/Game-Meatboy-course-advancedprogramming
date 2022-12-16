@@ -83,12 +83,12 @@ clean: CMakeFiles/2022_project_henrey_T.dir/clean
 CMakeFiles/logicLibrary_meatBoy.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/logicLibrary_meatBoy.dir/build.make CMakeFiles/logicLibrary_meatBoy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21 "Built target logicLibrary_meatBoy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles --progress-num=13,14,15,16,17,18,19 "Built target logicLibrary_meatBoy"
 .PHONY : CMakeFiles/logicLibrary_meatBoy.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/logicLibrary_meatBoy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/logicLibrary_meatBoy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/logicLibrary_meatBoy.dir/rule
@@ -114,7 +114,7 @@ CMakeFiles/2022_project_henrey_T.dir/all: CMakeFiles/logicLibrary_meatBoy.dir/al
 
 # Build rule for subdir invocation for target.
 CMakeFiles/2022_project_henrey_T.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/2022_project_henrey_T.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/2022_project_henrey_T.dir/rule

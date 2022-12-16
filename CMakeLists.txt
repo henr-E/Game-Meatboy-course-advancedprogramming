@@ -37,7 +37,7 @@ add_library(logicLibrary_meatBoy
         Game_Logic/Observer.h
         Game_Logic/Subject.cpp
         Game_Logic/Subject.h
-        Game_Logic/Models/Model.cpp Game_Logic/Camera.cpp Game_Logic/Models/WallModel.cpp Game_Logic/Models/GoalModel.cpp)
+        Game_Logic/Models/Model.cpp Game_Logic/Camera.cpp)
 
 add_executable(2022_project_henrey_T
         src/main.cpp

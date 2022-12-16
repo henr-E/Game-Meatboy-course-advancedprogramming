@@ -11,9 +11,26 @@ private:
     Direction playerDirection;
 
 public:
+    /**
+     * constructore
+     * @param modelPosition
+     * @param modelTileType
+     * @param sfWindow
+     */
     PlayerView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
-    ~PlayerView() override;
+    /**
+     * destructor
+     */
+    ~PlayerView() override = default;
+    /**
+     * draws player to screen
+     */
     void update() override;
+    /**
+     * update data from model
+     * @param position
+     * @param direction
+     */
     void updateData(Position position, Direction direction) override;
 };
 

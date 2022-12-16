@@ -59,4 +59,3 @@ void Game::run() {
         stateManager->simulate(functionCallTo);
     }
 }
-Game::~Game() {}

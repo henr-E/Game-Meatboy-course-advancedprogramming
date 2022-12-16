@@ -13,8 +13,6 @@ GoalView::GoalView(const Position& modelPosition, TileType modelTileType, const 
     modelSprite.setTexture(modelTexture);
 }
 
-GoalView::~GoalView() {}
-
 void GoalView::update() {
     //transform coordinates
     Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);

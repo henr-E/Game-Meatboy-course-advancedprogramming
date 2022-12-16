@@ -20,8 +20,6 @@ using namespace std;
 
 class Game {
 private:
-
-
     //sfml elements
     VideoMode sfVideoMode;
     shared_ptr<RenderWindow> sfWindow = make_shared<RenderWindow>();
@@ -36,8 +34,17 @@ private:
     Vector2i windowDimentions;
 
 public:
+    /**
+     * constructor
+     */
     Game();
-    virtual ~Game();
+    /**
+     * destructor
+     */
+    virtual ~Game() = default;
+    /**
+     * run the game
+     */
     void run();
 };
 

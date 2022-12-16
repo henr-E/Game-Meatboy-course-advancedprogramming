@@ -11,8 +11,8 @@ public:
     /**
      * constructor
      */
-    WallModel();
-    ~WallModel() override;
+    WallModel() = default;
+    ~WallModel() override = default;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_WALLMODEL_H

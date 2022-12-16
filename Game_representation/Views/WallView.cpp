@@ -14,8 +14,6 @@ WallView::WallView(const Position& modelPosition, TileType modelTileType, const 
 
 }
 
-WallView::~WallView() {}
-
 void WallView::update() {
     //transform coordinates
     Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);

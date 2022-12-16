@@ -4,10 +4,6 @@
 #include "Camera.h"
 shared_ptr<Camera> Camera::instance_{nullptr};
 
-Camera::Camera() {
-    viewMoved = false;
-}
-
 Position Camera::coordinatesToPixel(float xOld, float yOld) {
     /*
      * the wallTiles are drawn from bottom to top but when converting we need to move
@@ -100,7 +96,6 @@ void Camera::moveScreenAtEighty(CameraPositions& cameraPositions, Position playe
         if (playerPosition.y <= eightyPercent and positionDifference.y > 0) {
             cameraPositions.viewPosition.y -= positionDifference.y;
             cameraPositions.backgroundPosition.y -= positionDifference.y;
-            viewMoved = true;
         }
     }
 }
@@ -118,4 +113,3 @@ void Camera::moveScreen(CameraPositions& cameraPositions){
 
 
 Camera::~Camera() {}
-bool Camera::isViewMoved() const { return viewMoved; }

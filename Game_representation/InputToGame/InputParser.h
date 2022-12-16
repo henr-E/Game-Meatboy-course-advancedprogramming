@@ -23,14 +23,17 @@ private:
     vector<vector<inputRectangles>> tiles;
     Position screenDimensions;
     float tileSize;
-    MoveScreen moveScreen;
+    MoveScreen moveScreenInput;
 
 public:
     /**
      * default constructor
      */
     InputParser();
-    virtual ~InputParser();
+    /**
+     *
+     */
+    virtual ~InputParser() = default;
     /**
      * parses the level that is given
      * takes input from "levels" directory and makes level
@@ -55,6 +58,10 @@ public:
      * @return tileSize
      */
     float getTileSize() const;
+    /**
+     *
+     * @return
+     */
     MoveScreen getMoveScreen() const;
 };
 
