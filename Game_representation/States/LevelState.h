@@ -32,6 +32,7 @@ private:
 
     int chosenLevel;
 
+
 //    bool screenMoved;
 //    Vector2f newViewPosition{};
 
@@ -66,7 +67,6 @@ public:
      *
      */
     bool checkPlayerDeath();
-    bool checkPlayerReachGoal();
 
     void moveScreen();
 };

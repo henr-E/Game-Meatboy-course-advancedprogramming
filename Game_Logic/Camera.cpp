@@ -20,15 +20,36 @@ Position Camera::coordinatesToPixel(float xOld, float yOld) {
     //    float tileSize = 2.f/(screenDimensions.x/32);
     //    yOld += tileSize * 2;
 
-    Position p{};
-    xOld += 1;
-    yOld += 1;
+    Position newpoint{};
+    newpoint.x = (xOld+1) * screenDimensions.x / 2;
+    newpoint.y = 1024 - (yOld+1) * screenDimensions.x / 2;
 
-    p.x = xOld * screenDimensions.x / 2;
-    p.y = 1024 - yOld * screenDimensions.x / 2;
-
-    return p;
+    return newpoint;
 }
+
+Position Camera::pixelToCoordinates(float xNew, float yNew) {
+    /*
+     * the wallTiles are drawn from bottom to top but when converting we need to move
+     * all the wallTiles with the amount of wallTiles that are not visible
+     *
+     * lets say we have 6 wallTiles that are not visible.
+     * these wallTiles are below the game screen so we have to move all the wallTiles up
+     * so that these 6 wallTiles will become the bottom of our screen
+     */
+    //    float tileSize = 2.f/(screenDimensions.x/32);
+    //    yOld += tileSize * 2;
+
+
+
+
+    Position oldPoint{};
+    oldPoint.x = ((xNew*2)/screenDimensions.x) - 1;
+    oldPoint.y = (((-yNew + 1024) * 2)/screenDimensions.x) - 1;
+
+    return oldPoint;
+}
+
+
 void Camera::setScreenDimensions(const Position& screenDimensions) { Camera::screenDimensions = screenDimensions; }
 
 const shared_ptr<Camera>& Camera::getInstance() {

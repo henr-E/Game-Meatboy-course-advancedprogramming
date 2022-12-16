@@ -49,6 +49,7 @@ public:
      * @return Position
      */
     Position coordinatesToPixel(float xOld, float yOld);
+    Position pixelToCoordinates(float xOld, float yOld);
     /**
      *
      * @param screenDimensions

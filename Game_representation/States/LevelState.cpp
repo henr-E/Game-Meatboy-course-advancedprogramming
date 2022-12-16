@@ -92,9 +92,8 @@ void LevelState::userInput(Event &event) {
 
 void LevelState::simulate() {
     // run world
-    world.updatePlayerModel();
     moveScreen();
-////TODO controleren of werkt
+    world.updatePlayerModel();
 
     //start level again
     if(checkPlayerDeath()){
@@ -133,6 +132,8 @@ void LevelState::moveScreen(){
     spriteBackground.setPosition(positions.backgroundPosition.x, positions.backgroundPosition.y);
 
     stateManager.getSfWindow()->setView(view);
+    Position bottomView = camera->pixelToCoordinates(0, positions.viewPosition.y + 1024.f/2);
+    world.setBottomViewY(bottomView.y);
 }
 //TODO
 bool LevelState::checkPlayerDeath() {

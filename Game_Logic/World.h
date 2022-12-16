@@ -36,6 +36,7 @@ private:
 
 
     float tileSize;
+    float bottomViewY;
 
 public:
     World();
@@ -88,6 +89,8 @@ public:
 
     const shared_ptr<PlayerModel>& getPlayer() const;
     const shared_ptr<GoalModel>& getGoal() const;
+
+    void setBottomViewY(float bottomViewY);
 };
 
 

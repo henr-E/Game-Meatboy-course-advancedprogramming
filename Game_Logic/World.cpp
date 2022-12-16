@@ -101,27 +101,19 @@ void World::checkCollisionWithTiles() {
         }
     }
 
-    if (currentPlayerColumn == 10) {
-    }
-//    cout << "currentPlayerRowIN WORLD == " << currentPlayerRow
-//         << "  currentPlayerColumn in world == " << currentPlayerColumn << endl;
-    //        // get tile where current tile is at
-    //        currentTile = walls[currentPlayerRow][currentPlayerColumn];
 
-
-
-    if (rightTile != nullptr and player->intersects(rightTile)) {
+    if (rightTile != nullptr and rightTile->getLeftUpperCorner().y > bottomViewY and player->intersects(rightTile)) {
         collision.collisionRight = true;
     }
-    if (leftTile != nullptr and player->intersects(leftTile)) {
+    if (leftTile != nullptr and leftTile->getLeftUpperCorner().y > bottomViewY and player->intersects(leftTile)) {
         collision.collisionLeft = true;
 //        cout << "collision LEFT"<< endl;
     }
-    if (upTile != nullptr and player->intersects(upTile)) {
+    if (upTile != nullptr and upTile->getLeftUpperCorner().y > bottomViewY and player->intersects(upTile)) {
         collision.collisionUp = true;
 //        cout << "collision UP"<< endl;
     }
-    if (downTile != nullptr and player->intersects(downTile)) {
+    if (downTile != nullptr and downTile->getLeftUpperCorner().y > bottomViewY and player->intersects(downTile)) {
         collision.collisionDown = true;
 //        cout << "collision DOWN"<< endl;
     }
@@ -133,16 +125,16 @@ void World::checkCollisionWithTiles() {
      */
     if(!collision.collisionRight and !collision.collisionLeft) {
 
-        if (leftUpperTile != nullptr and player->intersects(leftUpperTile)) {
+        if (leftUpperTile != nullptr and leftUpperTile->getLeftUpperCorner().y > bottomViewY and player->intersects(leftUpperTile)) {
             collision.collisionUp = true;
         }
-        if (rightUpperTile != nullptr and player->intersects(rightUpperTile)) {
+        if (rightUpperTile != nullptr and rightUpperTile->getLeftUpperCorner().y > bottomViewY and player->intersects(rightUpperTile)) {
             collision.collisionUp = true;
         }
-        if (leftDownTile != nullptr and player->intersects(leftDownTile)) {
+        if (leftDownTile != nullptr and leftDownTile->getLeftUpperCorner().y > bottomViewY and player->intersects(leftDownTile)) {
             collision.collisionDown = true;
         }
-        if (rightDownTile != nullptr and player->intersects(rightDownTile)) {
+        if (rightDownTile != nullptr and rightDownTile->getLeftUpperCorner().y > bottomViewY and player->intersects(rightDownTile)) {
             collision.collisionDown = true;
         }
     }
@@ -177,3 +169,4 @@ World::World() {}
 World::~World() {}
 const shared_ptr<PlayerModel>& World::getPlayer() const { return player; }
 const shared_ptr<GoalModel>& World::getGoal() const { return goal; }
+void World::setBottomViewY(float bottomViewY) { World::bottomViewY = bottomViewY; }
