@@ -63,7 +63,9 @@ public:
       * @param playerPosition
       * @param prevPlayerPosition
       */
-    void moveScreen(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition);
+    void moveScreenAtEighty(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition);
+
+    void moveScreen(CameraPositions& cameraPositions);
 
     bool isViewMoved() const;
 };

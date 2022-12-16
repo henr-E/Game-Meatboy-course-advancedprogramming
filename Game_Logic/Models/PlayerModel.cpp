@@ -5,7 +5,8 @@
 PlayerModel::PlayerModel() {
     horizontalSpeed = 0;
     verticalSpeed = 0;
-    acceleration = 0.1;
+    accelerationX = 0;
+    accelerationY = 0;
     gravity = 0.02;
 
 
@@ -25,6 +26,7 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
         direction = facingLeft;
         keyboardLeft = true;
         horizontalSpeed = -0.7;
+        accelerationX = 0.1;
         break;
 
     case releaseMoveLeft:
@@ -35,6 +37,7 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
         direction = facingRight;
         keyboardRight = true;
         horizontalSpeed = 0.7;
+        accelerationX = 0.1;
         break;
 
     case releaseMoveRight:
@@ -44,7 +47,7 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
     case pressJump:
         if(verticalSpeed == 0){
             verticalSpeed = -0.7;
-            acceleration = 0.02;
+            accelerationY = 0.02;
         }
 
         if(!collision.collisionDown){
@@ -64,7 +67,7 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
         break;
 
     case releaseJump:
-        cout << "RELEASE" <<endl;
+//        cout << "RELEASE" <<endl;
     case noKey:
         break;
     default:
@@ -76,25 +79,25 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
 
 
 void PlayerModel::simulate(float elapsedTime) {
-    if(jumpWallLeft){
-
-    }
     previousLeftUpperCorner = leftUpperCorner;
     //landing
     if(collision.collisionDown and verticalSpeed > 0){
         verticalSpeed = 0;
-        acceleration = 0;
+        accelerationY = 0;
         horizontalSpeed = 0;
+        accelerationX = 0;
         jumpWallLeft = false;
         jumpWallRight = false;
     }
     //moving left and hitting a wall on the left
     if(horizontalSpeed < 0 and collision.collisionLeft){
         horizontalSpeed = 0;
+        accelerationX = 0;
         jumpWallRight = false;
     }
     if(horizontalSpeed > 0 and collision.collisionRight){
         horizontalSpeed = 0;
+        accelerationX = 0;
         jumpWallLeft = false;
     }
 
@@ -102,13 +105,13 @@ void PlayerModel::simulate(float elapsedTime) {
 //        cout << "jumpLEFT = " << jumpWallLeft <<endl;
 //        cout << "acceleration" << acceleration <<endl;
 //        cout << "horizontalSpeed" << horizontalSpeed <<endl;
-        float add = horizontalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2))/2;
+        float add = horizontalSpeed * elapsedTime + (accelerationX * powf(elapsedTime, 2))/2;
         leftUpperCorner.x += add;
         rightDownCorner.x += add;
     }
     if (((keyboardLeft and !collision.collisionLeft) or jumpWallRight) and !jumpWallLeft){
 //        cout << "jumpRIGHT = " << jumpWallRight <<endl;
-        float add = horizontalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2))/2;
+        float add = horizontalSpeed * elapsedTime + (accelerationX * powf(elapsedTime, 2))/2;
         leftUpperCorner.x += add;
         rightDownCorner.x += add;
     }
@@ -118,7 +121,11 @@ void PlayerModel::simulate(float elapsedTime) {
         verticalSpeed += gravity;
     }
 
-    float addVertical = verticalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2)) / 2;
+//    cout << "gravity: " << gravity << endl;
+//    cout << "acceleration: " << accelerationY   << endl;
+//    cout << "verticalSpeed: " << verticalSpeed << endl;
+    float addVertical = verticalSpeed * elapsedTime + (accelerationY * powf(elapsedTime, 2)) / 2;
+//    cout << "add: " << addVertical << endl;
     leftUpperCorner.y -= addVertical;
     rightDownCorner.y -= addVertical;
 

@@ -23,6 +23,7 @@ private:
     vector<vector<inputRectangles>> tiles;
     Position screenDimensions;
     float tileSize;
+    MoveScreen moveScreen;
 
 public:
     /**
@@ -54,6 +55,7 @@ public:
      * @return tileSize
      */
     float getTileSize() const;
+    MoveScreen getMoveScreen() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_INPUTPARSER_H

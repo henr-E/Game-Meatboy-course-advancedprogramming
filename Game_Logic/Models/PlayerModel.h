@@ -16,7 +16,8 @@ class PlayerModel: public ownModel::Model{
 
     float verticalSpeed;
     float horizontalSpeed;
-    float acceleration;
+    float accelerationX;
+    float accelerationY;
     float gravity;
 
     /// Which direction(s) is the player currently moving in

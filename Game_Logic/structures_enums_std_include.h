@@ -101,4 +101,10 @@ struct CameraPositions{
     Position viewPosition;
     Position backgroundPosition;
 };
+
+enum MoveScreen{
+    MOVE,
+    NOMOVE,
+    DEFAULT
+};
 #endif // INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H

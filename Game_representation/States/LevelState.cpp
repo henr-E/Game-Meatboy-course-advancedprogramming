@@ -118,7 +118,10 @@ void LevelState::moveScreen(){
     positions.viewPosition = viewCenter;
     positions.backgroundPosition = backgroundLeftUpCorner;
 
-    camera->moveScreen(positions, playerPosition, prevPlayerPosition);
+    camera->moveScreenAtEighty(positions, playerPosition, prevPlayerPosition);
+//    if(inputParser.getMoveScreen() == MOVE){
+//        camera->moveScreen(positions);
+//    }
 
     //remember this is the center!
     view.setCenter(positions.viewPosition.x, positions.viewPosition.y);
