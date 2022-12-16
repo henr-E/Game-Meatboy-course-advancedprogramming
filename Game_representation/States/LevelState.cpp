@@ -7,21 +7,13 @@
 
 LevelState::LevelState(StateManager& stateManager, int chosenLevel)
     : State(stateManager), chosenLevel(chosenLevel) {
+    startup(chosenLevel);
 
     cout << "Level " <<chosenLevel <<" is started." <<endl;
 
-    startup(chosenLevel);
-    //load background
-    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
-        cout << ("Failed to load background into texture.") << endl;
-
-    }
-    // configure sprite
-    spriteBackground.setTexture(textureBackground);
 }
 
 void LevelState::startup(int chosenLevel) {
-
     // make level from input
     inputParser.parse(chosenLevel);
 
@@ -41,6 +33,15 @@ void LevelState::startup(int chosenLevel) {
     world.setUp(tiles);
     //pass tileSize to world
     world.setTileSize(inputParser.getTileSize());
+
+    //load background
+    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
+        cout << ("Failed to load background into texture.") << endl;
+
+    }
+    // configure sprite
+    spriteBackground.setTexture(textureBackground);
+    spriteBackground.setPosition(0, 0);
 }
 
 void LevelState::userInput(Event &event) {
@@ -106,21 +107,23 @@ void LevelState::simulate() {
 }
 void LevelState::moveScreen(){
     auto view = stateManager.getSfWindow()->getView();
-    Position viewPosition;
-    viewPosition.x = view.getCenter().x;
-    viewPosition.y = view.getCenter().y;
 
-    Position p = world.getPlayer()->getLeftUpperCorner();
-    Position prevP = world.getPlayer()->getPreviousLeftUpperCorner();
-    //todo move screen
-    Position newViewPosition = camera->moveScreen(viewPosition, p, prevP);
+    Position viewCenter(view.getCenter().x, view.getCenter().y);
+    Position backgroundLeftUpCorner(spriteBackground.getPosition().x, spriteBackground.getPosition().y);
 
-    Vector2f finalViewPosition;
-    finalViewPosition.x = newViewPosition.x;
-    finalViewPosition.y = newViewPosition.y;
+    Position playerPosition = world.getPlayer()->getLeftUpperCorner();
+    Position prevPlayerPosition = world.getPlayer()->getPreviousLeftUpperCorner();
+
+    CameraPositions positions;
+    positions.viewPosition = viewCenter;
+    positions.backgroundPosition = backgroundLeftUpCorner;
+
+    camera->moveScreen(positions, playerPosition, prevPlayerPosition);
 
     //remember this is the center!
-    view.setCenter(finalViewPosition);
+    view.setCenter(positions.viewPosition.x, positions.viewPosition.y);
+    spriteBackground.setPosition(positions.backgroundPosition.x, positions.backgroundPosition.y);
+
     stateManager.getSfWindow()->setView(view);
 }
 //TODO

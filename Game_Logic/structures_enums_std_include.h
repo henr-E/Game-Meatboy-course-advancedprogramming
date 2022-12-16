@@ -96,4 +96,9 @@ public:
     TileType tileType;
     float tileHeightWidth;
 };
+
+struct CameraPositions{
+    Position viewPosition;
+    Position backgroundPosition;
+};
 #endif // INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H

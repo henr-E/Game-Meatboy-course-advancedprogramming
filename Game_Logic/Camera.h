@@ -55,10 +55,15 @@ public:
      */
     void setScreenDimensions(const Position& screenDimensions);
 
-    /**
-     * moves the view
-     */
-    Position moveScreen(Position viewPosition, Position playerPosition, Position prevPlayerPosition);
+     /**
+      * gets a camerapositions struct
+        * this struct has a viewPosition and a backgroundPosition
+        * this method will change this struct by reference
+      * @param cameraPositions
+      * @param playerPosition
+      * @param prevPlayerPosition
+      */
+    void moveScreen(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition);
 
     bool isViewMoved() const;
 };

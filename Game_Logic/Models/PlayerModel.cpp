@@ -6,7 +6,7 @@ PlayerModel::PlayerModel() {
     horizontalSpeed = 0;
     verticalSpeed = 0;
     acceleration = 0.1;
-    gravity = 0.01;
+    gravity = 0.02;
 
 
     direction = facingRight;
@@ -76,6 +76,9 @@ void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
 
 
 void PlayerModel::simulate(float elapsedTime) {
+    if(jumpWallLeft){
+
+    }
     previousLeftUpperCorner = leftUpperCorner;
     //landing
     if(collision.collisionDown and verticalSpeed > 0){
@@ -114,7 +117,7 @@ void PlayerModel::simulate(float elapsedTime) {
     if(!collision.collisionDown){
         verticalSpeed += gravity;
     }
-//todo player jumps down and not up!!!!
+
     float addVertical = verticalSpeed * elapsedTime + (acceleration * powf(elapsedTime, 2)) / 2;
     leftUpperCorner.y -= addVertical;
     rightDownCorner.y -= addVertical;
@@ -192,3 +195,4 @@ void PlayerModel::setCollision(const Collision& collisionNew) { collision = coll
 void PlayerModel::updateObservers() { Model::updateObservers(); }
 const Position& PlayerModel::getPreviousLeftUpperCorner() const { return previousLeftUpperCorner; }
 PlayerModel::~PlayerModel() {}
+float PlayerModel::getVerticalSpeed() const { return verticalSpeed; }

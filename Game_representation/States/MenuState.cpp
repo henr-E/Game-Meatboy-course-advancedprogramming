@@ -33,29 +33,28 @@ void MenuState::makeTexts() {
 
     // select the font
     welcomeText.setFont(font);
+    extraText.setFont(font);
+    extraText2.setFont(font);
+    //set string to present
     welcomeText.setString("WELCOME TO MEAT BOY!");
-
-    /*
-     * the position decides where the first character of the string will be
-     * one character = 32 pixels
-     * if the string is 10 characters
-     * then 10*32 is the length of the string
-     * 10*32/2 is the length of half the string
-     *
-     * so if we want to center it =>
-     * 544/2 - 10*32/2
-     *
-     */
-    //position is position of first character
-
-    welcomeText.setPosition(positionX - (12.5/2*32),64);
-
+    extraText.setString("Somoene stole your girlfriend :(");
+    extraText2.setString("WHAT ARE YOU WAITING FOR?! FIND HER!");
+    //set position
+    welcomeText.setPosition(72,64);
+    extraText.setPosition(50,150);
+    extraText2.setPosition(8, 200);
     // set the character size
     welcomeText.setCharacterSize(32);
+    extraText.setCharacterSize(25);
+    extraText2.setCharacterSize(25);
     // set the color
-    welcomeText.setFillColor(Color::Red);
+    welcomeText.setFillColor(Color::Green);
+    extraText.setFillColor(Color::White);
+    extraText2.setFillColor(Color::White);
     // set the text style
     welcomeText.setStyle(sf::Text::Bold | sf::Text::Underlined);
+    extraText.setStyle(sf::Text::Bold);
+    extraText2.setStyle(sf::Text::Bold);
 
     for(int t = 0; t < allTexts.size(); t++){
         Text &text = allTexts[t];
@@ -108,6 +107,9 @@ void MenuState::draw() {
     sfWindow->draw(spriteBackground);
 
     sfWindow->draw(welcomeText);
+    sfWindow->draw(extraText);
+    sfWindow->draw(extraText2);
+
     for(const Text& text: allTexts) {
         sfWindow->draw(text);
     }

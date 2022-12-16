@@ -3,7 +3,6 @@
 //
 
 #include "InputParser.h"
-//todo check for two girlfriends becauase hten level is wrong
 InputParser::InputParser() {
     screenDimensions.x = 0;
     screenDimensions.y = 0;

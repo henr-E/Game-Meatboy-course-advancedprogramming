@@ -107,6 +107,8 @@ void World::checkCollisionWithTiles() {
     //        // get tile where current tile is at
     //        currentTile = walls[currentPlayerRow][currentPlayerColumn];
 
+
+
     if (rightTile != nullptr and player->intersects(rightTile)) {
         collision.collisionRight = true;
     }
@@ -122,18 +124,28 @@ void World::checkCollisionWithTiles() {
         collision.collisionDown = true;
 //        cout << "collision DOWN"<< endl;
     }
-//    if (leftUpperTile != nullptr  and player->intersects(leftUpperTile, Left)) {
-//        collision.collisionUp = true;
-//    }
-//    if (rightUpperTile != nullptr  and player->intersects(rightUpperTile, Right)) {
-//        collision.collisionUp = true;
-//    }
-//    if (leftDownTile != nullptr  and player->intersects(leftDownTile,Up)) {
-//        collision.collisionDown = true;
-//    }
-//    if (leftDownTile != nullptr  and player->intersects(rightDownTile,Check)) {
-//        collision.collisionDown = true;
-//    }
+
+    /*
+     * collision right and left will happen when against a wall
+     * if we dont do this check and we jump against a wall
+     * there will be collision rightDown of collision leftdown and the player wont move
+     */
+    if(!collision.collisionRight and !collision.collisionLeft) {
+
+        if (leftUpperTile != nullptr and player->intersects(leftUpperTile)) {
+            collision.collisionUp = true;
+        }
+        if (rightUpperTile != nullptr and player->intersects(rightUpperTile)) {
+            collision.collisionUp = true;
+        }
+        if (leftDownTile != nullptr and player->intersects(leftDownTile)) {
+            collision.collisionDown = true;
+        }
+        if (rightDownTile != nullptr and player->intersects(rightDownTile)) {
+            collision.collisionDown = true;
+        }
+    }
+
 }
 void World::checkCollisionWallsBotom(){
     float XLeft= player->getLeftUpperCorner().x;

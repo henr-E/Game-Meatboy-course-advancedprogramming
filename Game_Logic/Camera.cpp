@@ -40,16 +40,7 @@ const shared_ptr<Camera>& Camera::getInstance() {
 }
 
 
-Position Camera::moveScreen(Position viewPosition, Position playerPosition, Position prevPlayerPosition) {
-
-    float x = playerPosition.x;
-    float y = playerPosition.y;
-
-    float prevX = prevPlayerPosition.x;
-    float prevY = prevPlayerPosition.y;
-
-    playerPosition = coordinatesToPixel(x,y);
-    prevPlayerPosition = coordinatesToPixel(prevX, prevY);
+void Camera::moveScreen(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition) {
 
     Position positionDifference = playerPosition - prevPlayerPosition;
     //    view.reset(sf::FloatRect(0, 0, 544.f, 1024.f));
@@ -74,16 +65,16 @@ Position Camera::moveScreen(Position viewPosition, Position playerPosition, Posi
      * -------------------1024
      */
     float maximumViewHeight = -(screenDimensions.y - 1024);
-    if ((viewPosition.y - 1024.f/2) >= maximumViewHeight){
+    if ((cameraPositions.viewPosition.y - 1024.f/2) >= maximumViewHeight){
         float eightyPercentageHeight = 1024.f-((1024.f*80.f)/100.f);
         //if player is in 80% and the difference is positive
         //if the differene is negative, the player is going down and the screen shouldnt move
         if (playerPosition.y <= eightyPercentageHeight and positionDifference.y > 0) {
-            viewPosition.y -= positionDifference.y;
+            cameraPositions.viewPosition.y -= positionDifference.y;
+            cameraPositions.backgroundPosition.y -= positionDifference.y;
             viewMoved = true;
         }
     }
-    return viewPosition;
 }
 
 Camera::~Camera() {}

@@ -48,5 +48,6 @@ public:
 
     const Position& getPreviousLeftUpperCorner() const;
 
+    float getVerticalSpeed() const;
 };
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERMODEL_H

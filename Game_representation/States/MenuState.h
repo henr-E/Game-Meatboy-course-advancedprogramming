@@ -18,6 +18,8 @@ private:
 
     //sfml elements
     sf::Text welcomeText;
+    sf::Text extraText;
+    sf::Text extraText2;
     sf::Text level1;
     sf::Text level2;
     sf::Text level3;
