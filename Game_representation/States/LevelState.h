@@ -32,21 +32,21 @@ private:
 
     int chosenLevel;
 
-
-//    bool screenMoved;
-//    Vector2f newViewPosition{};
-
 public:
     /**
      * constructor
      * @param sfWindow
      */
-    LevelState(StateManager& stateManager, int chosenLevel);
-    virtual ~LevelState() override;
+    LevelState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow, int chosenLevel);
+    /**
+     * destructor
+     */
+    ~LevelState() override = default;
+
     /**
      *
      */
-     void startup(int chosenLevel);
+    void startup(int chosenLevel);
     /**
      * event is passed to this method
      * the event holds which keys are pressed

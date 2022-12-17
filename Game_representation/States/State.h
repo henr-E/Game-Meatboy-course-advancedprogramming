@@ -21,13 +21,14 @@ protected:
      */
     StateManager& stateManager;
     int chosenLevel;
-    //    shared_ptr<RenderWindow>& sfWindow;
+    shared_ptr<RenderWindow> sfWindow;
+
 public:
     //todo statemanager doorgeven in constructor
     /**
      *constructor
      */
-    State(StateManager& stateManager);
+    State(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow);
     /**
      *destructor
      */

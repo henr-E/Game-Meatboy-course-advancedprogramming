@@ -14,7 +14,18 @@ void InputParser::parse(int levelNumb) {
     string myText;
 
     // Read from the text file
-    ifstream myFile("../levels/level" + to_string(levelNumb) + ".txt");
+    ifstream myFile;
+    myFile.open("../levels/level" + to_string(levelNumb) + ".txt");
+    while(!myFile){
+        cout << "Configuration file for level " << levelNumb << " was not found => trying ";
+        if(levelNumb < 5){
+            levelNumb+=1;
+        }else{
+            levelNumb = 1;
+        }
+        cout << "level " << levelNumb << "." << endl;
+        myFile.open("../levels/level" + to_string(levelNumb) + ".txt");
+    }
 
     // loop through file and store all lines in a vector
     vector<string> lines;

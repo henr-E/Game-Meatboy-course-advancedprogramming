@@ -4,15 +4,9 @@
 
 #include "StateManager.h"
 
-StateManager::StateManager(const shared_ptr<RenderWindow>& sfWindow) : sfWindow(sfWindow) {
-    shared_ptr<State> state1 = make_shared<MenuState>(*this);
-    state = state1;
+StateManager::StateManager(shared_ptr<RenderWindow>& sfWindow) : sfWindow(sfWindow) {
+    state = make_shared<MenuState>(*this, sfWindow);
 }
-
-//void StateManager::setSfWindow(shared_ptr<RenderWindow>& sfWindow) {
-//    StateManager::sfWindow = sfWindow;
-////    state->setSfWindow(sfWindow);
-//}
 
 void StateManager::setEvent(Event& event) {
     StateManager::event = event;
@@ -31,4 +25,3 @@ void StateManager::simulate(FunctionCallTo functionCallTo) {
 }
 void StateManager::setState(const shared_ptr<State>& state) { StateManager::state = state; }
 const shared_ptr<RenderWindow>& StateManager::getSfWindow() const { return sfWindow; }
-StateManager::~StateManager() {}

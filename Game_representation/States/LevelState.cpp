@@ -5,8 +5,8 @@
 #include "LevelState.h"
 #include "StateManager.h"
 
-LevelState::LevelState(StateManager& stateManager, int chosenLevel)
-    : State(stateManager), chosenLevel(chosenLevel) {
+LevelState::LevelState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow, int chosenLevel)
+    : State(stateManager, sfWindow), chosenLevel(chosenLevel) {
     startup(chosenLevel);
 
     cout << "Level " <<chosenLevel <<" is started." <<endl;
@@ -15,9 +15,9 @@ LevelState::LevelState(StateManager& stateManager, int chosenLevel)
 
 void LevelState::startup(int chosenLevel) {
 
-    sf::View view = stateManager.getSfWindow()->getView();
+    sf::View view = sfWindow->getView();
     view.setCenter(544.f/2, 1024.f/2);
-    stateManager.getSfWindow()->setView(view);
+    sfWindow->setView(view);
 
     // make level from input
     inputParser.parse(chosenLevel);
@@ -28,7 +28,7 @@ void LevelState::startup(int chosenLevel) {
 
     camera->setScreenDimensions(screenDimensions);
 
-    shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(stateManager.getSfWindow());
+    shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(sfWindow);
 
     //add absstractFactory
     world.setAbstractFactory(conc);
@@ -56,7 +56,7 @@ void LevelState::userInput(Event &event) {
     if (event.type == Event::KeyPressed) {
         // Escape
         if (event.key.code == Keyboard::Escape) {
-            shared_ptr<State> newState = make_shared<MenuState>(stateManager);
+            shared_ptr<State> newState = make_shared<MenuState>(stateManager, sfWindow);
             stateManager.setState(newState);
             return;
         }
@@ -97,20 +97,20 @@ void LevelState::simulate() {
 
     //start level again
     if(checkPlayerDeath()){
-        shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel);
+        shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel);
         stateManager.setState(newState);
         return;
     }
     //start next level
     if(world.getPlayer()->intersects(world.getGoal())){
-        shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel + 1);
+        shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel + 1);
         stateManager.setState(newState);
         return;
     }
 
 }
 void LevelState::moveScreen(){
-    auto view = stateManager.getSfWindow()->getView();
+    auto view = sfWindow->getView();
 
     Position viewCenter(view.getCenter().x, view.getCenter().y);
     Position backgroundLeftUpCorner(spriteBackground.getPosition().x, spriteBackground.getPosition().y);
@@ -131,7 +131,7 @@ void LevelState::moveScreen(){
     view.setCenter(positions.viewPosition.x, positions.viewPosition.y);
     spriteBackground.setPosition(positions.backgroundPosition.x, positions.backgroundPosition.y);
 
-    stateManager.getSfWindow()->setView(view);
+    sfWindow->setView(view);
     Position bottomView = camera->pixelToCoordinates(0, positions.viewPosition.y + 1024.f/2);
     world.setBottomViewY(bottomView.y);
 }
@@ -142,7 +142,7 @@ bool LevelState::checkPlayerDeath() {
     //get player position in pixels
     Position playerY = camera->coordinatesToPixel(world.getPlayer()->getLeftUpperCorner().x, world.getPlayer()->getLeftUpperCorner().y);
     //get view position
-    auto viewCenter = stateManager.getSfWindow()->getView().getCenter();
+    auto viewCenter = sfWindow->getView().getCenter();
 
     if(playerY.y > (viewCenter.y + 1024.f/2)){
         return true;
@@ -152,10 +152,9 @@ bool LevelState::checkPlayerDeath() {
 
 
 void LevelState::draw() {
-//    cout << "AMOUNT OF POINTERS TO WINDOW " << stateManager.getSfWindow().use_count() <<endl;
-
-    stateManager.getSfWindow()->clear();
-    stateManager.getSfWindow()->draw(spriteBackground);
+    sfWindow->clear();
+    sfWindow->draw(spriteBackground);
     world.updateViews();
-    stateManager.getSfWindow()->display();
+    sfWindow->display();
 }
+

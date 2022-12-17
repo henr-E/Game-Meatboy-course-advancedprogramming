@@ -33,4 +33,3 @@ void PlayerView::updateData(Position position, Direction direction) {
     modelPosition = position;
     playerDirection = direction;
 }
-PlayerView::~PlayerView() {}

@@ -32,18 +32,13 @@ private:
     vector<Text> allTexts = {level1, level2, level3, level4, level5};
 
 public:
-    MenuState(StateManager& stateManager);
-    virtual ~MenuState() override;
+    MenuState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow);
+
+    ~MenuState() override = default;
     virtual void userInput(Event &event);
     virtual void simulate();
     virtual void draw();
     void makeTexts();
-
-    const Texture& getTextureBackground() const;
-    const Sprite& getSpriteBackground() const;
-    const Font& getFont() const;
-    const vector<Text>& getAllTexts() const;
-    const Text& getWelcomeText() const;
 };
 
 

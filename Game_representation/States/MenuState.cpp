@@ -4,8 +4,11 @@
 
 #include "MenuState.h"
 #include "StateManager.h"
-MenuState::MenuState(StateManager& stateManager)
-    : State(stateManager) {
+MenuState::MenuState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow) : State(stateManager, sfWindow) {
+
+    sf::View view = sfWindow->getView();
+    view.setCenter(544.f/2, 1024.f/2);
+    sfWindow->setView(view);
 
     //load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
@@ -82,7 +85,7 @@ void MenuState::userInput(Event &event) {
 
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 chosenLevel = t+1;
-                shared_ptr<State> newState = make_shared<LevelState>(stateManager, chosenLevel);
+                shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel);
                 stateManager.setState(newState);
                 break;
             }
@@ -97,7 +100,6 @@ void MenuState::simulate() {
 
 }
 void MenuState::draw() {
-    auto sfWindow = stateManager.getSfWindow();
     // Rub out the last frame
     sfWindow->clear();
 
@@ -114,9 +116,3 @@ void MenuState::draw() {
     // Show everything we have just drawn
     sfWindow->display();
 }
-const Texture& MenuState::getTextureBackground() const { return textureBackground; }
-const Sprite& MenuState::getSpriteBackground() const { return spriteBackground; }
-const Font& MenuState::getFont() const { return font; }
-const vector<Text>& MenuState::getAllTexts() const { return allTexts; }
-const Text& MenuState::getWelcomeText() const { return welcomeText; }
-MenuState::~MenuState() {}

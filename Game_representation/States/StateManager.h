@@ -24,7 +24,7 @@ public:
      *
      * @param sfWindow
      */
-    explicit StateManager(const shared_ptr<RenderWindow>& sfWindow);
+    explicit StateManager(shared_ptr<RenderWindow>& sfWindow);
     /**
      *
      */
