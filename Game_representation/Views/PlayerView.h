@@ -9,6 +9,21 @@
 class PlayerView : public ownView::View{
 private:
     Direction playerDirection;
+    /**
+     * 2 textures for the player
+     */
+    Texture playerTextureRight;
+    Texture playerTextureLeft;
+    /**
+     * 2 sprites for the player
+     */
+    Sprite playerSpriteRight;
+    Sprite playerSpriteLeft;
+    /**
+     * booleans that hold is texture exists
+     */
+    bool playerTextureExistsRight;
+    bool playerTextureExistsLeft;
 
 public:
     /**

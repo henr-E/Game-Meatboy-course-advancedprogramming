@@ -22,6 +22,8 @@ namespace ownView {
     protected:
         Sprite modelSprite;
         Texture modelTexture;
+        RectangleShape rectangle;
+        bool textureFileExists;
 
         shared_ptr<Camera> camera = Camera::getInstance();
 
