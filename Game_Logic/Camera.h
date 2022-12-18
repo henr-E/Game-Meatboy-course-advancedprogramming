@@ -7,6 +7,7 @@
 
 #include "structures_enums_std_include.h"
 #include <iostream>
+#include "memory"
 
 using namespace std;
 /**
