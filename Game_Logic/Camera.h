@@ -26,7 +26,7 @@ public:
     /**
      * destructor
      */
-    virtual ~Camera();
+    virtual ~Camera() = default;
     /**
      * not clonable
      * @param other
@@ -40,7 +40,7 @@ public:
      *
      * @return Instance
      */
-    static const shared_ptr<Camera>& getInstance();
+    static shared_ptr<Camera>& getInstance();
     /**
      * converts coordinates to pixels
      * @param xOld

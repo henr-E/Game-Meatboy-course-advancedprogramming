@@ -48,7 +48,7 @@ Position Camera::pixelToCoordinates(float xNew, float yNew) {
 
 void Camera::setScreenDimensions(const Position& screenDimensions) { Camera::screenDimensions = screenDimensions; }
 
-const shared_ptr<Camera>& Camera::getInstance() {
+shared_ptr<Camera>& Camera::getInstance() {
     if (instance_ == nullptr) {
         shared_ptr<Camera> s = make_shared<Camera>();
         instance_ = s;
@@ -110,6 +110,3 @@ void Camera::moveScreen(CameraPositions& cameraPositions){
 
     }
 }
-
-
-Camera::~Camera() {}
