@@ -4,6 +4,8 @@
 #include "Camera.h"
 shared_ptr<Camera> Camera::instance_{nullptr};
 
+Camera::Camera() {}
+
 Position Camera::coordinatesToPixel(float xOld, float yOld) {
     /*
      * the wallTiles are drawn from bottom to top but when converting we need to move
@@ -110,3 +112,4 @@ void Camera::moveScreen(CameraPositions& cameraPositions){
 
     }
 }
+

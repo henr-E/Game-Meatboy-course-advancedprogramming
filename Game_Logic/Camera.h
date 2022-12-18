@@ -19,10 +19,7 @@ public:
     Position screenDimensions;
 
 public:
-    /**
-     * constructor
-     */
-    Camera() = default;
+    Camera();
     /**
      * destructor
      */
