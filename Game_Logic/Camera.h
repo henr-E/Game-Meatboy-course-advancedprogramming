@@ -5,9 +5,9 @@
 #ifndef INC_2022_PROJECT_HENREY_T_CAMERA_H
 #define INC_2022_PROJECT_HENREY_T_CAMERA_H
 
+#include "memory"
 #include "structures_enums_std_include.h"
 #include <iostream>
-#include "memory"
 
 using namespace std;
 /**
@@ -17,7 +17,7 @@ using namespace std;
 class Camera {
 public:
     static shared_ptr<Camera> instance_;
-    Position screenDimensions;
+    ownType::Position screenDimensions;
 
 public:
     Camera();
@@ -45,33 +45,34 @@ public:
      * @param yOld
      * @return coordinates from pixels
      */
-    Position coordinatesToPixel(float xOld, float yOld);
+    ownType::Position coordinatesToPixel(float xOld, float yOld);
     /**
      *
      * @param xOld
      * @param yOld
      * @return pixels from coordinates
      */
-    Position pixelToCoordinates(float xOld, float yOld);
+    ownType::Position pixelToCoordinates(float xOld, float yOld);
     /**
      *
      * @param screenDimensions
      */
-    void setScreenDimensions(const Position& screenDimensions);
-     /**
-      * gets a camerapositions struct
-        * this struct has a viewPosition and a backgroundPosition
-        * this method will change this struct by reference
-      * @param cameraPositions
-      * @param playerPosition
-      * @param prevPlayerPosition
-      */
-    void moveScreenAtEighty(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition);
+    void setScreenDimensions(const ownType::Position& screenDimensions);
+    /**
+     * gets a camerapositions struct
+     * this struct has a viewPosition and a backgroundPosition
+     * this method will change this struct by reference
+     * @param cameraPositions
+     * @param playerPosition
+     * @param prevPlayerPosition
+     */
+    void moveScreenAtEighty(ownType::CameraPositions& cameraPositions, ownType::Position playerPosition,
+                            ownType::Position prevPlayerPosition);
     /**
      * move View
      * @param cameraPositions
      */
-    void moveScreen(CameraPositions& cameraPositions);
+    void moveScreen(ownType::CameraPositions& cameraPositions);
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_CAMERA_H

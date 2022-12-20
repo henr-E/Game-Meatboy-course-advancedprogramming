@@ -3,8 +3,8 @@
 //
 
 #include "Game.h"
-Game::Game(){
-    //TODO moeten we verschillende breetes kunnen ondersteuenn voor grotere levels?
+Game::Game() {
+    // TODO moeten we verschillende breetes kunnen ondersteuenn voor grotere levels?
     windowDimentions.x = 544;
     windowDimentions.y = 1024;
 
@@ -13,7 +13,7 @@ Game::Game(){
     sfVideoMode.height = windowDimentions.y;
 
     //  Create and open a window
-    sfWindow->create(sfVideoMode, "game");
+    sfWindow->create(sfVideoMode, "MEAT BOY");
 
     // change framerate
     sfWindow->setFramerateLimit(60);
@@ -21,13 +21,12 @@ Game::Game(){
     shared_ptr<StateManager> stateManager1 = make_shared<StateManager>(sfWindow);
     stateManager = stateManager1;
 
-//        if (!music.openFromFile("../content/music.ogg")){}
-//
-//        music.play();
-//
-//        music.setLoop(true);
-//        music.setVolume(50);
-
+    //        if (!music.openFromFile("../content/music.ogg")){}
+    //
+    //        music.play();
+    //
+    //        music.setLoop(true);
+    //        music.setVolume(50);
 
     //    // Load sound
     //    if (!buffer.loadFromFile("../content/bip.wav"))
@@ -37,25 +36,25 @@ Game::Game(){
 }
 
 void Game::run() {
-    //statemanager is made and the statemanager makes a manuState
+    // statemanager is made and the statemanager makes a manuState
     while (sfWindow->isOpen()) {
         Event event;
 
         while (sfWindow->pollEvent(event)) {
-            //it is necasary to pass the event after the second while loop
-            //because the pollEvent function changes the event
+            // it is necasary to pass the event after the second while loop
+            // because the pollEvent function changes the event
             stateManager->setEvent(event);
             if (event.type == sf::Event::Closed) {
                 sfWindow->close();
             }
 
-            functionCallTo = INPUT;
+            functionCallTo = ownType::INPUT;
             stateManager->simulate(functionCallTo);
         }
-        functionCallTo = SIMULATE;
+        functionCallTo = ownType::SIMULATE;
         stateManager->simulate(functionCallTo);
 
-        functionCallTo = DRAW;
+        functionCallTo = ownType::DRAW;
         stateManager->simulate(functionCallTo);
     }
 }

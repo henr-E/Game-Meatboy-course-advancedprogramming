@@ -4,10 +4,10 @@
 
 #ifndef INC_2022_PROJECT_HENREY_T_WALLVIEW_H
 #define INC_2022_PROJECT_HENREY_T_WALLVIEW_H
-#include "View.h"
-#include "../InputToGame/InputParser.h"
 #include "../../Game_Logic/Camera.h"
-class WallView : public ownView::View{
+#include "../InputToGame/InputParser.h"
+#include "View.h"
+class WallView : public ownView::View {
 public:
     /**
      * constructor
@@ -15,7 +15,8 @@ public:
      * @param modelTileType
      * @param sfWindow
      */
-    WallView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
+    WallView(const ownType::Position& modelPosition, ownType::TileType modelTileType,
+             const shared_ptr<RenderWindow>& sfWindow);
     /**
      * destructor
      */
@@ -29,7 +30,7 @@ public:
      * @param position
      * @param direction
      */
-    void updateData(Position position, Direction direction) override;
+    void updateData(ownType::Position position, ownType::Direction direction) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_WALLVIEW_H

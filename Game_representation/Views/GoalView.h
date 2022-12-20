@@ -5,7 +5,7 @@
 #ifndef INC_2022_PROJECT_HENREY_T_GOALVIEW_H
 #define INC_2022_PROJECT_HENREY_T_GOALVIEW_H
 #include "View.h"
-class GoalView : public ownView::View{
+class GoalView : public ownView::View {
 public:
     /**
      * constructor
@@ -13,7 +13,8 @@ public:
      * @param modelTileType
      * @param sfWindow
      */
-    GoalView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
+    GoalView(const ownType::Position& modelPosition, ownType::TileType modelTileType,
+             const shared_ptr<RenderWindow>& sfWindow);
     /**
      * destructor
      */
@@ -27,7 +28,7 @@ public:
      * @param position
      * @param direction
      */
-    void updateData(Position position, Direction direction) override;
+    void updateData(ownType::Position position, ownType::Direction direction) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_GOALVIEW_H

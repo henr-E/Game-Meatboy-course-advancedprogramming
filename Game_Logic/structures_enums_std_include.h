@@ -5,6 +5,7 @@
 #ifndef INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H
 #define INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H
 
+namespace ownType {
 enum KeyboardInput {
     pressMoveLeft,
     pressMoveRight,
@@ -64,13 +65,9 @@ enum Direction { facingRight, facingLeft };
 
 enum TileType { GIRL, BLOCK, NONE, PLAYER };
 
-enum FunctionCallTo{
-    DRAW,
-    INPUT,
-    SIMULATE
-};
+enum FunctionCallTo { DRAW, INPUT, SIMULATE };
 
-class inputRectangles{
+class inputRectangles {
 public:
     Position leftUpperCorner;
     Position rightDownCorner;
@@ -79,14 +76,11 @@ public:
     float tileHeightWidth;
 };
 
-struct CameraPositions{
+struct CameraPositions {
     Position viewPosition;
     Position backgroundPosition;
 };
 
-enum MoveScreen{
-    MOVE,
-    NOMOVE,
-    DEFAULT
-};
+enum MoveScreen { MOVE, NOMOVE, DEFAULT };
+} // namespace ownType
 #endif // INC_2022_PROJECT_HENREY_T_STRUCTURES_ENUMS_STD_INCLUDE_H

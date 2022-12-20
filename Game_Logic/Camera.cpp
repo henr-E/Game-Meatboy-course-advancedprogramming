@@ -6,7 +6,7 @@ shared_ptr<Camera> Camera::instance_{nullptr};
 
 Camera::Camera() {}
 
-Position Camera::coordinatesToPixel(float xOld, float yOld) {
+ownType::Position Camera::coordinatesToPixel(float xOld, float yOld) {
     /*
      * the wallTiles are drawn from bottom to top but when converting we need to move
      * all the wallTiles with the amount of wallTiles that are not visible
@@ -18,14 +18,14 @@ Position Camera::coordinatesToPixel(float xOld, float yOld) {
     //    float tileSize = 2.f/(screenDimensions.x/32);
     //    yOld += tileSize * 2;
 
-    Position newpoint{};
-    newpoint.x = (xOld+1) * screenDimensions.x / 2;
-    newpoint.y = 1024 - (yOld+1) * screenDimensions.x / 2;
+    ownType::Position newpoint{};
+    newpoint.x = (xOld + 1) * screenDimensions.x / 2;
+    newpoint.y = 1024 - (yOld + 1) * screenDimensions.x / 2;
 
     return newpoint;
 }
 
-Position Camera::pixelToCoordinates(float xNew, float yNew) {
+ownType::Position Camera::pixelToCoordinates(float xNew, float yNew) {
     /*
      * the wallTiles are drawn from bottom to top but when converting we need to move
      * all the wallTiles with the amount of wallTiles that are not visible
@@ -37,18 +37,16 @@ Position Camera::pixelToCoordinates(float xNew, float yNew) {
     //    float tileSize = 2.f/(screenDimensions.x/32);
     //    yOld += tileSize * 2;
 
-
-
-
-    Position oldPoint{};
-    oldPoint.x = ((xNew*2)/screenDimensions.x) - 1;
-    oldPoint.y = (((-yNew + 1024) * 2)/screenDimensions.x) - 1;
+    ownType::Position oldPoint{};
+    oldPoint.x = ((xNew * 2) / screenDimensions.x) - 1;
+    oldPoint.y = (((-yNew + 1024) * 2) / screenDimensions.x) - 1;
 
     return oldPoint;
 }
 
-
-void Camera::setScreenDimensions(const Position& screenDimensions) { Camera::screenDimensions = screenDimensions; }
+void Camera::setScreenDimensions(const ownType::Position& screenDimensions) {
+    Camera::screenDimensions = screenDimensions;
+}
 
 shared_ptr<Camera>& Camera::getInstance() {
     if (instance_ == nullptr) {
@@ -58,12 +56,12 @@ shared_ptr<Camera>& Camera::getInstance() {
     return instance_;
 }
 
-
-void Camera::moveScreenAtEighty(CameraPositions& cameraPositions, Position playerPosition, Position prevPlayerPosition) {
+void Camera::moveScreenAtEighty(ownType::CameraPositions& cameraPositions, ownType::Position playerPosition,
+                                ownType::Position prevPlayerPosition) {
 
     playerPosition = coordinatesToPixel(playerPosition.x, playerPosition.y);
     prevPlayerPosition = coordinatesToPixel(prevPlayerPosition.x, prevPlayerPosition.y);
-    Position positionDifference = playerPosition - prevPlayerPosition;
+    ownType::Position positionDifference = playerPosition - prevPlayerPosition;
     //    view.reset(sf::FloatRect(0, 0, 544.f, 1024.f));
 
     /*
@@ -85,16 +83,16 @@ void Camera::moveScreenAtEighty(CameraPositions& cameraPositions, Position playe
      *
      * -------------------1024
      */
-    //maximumViewHeight is actually the amount of walls that are above the window
+    // maximumViewHeight is actually the amount of walls that are above the window
     float maximumViewHeight = -(screenDimensions.y - 1024);
-    if ((cameraPositions.viewPosition.y - 1024.f/2) >= maximumViewHeight){
+    if ((cameraPositions.viewPosition.y - 1024.f / 2) >= maximumViewHeight) {
 
-        float bottom = cameraPositions.viewPosition.y + 1024/2;
-        float eightyOfBottom = bottom  * 80 / 100 ;
+        float bottom = cameraPositions.viewPosition.y + 1024 / 2;
+        float eightyOfBottom = bottom * 80 / 100;
         float eightyPercent = bottom - eightyOfBottom;
 
-        //if player is in 80% and the difference is positive
-        //if the differene is negative, the player is going down and the screen shouldnt move
+        // if player is in 80% and the difference is positive
+        // if the differene is negative, the player is going down and the screen shouldnt move
         if (playerPosition.y <= eightyPercent and positionDifference.y > 0) {
             cameraPositions.viewPosition.y -= positionDifference.y;
             cameraPositions.backgroundPosition.y -= positionDifference.y;
@@ -102,14 +100,12 @@ void Camera::moveScreenAtEighty(CameraPositions& cameraPositions, Position playe
     }
 }
 
-void Camera::moveScreen(CameraPositions& cameraPositions){
+void Camera::moveScreen(ownType::CameraPositions& cameraPositions) {
 
-    //maximumViewHeight is actually the amount of walls that are above the window
+    // maximumViewHeight is actually the amount of walls that are above the window
     float maximumViewHeight = -(screenDimensions.y - 1024);
-    if ((cameraPositions.viewPosition.y - 1024.f/2) >= maximumViewHeight){
+    if ((cameraPositions.viewPosition.y - 1024.f / 2) >= maximumViewHeight) {
         cameraPositions.viewPosition.y -= 0.150;
         cameraPositions.backgroundPosition.y -= 0.150;
-
     }
 }
-

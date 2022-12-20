@@ -16,16 +16,17 @@ void InputParser::parse(int levelNumb) {
     // Read from the text file
     ifstream myFile;
     myFile.open("../levels/level" + to_string(levelNumb) + ".txt");
-    while(!myFile){
+    while (!myFile) {
         cout << "Configuration file for level " << levelNumb << " was not found => trying ";
-        if(levelNumb < 5){
-            levelNumb+=1;
-        }else{
+        if (levelNumb < 5) {
+            levelNumb += 1;
+        } else {
             levelNumb = 1;
         }
         cout << "level " << levelNumb << "." << endl;
         myFile.open("../levels/level" + to_string(levelNumb) + ".txt");
     }
+    cout << "Level " << levelNumb << " is started." << endl;
 
     // loop through file and store all lines in a vector
     vector<string> lines;
@@ -33,16 +34,16 @@ void InputParser::parse(int levelNumb) {
         auto s = string(myText);
         lines.emplace_back(s);
     }
-    //amount of strings will show how many rows there are
+    // amount of strings will show how many rows there are
     screenDimensions.y = (lines.size() - 1) * 32;
 
-    if (lines[0] == "MOVE"){
-        moveScreenInput = MOVE;
-    }else if (lines[0] == "NOMOVE"){
-        moveScreenInput = NOMOVE;
-    }else{
+    if (lines[0] == "MOVE") {
+        moveScreenInput = ownType::MOVE;
+    } else if (lines[0] == "NOMOVE") {
+        moveScreenInput = ownType::NOMOVE;
+    } else {
         cout << "No movement of level was found in the configurationFile => using move" << endl;
-        moveScreenInput = DEFAULT;
+        moveScreenInput = ownType::DEFAULT;
         screenDimensions.y = (lines.size()) * 32;
     }
 
@@ -58,7 +59,7 @@ void InputParser::parse(int levelNumb) {
      * so the size of a tile is 2/(screenDimenstionsX/32)
      */
 
-    tileSize = 2.f/(screenDimensions.x/32);
+    tileSize = 2.f / (screenDimensions.x / 32);
 
     // set begin of positions
     float leftUpperX = -1;
@@ -71,56 +72,60 @@ void InputParser::parse(int levelNumb) {
     /*
      * if moveScreenAtEighty input is default we have one line less in the configurationFile
      */
-    if(moveScreenInput != DEFAULT){
+    if (moveScreenInput != ownType::DEFAULT) {
         forLoopEnd = 1;
     }
 
     // loop backwards through the list so the first line of text is
     // actually the first row of wallTiles at the bottom of the screen
-    for (int line = lines.size()-1; line >= forLoopEnd; --line) {
-        //if line is empty
-        if(lines[line].empty()){
+    for (int line = lines.size() - 1; line >= forLoopEnd; --line) {
+        // if line is empty
+        if (lines[line].empty()) {
             cout << "An empty line was given in the configurationFile => ignoring line" << endl;
-        }else{
-            if(lines[line].size() > 17){
-                cout << "A row in the configurationFile is longer than allowed, the amount of tiles in a row is 17 => taking first 17 and ignoring the rest" << endl;
+        } else {
+            if (lines[line].size() > 17) {
+                cout << "A row in the configurationFile is longer than allowed, the amount of tiles in a row is 17 => "
+                        "taking first 17 and ignoring the rest"
+                     << endl;
             }
             // make a tileVector
-            vector<inputRectangles> tileRow;
+            vector<ownType::inputRectangles> tileRow;
             // loop through every character in the line
             for (int column = 0; column <= 16; column++) {
-                inputRectangles tile;
+                ownType::inputRectangles tile;
                 if (lines[line][column] == '#') {
                     // set tileType
-                    tile.tileType = BLOCK;
+                    tile.tileType = ownType::BLOCK;
                 } else if (lines[line][column] == '.') {
                     // set tileType
-                    tile.tileType = NONE;
-                } else if (lines[line][column]== '&') {
+                    tile.tileType = ownType::NONE;
+                } else if (lines[line][column] == '&') {
                     /**
-                 * if there are 0 girlfriends
+                     * if there are 0 girlfriends
                      */
-                    if(countGirlfriends == 0){
+                    if (countGirlfriends == 0) {
                         // set tileType
-                        tile.tileType = GIRL;
-                    }else{
-                        cout << "more than one girlfriends were provided in the configurationFile => skipping all girlfriends except first one" << endl;
+                        tile.tileType = ownType::GIRL;
+                    } else {
+                        cout << "more than one girlfriends were provided in the configurationFile => skipping all "
+                                "girlfriends except first one"
+                             << endl;
                         // set tileType
-                        tile.tileType = NONE;
+                        tile.tileType = ownType::NONE;
                     }
                     /**
-                 * add girlfriendCount
+                     * add girlfriendCount
                      */
                     countGirlfriends += 1;
                 }
-                //set height
+                // set height
                 tile.tileHeightWidth = tileSize;
                 // set position
-                Position leftUpper;
+                ownType::Position leftUpper;
                 leftUpper.x = leftUpperX;
                 leftUpper.y = leftUpperY;
                 // set position
-                Position rightDown;
+                ownType::Position rightDown;
                 rightDown.x = rightDownX;
                 rightDown.y = rightDownY;
                 // set position
@@ -145,17 +150,17 @@ void InputParser::parse(int levelNumb) {
      * if there are no girlfriends its a false level because the goal pointer will be a nullptr
      * todo throw exceptions !!!
      */
-    if(countGirlfriends == 0){
+    if (countGirlfriends == 0) {
         cout << "No girlfriend was provided in the configurationFile => making girlfriend at random location" << endl;
         /*
          * looping through all the tiles to find an empty place to put the girlfriend randomly
          */
         int row = 0;
         int column = 2;
-        while(tiles[row][column].tileType != NONE){
+        while (tiles[row][column].tileType != ownType::NONE) {
             column += 1;
-            if(column == tiles[row].size()-1){
-                row +=1;
+            if (column == tiles[row].size() - 1) {
+                row += 1;
                 column = 2;
             }
         }
@@ -163,16 +168,16 @@ void InputParser::parse(int levelNumb) {
          * change the NONE tile to a GIRL tile
          */
         // make a tile
-        inputRectangles t;
+        ownType::inputRectangles t;
         // set tileType
-        t.tileType = GIRL;
+        t.tileType = ownType::GIRL;
         t.tileHeightWidth = tileSize;
         // set position
-        Position leftUpper;
+        ownType::Position leftUpper;
         leftUpper.x = tiles[row][column].leftUpperCorner.x;
         leftUpper.y = tiles[row][column].leftUpperCorner.y;
         // set position
-        Position rightDown;
+        ownType::Position rightDown;
         rightDown.x = tiles[row][column].rightDownCorner.x;
         rightDown.y = tiles[row][column].rightDownCorner.y;
         // set position
@@ -186,7 +191,7 @@ void InputParser::parse(int levelNumb) {
     myFile.close();
 }
 
-const vector<vector<inputRectangles>>  & InputParser::getTiles() const { return tiles; }
-const Position& InputParser::getScreenDimensions() const { return screenDimensions; }
+const vector<vector<ownType::inputRectangles>>& InputParser::getTiles() const { return tiles; }
+const ownType::Position& InputParser::getScreenDimensions() const { return screenDimensions; }
 float InputParser::getTileSize() const { return tileSize; }
-MoveScreen InputParser::getMoveScreen() const { return moveScreenInput; }
+ownType::MoveScreen InputParser::getMoveScreen() const { return moveScreenInput; }

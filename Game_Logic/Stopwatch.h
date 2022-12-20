@@ -5,10 +5,10 @@
 #ifndef INC_2022_PROJECT_HENREY_T_STOPWATCH_H
 #define INC_2022_PROJECT_HENREY_T_STOPWATCH_H
 
-#include <ctime>
-#include <chrono>
 #include "iostream"
 #include "memory"
+#include <chrono>
+#include <ctime>
 
 using namespace std;
 using namespace chrono;
@@ -30,7 +30,7 @@ public:
     /**
      * not clonable
      */
-    Stopwatch(Stopwatch&other) = delete;
+    Stopwatch(Stopwatch& other) = delete;
 
     /**
      * not assignable
@@ -48,7 +48,6 @@ public:
      * @return instance
      */
     static shared_ptr<Stopwatch>& getInstance();
-
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STOPWATCH_H

@@ -4,20 +4,20 @@
 
 #include "GoalView.h"
 
-GoalView::GoalView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow)
+GoalView::GoalView(const ownType::Position& modelPosition, ownType::TileType modelTileType,
+                   const shared_ptr<RenderWindow>& sfWindow)
     : View(modelPosition, modelTileType, sfWindow) {
 
-    //transform coordinates
-    Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);
+    // transform coordinates
+    ownType::Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);
 
-    if (!modelTexture.loadFromFile("../content/tileset.png", IntRect(0, 0, 32, 32))){
-        cout << "Can't find file with tileTexture for walls => using pink rectangle" <<endl;
+    if (!modelTexture.loadFromFile("../content/tileset.png", IntRect(0, 0, 32, 32))) {
+        cout << "Can't find file with tileTexture for walls => using pink rectangle" << endl;
         rectangle.setSize(Vector2f(32, 32));
         rectangle.setPosition(p.x, p.y);
         rectangle.setFillColor(sf::Color(210, 110, 220));
         textureFileExists = false;
-    }
-    else{
+    } else {
         modelSprite.setPosition(p.x, p.y);
         modelSprite.setTexture(modelTexture);
         textureFileExists = true;
@@ -25,12 +25,10 @@ GoalView::GoalView(const Position& modelPosition, TileType modelTileType, const 
 }
 
 void GoalView::update() {
-    if(textureFileExists){
+    if (textureFileExists) {
         sfWindow->draw(modelSprite);
-    }
-    else{
+    } else {
         sfWindow->draw(rectangle);
     }
 }
-void GoalView::updateData(Position position, Direction direction){}
-
+void GoalView::updateData(ownType::Position position, ownType::Direction direction) {}

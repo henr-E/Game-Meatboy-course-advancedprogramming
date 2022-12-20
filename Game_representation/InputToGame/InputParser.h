@@ -9,21 +9,20 @@
 #include <iostream>
 #include <vector>
 
+#include "../../Game_Logic/Models/GoalModel.h"
+#include "../../Game_Logic/Models/WallModel.h"
+#include "../../Game_Logic/structures_enums_std_include.h"
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
-#include "../../Game_Logic/Models/WallModel.h"
-#include "../../Game_Logic/Models/GoalModel.h"
-#include "../../Game_Logic/structures_enums_std_include.h"
 using namespace sf;
 using namespace std;
 
-
 class InputParser {
 private:
-    vector<vector<inputRectangles>> tiles;
-    Position screenDimensions;
+    vector<vector<ownType::inputRectangles>> tiles;
+    ownType::Position screenDimensions;
     float tileSize;
-    MoveScreen moveScreenInput;
+    ownType::MoveScreen moveScreenInput;
 
 public:
     /**
@@ -45,14 +44,14 @@ public:
      *
      * @return walls
      */
-    const vector<vector<inputRectangles>> & getTiles() const;
+    const vector<vector<ownType::inputRectangles>>& getTiles() const;
     /**
      *
      * @return screenDimensions that were generated from the input
      * this is not the same as windowDimensions
      *
      */
-    const Position& getScreenDimensions() const;
+    const ownType::Position& getScreenDimensions() const;
     /**
      *
      * @return tileSize
@@ -62,7 +61,7 @@ public:
      *
      * @return
      */
-    MoveScreen getMoveScreen() const;
+    ownType::MoveScreen getMoveScreen() const;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_INPUTPARSER_H

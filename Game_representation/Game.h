@@ -6,12 +6,12 @@
 #ifndef INC_2022_PROJECT_HENREY_T_GAME_H
 #define INC_2022_PROJECT_HENREY_T_GAME_H
 
-#include <vector>
 #include <fstream>
 #include <iostream>
+#include <vector>
 
-#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 
 #include "States/StateManager.h"
 
@@ -20,12 +20,12 @@ using namespace std;
 
 class Game {
 private:
-    //sfml elements
+    // sfml elements
     VideoMode sfVideoMode;
     shared_ptr<RenderWindow> sfWindow = make_shared<RenderWindow>();
 
     shared_ptr<StateManager> stateManager;
-    FunctionCallTo functionCallTo;
+    ownType::FunctionCallTo functionCallTo;
 
     SoundBuffer buffer;
     Sound sound;
@@ -48,6 +48,4 @@ public:
     void run();
 };
 
-
-
-#endif //INC_2022_PROJECT_HENREY_T_GAME_H
+#endif // INC_2022_PROJECT_HENREY_T_GAME_H

@@ -4,11 +4,11 @@
 
 #ifndef INC_2022_PROJECT_HENREY_T_PLAYERVIEW_H
 #define INC_2022_PROJECT_HENREY_T_PLAYERVIEW_H
-#include "View.h"
 #include "../../Game_Logic/Camera.h"
-class PlayerView : public ownView::View{
+#include "View.h"
+class PlayerView : public ownView::View {
 private:
-    Direction playerDirection;
+    ownType::Direction playerDirection;
     /**
      * 2 textures for the player
      */
@@ -32,7 +32,8 @@ public:
      * @param modelTileType
      * @param sfWindow
      */
-    PlayerView(const Position& modelPosition, TileType modelTileType, const shared_ptr<RenderWindow>& sfWindow);
+    PlayerView(const ownType::Position& modelPosition, ownType::TileType modelTileType,
+               const shared_ptr<RenderWindow>& sfWindow);
     /**
      * destructor
      */
@@ -46,7 +47,7 @@ public:
      * @param position
      * @param direction
      */
-    void updateData(Position position, Direction direction) override;
+    void updateData(ownType::Position position, ownType::Direction direction) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERVIEW_H

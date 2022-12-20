@@ -6,12 +6,15 @@
 #define INC_2022_PROJECT_HENREY_T_WALLMODEL_H
 
 #include "Model.h"
-class WallModel: public ownModel::Model{
+class WallModel : public ownModel::Model {
 public:
     /**
      * constructor
      */
     WallModel() = default;
+    /**
+     * destructor
+     */
     ~WallModel() override = default;
 };
 

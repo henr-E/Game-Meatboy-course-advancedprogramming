@@ -8,51 +8,47 @@
 LevelState::LevelState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow, int chosenLevel)
     : State(stateManager, sfWindow), chosenLevel(chosenLevel) {
     startup(chosenLevel);
-
-    cout << "Level " <<chosenLevel <<" is started." <<endl;
-
 }
 
 void LevelState::startup(int chosenLevel) {
 
     sf::View view = sfWindow->getView();
-    view.setCenter(544.f/2, 1024.f/2);
+    view.setCenter(544.f / 2, 1024.f / 2);
     sfWindow->setView(view);
 
     // make level from input
     inputParser.parse(chosenLevel);
 
-    vector<vector<inputRectangles>> tiles = inputParser.getTiles();
+    vector<vector<ownType::inputRectangles>> tiles = inputParser.getTiles();
 
-    Position screenDimensions = inputParser.getScreenDimensions();
+    ownType::Position screenDimensions = inputParser.getScreenDimensions();
 
     camera->setScreenDimensions(screenDimensions);
 
     shared_ptr<AbstractFactory> conc = make_shared<ConcreteFactory>(sfWindow);
 
-    //add absstractFactory
+    // add absstractFactory
     world.setAbstractFactory(conc);
-    //pass wallTiles to world
+    // pass wallTiles to world
     world.setUp(tiles);
-    //pass tileSize to world
+    // pass tileSize to world
     world.setTileSize(inputParser.getTileSize());
 
-    //load background
+    // load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
         cout << ("Failed to load background into texture.") << endl;
-
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);
     spriteBackground.setPosition(0, 0);
 }
 
-void LevelState::userInput(Event &event) {
+void LevelState::userInput(Event& event) {
     /*
      * make a keyboardinput object (enum). Assign nokey to it because if not assigned it takes pressMoveRight
      * and the player will move even though there are no keys pressed
      */
-    keyboardInput = noKey;
+    keyboardInput = ownType::noKey;
     if (event.type == Event::KeyPressed) {
         // Escape
         if (event.key.code == Keyboard::Escape) {
@@ -62,29 +58,29 @@ void LevelState::userInput(Event &event) {
         }
         // Space
         if (event.key.code == Keyboard::Space)
-            keyboardInput = pressJump;
+            keyboardInput = ownType::pressJump;
 
         // Left arrow
         if (event.key.code == Keyboard::Left)
-            keyboardInput = pressMoveLeft;
+            keyboardInput = ownType::pressMoveLeft;
 
         // Right arrow
         if (event.key.code == Keyboard::Right)
-            keyboardInput = pressMoveRight;
+            keyboardInput = ownType::pressMoveRight;
     }
 
     if (event.type == Event::KeyReleased) {
         // Space
         if (event.key.code == Keyboard::Space)
-            keyboardInput = releaseJump;
+            keyboardInput = ownType::releaseJump;
 
         // Left arrow
         if (event.key.code == Keyboard::Left)
-            keyboardInput = releaseMoveLeft;
+            keyboardInput = ownType::releaseMoveLeft;
 
         // Right arrow
         if (event.key.code == Keyboard::Right)
-            keyboardInput = releaseMoveRight;
+            keyboardInput = ownType::releaseMoveRight;
     }
     // pass keyboard to player
     world.keyboardToPlayer(keyboardInput);
@@ -95,61 +91,60 @@ void LevelState::simulate() {
     moveScreen();
     world.updatePlayerModel();
 
-    //start level again
-    if(checkPlayerDeath()){
+    // start level again
+    if (checkPlayerDeath()) {
         shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel);
         stateManager.setState(newState);
         return;
     }
-    //start next level
-    if(world.getPlayer()->intersects(world.getGoal())){
+    // start next level
+    if (world.getPlayer()->intersects(world.getGoal())) {
         shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel + 1);
         stateManager.setState(newState);
         return;
     }
-
 }
-void LevelState::moveScreen(){
+void LevelState::moveScreen() {
     auto view = sfWindow->getView();
 
-    Position viewCenter(view.getCenter().x, view.getCenter().y);
-    Position backgroundLeftUpCorner(spriteBackground.getPosition().x, spriteBackground.getPosition().y);
+    ownType::Position viewCenter(view.getCenter().x, view.getCenter().y);
+    ownType::Position backgroundLeftUpCorner(spriteBackground.getPosition().x, spriteBackground.getPosition().y);
 
-    Position playerPosition = world.getPlayer()->getLeftUpperCorner();
-    Position prevPlayerPosition = world.getPlayer()->getPreviousLeftUpperCorner();
+    ownType::Position playerPosition = world.getPlayer()->getLeftUpperCorner();
+    ownType::Position prevPlayerPosition = world.getPlayer()->getPreviousLeftUpperCorner();
 
-    CameraPositions positions;
+    ownType::CameraPositions positions;
     positions.viewPosition = viewCenter;
     positions.backgroundPosition = backgroundLeftUpCorner;
 
     camera->moveScreenAtEighty(positions, playerPosition, prevPlayerPosition);
-    if(inputParser.getMoveScreen() == MOVE){
+    if (inputParser.getMoveScreen() == ownType::MOVE) {
         camera->moveScreen(positions);
     }
 
-    //remember this is the center!
+    // remember this is the center!
     view.setCenter(positions.viewPosition.x, positions.viewPosition.y);
     spriteBackground.setPosition(positions.backgroundPosition.x, positions.backgroundPosition.y);
 
     sfWindow->setView(view);
-    Position bottomView = camera->pixelToCoordinates(0, positions.viewPosition.y + 1024.f/2);
+    ownType::Position bottomView = camera->pixelToCoordinates(0, positions.viewPosition.y + 1024.f / 2);
     world.setBottomViewY(bottomView.y);
 }
-//TODO
+// TODO
 bool LevelState::checkPlayerDeath() {
-//    //check if view is moved otherwise its the beginning of the game
-//    bool viewMoved = camera->isViewMoved();
-    //get player position in pixels
-    Position playerY = camera->coordinatesToPixel(world.getPlayer()->getLeftUpperCorner().x, world.getPlayer()->getLeftUpperCorner().y);
-    //get view position
+    //    //check if view is moved otherwise its the beginning of the game
+    //    bool viewMoved = camera->isViewMoved();
+    // get player position in pixels
+    ownType::Position playerY = camera->coordinatesToPixel(world.getPlayer()->getLeftUpperCorner().x,
+                                                           world.getPlayer()->getLeftUpperCorner().y);
+    // get view position
     auto viewCenter = sfWindow->getView().getCenter();
 
-    if(playerY.y > (viewCenter.y + 1024.f/2)){
+    if (playerY.y > (viewCenter.y + 1024.f / 2)) {
         return true;
     }
     return false;
 }
-
 
 void LevelState::draw() {
     sfWindow->clear();
@@ -157,4 +152,3 @@ void LevelState::draw() {
     world.updateViews();
     sfWindow->display();
 }
-

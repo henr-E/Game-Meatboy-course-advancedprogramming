@@ -10,13 +10,13 @@
  * include of statemanager in .cpp
  */
 class StateManager;
-class MenuState: public State {
+class MenuState : public State {
 private:
-    //sfml elements
+    // sfml elements
     Texture textureBackground;
     Sprite spriteBackground;
 
-    //sfml elements
+    // sfml elements
     sf::Text welcomeText;
     sf::Text extraText;
     sf::Text extraText2;
@@ -35,11 +35,10 @@ public:
     MenuState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow);
 
     ~MenuState() override = default;
-    virtual void userInput(Event &event);
+    virtual void userInput(Event& event);
     virtual void simulate();
     virtual void draw();
     void makeTexts();
 };
-
 
 #endif // INC_2022_PROJECT_HENREY_T_MENUSTATE_H

@@ -5,8 +5,8 @@
 #ifndef INC_2022_PROJECT_HENREY_T_SUBJECT_H
 #define INC_2022_PROJECT_HENREY_T_SUBJECT_H
 #include "Observer.h"
-#include "vector"
 #include "memory"
+#include "vector"
 using namespace std;
 
 class Subject {
@@ -31,6 +31,7 @@ public:
      * @param observer
      */
     void removeObserver(shared_ptr<Observer> observer);
+
 protected:
     /**
      * update all observers for curretn model

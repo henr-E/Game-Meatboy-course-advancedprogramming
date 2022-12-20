@@ -10,7 +10,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-
 using namespace sf;
 using namespace std;
 class StateManager;
@@ -24,7 +23,7 @@ protected:
     shared_ptr<RenderWindow> sfWindow;
 
 public:
-    //todo statemanager doorgeven in constructor
+    // todo statemanager doorgeven in constructor
     /**
      *constructor
      */
@@ -37,7 +36,7 @@ public:
      *
      * @param event
      */
-    virtual void userInput(Event &event);
+    virtual void userInput(Event& event);
     /**
      * simulate
      */
@@ -46,8 +45,6 @@ public:
      * draw
      */
     virtual void draw();
-
-
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_STATE_H

@@ -4,13 +4,13 @@
 #pragma once
 #ifndef INC_2022_PROJECT_HENREY_T_PLAYERMODEL_H
 #define INC_2022_PROJECT_HENREY_T_PLAYERMODEL_H
-#include <cmath>
+#include "../structures_enums_std_include.h"
 #include "Model.h"
 #include "iostream"
-#include "../structures_enums_std_include.h"
+#include <cmath>
 
 using namespace std;
-class PlayerModel: public ownModel::Model{
+class PlayerModel : public ownModel::Model {
     float verticalSpeed;
     float horizontalSpeed;
     float accelerationX;
@@ -22,10 +22,11 @@ class PlayerModel: public ownModel::Model{
     bool jumpWallLeft;
     bool jumpWallRight;
 
-    Direction direction;
+    ownType::Direction direction;
 
-    Collision collision;
-    Position previousLeftUpperCorner;
+    ownType::Collision collision;
+    ownType::Position previousLeftUpperCorner;
+
 public:
     /**
      * constructor
@@ -39,7 +40,7 @@ public:
      * the world passes keyboard user input to the player
      * @param keyboardInput
      */
-    void updateFromKeyboard(KeyboardInput keyboardInput);
+    void updateFromKeyboard(ownType::KeyboardInput keyboardInput);
     /**
      * simulate the speed, position, ...
      * @param elapsedTime
@@ -50,7 +51,7 @@ public:
      * @return Direction of the player
      * this is used to define the playerSprite
      */
-    Direction getDirection() const;
+    ownType::Direction getDirection() const;
     /**
      *checks if 2 models intersect
      * @param that
@@ -61,11 +62,11 @@ public:
      *
      * @param collision
      */
-    void setCollision(const Collision& collision);
+    void setCollision(const ownType::Collision& collision);
     /**
      *
      * @return previous position
      */
-    const Position& getPreviousLeftUpperCorner() const;
+    const ownType::Position& getPreviousLeftUpperCorner() const;
 };
 #endif // INC_2022_PROJECT_HENREY_T_PLAYERMODEL_H

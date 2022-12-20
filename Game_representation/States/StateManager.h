@@ -8,10 +8,9 @@
 #include "LevelState.h"
 #include "MenuState.h"
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 #include "../../Game_Logic/structures_enums_std_include.h"
-
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 
 class StateManager {
 private:
@@ -33,7 +32,7 @@ public:
      * run draw, input and simulate of game
      * @param functionCallTo
      */
-    void simulate(FunctionCallTo functionCallTo);
+    void simulate(ownType::FunctionCallTo functionCallTo);
     /**
      *
      * @param state

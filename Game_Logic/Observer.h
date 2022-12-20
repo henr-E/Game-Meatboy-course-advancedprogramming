@@ -28,7 +28,7 @@ public:
      * @param position
      * @param direction
      */
-    virtual void updateData(Position position, Direction direction) = 0;
+    virtual void updateData(ownType::Position position, ownType::Direction direction) = 0;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_OBSERVER_H

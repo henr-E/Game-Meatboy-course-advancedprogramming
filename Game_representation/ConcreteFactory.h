@@ -12,7 +12,7 @@
 #include "Views/View.h"
 #include "Views/WallView.h"
 #include "memory.h"
-class ConcreteFactory: public AbstractFactory {
+class ConcreteFactory : public AbstractFactory {
 private:
     shared_ptr<RenderWindow> sfWindow;
 
@@ -35,14 +35,12 @@ public:
      * creates a goalModel with a goalView
      * @return goalModel
      */
-    shared_ptr<GoalModel> createGoal(inputRectangles tile) override;
+    shared_ptr<GoalModel> createGoal(ownType::inputRectangles tile) override;
     /**
      * creates a wallModel with a wallView
      * @return wallModel
      */
-    shared_ptr<WallModel> createWall(inputRectangles tile) override;
-
-
+    shared_ptr<WallModel> createWall(ownType::inputRectangles tile) override;
 };
 
 #endif // INC_2022_PROJECT_HENREY_T_CONCRETEFACTORY_H

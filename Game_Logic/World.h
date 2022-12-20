@@ -6,22 +6,22 @@
 #ifndef INC_2022_PROJECT_HENREY_T_WORLD_H
 #define INC_2022_PROJECT_HENREY_T_WORLD_H
 
-#include <vector>
-#include <iostream>
-#include <cmath>
 #include "AbstractFactory.h"
 #include "Models/GoalModel.h"
 #include "Models/PlayerModel.h"
 #include "Models/WallModel.h"
 #include "Stopwatch.h"
 #include "structures_enums_std_include.h"
+#include <cmath>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 using namespace chrono;
 
 class World {
 private:
-    Collision collision;
+    ownType::Collision collision;
 
     shared_ptr<Stopwatch> stopwatch = Stopwatch::getInstance();
     shared_ptr<AbstractFactory> abstractFactory;
@@ -29,7 +29,6 @@ private:
     shared_ptr<PlayerModel> player;
     vector<vector<shared_ptr<WallModel>>> walls;
     shared_ptr<GoalModel> goal;
-
 
     float tileSize;
     float bottomViewY;
@@ -47,7 +46,7 @@ public:
      * create player, goal and walls
      * @param tiles
      */
-    void setUp(vector<vector<inputRectangles>> tiles);
+    void setUp(vector<vector<ownType::inputRectangles>> tiles);
     /**
      * check Collision with Tiles
      */
@@ -60,7 +59,7 @@ public:
      * the world passes the keyboardinput to the player
      * @param keyboardInput
      */
-    void keyboardToPlayer(KeyboardInput keyboardInput);
+    void keyboardToPlayer(ownType::KeyboardInput keyboardInput);
     /**
      * resets collision and checks new collisions
      * calculate elapsed time and  update the playerModel
@@ -89,6 +88,4 @@ public:
     void setBottomViewY(float bottomViewY);
 };
 
-
-
-#endif //INC_2022_PROJECT_HENREY_T_WORLD_H
+#endif // INC_2022_PROJECT_HENREY_T_WORLD_H

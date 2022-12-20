@@ -8,18 +8,16 @@ StateManager::StateManager(shared_ptr<RenderWindow>& sfWindow) : sfWindow(sfWind
     state = make_shared<MenuState>(*this, sfWindow);
 }
 
-void StateManager::setEvent(Event& event) {
-    StateManager::event = event;
-}
+void StateManager::setEvent(Event& event) { StateManager::event = event; }
 
-void StateManager::simulate(FunctionCallTo functionCallTo) {
-    if (functionCallTo == INPUT){
+void StateManager::simulate(ownType::FunctionCallTo functionCallTo) {
+    if (functionCallTo == ownType::INPUT) {
         state->userInput(event);
     }
-    if (functionCallTo == DRAW){
+    if (functionCallTo == ownType::DRAW) {
         state->draw();
     }
-    if (functionCallTo == SIMULATE){
+    if (functionCallTo == ownType::SIMULATE) {
         state->simulate();
     }
 }

@@ -9,8 +9,7 @@ PlayerModel::PlayerModel() {
     accelerationY = 0;
     gravity = 0.02;
 
-
-    direction = facingRight;
+    direction = ownType::facingRight;
 
     previousLeftUpperCorner = leftUpperCorner;
 
@@ -21,68 +20,66 @@ PlayerModel::PlayerModel() {
 }
 PlayerModel::~PlayerModel() {}
 
-void PlayerModel::updateFromKeyboard(KeyboardInput keyboardInput) {
+void PlayerModel::updateFromKeyboard(ownType::KeyboardInput keyboardInput) {
     switch (keyboardInput) {
-    case pressMoveLeft:
-        direction = facingLeft;
+    case ownType::pressMoveLeft:
+        direction = ownType::facingLeft;
         keyboardLeft = true;
         horizontalSpeed = -0.7;
         accelerationX = 0.1;
         break;
 
-    case releaseMoveLeft:
+    case ownType::releaseMoveLeft:
         keyboardLeft = false;
         break;
 
-    case pressMoveRight:
-        direction = facingRight;
+    case ownType::pressMoveRight:
+        direction = ownType::facingRight;
         keyboardRight = true;
         horizontalSpeed = 0.7;
         accelerationX = 0.1;
         break;
 
-    case releaseMoveRight:
+    case ownType::releaseMoveRight:
         keyboardRight = false;
         break;
 
-    case pressJump:
-        if(verticalSpeed == 0){
+    case ownType::pressJump:
+        if (verticalSpeed == 0) {
             verticalSpeed = -0.7;
             accelerationY = 0.02;
         }
 
-        if(!collision.collisionDown){
-            if(collision.collisionRight){
+        if (!collision.collisionDown) {
+            if (collision.collisionRight) {
                 horizontalSpeed = -0.7;
                 verticalSpeed = -0.7;
                 jumpWallRight = true;
-                direction = facingLeft;
+                direction = ownType::facingLeft;
             }
-            if(collision.collisionLeft){
+            if (collision.collisionLeft) {
                 horizontalSpeed = 0.7;
                 verticalSpeed = -0.7;
                 jumpWallLeft = true;
-                direction = facingRight;
+                direction = ownType::facingRight;
             }
         }
         break;
 
-    case releaseJump:
-//        cout << "RELEASE" <<endl;
-    case noKey:
+    case ownType::releaseJump:
+        //        cout << "RELEASE" <<endl;
+    case ownType::noKey:
         break;
     default:
         cout << "Failed to load keyboard input" << endl;
         break;
     }
-
 }
-
 
 void PlayerModel::simulate(float elapsedTime) {
     previousLeftUpperCorner = leftUpperCorner;
-    //landing
-    if(collision.collisionDown and verticalSpeed > 0){
+    // landing
+    if (collision.collisionDown and verticalSpeed > 0) {
         verticalSpeed = 0;
         accelerationY = 0;
         horizontalSpeed = 0;
@@ -90,46 +87,45 @@ void PlayerModel::simulate(float elapsedTime) {
         jumpWallLeft = false;
         jumpWallRight = false;
     }
-    //moving left and hitting a wall on the left
-    if(horizontalSpeed < 0 and collision.collisionLeft){
+    // moving left and hitting a wall on the left
+    if (horizontalSpeed < 0 and collision.collisionLeft) {
         horizontalSpeed = 0;
         accelerationX = 0;
         jumpWallRight = false;
     }
-    if(horizontalSpeed > 0 and collision.collisionRight){
+    if (horizontalSpeed > 0 and collision.collisionRight) {
         horizontalSpeed = 0;
         accelerationX = 0;
         jumpWallLeft = false;
     }
 
-    if (((keyboardRight and !collision.collisionRight) or jumpWallLeft ) and !jumpWallRight) {
-//        cout << "jumpLEFT = " << jumpWallLeft <<endl;
-//        cout << "acceleration" << acceleration <<endl;
-//        cout << "horizontalSpeed" << horizontalSpeed <<endl;
-        float add = horizontalSpeed * elapsedTime + (accelerationX * powf(elapsedTime, 2))/2;
+    if (((keyboardRight and !collision.collisionRight) or jumpWallLeft) and !jumpWallRight) {
+        //        cout << "jumpLEFT = " << jumpWallLeft <<endl;
+        //        cout << "acceleration" << acceleration <<endl;
+        //        cout << "horizontalSpeed" << horizontalSpeed <<endl;
+        float add = horizontalSpeed * elapsedTime + (accelerationX * powf(elapsedTime, 2)) / 2;
         leftUpperCorner.x += add;
         rightDownCorner.x += add;
     }
-    if (((keyboardLeft and !collision.collisionLeft) or jumpWallRight) and !jumpWallLeft){
-//        cout << "jumpRIGHT = " << jumpWallRight <<endl;
-        float add = horizontalSpeed * elapsedTime + (accelerationX * powf(elapsedTime, 2))/2;
+    if (((keyboardLeft and !collision.collisionLeft) or jumpWallRight) and !jumpWallLeft) {
+        //        cout << "jumpRIGHT = " << jumpWallRight <<endl;
+        float add = horizontalSpeed * elapsedTime + (accelerationX * powf(elapsedTime, 2)) / 2;
         leftUpperCorner.x += add;
         rightDownCorner.x += add;
     }
 
-    //jumping
-    if(!collision.collisionDown){
+    // jumping
+    if (!collision.collisionDown) {
         verticalSpeed += gravity;
     }
 
-//    cout << "gravity: " << gravity << endl;
-//    cout << "acceleration: " << accelerationY   << endl;
-//    cout << "verticalSpeed: " << verticalSpeed << endl;
+    //    cout << "gravity: " << gravity << endl;
+    //    cout << "acceleration: " << accelerationY   << endl;
+    //    cout << "verticalSpeed: " << verticalSpeed << endl;
     float addVertical = verticalSpeed * elapsedTime + (accelerationY * powf(elapsedTime, 2)) / 2;
-//    cout << "add: " << addVertical << endl;
+    //    cout << "add: " << addVertical << endl;
     leftUpperCorner.y -= addVertical;
     rightDownCorner.y -= addVertical;
-
 
     /*
      * (-1,-1)         (1,-1)
@@ -141,8 +137,8 @@ void PlayerModel::simulate(float elapsedTime) {
      * |______________|
      * (-1,1)          (1,1)
      */
-    if (collision.collisionUp and verticalSpeed < 0){
-        //collision up can only occur when verticalspeed is negative so we make it positive
+    if (collision.collisionUp and verticalSpeed < 0) {
+        // collision up can only occur when verticalspeed is negative so we make it positive
         verticalSpeed = -verticalSpeed;
     }
 }
@@ -157,47 +153,43 @@ bool PlayerModel::intersects(const shared_ptr<Model>& that) {
      * Xleft    Xright
      */
 
-    float thatXLeft= that->getLeftUpperCorner().x;
-    float thatXRight= that->getRightDownCorner().x;
+    float thatXLeft = that->getLeftUpperCorner().x;
+    float thatXRight = that->getRightDownCorner().x;
 
-    float thatYUp= that->getLeftUpperCorner().y;
-    float thatYDown= that->getRightDownCorner().y;
+    float thatYUp = that->getLeftUpperCorner().y;
+    float thatYDown = that->getRightDownCorner().y;
 
-    float playerXLeft= leftUpperCorner.x;
-    float playerXRight= rightDownCorner.x;
+    float playerXLeft = leftUpperCorner.x;
+    float playerXRight = rightDownCorner.x;
 
-    float playerYUp= leftUpperCorner.y;
-    float playerYDown= rightDownCorner.y;
-
+    float playerYUp = leftUpperCorner.y;
+    float playerYDown = rightDownCorner.y;
 
     bool collides = false;
 
-    //check LEFT DOWN CORNER
-    if(thatXLeft <= playerXLeft and playerXLeft <= thatXRight
-        and thatYDown <= playerYDown and playerYDown <= thatYUp){
+    // check LEFT DOWN CORNER
+    if (thatXLeft <= playerXLeft and playerXLeft <= thatXRight and thatYDown <= playerYDown and
+        playerYDown <= thatYUp) {
         collides = true;
     }
-    //check Right DOWN CORNER
-    if(thatXLeft <= playerXRight and playerXRight <= thatXRight
-        and thatYDown <= playerYDown and playerYDown <= thatYUp){
+    // check Right DOWN CORNER
+    if (thatXLeft <= playerXRight and playerXRight <= thatXRight and thatYDown <= playerYDown and
+        playerYDown <= thatYUp) {
         collides = true;
     }
 
-    //check LEFT UP CORNER
-    if(thatXLeft <= playerXLeft and playerXLeft <= thatXRight
-        and thatYDown <= playerYUp and playerYUp <= thatYUp){
+    // check LEFT UP CORNER
+    if (thatXLeft <= playerXLeft and playerXLeft <= thatXRight and thatYDown <= playerYUp and playerYUp <= thatYUp) {
         collides = true;
     }
-    //check Right UP CORNER
-    if(thatXLeft <= playerXRight and playerXRight <= thatXRight
-        and thatYDown <= playerYUp and playerYUp <= thatYUp){
+    // check Right UP CORNER
+    if (thatXLeft <= playerXRight and playerXRight <= thatXRight and thatYDown <= playerYUp and playerYUp <= thatYUp) {
         collides = true;
     }
 
     return collides;
 }
 
-Direction PlayerModel::getDirection() const { return direction; }
-void PlayerModel::setCollision(const Collision& collisionNew) { collision = collisionNew; }
-const Position& PlayerModel::getPreviousLeftUpperCorner() const { return previousLeftUpperCorner; }
-
+ownType::Direction PlayerModel::getDirection() const { return direction; }
+void PlayerModel::setCollision(const ownType::Collision& collisionNew) { collision = collisionNew; }
+const ownType::Position& PlayerModel::getPreviousLeftUpperCorner() const { return previousLeftUpperCorner; }

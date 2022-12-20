@@ -4,25 +4,25 @@
 
 #include "World.h"
 
-void World::setUp(vector<vector<inputRectangles>> tiles) {
+void World::setUp(vector<vector<ownType::inputRectangles>> tiles) {
     player = abstractFactory->createPlayer();
 
     /**
      * turn the inputparser inputrectangles into wallModels with views
      */
-    for(const vector<inputRectangles>& tilerow: tiles){
+    for (const vector<ownType::inputRectangles>& tilerow : tiles) {
         vector<shared_ptr<WallModel>> wallModelRow;
-        for(const inputRectangles& wall: tilerow){
-            if(wall.tileType == BLOCK){
+        for (const ownType::inputRectangles& wall : tilerow) {
+            if (wall.tileType == ownType::BLOCK) {
                 shared_ptr<WallModel> wallModel = abstractFactory->createWall(wall);
                 wallModelRow.push_back(wallModel);
-            }else{
+            } else {
                 wallModelRow.push_back(nullptr);
-                if(wall.tileType == GIRL){
+                if (wall.tileType == ownType::GIRL) {
                     goal = abstractFactory->createGoal(wall);
 
-                }else if(wall.tileType != NONE){
-                    //TODO throw exception
+                } else if (wall.tileType != ownType::NONE) {
+                    // TODO throw exception
                 }
             }
         }
@@ -30,10 +30,8 @@ void World::setUp(vector<vector<inputRectangles>> tiles) {
     }
 }
 
-void World::keyboardToPlayer(KeyboardInput keyboardInput){
-    player->updateFromKeyboard(keyboardInput);
-}
-void World::updatePlayerModel(){
+void World::keyboardToPlayer(ownType::KeyboardInput keyboardInput) { player->updateFromKeyboard(keyboardInput); }
+void World::updatePlayerModel() {
     collision.setAllFalse();
     checkCollisionWithTiles();
     checkCollisionWallsBotom();
@@ -42,14 +40,14 @@ void World::updatePlayerModel(){
     player->simulate(elapsed);
 }
 void World::updateViews() {
-    for(const vector<shared_ptr<WallModel>>& wallRow: walls) {
+    for (const vector<shared_ptr<WallModel>>& wallRow : walls) {
         for (shared_ptr<WallModel> wall : wallRow) {
             if (wall != nullptr) {
                 wall->updateObservers();
             }
         }
     }
-    for(auto &observer: player->getObserverList()){
+    for (auto& observer : player->getObserverList()) {
         observer->updateData(player->getLeftUpperCorner(), player->getDirection());
     }
     player->updateObservers();
@@ -101,21 +99,20 @@ void World::checkCollisionWithTiles() {
         }
     }
 
-
     if (rightTile != nullptr and rightTile->getLeftUpperCorner().y > bottomViewY and player->intersects(rightTile)) {
         collision.collisionRight = true;
     }
     if (leftTile != nullptr and leftTile->getLeftUpperCorner().y > bottomViewY and player->intersects(leftTile)) {
         collision.collisionLeft = true;
-//        cout << "collision LEFT"<< endl;
+        //        cout << "collision LEFT"<< endl;
     }
     if (upTile != nullptr and upTile->getLeftUpperCorner().y > bottomViewY and player->intersects(upTile)) {
         collision.collisionUp = true;
-//        cout << "collision UP"<< endl;
+        //        cout << "collision UP"<< endl;
     }
     if (downTile != nullptr and downTile->getLeftUpperCorner().y > bottomViewY and player->intersects(downTile)) {
         collision.collisionDown = true;
-//        cout << "collision DOWN"<< endl;
+        //        cout << "collision DOWN"<< endl;
     }
 
     /*
@@ -123,35 +120,38 @@ void World::checkCollisionWithTiles() {
      * if we dont do this check and we jump against a wall
      * there will be collision rightDown of collision leftdown and the player wont move
      */
-    if(!collision.collisionRight and !collision.collisionLeft) {
+    if (!collision.collisionRight and !collision.collisionLeft) {
 
-        if (leftUpperTile != nullptr and leftUpperTile->getLeftUpperCorner().y > bottomViewY and player->intersects(leftUpperTile)) {
+        if (leftUpperTile != nullptr and leftUpperTile->getLeftUpperCorner().y > bottomViewY and
+            player->intersects(leftUpperTile)) {
             collision.collisionUp = true;
         }
-        if (rightUpperTile != nullptr and rightUpperTile->getLeftUpperCorner().y > bottomViewY and player->intersects(rightUpperTile)) {
+        if (rightUpperTile != nullptr and rightUpperTile->getLeftUpperCorner().y > bottomViewY and
+            player->intersects(rightUpperTile)) {
             collision.collisionUp = true;
         }
-        if (leftDownTile != nullptr and leftDownTile->getLeftUpperCorner().y > bottomViewY and player->intersects(leftDownTile)) {
+        if (leftDownTile != nullptr and leftDownTile->getLeftUpperCorner().y > bottomViewY and
+            player->intersects(leftDownTile)) {
             collision.collisionDown = true;
         }
-        if (rightDownTile != nullptr and rightDownTile->getLeftUpperCorner().y > bottomViewY and player->intersects(rightDownTile)) {
+        if (rightDownTile != nullptr and rightDownTile->getLeftUpperCorner().y > bottomViewY and
+            player->intersects(rightDownTile)) {
             collision.collisionDown = true;
         }
     }
-
 }
-void World::checkCollisionWallsBotom(){
-    float XLeft= player->getLeftUpperCorner().x;
-    float XRight= player->getRightDownCorner().x;
+void World::checkCollisionWallsBotom() {
+    float XLeft = player->getLeftUpperCorner().x;
+    float XRight = player->getRightDownCorner().x;
 
-    float YUp= player->getLeftUpperCorner().y;
-    float YDown= player->getRightDownCorner().y;
+    float YUp = player->getLeftUpperCorner().y;
+    float YDown = player->getRightDownCorner().y;
 
     // collisionWithGround
     if (YDown <= -1) {
         collision.collisionDown = true;
     }
-     // collisionRightWall
+    // collisionRightWall
     if (XRight >= 1) {
         collision.collisionRight = true;
     }

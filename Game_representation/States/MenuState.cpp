@@ -7,19 +7,18 @@
 MenuState::MenuState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWindow) : State(stateManager, sfWindow) {
 
     sf::View view = sfWindow->getView();
-    view.setCenter(544.f/2, 1024.f/2);
+    view.setCenter(544.f / 2, 1024.f / 2);
     sfWindow->setView(view);
 
-    //load background
+    // load background
     if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
         cout << ("Failed to load background into texture.") << endl;
-
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);
 
-    //load font
-    if(!font.loadFromFile("../content/Fonts/Herculanum.ttf")){
+    // load font
+    if (!font.loadFromFile("../content/Fonts/Herculanum.ttf")) {
         cout << printf("Failed to load font.") << endl;
     }
 
@@ -28,20 +27,20 @@ MenuState::MenuState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWin
 
 void MenuState::makeTexts() {
 
-    int positionX = 544/2;
-    int positionY = 960/3;
+    int positionX = 544 / 2;
+    int positionY = 960 / 3;
 
     // select the font
     welcomeText.setFont(font);
     extraText.setFont(font);
     extraText2.setFont(font);
-    //set string to present
+    // set string to present
     welcomeText.setString("WELCOME TO MEAT BOY!");
     extraText.setString("Somoene stole your girlfriend :(");
     extraText2.setString("WHAT ARE YOU WAITING FOR?! FIND HER!");
-    //set position
-    welcomeText.setPosition(72,64);
-    extraText.setPosition(50,150);
+    // set position
+    welcomeText.setPosition(72, 64);
+    extraText.setPosition(50, 150);
     extraText2.setPosition(8, 200);
     // set the character size
     welcomeText.setCharacterSize(32);
@@ -56,13 +55,13 @@ void MenuState::makeTexts() {
     extraText.setStyle(sf::Text::Bold);
     extraText2.setStyle(sf::Text::Bold);
 
-    for(int t = 0; t < allTexts.size(); t++){
-        Text &text = allTexts[t];
+    for (int t = 0; t < allTexts.size(); t++) {
+        Text& text = allTexts[t];
 
         text.setFont(font);
-        text.setString("LEVEL " + to_string(t+1));
+        text.setString("LEVEL " + to_string(t + 1));
 
-        text.setPosition(positionX - (5/2*32),positionY);
+        text.setPosition(positionX - (5 / 2 * 32), positionY);
         positionY += 100;
 
         text.setCharacterSize(32);
@@ -71,34 +70,32 @@ void MenuState::makeTexts() {
     }
 }
 
-void MenuState::userInput(Event &event) {
-    //get mousePosition
-    mousePosition = Mouse::getPosition(*stateManager.getSfWindow()); // window is a sf::OwnWindow
+void MenuState::userInput(Event& event) {
+    // get mousePosition
+    mousePosition = Mouse::getPosition(*sfWindow); // window is a sf::OwnWindow
 
-    //check if mouse is on text
-    for(int t = 0; t < allTexts.size(); t++){
-        Text &text = allTexts[t];
+    // check if mouse is on text
+    for (int t = 0; t < allTexts.size(); t++) {
+        Text& text = allTexts[t];
 
         Vector2f pos = text.getPosition();
-        if(pos.x <= mousePosition.x and mousePosition.x <= pos.x + 7*32 and pos.y <= mousePosition.y and mousePosition.y <= pos.y + 32) {
+        if (pos.x <= mousePosition.x and mousePosition.x <= pos.x + 7 * 32 and pos.y <= mousePosition.y and
+            mousePosition.y <= pos.y + 32) {
             text.setFillColor(Color::Cyan);
 
             if (Mouse::isButtonPressed(Mouse::Left)) {
-                chosenLevel = t+1;
+                chosenLevel = t + 1;
                 shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel);
                 stateManager.setState(newState);
                 break;
             }
-        }
-        else{
+        } else {
             text.setFillColor(Color::White);
         }
     }
 }
 
-void MenuState::simulate() {
-
-}
+void MenuState::simulate() {}
 void MenuState::draw() {
     // Rub out the last frame
     sfWindow->clear();
@@ -109,7 +106,7 @@ void MenuState::draw() {
     sfWindow->draw(extraText);
     sfWindow->draw(extraText2);
 
-    for(const Text& text: allTexts) {
+    for (const Text& text : allTexts) {
         sfWindow->draw(text);
     }
 
