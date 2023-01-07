@@ -21,18 +21,19 @@ Game::Game() {
     shared_ptr<StateManager> stateManager1 = make_shared<StateManager>(sfWindow);
     stateManager = stateManager1;
 
-    //        if (!music.openFromFile("../content/music.ogg")){}
-    //
-    //        music.play();
-    //
-    //        music.setLoop(true);
-    //        music.setVolume(50);
+    if (!music.openFromFile("../content/music.ogg")) {
+    }
 
-    //    // Load sound
-    //    if (!buffer.loadFromFile("../content/bip.wav"))
+    music.play();
 
-    //    sound.setBuffer(buffer);
-    //    sound.play();
+    music.setLoop(true);
+    music.setVolume(15);
+
+    // Load sound
+    if (!buffer.loadFromFile("../content/bip.wav"))
+
+        sound.setBuffer(buffer);
+    sound.play();
 }
 
 void Game::run() {

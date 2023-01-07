@@ -119,7 +119,6 @@ void PlayerModel::simulate(float elapsedTime) {
         verticalSpeed += gravity;
     }
 
-
     //    cout << "gravity: " << gravity << endl;
     //    cout << "acceleration: " << accelerationY   << endl;
     //    cout << "verticalSpeed: " << verticalSpeed << endl;

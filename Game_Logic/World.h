@@ -30,8 +30,8 @@ private:
     vector<vector<shared_ptr<WallModel>>> walls;
     shared_ptr<GoalModel> goal;
 
-    float tileSize;
-    float bottomViewY;
+    float tileSize = 0;
+    float bottomViewY = 0;
 
 public:
     /**
