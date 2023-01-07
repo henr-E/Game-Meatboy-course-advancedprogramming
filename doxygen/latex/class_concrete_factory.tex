@@ -1,0 +1,107 @@
+\hypertarget{class_concrete_factory}{}\doxysection{Concrete\+Factory Class Reference}
+\label{class_concrete_factory}\index{ConcreteFactory@{ConcreteFactory}}
+
+
+{\ttfamily \#include $<$Concrete\+Factory.\+h$>$}
+
+Inheritance diagram for Concrete\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_concrete_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concrete_factory_afe9ec3e970057d927678c61ffed4da0b}{Concrete\+Factory}} (const shared\+\_\+ptr$<$ Render\+Window $>$ \&\mbox{\hyperlink{class_concrete_factory_a45037fa2223f49734b7f77462df5ffc6}{sf\+Window}})
+\item 
+\mbox{\hyperlink{class_concrete_factory_a7189b1eafc6a07d33fcf70055af529d2}{$\sim$\+Concrete\+Factory}} () override
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_player_model}{Player\+Model}} $>$ \mbox{\hyperlink{class_concrete_factory_a520d5c8e5e4050aa3235bc6c022fa559}{create\+Player}} () override
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_goal_model}{Goal\+Model}} $>$ \mbox{\hyperlink{class_concrete_factory_a1d2657f6d448554f4b82c3eaadf5b27a}{create\+Goal}} (\mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} tile) override
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_wall_model}{Wall\+Model}} $>$ \mbox{\hyperlink{class_concrete_factory_a45db8f50c80cbb7d86a248ee3a23c9cd}{create\+Wall}} (\mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} tile) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ Render\+Window $>$ \mbox{\hyperlink{class_concrete_factory_a45037fa2223f49734b7f77462df5ffc6}{sf\+Window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concrete_factory_afe9ec3e970057d927678c61ffed4da0b}\label{class_concrete_factory_afe9ec3e970057d927678c61ffed4da0b}} 
+\index{ConcreteFactory@{ConcreteFactory}!ConcreteFactory@{ConcreteFactory}}
+\index{ConcreteFactory@{ConcreteFactory}!ConcreteFactory@{ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{ConcreteFactory()}{ConcreteFactory()}}
+{\footnotesize\ttfamily Concrete\+Factory\+::\+Concrete\+Factory (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ Render\+Window $>$ \&}]{sf\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+constructor 
+\begin{DoxyParams}{Parameters}
+{\em sf\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concrete_factory_a7189b1eafc6a07d33fcf70055af529d2}\label{class_concrete_factory_a7189b1eafc6a07d33fcf70055af529d2}} 
+\index{ConcreteFactory@{ConcreteFactory}!````~ConcreteFactory@{$\sim$ConcreteFactory}}
+\index{````~ConcreteFactory@{$\sim$ConcreteFactory}!ConcreteFactory@{ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConcreteFactory()}{~ConcreteFactory()}}
+{\footnotesize\ttfamily Concrete\+Factory\+::$\sim$\+Concrete\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concrete_factory_a1d2657f6d448554f4b82c3eaadf5b27a}\label{class_concrete_factory_a1d2657f6d448554f4b82c3eaadf5b27a}} 
+\index{ConcreteFactory@{ConcreteFactory}!createGoal@{createGoal}}
+\index{createGoal@{createGoal}!ConcreteFactory@{ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createGoal()}{createGoal()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_goal_model}{Goal\+Model}} $>$ Concrete\+Factory\+::create\+Goal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}}}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+creates a goal\+Model with a goal\+View \begin{DoxyReturn}{Returns}
+goal\+Model 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_factory_a984b8911f2c4da709bea617fd92c5a9d}{Abstract\+Factory}}.
+
+\mbox{\Hypertarget{class_concrete_factory_a520d5c8e5e4050aa3235bc6c022fa559}\label{class_concrete_factory_a520d5c8e5e4050aa3235bc6c022fa559}} 
+\index{ConcreteFactory@{ConcreteFactory}!createPlayer@{createPlayer}}
+\index{createPlayer@{createPlayer}!ConcreteFactory@{ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createPlayer()}{createPlayer()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_player_model}{Player\+Model}} $>$ Concrete\+Factory\+::create\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+creates a player\+Model with a Playerview \begin{DoxyReturn}{Returns}
+player\+Model 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_factory_a152b8ec886575d579989f09ffd085d4f}{Abstract\+Factory}}.
+
+\mbox{\Hypertarget{class_concrete_factory_a45db8f50c80cbb7d86a248ee3a23c9cd}\label{class_concrete_factory_a45db8f50c80cbb7d86a248ee3a23c9cd}} 
+\index{ConcreteFactory@{ConcreteFactory}!createWall@{createWall}}
+\index{createWall@{createWall}!ConcreteFactory@{ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createWall()}{createWall()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_wall_model}{Wall\+Model}} $>$ Concrete\+Factory\+::create\+Wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}}}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+creates a wall\+Model with a wall\+View \begin{DoxyReturn}{Returns}
+wall\+Model 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_factory_ae3bc0715a62b1f15112f28f74cc49cc4}{Abstract\+Factory}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_concrete_factory_a45037fa2223f49734b7f77462df5ffc6}\label{class_concrete_factory_a45037fa2223f49734b7f77462df5ffc6}} 
+\index{ConcreteFactory@{ConcreteFactory}!sfWindow@{sfWindow}}
+\index{sfWindow@{sfWindow}!ConcreteFactory@{ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{sfWindow}{sfWindow}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$Render\+Window$>$ Concrete\+Factory\+::sf\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Representation/\mbox{\hyperlink{_concrete_factory_8h}{Concrete\+Factory.\+h}}\item 
+Game\+\_\+\+Representation/\mbox{\hyperlink{_concrete_factory_8cpp}{Concrete\+Factory.\+cpp}}\end{DoxyCompactItemize}

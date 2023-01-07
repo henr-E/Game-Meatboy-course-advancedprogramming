@@ -1,0 +1,215 @@
+\hypertarget{class_world}{}\doxysection{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_world_a1fc6067fe31da6405bece93c9dbb61ac}{World}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_world_a224e5607807d4a2a24c7dea3080ceb08}{$\sim$\+World}} ()=default
+\item 
+void \mbox{\hyperlink{class_world_afb15aa5dbe4b208af34ae4202f6b6218}{set\+Up}} (vector$<$ vector$<$ \mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} $>$ $>$ tiles)
+\item 
+void \mbox{\hyperlink{class_world_a857128365d2f6abd77476029010a4047}{check\+Collision\+With\+Tiles}} ()
+\item 
+void \mbox{\hyperlink{class_world_af0e3eb1c3bb4104ceb2ebf4fd0207b57}{check\+Collision\+Walls\+Botom}} ()
+\item 
+void \mbox{\hyperlink{class_world_ac02ecc9811c5ef7235481520e7c8708d}{keyboard\+To\+Player}} (\mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{own\+Type\+::\+Keyboard\+Input}} keyboard\+Input)
+\item 
+void \mbox{\hyperlink{class_world_a1a4936427b3bee3763d66d04c7b71efc}{update\+Player\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_world_aacc277932905d3c76aa0890599791ea6}{update\+Views}} ()
+\item 
+void \mbox{\hyperlink{class_world_a34a89ac9e162d61369f9016d527f4913}{set\+Abstract\+Factory}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_abstract_factory}{Abstract\+Factory}} $>$ \&\mbox{\hyperlink{class_world_ac02a7e5b5bd4d1a7592949861e99e37a}{abstract\+Factory}})
+\item 
+void \mbox{\hyperlink{class_world_a0371ddbe91eec57771f4a0e2f7ab2761}{set\+Tile\+Size}} (float \mbox{\hyperlink{class_world_ae0463f79b55d4b164f39d6a2b4e539c5}{tile\+Size}})
+\item 
+const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_player_model}{Player\+Model}} $>$ \& \mbox{\hyperlink{class_world_a3e0f91432497cf4ff1317de2b08dd17d}{get\+Player}} () const
+\item 
+const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_goal_model}{Goal\+Model}} $>$ \& \mbox{\hyperlink{class_world_a4be8f12e42ec9f796e4293a5e862824d}{get\+Goal}} () const
+\item 
+void \mbox{\hyperlink{class_world_a9576431bcd1f4f6e572fe441b4e5fc42}{set\+Bottom\+ViewY}} (float \mbox{\hyperlink{class_world_a7bea9a8fe1ca2f80bef805e41840444c}{bottom\+ViewY}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classown_type_1_1_collision}{own\+Type\+::\+Collision}} \mbox{\hyperlink{class_world_aa70b7ae1a36d3fb1533e787e43942b5e}{collision}}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_stopwatch}{Stopwatch}} $>$ \mbox{\hyperlink{class_world_ab3bef2c9d05bb129da232905c131514b}{stopwatch}} = \mbox{\hyperlink{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}{Stopwatch\+::get\+Instance}}()
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_abstract_factory}{Abstract\+Factory}} $>$ \mbox{\hyperlink{class_world_ac02a7e5b5bd4d1a7592949861e99e37a}{abstract\+Factory}}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_player_model}{Player\+Model}} $>$ \mbox{\hyperlink{class_world_a7b9336872cf7a27c765908c65956af15}{player}}
+\item 
+vector$<$ vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_wall_model}{Wall\+Model}} $>$ $>$ $>$ \mbox{\hyperlink{class_world_aeeb14ff838f0ac94ec9e3c08a7e74b99}{walls}}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_goal_model}{Goal\+Model}} $>$ \mbox{\hyperlink{class_world_a635df1fe85437a4f502663e7ded5af55}{goal}}
+\item 
+float \mbox{\hyperlink{class_world_ae0463f79b55d4b164f39d6a2b4e539c5}{tile\+Size}}
+\item 
+float \mbox{\hyperlink{class_world_a7bea9a8fe1ca2f80bef805e41840444c}{bottom\+ViewY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_world_a1fc6067fe31da6405bece93c9dbb61ac}\label{class_world_a1fc6067fe31da6405bece93c9dbb61ac}} 
+\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily World\+::\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+constructor \mbox{\Hypertarget{class_world_a224e5607807d4a2a24c7dea3080ceb08}\label{class_world_a224e5607807d4a2a24c7dea3080ceb08}} 
+\index{World@{World}!````~World@{$\sim$World}}
+\index{````~World@{$\sim$World}!World@{World}}
+\doxysubsubsection{\texorpdfstring{$\sim$World()}{~World()}}
+{\footnotesize\ttfamily virtual World\+::$\sim$\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_af0e3eb1c3bb4104ceb2ebf4fd0207b57}\label{class_world_af0e3eb1c3bb4104ceb2ebf4fd0207b57}} 
+\index{World@{World}!checkCollisionWallsBotom@{checkCollisionWallsBotom}}
+\index{checkCollisionWallsBotom@{checkCollisionWallsBotom}!World@{World}}
+\doxysubsubsection{\texorpdfstring{checkCollisionWallsBotom()}{checkCollisionWallsBotom()}}
+{\footnotesize\ttfamily void World\+::check\+Collision\+Walls\+Botom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+check Collision with walls and botom \mbox{\Hypertarget{class_world_a857128365d2f6abd77476029010a4047}\label{class_world_a857128365d2f6abd77476029010a4047}} 
+\index{World@{World}!checkCollisionWithTiles@{checkCollisionWithTiles}}
+\index{checkCollisionWithTiles@{checkCollisionWithTiles}!World@{World}}
+\doxysubsubsection{\texorpdfstring{checkCollisionWithTiles()}{checkCollisionWithTiles()}}
+{\footnotesize\ttfamily void World\+::check\+Collision\+With\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+check Collision with Tiles \mbox{\Hypertarget{class_world_a4be8f12e42ec9f796e4293a5e862824d}\label{class_world_a4be8f12e42ec9f796e4293a5e862824d}} 
+\index{World@{World}!getGoal@{getGoal}}
+\index{getGoal@{getGoal}!World@{World}}
+\doxysubsubsection{\texorpdfstring{getGoal()}{getGoal()}}
+{\footnotesize\ttfamily const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_goal_model}{Goal\+Model}} $>$ \& World\+::get\+Goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_world_a3e0f91432497cf4ff1317de2b08dd17d}\label{class_world_a3e0f91432497cf4ff1317de2b08dd17d}} 
+\index{World@{World}!getPlayer@{getPlayer}}
+\index{getPlayer@{getPlayer}!World@{World}}
+\doxysubsubsection{\texorpdfstring{getPlayer()}{getPlayer()}}
+{\footnotesize\ttfamily const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_player_model}{Player\+Model}} $>$ \& World\+::get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_world_ac02ecc9811c5ef7235481520e7c8708d}\label{class_world_ac02ecc9811c5ef7235481520e7c8708d}} 
+\index{World@{World}!keyboardToPlayer@{keyboardToPlayer}}
+\index{keyboardToPlayer@{keyboardToPlayer}!World@{World}}
+\doxysubsubsection{\texorpdfstring{keyboardToPlayer()}{keyboardToPlayer()}}
+{\footnotesize\ttfamily void World\+::keyboard\+To\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{own\+Type\+::\+Keyboard\+Input}}}]{keyboard\+Input }\end{DoxyParamCaption})}
+
+the world passes the keyboardinput to the player 
+\begin{DoxyParams}{Parameters}
+{\em keyboard\+Input} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_world_a34a89ac9e162d61369f9016d527f4913}\label{class_world_a34a89ac9e162d61369f9016d527f4913}} 
+\index{World@{World}!setAbstractFactory@{setAbstractFactory}}
+\index{setAbstractFactory@{setAbstractFactory}!World@{World}}
+\doxysubsubsection{\texorpdfstring{setAbstractFactory()}{setAbstractFactory()}}
+{\footnotesize\ttfamily void World\+::set\+Abstract\+Factory (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_abstract_factory}{Abstract\+Factory}} $>$ \&}]{abstract\+Factory }\end{DoxyParamCaption})}
+
+a setter for abstract factory the levelstate passes a concrete factory to the world the world then uses this factory as an abstract factory to create player, goal and walls when the world calls the creating of player, goal and walls, the concrete factory makes these this way the world can create these models without having to do anything with sfml 
+\begin{DoxyParams}{Parameters}
+{\em abstract\+Factory} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_world_a9576431bcd1f4f6e572fe441b4e5fc42}\label{class_world_a9576431bcd1f4f6e572fe441b4e5fc42}} 
+\index{World@{World}!setBottomViewY@{setBottomViewY}}
+\index{setBottomViewY@{setBottomViewY}!World@{World}}
+\doxysubsubsection{\texorpdfstring{setBottomViewY()}{setBottomViewY()}}
+{\footnotesize\ttfamily void World\+::set\+Bottom\+ViewY (\begin{DoxyParamCaption}\item[{float}]{bottom\+ViewY }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_world_a0371ddbe91eec57771f4a0e2f7ab2761}\label{class_world_a0371ddbe91eec57771f4a0e2f7ab2761}} 
+\index{World@{World}!setTileSize@{setTileSize}}
+\index{setTileSize@{setTileSize}!World@{World}}
+\doxysubsubsection{\texorpdfstring{setTileSize()}{setTileSize()}}
+{\footnotesize\ttfamily void World\+::set\+Tile\+Size (\begin{DoxyParamCaption}\item[{float}]{tile\+Size }\end{DoxyParamCaption})}
+
+sets the tile\+Size 
+\begin{DoxyParams}{Parameters}
+{\em tile\+Size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_world_afb15aa5dbe4b208af34ae4202f6b6218}\label{class_world_afb15aa5dbe4b208af34ae4202f6b6218}} 
+\index{World@{World}!setUp@{setUp}}
+\index{setUp@{setUp}!World@{World}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void World\+::set\+Up (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} $>$ $>$}]{tiles }\end{DoxyParamCaption})}
+
+create player, goal and walls 
+\begin{DoxyParams}{Parameters}
+{\em tiles} & \\
+\hline
+\end{DoxyParams}
+turn the inputparser inputrectangles into wall\+Models with views\mbox{\Hypertarget{class_world_a1a4936427b3bee3763d66d04c7b71efc}\label{class_world_a1a4936427b3bee3763d66d04c7b71efc}} 
+\index{World@{World}!updatePlayerModel@{updatePlayerModel}}
+\index{updatePlayerModel@{updatePlayerModel}!World@{World}}
+\doxysubsubsection{\texorpdfstring{updatePlayerModel()}{updatePlayerModel()}}
+{\footnotesize\ttfamily void World\+::update\+Player\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+resets collision and checks new collisions calculate elapsed time and update the player\+Model \mbox{\Hypertarget{class_world_aacc277932905d3c76aa0890599791ea6}\label{class_world_aacc277932905d3c76aa0890599791ea6}} 
+\index{World@{World}!updateViews@{updateViews}}
+\index{updateViews@{updateViews}!World@{World}}
+\doxysubsubsection{\texorpdfstring{updateViews()}{updateViews()}}
+{\footnotesize\ttfamily void World\+::update\+Views (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+update view of wall, goal and player 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_world_ac02a7e5b5bd4d1a7592949861e99e37a}\label{class_world_ac02a7e5b5bd4d1a7592949861e99e37a}} 
+\index{World@{World}!abstractFactory@{abstractFactory}}
+\index{abstractFactory@{abstractFactory}!World@{World}}
+\doxysubsubsection{\texorpdfstring{abstractFactory}{abstractFactory}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{class_abstract_factory}{Abstract\+Factory}}$>$ World\+::abstract\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a7bea9a8fe1ca2f80bef805e41840444c}\label{class_world_a7bea9a8fe1ca2f80bef805e41840444c}} 
+\index{World@{World}!bottomViewY@{bottomViewY}}
+\index{bottomViewY@{bottomViewY}!World@{World}}
+\doxysubsubsection{\texorpdfstring{bottomViewY}{bottomViewY}}
+{\footnotesize\ttfamily float World\+::bottom\+ViewY\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_aa70b7ae1a36d3fb1533e787e43942b5e}\label{class_world_aa70b7ae1a36d3fb1533e787e43942b5e}} 
+\index{World@{World}!collision@{collision}}
+\index{collision@{collision}!World@{World}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_collision}{own\+Type\+::\+Collision}} World\+::collision\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a635df1fe85437a4f502663e7ded5af55}\label{class_world_a635df1fe85437a4f502663e7ded5af55}} 
+\index{World@{World}!goal@{goal}}
+\index{goal@{goal}!World@{World}}
+\doxysubsubsection{\texorpdfstring{goal}{goal}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{class_goal_model}{Goal\+Model}}$>$ World\+::goal\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_a7b9336872cf7a27c765908c65956af15}\label{class_world_a7b9336872cf7a27c765908c65956af15}} 
+\index{World@{World}!player@{player}}
+\index{player@{player}!World@{World}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{class_player_model}{Player\+Model}}$>$ World\+::player\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_ab3bef2c9d05bb129da232905c131514b}\label{class_world_ab3bef2c9d05bb129da232905c131514b}} 
+\index{World@{World}!stopwatch@{stopwatch}}
+\index{stopwatch@{stopwatch}!World@{World}}
+\doxysubsubsection{\texorpdfstring{stopwatch}{stopwatch}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{class_stopwatch}{Stopwatch}}$>$ World\+::stopwatch = \mbox{\hyperlink{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}{Stopwatch\+::get\+Instance}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_ae0463f79b55d4b164f39d6a2b4e539c5}\label{class_world_ae0463f79b55d4b164f39d6a2b4e539c5}} 
+\index{World@{World}!tileSize@{tileSize}}
+\index{tileSize@{tileSize}!World@{World}}
+\doxysubsubsection{\texorpdfstring{tileSize}{tileSize}}
+{\footnotesize\ttfamily float World\+::tile\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_aeeb14ff838f0ac94ec9e3c08a7e74b99}\label{class_world_aeeb14ff838f0ac94ec9e3c08a7e74b99}} 
+\index{World@{World}!walls@{walls}}
+\index{walls@{walls}!World@{World}}
+\doxysubsubsection{\texorpdfstring{walls}{walls}}
+{\footnotesize\ttfamily vector$<$vector$<$shared\+\_\+ptr$<$\mbox{\hyperlink{class_wall_model}{Wall\+Model}}$>$ $>$ $>$ World\+::walls\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_world_8h}{World.\+h}}\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_world_8cpp}{World.\+cpp}}\end{DoxyCompactItemize}

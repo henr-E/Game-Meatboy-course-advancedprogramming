@@ -1,0 +1,205 @@
+\hypertarget{classown_model_1_1_model}{}\doxysection{own\+Model\+::Model Class Reference}
+\label{classown_model_1_1_model}\index{ownModel::Model@{ownModel::Model}}
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+Inheritance diagram for own\+Model\+::Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classown_model_1_1_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classown_model_1_1_model_a1a3b3491bafc171de7eae06141aaaac1}{Model}} ()=default
+\item 
+\mbox{\hyperlink{classown_model_1_1_model_a7cef2adb4ec5aab4aaacb0b0d46cab50}{$\sim$\+Model}} () override=default
+\item 
+void \mbox{\hyperlink{classown_model_1_1_model_af09851aa8a1e6041dc181cc5007b9546}{update\+Observers}} () override
+\item 
+virtual const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& \mbox{\hyperlink{classown_model_1_1_model_ae8c36a4d15decc2f8a4ec91bc42c570a}{get\+Left\+Upper\+Corner}} () const
+\item 
+virtual void \mbox{\hyperlink{classown_model_1_1_model_afea01fffbf4b3000031f83ab83164520}{set\+Left\+Upper\+Corner}} (const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&\mbox{\hyperlink{classown_model_1_1_model_a83e5f29a10f2974e449150b76ffeb76a}{left\+Upper\+Corner}})
+\item 
+virtual const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& \mbox{\hyperlink{classown_model_1_1_model_aab4bbbcb47ff315dd08fb7a78b2071cc}{get\+Right\+Down\+Corner}} () const
+\item 
+virtual void \mbox{\hyperlink{classown_model_1_1_model_a479e28c27a311a5773cdd5244ec15c93}{set\+Right\+Down\+Corner}} (const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&\mbox{\hyperlink{classown_model_1_1_model_af7af18a0bfa589fbe13a5abcd0a338b0}{right\+Down\+Corner}})
+\item 
+virtual \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} \mbox{\hyperlink{classown_model_1_1_model_a8da68e7223c924a6dbe4235244122d9c}{get\+Tile\+Type}} () const
+\item 
+virtual void \mbox{\hyperlink{classown_model_1_1_model_aabc5e71fc3272411337e3005aeed9468}{set\+Tile\+Type}} (const \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} \&\mbox{\hyperlink{classown_model_1_1_model_a1a7df51c472a9ccc5260ef206a71e142}{tile\+Type}})
+\item 
+virtual float \mbox{\hyperlink{classown_model_1_1_model_a33a5c7b82467950ef5b1264a838a9b30}{get\+Tile\+Height\+Width}} () const
+\item 
+virtual void \mbox{\hyperlink{classown_model_1_1_model_a84f96ba92c6607c82f0ed149fba08a5d}{set\+Tile\+Height\+Width}} (const float \&\mbox{\hyperlink{classown_model_1_1_model_aca7fb025fc7b539d9b8a8cd6fb841836}{tile\+Height\+Width}})
+\item 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ $>$ \& \mbox{\hyperlink{classown_model_1_1_model_a5c9a09bd7fa2b27e86d44fde9ce5f96a}{get\+Observer\+List}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{classown_model_1_1_model_a83e5f29a10f2974e449150b76ffeb76a}{left\+Upper\+Corner}}
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{classown_model_1_1_model_af7af18a0bfa589fbe13a5abcd0a338b0}{right\+Down\+Corner}}
+\item 
+\mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} \mbox{\hyperlink{classown_model_1_1_model_a1a7df51c472a9ccc5260ef206a71e142}{tile\+Type}}
+\item 
+float \mbox{\hyperlink{classown_model_1_1_model_aca7fb025fc7b539d9b8a8cd6fb841836}{tile\+Height\+Width}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classown_model_1_1_model_a1a3b3491bafc171de7eae06141aaaac1}\label{classown_model_1_1_model_a1a3b3491bafc171de7eae06141aaaac1}} 
+\index{ownModel::Model@{ownModel::Model}!Model@{Model}}
+\index{Model@{Model}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily own\+Model\+::\+Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+default constructor \mbox{\Hypertarget{classown_model_1_1_model_a7cef2adb4ec5aab4aaacb0b0d46cab50}\label{classown_model_1_1_model_a7cef2adb4ec5aab4aaacb0b0d46cab50}} 
+\index{ownModel::Model@{ownModel::Model}!````~Model@{$\sim$Model}}
+\index{````~Model@{$\sim$Model}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{$\sim$Model()}{~Model()}}
+{\footnotesize\ttfamily own\+Model\+::\+Model\+::$\sim$\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classown_model_1_1_model_ae8c36a4d15decc2f8a4ec91bc42c570a}\label{classown_model_1_1_model_ae8c36a4d15decc2f8a4ec91bc42c570a}} 
+\index{ownModel::Model@{ownModel::Model}!getLeftUpperCorner@{getLeftUpperCorner}}
+\index{getLeftUpperCorner@{getLeftUpperCorner}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{getLeftUpperCorner()}{getLeftUpperCorner()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& own\+Model\+::\+Model\+::get\+Left\+Upper\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Left\+Upper\+Corner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classown_model_1_1_model_a5c9a09bd7fa2b27e86d44fde9ce5f96a}\label{classown_model_1_1_model_a5c9a09bd7fa2b27e86d44fde9ce5f96a}} 
+\index{ownModel::Model@{ownModel::Model}!getObserverList@{getObserverList}}
+\index{getObserverList@{getObserverList}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{getObserverList()}{getObserverList()}}
+{\footnotesize\ttfamily const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ $>$ \& own\+Model\+::\+Model\+::get\+Observer\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+all observers for this model 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_subject_a6d16bc45227813bce2e41699a3362a87}{Subject}}.
+
+\mbox{\Hypertarget{classown_model_1_1_model_aab4bbbcb47ff315dd08fb7a78b2071cc}\label{classown_model_1_1_model_aab4bbbcb47ff315dd08fb7a78b2071cc}} 
+\index{ownModel::Model@{ownModel::Model}!getRightDownCorner@{getRightDownCorner}}
+\index{getRightDownCorner@{getRightDownCorner}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{getRightDownCorner()}{getRightDownCorner()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& own\+Model\+::\+Model\+::get\+Right\+Down\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Right\+Down\+Corner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classown_model_1_1_model_a33a5c7b82467950ef5b1264a838a9b30}\label{classown_model_1_1_model_a33a5c7b82467950ef5b1264a838a9b30}} 
+\index{ownModel::Model@{ownModel::Model}!getTileHeightWidth@{getTileHeightWidth}}
+\index{getTileHeightWidth@{getTileHeightWidth}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{getTileHeightWidth()}{getTileHeightWidth()}}
+{\footnotesize\ttfamily float own\+Model\+::\+Model\+::get\+Tile\+Height\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+height/width 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classown_model_1_1_model_a8da68e7223c924a6dbe4235244122d9c}\label{classown_model_1_1_model_a8da68e7223c924a6dbe4235244122d9c}} 
+\index{ownModel::Model@{ownModel::Model}!getTileType@{getTileType}}
+\index{getTileType@{getTileType}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{getTileType()}{getTileType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} own\+Model\+::\+Model\+::get\+Tile\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Tile\+Type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classown_model_1_1_model_afea01fffbf4b3000031f83ab83164520}\label{classown_model_1_1_model_afea01fffbf4b3000031f83ab83164520}} 
+\index{ownModel::Model@{ownModel::Model}!setLeftUpperCorner@{setLeftUpperCorner}}
+\index{setLeftUpperCorner@{setLeftUpperCorner}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{setLeftUpperCorner()}{setLeftUpperCorner()}}
+{\footnotesize\ttfamily void own\+Model\+::\+Model\+::set\+Left\+Upper\+Corner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&}]{left\+Upper\+Corner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Upper\+Corner} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classown_model_1_1_model_a479e28c27a311a5773cdd5244ec15c93}\label{classown_model_1_1_model_a479e28c27a311a5773cdd5244ec15c93}} 
+\index{ownModel::Model@{ownModel::Model}!setRightDownCorner@{setRightDownCorner}}
+\index{setRightDownCorner@{setRightDownCorner}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{setRightDownCorner()}{setRightDownCorner()}}
+{\footnotesize\ttfamily void own\+Model\+::\+Model\+::set\+Right\+Down\+Corner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&}]{right\+Down\+Corner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em right\+Down\+Corner} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classown_model_1_1_model_a84f96ba92c6607c82f0ed149fba08a5d}\label{classown_model_1_1_model_a84f96ba92c6607c82f0ed149fba08a5d}} 
+\index{ownModel::Model@{ownModel::Model}!setTileHeightWidth@{setTileHeightWidth}}
+\index{setTileHeightWidth@{setTileHeightWidth}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{setTileHeightWidth()}{setTileHeightWidth()}}
+{\footnotesize\ttfamily void own\+Model\+::\+Model\+::set\+Tile\+Height\+Width (\begin{DoxyParamCaption}\item[{const float \&}]{tile\+Height\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile\+Height\+Width} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classown_model_1_1_model_aabc5e71fc3272411337e3005aeed9468}\label{classown_model_1_1_model_aabc5e71fc3272411337e3005aeed9468}} 
+\index{ownModel::Model@{ownModel::Model}!setTileType@{setTileType}}
+\index{setTileType@{setTileType}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{setTileType()}{setTileType()}}
+{\footnotesize\ttfamily void own\+Model\+::\+Model\+::set\+Tile\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} \&}]{tile\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classown_model_1_1_model_af09851aa8a1e6041dc181cc5007b9546}\label{classown_model_1_1_model_af09851aa8a1e6041dc181cc5007b9546}} 
+\index{ownModel::Model@{ownModel::Model}!updateObservers@{updateObservers}}
+\index{updateObservers@{updateObservers}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{updateObservers()}{updateObservers()}}
+{\footnotesize\ttfamily void own\+Model\+::\+Model\+::update\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update all observers in this game each model has its own observer 
+
+Reimplemented from \mbox{\hyperlink{class_subject_aa65b1a1575db02de92f1c5817c95bc9a}{Subject}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classown_model_1_1_model_a83e5f29a10f2974e449150b76ffeb76a}\label{classown_model_1_1_model_a83e5f29a10f2974e449150b76ffeb76a}} 
+\index{ownModel::Model@{ownModel::Model}!leftUpperCorner@{leftUpperCorner}}
+\index{leftUpperCorner@{leftUpperCorner}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{leftUpperCorner}{leftUpperCorner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} own\+Model\+::\+Model\+::left\+Upper\+Corner\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classown_model_1_1_model_af7af18a0bfa589fbe13a5abcd0a338b0}\label{classown_model_1_1_model_af7af18a0bfa589fbe13a5abcd0a338b0}} 
+\index{ownModel::Model@{ownModel::Model}!rightDownCorner@{rightDownCorner}}
+\index{rightDownCorner@{rightDownCorner}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{rightDownCorner}{rightDownCorner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} own\+Model\+::\+Model\+::right\+Down\+Corner\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classown_model_1_1_model_aca7fb025fc7b539d9b8a8cd6fb841836}\label{classown_model_1_1_model_aca7fb025fc7b539d9b8a8cd6fb841836}} 
+\index{ownModel::Model@{ownModel::Model}!tileHeightWidth@{tileHeightWidth}}
+\index{tileHeightWidth@{tileHeightWidth}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{tileHeightWidth}{tileHeightWidth}}
+{\footnotesize\ttfamily float own\+Model\+::\+Model\+::tile\+Height\+Width\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classown_model_1_1_model_a1a7df51c472a9ccc5260ef206a71e142}\label{classown_model_1_1_model_a1a7df51c472a9ccc5260ef206a71e142}} 
+\index{ownModel::Model@{ownModel::Model}!tileType@{tileType}}
+\index{tileType@{tileType}!ownModel::Model@{ownModel::Model}}
+\doxysubsubsection{\texorpdfstring{tileType}{tileType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} own\+Model\+::\+Model\+::tile\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Logic/\+Models/\mbox{\hyperlink{_model_8h}{Model.\+h}}\item 
+Game\+\_\+\+Logic/\+Models/\mbox{\hyperlink{_model_8cpp}{Model.\+cpp}}\end{DoxyCompactItemize}

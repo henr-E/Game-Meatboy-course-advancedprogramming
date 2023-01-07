@@ -1,0 +1,46 @@
+\hypertarget{_player_model_8h_source}{}\doxysection{Player\+Model.\+h}
+\label{_player_model_8h_source}\index{Game\_Logic/Models/PlayerModel.h@{Game\_Logic/Models/PlayerModel.h}}
+\mbox{\hyperlink{_player_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 08/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_PLAYERMODEL\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_PLAYERMODEL\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../structures\_enums\_std\_include.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_model_8h}{Model.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}iostream"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_model}{PlayerModel}} : \textcolor{keyword}{public} \mbox{\hyperlink{classown_model_1_1_model}{ownModel::Model}} \{}
+\DoxyCodeLine{14     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_model_aa84df08bd321bebd499d6a200b275ec0}{verticalSpeed}};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_model_a1de8424bee8f95752fa521c5afa8d321}{horizontalSpeed}};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_model_aa23415830855cc7f0969a4f723280072}{accelerationX}};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_model_a9eb20c9441a5072af96b111b9709d4ab}{accelerationY}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_model_aa58bc170a4ed35800ec6a9061412a9f0}{gravity}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_model_a775c379ab77fe4be02a3015038aff787}{keyboardLeft}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_model_afb8cf0850dde228d5da36bf5db9da398}{keyboardRight}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_model_a09388b2786e2802f239feedb9be98874}{jumpWallLeft}};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_model_af661a4e3887642d200dfe9228c37c576}{jumpWallRight}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{ownType::Direction}} \mbox{\hyperlink{class_player_model_a9f38d852b79ca74bfd33c352da1ef923}{direction}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \mbox{\hyperlink{classown_type_1_1_collision}{ownType::Collision}} \mbox{\hyperlink{class_player_model_a83e979883cff4fa05d1cab009356805a}{collision}};}
+\DoxyCodeLine{28     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{class_player_model_af1bd9b515308027c5f0a89e5b7ea34fd}{previousLeftUpperCorner}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_player_model_a10b23d720ce628b505b259d268f54d80}{PlayerModel}}();}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_player_model_a2f072d6c31bdc421dce7fc4084f8888d}{\string~PlayerModel}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_model_aef73817c2ff57c6b58975bacb998c991}{updateFromKeyboard}}(\mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{ownType::KeyboardInput}} keyboardInput);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_model_aa46b96bc62901af5ce369b6cefa9219d}{simulate}}(\textcolor{keywordtype}{float} elapsedTime);}
+\DoxyCodeLine{54     \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{ownType::Direction}} \mbox{\hyperlink{class_player_model_a8952c61a7285ef87c5e457ac3d675cb3}{getDirection}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_model_a12d77167617ed7f02f9d04d04d90c20d}{intersects}}(\textcolor{keyword}{const} shared\_ptr<Model>\& that);}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_model_a223c0b46502906ce8a826b6f2a24e4d4}{setCollision}}(\textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_collision}{ownType::Collision}}\& \mbox{\hyperlink{class_player_model_a83e979883cff4fa05d1cab009356805a}{collision}});}
+\DoxyCodeLine{70     \textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{class_player_model_a95e45feb12c6353b60882d5f445da554}{getPreviousLeftUpperCorner}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_PLAYERMODEL\_H}}
+
+\end{DoxyCode}

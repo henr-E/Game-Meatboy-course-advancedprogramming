@@ -1,0 +1,179 @@
+\hypertarget{class_camera}{}\doxysection{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera}} ()
+\item 
+virtual \mbox{\hyperlink{class_camera_ad3ed0c5e02c46f73ba92673598e40514}{$\sim$\+Camera}} ()=default
+\item 
+\mbox{\hyperlink{class_camera_acd4f99b146dbea1819151191a3c04547}{Camera}} (\mbox{\hyperlink{class_camera}{Camera}} \&other)=delete
+\item 
+void \mbox{\hyperlink{class_camera_a7eeb2e42536c113977174165dd29742d}{operator=}} (const \mbox{\hyperlink{class_camera}{Camera}} \&)=delete
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{class_camera_a5658eedf91b3bdc7c4216420da4d994f}{coordinates\+To\+Pixel}} (float x\+Old, float y\+Old)
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{class_camera_abaeec845ce5af14d1df366f237f52a5d}{pixel\+To\+Coordinates}} (float x\+Old, float y\+Old)
+\item 
+void \mbox{\hyperlink{class_camera_ae1967c6c9b5c6040833942fe33cbb024}{set\+Screen\+Dimensions}} (const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&\mbox{\hyperlink{class_camera_a3af7ac75e573a4215acbed747ff83547}{screen\+Dimensions}})
+\item 
+void \mbox{\hyperlink{class_camera_a6ee788e6ae154e9f101cb95b36a6d367}{move\+Screen\+At\+Eighty}} (\mbox{\hyperlink{structown_type_1_1_camera_positions}{own\+Type\+::\+Camera\+Positions}} \&camera\+Positions, \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} player\+Position, \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} prev\+Player\+Position)
+\item 
+void \mbox{\hyperlink{class_camera_a3275d740a066280bb01ed26540dfa684}{move\+Screen}} (\mbox{\hyperlink{structown_type_1_1_camera_positions}{own\+Type\+::\+Camera\+Positions}} \&camera\+Positions)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ \& \mbox{\hyperlink{class_camera_a8f270264fd87d248198e0f19a6821b03}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{class_camera_a3af7ac75e573a4215acbed747ff83547}{screen\+Dimensions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ \mbox{\hyperlink{class_camera_a408d0bf66620c0df37543c9978c87bc8}{instance\+\_\+}} \{nullptr\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I used the singleton pattern so I can set the screen\+Dimensions 1 time and use the camera in all the views. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_camera_a01f94c3543f56ede7af49dc778f19331}\label{class_camera_a01f94c3543f56ede7af49dc778f19331}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_camera_ad3ed0c5e02c46f73ba92673598e40514}\label{class_camera_ad3ed0c5e02c46f73ba92673598e40514}} 
+\index{Camera@{Camera}!````~Camera@{$\sim$Camera}}
+\index{````~Camera@{$\sim$Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{$\sim$Camera()}{~Camera()}}
+{\footnotesize\ttfamily virtual Camera\+::$\sim$\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+destructor \mbox{\Hypertarget{class_camera_acd4f99b146dbea1819151191a3c04547}\label{class_camera_acd4f99b146dbea1819151191a3c04547}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+not clonable 
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_a5658eedf91b3bdc7c4216420da4d994f}\label{class_camera_a5658eedf91b3bdc7c4216420da4d994f}} 
+\index{Camera@{Camera}!coordinatesToPixel@{coordinatesToPixel}}
+\index{coordinatesToPixel@{coordinatesToPixel}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{coordinatesToPixel()}{coordinatesToPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} Camera\+::coordinates\+To\+Pixel (\begin{DoxyParamCaption}\item[{float}]{x\+Old,  }\item[{float}]{y\+Old }\end{DoxyParamCaption})}
+
+converts coordinates to pixels 
+\begin{DoxyParams}{Parameters}
+{\em x\+Old} & \\
+\hline
+{\em y\+Old} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordinates from pixels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_camera_a8f270264fd87d248198e0f19a6821b03}\label{class_camera_a8f270264fd87d248198e0f19a6821b03}} 
+\index{Camera@{Camera}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ \& Camera\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_camera_a3275d740a066280bb01ed26540dfa684}\label{class_camera_a3275d740a066280bb01ed26540dfa684}} 
+\index{Camera@{Camera}!moveScreen@{moveScreen}}
+\index{moveScreen@{moveScreen}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{moveScreen()}{moveScreen()}}
+{\footnotesize\ttfamily void Camera\+::move\+Screen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structown_type_1_1_camera_positions}{own\+Type\+::\+Camera\+Positions}} \&}]{camera\+Positions }\end{DoxyParamCaption})}
+
+move View 
+\begin{DoxyParams}{Parameters}
+{\em camera\+Positions} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a6ee788e6ae154e9f101cb95b36a6d367}\label{class_camera_a6ee788e6ae154e9f101cb95b36a6d367}} 
+\index{Camera@{Camera}!moveScreenAtEighty@{moveScreenAtEighty}}
+\index{moveScreenAtEighty@{moveScreenAtEighty}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{moveScreenAtEighty()}{moveScreenAtEighty()}}
+{\footnotesize\ttfamily void Camera\+::move\+Screen\+At\+Eighty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structown_type_1_1_camera_positions}{own\+Type\+::\+Camera\+Positions}} \&}]{camera\+Positions,  }\item[{\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}}}]{player\+Position,  }\item[{\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}}}]{prev\+Player\+Position }\end{DoxyParamCaption})}
+
+gets a camerapositions struct this struct has a view\+Position and a background\+Position this method will change this struct by reference 
+\begin{DoxyParams}{Parameters}
+{\em camera\+Positions} & \\
+\hline
+{\em player\+Position} & \\
+\hline
+{\em prev\+Player\+Position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a7eeb2e42536c113977174165dd29742d}\label{class_camera_a7eeb2e42536c113977174165dd29742d}} 
+\index{Camera@{Camera}!operator=@{operator=}}
+\index{operator=@{operator=}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Camera\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+no copy constructor \mbox{\Hypertarget{class_camera_abaeec845ce5af14d1df366f237f52a5d}\label{class_camera_abaeec845ce5af14d1df366f237f52a5d}} 
+\index{Camera@{Camera}!pixelToCoordinates@{pixelToCoordinates}}
+\index{pixelToCoordinates@{pixelToCoordinates}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{pixelToCoordinates()}{pixelToCoordinates()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} Camera\+::pixel\+To\+Coordinates (\begin{DoxyParamCaption}\item[{float}]{x\+Old,  }\item[{float}]{y\+Old }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Old} & \\
+\hline
+{\em y\+Old} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pixels from coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_camera_ae1967c6c9b5c6040833942fe33cbb024}\label{class_camera_ae1967c6c9b5c6040833942fe33cbb024}} 
+\index{Camera@{Camera}!setScreenDimensions@{setScreenDimensions}}
+\index{setScreenDimensions@{setScreenDimensions}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setScreenDimensions()}{setScreenDimensions()}}
+{\footnotesize\ttfamily void Camera\+::set\+Screen\+Dimensions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&}]{screen\+Dimensions }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+Dimensions} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_a408d0bf66620c0df37543c9978c87bc8}\label{class_camera_a408d0bf66620c0df37543c9978c87bc8}} 
+\index{Camera@{Camera}!instance\_@{instance\_}}
+\index{instance\_@{instance\_}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{instance\_}{instance\_}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ Camera\+::instance\+\_\+ \{nullptr\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_camera_a3af7ac75e573a4215acbed747ff83547}\label{class_camera_a3af7ac75e573a4215acbed747ff83547}} 
+\index{Camera@{Camera}!screenDimensions@{screenDimensions}}
+\index{screenDimensions@{screenDimensions}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{screenDimensions}{screenDimensions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} Camera\+::screen\+Dimensions}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

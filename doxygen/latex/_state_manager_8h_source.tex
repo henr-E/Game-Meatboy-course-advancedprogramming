@@ -1,0 +1,36 @@
+\hypertarget{_state_manager_8h_source}{}\doxysection{State\+Manager.\+h}
+\label{_state_manager_8h_source}\index{Game\_Representation/States/StateManager.h@{Game\_Representation/States/StateManager.h}}
+\mbox{\hyperlink{_state_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 25/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_STATEMANAGER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_STATEMANAGER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_level_state_8h}{LevelState.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_menu_state_8h}{MenuState.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/structures\_enums\_std\_include.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_state_manager}{StateManager}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     shared\_ptr<RenderWindow> \mbox{\hyperlink{class_state_manager_ad10b9ea0c28dcc267856e7dc82ee774d}{sfWindow}};}
+\DoxyCodeLine{18     shared\_ptr<State> \mbox{\hyperlink{class_state_manager_a0f67a6b4ac51ed8379f114a910125fc7}{state}};}
+\DoxyCodeLine{19     Event \mbox{\hyperlink{class_state_manager_a2cfda78450931c4f1ffaa5e8003b03f9}{event}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_state_manager}{StateManager}}(shared\_ptr<RenderWindow>\& \mbox{\hyperlink{class_state_manager_ad10b9ea0c28dcc267856e7dc82ee774d}{sfWindow}});}
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_state_manager_a6f5c9917b92bc9cd7445f0791d34b2be}{\string~StateManager}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_manager_a708d95f18aaac062d011ed9197e90581}{simulate}}(\mbox{\hyperlink{namespaceown_type_a7e8a6ae398a86ee5cace304c92cb936e}{ownType::FunctionCallTo}} functionCallTo);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_manager_ade529187e0fbbb33834b89bd82804fd1}{setState}}(\textcolor{keyword}{const} shared\_ptr<State>\& \mbox{\hyperlink{class_state_manager_a0f67a6b4ac51ed8379f114a910125fc7}{state}});}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_manager_a08fb803e95e4bd00ef99114c4108d319}{setEvent}}(Event\& \mbox{\hyperlink{class_state_manager_a2cfda78450931c4f1ffaa5e8003b03f9}{event}});}
+\DoxyCodeLine{50     \textcolor{keyword}{const} shared\_ptr<RenderWindow>\& \mbox{\hyperlink{class_state_manager_a2c73933b8a4a37b78c3d2af8135a4261}{getSfWindow}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_STATEMANAGER\_H}}
+
+\end{DoxyCode}

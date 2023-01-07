@@ -1,5 +1,30 @@
 var searchData=
 [
-  ['platform_5fid_0',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
-  ['project_20advanced_20programming_202022_2d2023_1',['Project Advanced Programming 2022-2023',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['game_0',['Game',['../class_game.html',1,'Game'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
+  ['game_2ecpp_1',['Game.cpp',['../_game_8cpp.html',1,'']]],
+  ['game_2eh_2',['Game.h',['../_game_8h.html',1,'']]],
+  ['getdifference_3',['getDifference',['../class_stopwatch.html#a56091442f072c7876acb5839b57f0e73',1,'Stopwatch']]],
+  ['getdirection_4',['getDirection',['../class_player_model.html#a8952c61a7285ef87c5e457ac3d675cb3',1,'PlayerModel']]],
+  ['getgoal_5',['getGoal',['../class_world.html#a4be8f12e42ec9f796e4293a5e862824d',1,'World']]],
+  ['getinstance_6',['getInstance',['../class_stopwatch.html#aecf55837063c3cf84ece1d4a30e0510f',1,'Stopwatch::getInstance()'],['../class_camera.html#a8f270264fd87d248198e0f19a6821b03',1,'Camera::getInstance()']]],
+  ['getleftuppercorner_7',['getLeftUpperCorner',['../classown_model_1_1_model.html#ae8c36a4d15decc2f8a4ec91bc42c570a',1,'ownModel::Model']]],
+  ['getmovescreen_8',['getMoveScreen',['../class_input_parser.html#ad506f37e4a4fa6b469d73b16c2a2756d',1,'InputParser']]],
+  ['getobserverlist_9',['getObserverList',['../classown_model_1_1_model.html#a5c9a09bd7fa2b27e86d44fde9ce5f96a',1,'ownModel::Model::getObserverList()'],['../class_subject.html#a6d16bc45227813bce2e41699a3362a87',1,'Subject::getObserverList()']]],
+  ['getplayer_10',['getPlayer',['../class_world.html#a3e0f91432497cf4ff1317de2b08dd17d',1,'World']]],
+  ['getpreviousleftuppercorner_11',['getPreviousLeftUpperCorner',['../class_player_model.html#a95e45feb12c6353b60882d5f445da554',1,'PlayerModel']]],
+  ['getrightdowncorner_12',['getRightDownCorner',['../classown_model_1_1_model.html#aab4bbbcb47ff315dd08fb7a78b2071cc',1,'ownModel::Model']]],
+  ['getscreendimensions_13',['getScreenDimensions',['../class_input_parser.html#ad6b249bf71f91a5556c29a6f2216d4bb',1,'InputParser']]],
+  ['getsfwindow_14',['getSfWindow',['../class_state_manager.html#a2c73933b8a4a37b78c3d2af8135a4261',1,'StateManager']]],
+  ['gettileheightwidth_15',['getTileHeightWidth',['../classown_model_1_1_model.html#a33a5c7b82467950ef5b1264a838a9b30',1,'ownModel::Model']]],
+  ['gettiles_16',['getTiles',['../class_input_parser.html#aff9fad48a9629771751da760c7e9395f',1,'InputParser']]],
+  ['gettilesize_17',['getTileSize',['../class_input_parser.html#ac1432c2389462e6780c70a947918d25f',1,'InputParser']]],
+  ['gettiletype_18',['getTileType',['../classown_model_1_1_model.html#a8da68e7223c924a6dbe4235244122d9c',1,'ownModel::Model']]],
+  ['girl_19',['GIRL',['../namespaceown_type.html#a83a062ad493704558ea7784c2363a1d4a1eaf69306aa50f3de1d0e5c820c50db7',1,'ownType']]],
+  ['goal_20',['goal',['../class_world.html#a635df1fe85437a4f502663e7ded5af55',1,'World']]],
+  ['goalmodel_21',['GoalModel',['../class_goal_model.html',1,'GoalModel'],['../class_goal_model.html#af37aa170b95632994718dcdbcb249329',1,'GoalModel::GoalModel()']]],
+  ['goalmodel_2eh_22',['GoalModel.h',['../_goal_model_8h.html',1,'']]],
+  ['goalview_23',['GoalView',['../class_goal_view.html',1,'GoalView'],['../class_goal_view.html#ae21781192dda612f35f4487bc27c9687',1,'GoalView::GoalView()']]],
+  ['goalview_2ecpp_24',['GoalView.cpp',['../_goal_view_8cpp.html',1,'']]],
+  ['goalview_2eh_25',['GoalView.h',['../_goal_view_8h.html',1,'']]],
+  ['gravity_26',['gravity',['../class_player_model.html#aa58bc170a4ed35800ec6a9061412a9f0',1,'PlayerModel']]]
 ];

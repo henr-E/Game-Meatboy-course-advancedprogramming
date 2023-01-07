@@ -26,14 +26,6 @@ make install
 ./installed/bin/hw  
 
 ##doxygen
-the OUTPUT_DIRECTORY in the "doxygen config_file" is set to the "doxygen" directory
-* ###changes in default config_file
-  * EXTRACT_ALL            = YES
-  * EXTRACT_PRIVATE        = YES
-  * EXTRACT_PRIV_VIRTUAL   = YES
-  * RECURSIVE              = NO
-  * OUTPUT_DIRECTORY       = doxygen
-
 * ###install
   * Doxygen installation command on mac: "brew install doxygen"
 * ###create config_file for doxygen

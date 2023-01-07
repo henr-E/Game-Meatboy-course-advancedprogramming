@@ -1,0 +1,27 @@
+\hypertarget{_abstract_factory_8h_source}{}\doxysection{Abstract\+Factory.\+h}
+\label{_abstract_factory_8h_source}\index{Game\_Logic/AbstractFactory.h@{Game\_Logic/AbstractFactory.h}}
+\mbox{\hyperlink{_abstract_factory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 04/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_ABSTRACTFACTORY\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_ABSTRACTFACTORY\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_goal_model_8h}{Models/GoalModel.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_model_8h}{Models/PlayerModel.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_wall_model_8h}{Models/WallModel.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_abstract_factory}{AbstractFactory}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_abstract_factory_a41c48cc0b0fb83476861a69bf05edede}{AbstractFactory}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_abstract_factory_ae0b348ff14d4b3e9ab8322afd2fd8b38}{\string~AbstractFactory}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} shared\_ptr<PlayerModel> \mbox{\hyperlink{class_abstract_factory_a152b8ec886575d579989f09ffd085d4f}{createPlayer}}() = 0;}
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} shared\_ptr<GoalModel> \mbox{\hyperlink{class_abstract_factory_a984b8911f2c4da709bea617fd92c5a9d}{createGoal}}(\mbox{\hyperlink{classown_type_1_1input_rectangles}{ownType::inputRectangles}} tile) = 0;}
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} shared\_ptr<WallModel> \mbox{\hyperlink{class_abstract_factory_ae3bc0715a62b1f15112f28f74cc49cc4}{createWall}}(\mbox{\hyperlink{classown_type_1_1input_rectangles}{ownType::inputRectangles}} tile) = 0;}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_ABSTRACTFACTORY\_H}}
+
+\end{DoxyCode}

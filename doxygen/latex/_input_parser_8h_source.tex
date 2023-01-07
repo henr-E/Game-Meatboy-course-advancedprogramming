@@ -1,0 +1,44 @@
+\hypertarget{_input_parser_8h_source}{}\doxysection{Input\+Parser.\+h}
+\label{_input_parser_8h_source}\index{Game\_Representation/InputToGame/InputParser.h@{Game\_Representation/InputToGame/InputParser.h}}
+\mbox{\hyperlink{_input_parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 21/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_INPUTPARSER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_INPUTPARSER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/Models/GoalModel.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/Models/WallModel.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/structures\_enums\_std\_include.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{17 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_input_parser}{InputParser}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     vector<vector<ownType::inputRectangles>> \mbox{\hyperlink{class_input_parser_ace76b3342340734f94ffd855fc38f07e}{tiles}};}
+\DoxyCodeLine{23     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{class_input_parser_ae74a6f255be33d1464b3d7c787dd49a3}{screenDimensions}};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_input_parser_a565e77154c41d2e5b1043254fc78c42b}{tileSize}};}
+\DoxyCodeLine{25     \mbox{\hyperlink{namespaceown_type_ac5208437bfd75911caadbf0d37d4c058}{ownType::MoveScreen}} \mbox{\hyperlink{class_input_parser_a3a91f42400fc5f1813418b3606a17aa6}{moveScreenInput}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_input_parser_a9e2e24cbf89184dd4fa72a74fb89773a}{InputParser}}();}
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_input_parser_a9f3fba1742f4c6f2f35e001cb20a1634}{\string~InputParser}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_input_parser_a58ad2f6cec4fe0392e63f48a0d531e77}{parse}}(\textcolor{keywordtype}{int} levelNumb);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keyword}{const} vector<vector<ownType::inputRectangles>>\& \mbox{\hyperlink{class_input_parser_aff9fad48a9629771751da760c7e9395f}{getTiles}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54     \textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{class_input_parser_ad6b249bf71f91a5556c29a6f2216d4bb}{getScreenDimensions}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{59     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_input_parser_ac1432c2389462e6780c70a947918d25f}{getTileSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64     \mbox{\hyperlink{namespaceown_type_ac5208437bfd75911caadbf0d37d4c058}{ownType::MoveScreen}} \mbox{\hyperlink{class_input_parser_ad506f37e4a4fa6b469d73b16c2a2756d}{getMoveScreen}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_INPUTPARSER\_H}}
+
+\end{DoxyCode}

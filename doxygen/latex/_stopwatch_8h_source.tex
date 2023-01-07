@@ -1,0 +1,39 @@
+\hypertarget{_stopwatch_8h_source}{}\doxysection{Stopwatch.\+h}
+\label{_stopwatch_8h_source}\index{Game\_Logic/Stopwatch.h@{Game\_Logic/Stopwatch.h}}
+\mbox{\hyperlink{_stopwatch_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 04/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_STOPWATCH\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_STOPWATCH\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}iostream"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}memory"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 \textcolor{keyword}{using namespace }chrono;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_stopwatch}{Stopwatch}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     time\_point<steady\_clock> \mbox{\hyperlink{class_stopwatch_a705b0fa44452f93a31672eee4c6678dc}{prev\_time}};}
+\DoxyCodeLine{19     \textcolor{keyword}{static} shared\_ptr<Stopwatch> \mbox{\hyperlink{class_stopwatch_aedbb7a69bc5b9ba95223d78614013a4e}{instance\_}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_stopwatch_a628b5ebeed5df065dd847e68fb6336cf}{Stopwatch}}();}
+\DoxyCodeLine{29     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_stopwatch_ad86e08d167d5cf827e612103ef7107e7}{\string~Stopwatch}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_stopwatch_ab9f33b55664ef1358df1909b8696bb74}{Stopwatch}}(\mbox{\hyperlink{class_stopwatch}{Stopwatch}}\& other) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stopwatch_aadd43373c5401100e59a9dd5c97110dc}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_stopwatch}{Stopwatch}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_stopwatch_a56091442f072c7876acb5839b57f0e73}{getDifference}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{50     \textcolor{keyword}{static} shared\_ptr<Stopwatch>\& \mbox{\hyperlink{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}{getInstance}}();}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_STOPWATCH\_H}}
+
+\end{DoxyCode}

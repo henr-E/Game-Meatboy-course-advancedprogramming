@@ -1,0 +1,122 @@
+\hypertarget{class_state_manager}{}\doxysection{State\+Manager Class Reference}
+\label{class_state_manager}\index{StateManager@{StateManager}}
+
+
+{\ttfamily \#include $<$State\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_manager_a29953753898ff847a281274282a09d7d}{State\+Manager}} (shared\+\_\+ptr$<$ Render\+Window $>$ \&\mbox{\hyperlink{class_state_manager_ad10b9ea0c28dcc267856e7dc82ee774d}{sf\+Window}})
+\item 
+virtual \mbox{\hyperlink{class_state_manager_a6f5c9917b92bc9cd7445f0791d34b2be}{$\sim$\+State\+Manager}} ()=default
+\item 
+void \mbox{\hyperlink{class_state_manager_a708d95f18aaac062d011ed9197e90581}{simulate}} (\mbox{\hyperlink{namespaceown_type_a7e8a6ae398a86ee5cace304c92cb936e}{own\+Type\+::\+Function\+Call\+To}} function\+Call\+To)
+\item 
+void \mbox{\hyperlink{class_state_manager_ade529187e0fbbb33834b89bd82804fd1}{set\+State}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_state}{State}} $>$ \&\mbox{\hyperlink{class_state_manager_a0f67a6b4ac51ed8379f114a910125fc7}{state}})
+\item 
+void \mbox{\hyperlink{class_state_manager_a08fb803e95e4bd00ef99114c4108d319}{set\+Event}} (Event \&\mbox{\hyperlink{class_state_manager_a2cfda78450931c4f1ffaa5e8003b03f9}{event}})
+\item 
+const shared\+\_\+ptr$<$ Render\+Window $>$ \& \mbox{\hyperlink{class_state_manager_a2c73933b8a4a37b78c3d2af8135a4261}{get\+Sf\+Window}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ Render\+Window $>$ \mbox{\hyperlink{class_state_manager_ad10b9ea0c28dcc267856e7dc82ee774d}{sf\+Window}}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{class_state}{State}} $>$ \mbox{\hyperlink{class_state_manager_a0f67a6b4ac51ed8379f114a910125fc7}{state}}
+\item 
+Event \mbox{\hyperlink{class_state_manager_a2cfda78450931c4f1ffaa5e8003b03f9}{event}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_state_manager_a29953753898ff847a281274282a09d7d}\label{class_state_manager_a29953753898ff847a281274282a09d7d}} 
+\index{StateManager@{StateManager}!StateManager@{StateManager}}
+\index{StateManager@{StateManager}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{StateManager()}{StateManager()}}
+{\footnotesize\ttfamily State\+Manager\+::\+State\+Manager (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ Render\+Window $>$ \&}]{sf\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sf\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_a6f5c9917b92bc9cd7445f0791d34b2be}\label{class_state_manager_a6f5c9917b92bc9cd7445f0791d34b2be}} 
+\index{StateManager@{StateManager}!````~StateManager@{$\sim$StateManager}}
+\index{````~StateManager@{$\sim$StateManager}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$StateManager()}{~StateManager()}}
+{\footnotesize\ttfamily virtual State\+Manager\+::$\sim$\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_manager_a2c73933b8a4a37b78c3d2af8135a4261}\label{class_state_manager_a2c73933b8a4a37b78c3d2af8135a4261}} 
+\index{StateManager@{StateManager}!getSfWindow@{getSfWindow}}
+\index{getSfWindow@{getSfWindow}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{getSfWindow()}{getSfWindow()}}
+{\footnotesize\ttfamily const shared\+\_\+ptr$<$ Render\+Window $>$ \& State\+Manager\+::get\+Sf\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+sf\+Window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_manager_a08fb803e95e4bd00ef99114c4108d319}\label{class_state_manager_a08fb803e95e4bd00ef99114c4108d319}} 
+\index{StateManager@{StateManager}!setEvent@{setEvent}}
+\index{setEvent@{setEvent}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{setEvent()}{setEvent()}}
+{\footnotesize\ttfamily void State\+Manager\+::set\+Event (\begin{DoxyParamCaption}\item[{Event \&}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_ade529187e0fbbb33834b89bd82804fd1}\label{class_state_manager_ade529187e0fbbb33834b89bd82804fd1}} 
+\index{StateManager@{StateManager}!setState@{setState}}
+\index{setState@{setState}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void State\+Manager\+::set\+State (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_state}{State}} $>$ \&}]{state }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_a708d95f18aaac062d011ed9197e90581}\label{class_state_manager_a708d95f18aaac062d011ed9197e90581}} 
+\index{StateManager@{StateManager}!simulate@{simulate}}
+\index{simulate@{simulate}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void State\+Manager\+::simulate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceown_type_a7e8a6ae398a86ee5cace304c92cb936e}{own\+Type\+::\+Function\+Call\+To}}}]{function\+Call\+To }\end{DoxyParamCaption})}
+
+run draw, input and simulate of game 
+\begin{DoxyParams}{Parameters}
+{\em function\+Call\+To} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_state_manager_a2cfda78450931c4f1ffaa5e8003b03f9}\label{class_state_manager_a2cfda78450931c4f1ffaa5e8003b03f9}} 
+\index{StateManager@{StateManager}!event@{event}}
+\index{event@{event}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily Event State\+Manager\+::event\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_state_manager_ad10b9ea0c28dcc267856e7dc82ee774d}\label{class_state_manager_ad10b9ea0c28dcc267856e7dc82ee774d}} 
+\index{StateManager@{StateManager}!sfWindow@{sfWindow}}
+\index{sfWindow@{sfWindow}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{sfWindow}{sfWindow}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$Render\+Window$>$ State\+Manager\+::sf\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_state_manager_a0f67a6b4ac51ed8379f114a910125fc7}\label{class_state_manager_a0f67a6b4ac51ed8379f114a910125fc7}} 
+\index{StateManager@{StateManager}!state@{state}}
+\index{state@{state}!StateManager@{StateManager}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{class_state}{State}}$>$ State\+Manager\+::state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Representation/\+States/\mbox{\hyperlink{_state_manager_8h}{State\+Manager.\+h}}\item 
+Game\+\_\+\+Representation/\+States/\mbox{\hyperlink{_state_manager_8cpp}{State\+Manager.\+cpp}}\end{DoxyCompactItemize}

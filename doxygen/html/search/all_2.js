@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['dec_0',['DEC',['../_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad',1,'DEC():&#160;CMakeCXXCompilerId.cpp']]],
-  ['draw_1',['draw',['../classdraw.html',1,'']]],
-  ['draw_2ecpp_2',['draw.cpp',['../draw_8cpp.html',1,'']]],
-  ['draw_2eh_3',['draw.h',['../draw_8h.html',1,'']]]
+  ['camera_0',['Camera',['../class_camera.html',1,'Camera'],['../class_camera.html#acd4f99b146dbea1819151191a3c04547',1,'Camera::Camera()']]],
+  ['camera_1',['camera',['../class_level_state.html#af4d9ed8a2c899750f19bb221fcaee46a',1,'LevelState::camera()'],['../classown_view_1_1_view.html#a68f47e80d62ccb52576ddfe0ec4b7926',1,'ownView::View::camera()']]],
+  ['camera_2',['Camera',['../class_camera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera']]],
+  ['camera_2ecpp_3',['Camera.cpp',['../_camera_8cpp.html',1,'']]],
+  ['camera_2eh_4',['Camera.h',['../_camera_8h.html',1,'']]],
+  ['camerapositions_5',['CameraPositions',['../structown_type_1_1_camera_positions.html',1,'ownType']]],
+  ['checkcollisionwallsbotom_6',['checkCollisionWallsBotom',['../class_world.html#af0e3eb1c3bb4104ceb2ebf4fd0207b57',1,'World']]],
+  ['checkcollisionwithtiles_7',['checkCollisionWithTiles',['../class_world.html#a857128365d2f6abd77476029010a4047',1,'World']]],
+  ['checkplayerdeath_8',['checkPlayerDeath',['../class_level_state.html#ae3d6d1e0ff32658e21381c2fed8d0d12',1,'LevelState']]],
+  ['chosenlevel_9',['chosenLevel',['../class_level_state.html#aaed011672738d0182a4c4e5632bb8459',1,'LevelState::chosenLevel()'],['../class_state.html#a2547f728f957cda44fe9a5f959f3c79e',1,'State::chosenLevel()']]],
+  ['collision_10',['collision',['../class_player_model.html#a83e979883cff4fa05d1cab009356805a',1,'PlayerModel::collision()'],['../class_world.html#aa70b7ae1a36d3fb1533e787e43942b5e',1,'World::collision()']]],
+  ['collision_11',['Collision',['../classown_type_1_1_collision.html',1,'ownType']]],
+  ['collisiondown_12',['collisionDown',['../classown_type_1_1_collision.html#a904454a9c75510e608d5728f1ea24ec6',1,'ownType::Collision']]],
+  ['collisionleft_13',['collisionLeft',['../classown_type_1_1_collision.html#a8ae20a8c9b9a4bd4fc2bd73632a0ff2f',1,'ownType::Collision']]],
+  ['collisionright_14',['collisionRight',['../classown_type_1_1_collision.html#ace1f2ae4018ab803ff5090a2679468a1',1,'ownType::Collision']]],
+  ['collisionup_15',['collisionUp',['../classown_type_1_1_collision.html#a1cb42b162a2ff99222950cadb9b190bd',1,'ownType::Collision']]],
+  ['concretefactory_16',['ConcreteFactory',['../class_concrete_factory.html',1,'ConcreteFactory'],['../class_concrete_factory.html#afe9ec3e970057d927678c61ffed4da0b',1,'ConcreteFactory::ConcreteFactory()']]],
+  ['concretefactory_2ecpp_17',['ConcreteFactory.cpp',['../_concrete_factory_8cpp.html',1,'']]],
+  ['concretefactory_2eh_18',['ConcreteFactory.h',['../_concrete_factory_8h.html',1,'']]],
+  ['coordinatestopixel_19',['coordinatesToPixel',['../class_camera.html#a5658eedf91b3bdc7c4216420da4d994f',1,'Camera']]],
+  ['creategoal_20',['createGoal',['../class_abstract_factory.html#a984b8911f2c4da709bea617fd92c5a9d',1,'AbstractFactory::createGoal()'],['../class_concrete_factory.html#a1d2657f6d448554f4b82c3eaadf5b27a',1,'ConcreteFactory::createGoal()']]],
+  ['createplayer_21',['createPlayer',['../class_abstract_factory.html#a152b8ec886575d579989f09ffd085d4f',1,'AbstractFactory::createPlayer()'],['../class_concrete_factory.html#a520d5c8e5e4050aa3235bc6c022fa559',1,'ConcreteFactory::createPlayer()']]],
+  ['createwall_22',['createWall',['../class_abstract_factory.html#ae3bc0715a62b1f15112f28f74cc49cc4',1,'AbstractFactory::createWall()'],['../class_concrete_factory.html#a45db8f50c80cbb7d86a248ee3a23c9cd',1,'ConcreteFactory::createWall()']]]
 ];

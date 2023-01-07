@@ -1,0 +1,51 @@
+\hypertarget{_level_state_8h_source}{}\doxysection{Level\+State.\+h}
+\label{_level_state_8h_source}\index{Game\_Representation/States/LevelState.h@{Game\_Representation/States/LevelState.h}}
+\mbox{\hyperlink{_level_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 24/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_LEVELSTATE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_LEVELSTATE\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/Camera.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/World.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/structures\_enums\_std\_include.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}../ConcreteFactory.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_state_manager}{StateManager}};}
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_level_state}{LevelState}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_state}{State}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{comment}{// sfml elements}}
+\DoxyCodeLine{22     Texture \mbox{\hyperlink{class_level_state_a73707dd066cf15530d16a09a68534625}{textureBackground}};}
+\DoxyCodeLine{23     Sprite \mbox{\hyperlink{class_level_state_aa7c20bf6b3f203a86d692b4d821e8706}{spriteBackground}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// selfmade classes/structs}}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_world}{World}} \mbox{\hyperlink{class_level_state_a5ac05713d26c9c9451a9d372231f5dc7}{world}};}
+\DoxyCodeLine{27     \mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{ownType::KeyboardInput}} \mbox{\hyperlink{class_level_state_a2c4dd0975247648147ad1e1182f735e7}{keyboardInput}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_input_parser}{InputParser}} \mbox{\hyperlink{class_level_state_a1da1cdcd7d531a5f153e4b6727f3bf4e}{inputParser}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     shared\_ptr<Camera> \mbox{\hyperlink{class_level_state_af4d9ed8a2c899750f19bb221fcaee46a}{camera}} = \mbox{\hyperlink{class_camera_a8f270264fd87d248198e0f19a6821b03}{Camera::getInstance}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_level_state_aaed011672738d0182a4c4e5632bb8459}{chosenLevel}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_level_state}{LevelState}}(\mbox{\hyperlink{class_state_manager}{StateManager}}\& \mbox{\hyperlink{class_state_a2c50419dbdfc3618c7a8f6e7d11e7e7a}{stateManager}}, shared\_ptr<RenderWindow>\& \mbox{\hyperlink{class_state_a2027ae2ba2abee0f19601593f9a1228c}{sfWindow}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_level_state_aaed011672738d0182a4c4e5632bb8459}{chosenLevel}});}
+\DoxyCodeLine{44     \mbox{\hyperlink{class_level_state_a506bcaac387a2ff5984b11f3f1fde5ca}{\string~LevelState}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_state_a263e23a4c8be438864a2aff1467d30cd}{startup}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_level_state_aaed011672738d0182a4c4e5632bb8459}{chosenLevel}});}
+\DoxyCodeLine{55     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_state_a24794808c5114acc17a46d2ab791d0f6}{userInput}}(Event\& event);}
+\DoxyCodeLine{59     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_state_adcf64c056996ae70e1d0f3330ab85fe7}{simulate}}();}
+\DoxyCodeLine{63     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_state_ab6771eeb1dedc601a03dd91229dfbd27}{draw}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_level_state_ae3d6d1e0ff32658e21381c2fed8d0d12}{checkPlayerDeath}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_state_ade49de9e4c7e81e56afab021b92df9d3}{moveScreen}}();}
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_LEVELSTATE\_H}}
+
+\end{DoxyCode}

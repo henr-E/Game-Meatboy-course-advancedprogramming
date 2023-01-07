@@ -1,0 +1,46 @@
+\hypertarget{_menu_state_8h_source}{}\doxysection{Menu\+State.\+h}
+\label{_menu_state_8h_source}\index{Game\_Representation/States/MenuState.h@{Game\_Representation/States/MenuState.h}}
+\mbox{\hyperlink{_menu_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 24/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_MENUSTATE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_MENUSTATE\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_state_manager}{StateManager}};}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu_state}{MenuState}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_state}{State}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     \textcolor{comment}{// sfml elements}}
+\DoxyCodeLine{16     Texture \mbox{\hyperlink{class_menu_state_a009421007792ab731de7d0aa94d898c9}{textureBackground}};}
+\DoxyCodeLine{17     Sprite \mbox{\hyperlink{class_menu_state_abd5e26a1a53c5739119bdc6bf456d054}{spriteBackground}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{comment}{// sfml elements}}
+\DoxyCodeLine{20     sf::Text \mbox{\hyperlink{class_menu_state_a5bbfdef6dc5581f117d0d72721d7eae4}{welcomeText}};}
+\DoxyCodeLine{21     sf::Text \mbox{\hyperlink{class_menu_state_aeeb51df7ee7b75fb2302b0b8c4ac4b2a}{extraText}};}
+\DoxyCodeLine{22     sf::Text \mbox{\hyperlink{class_menu_state_a9d4297c529f6c7108d252aa6981a5370}{extraText2}};}
+\DoxyCodeLine{23     sf::Text \mbox{\hyperlink{class_menu_state_a17f4e86eae3fbca09575205dfe3175ae}{level1}};}
+\DoxyCodeLine{24     sf::Text \mbox{\hyperlink{class_menu_state_a0f33798db5c8b5f4a046e5dc95c6f771}{level2}};}
+\DoxyCodeLine{25     sf::Text \mbox{\hyperlink{class_menu_state_a6c465f06a6bb27c0d37aacb851bee34a}{level3}};}
+\DoxyCodeLine{26     sf::Text \mbox{\hyperlink{class_menu_state_ad870f175a6343623f7b45a4ef3a42807}{level4}};}
+\DoxyCodeLine{27     sf::Text \mbox{\hyperlink{class_menu_state_ab3903d2b94e7758d6219580a7e61f53b}{level5}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     Font \mbox{\hyperlink{class_menu_state_a7533c27e347d53f13f59c4b643e47485}{font}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     Vector2i \mbox{\hyperlink{class_menu_state_a741f0e624f1c9ac34f060181ac8e5af1}{mousePosition}};}
+\DoxyCodeLine{32     vector<Text> \mbox{\hyperlink{class_menu_state_aa270ff46feb116667468e53e6468ecc3}{allTexts}} = \{\mbox{\hyperlink{class_menu_state_a17f4e86eae3fbca09575205dfe3175ae}{level1}}, \mbox{\hyperlink{class_menu_state_a0f33798db5c8b5f4a046e5dc95c6f771}{level2}}, \mbox{\hyperlink{class_menu_state_a6c465f06a6bb27c0d37aacb851bee34a}{level3}}, \mbox{\hyperlink{class_menu_state_ad870f175a6343623f7b45a4ef3a42807}{level4}}, \mbox{\hyperlink{class_menu_state_ab3903d2b94e7758d6219580a7e61f53b}{level5}}\};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_menu_state}{MenuState}}(\mbox{\hyperlink{class_state_manager}{StateManager}}\& \mbox{\hyperlink{class_state_a2c50419dbdfc3618c7a8f6e7d11e7e7a}{stateManager}}, shared\_ptr<RenderWindow>\& \mbox{\hyperlink{class_state_a2027ae2ba2abee0f19601593f9a1228c}{sfWindow}});}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \mbox{\hyperlink{class_menu_state_a1af2b7fbd42f0ffb93e4740cb65e1900}{\string~MenuState}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_aa2363e20335ef5c121ce05806cb508f0}{userInput}}(Event\& event);}
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_a3035e68583674f302e354167541240ed}{simulate}}();}
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_aa557d6c3bf06bb3107ed780913a6b47f}{draw}}();}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_state_ad1e183b06e9057451f953e819f90757d}{makeTexts}}();}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_MENUSTATE\_H}}
+
+\end{DoxyCode}

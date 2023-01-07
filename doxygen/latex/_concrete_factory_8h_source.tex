@@ -1,0 +1,33 @@
+\hypertarget{_concrete_factory_8h_source}{}\doxysection{Concrete\+Factory.\+h}
+\label{_concrete_factory_8h_source}\index{Game\_Representation/ConcreteFactory.h@{Game\_Representation/ConcreteFactory.h}}
+\mbox{\hyperlink{_concrete_factory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 04/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_CONCRETEFACTORY\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_CONCRETEFACTORY\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../Game\_Logic/AbstractFactory.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../Game\_Logic/Observer.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_goal_view_8h}{Views/GoalView.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_view_8h}{Views/PlayerView.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_view_8h}{Views/View.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_wall_view_8h}{Views/WallView.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}memory.h"{}}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_concrete_factory}{ConcreteFactory}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract_factory}{AbstractFactory}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     shared\_ptr<RenderWindow> \mbox{\hyperlink{class_concrete_factory_a45037fa2223f49734b7f77462df5ffc6}{sfWindow}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_concrete_factory}{ConcreteFactory}}(\textcolor{keyword}{const} shared\_ptr<RenderWindow>\& \mbox{\hyperlink{class_concrete_factory_a45037fa2223f49734b7f77462df5ffc6}{sfWindow}});}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_concrete_factory_a7189b1eafc6a07d33fcf70055af529d2}{\string~ConcreteFactory}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{33     shared\_ptr<PlayerModel> \mbox{\hyperlink{class_concrete_factory_a520d5c8e5e4050aa3235bc6c022fa559}{createPlayer}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{38     shared\_ptr<GoalModel> \mbox{\hyperlink{class_concrete_factory_a1d2657f6d448554f4b82c3eaadf5b27a}{createGoal}}(\mbox{\hyperlink{classown_type_1_1input_rectangles}{ownType::inputRectangles}} tile) \textcolor{keyword}{override};}
+\DoxyCodeLine{43     shared\_ptr<WallModel> \mbox{\hyperlink{class_concrete_factory_a45db8f50c80cbb7d86a248ee3a23c9cd}{createWall}}(\mbox{\hyperlink{classown_type_1_1input_rectangles}{ownType::inputRectangles}} tile) \textcolor{keyword}{override};}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_CONCRETEFACTORY\_H}}
+
+\end{DoxyCode}

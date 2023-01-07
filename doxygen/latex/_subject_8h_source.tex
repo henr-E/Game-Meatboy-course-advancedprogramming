@@ -1,0 +1,32 @@
+\hypertarget{_subject_8h_source}{}\doxysection{Subject.\+h}
+\label{_subject_8h_source}\index{Game\_Logic/Subject.h@{Game\_Logic/Subject.h}}
+\mbox{\hyperlink{_subject_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 08/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_SUBJECT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_SUBJECT\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_observer_8h}{Observer.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}memory"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}vector"{}}}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_subject}{Subject}} \{}
+\DoxyCodeLine{13     vector<shared\_ptr<Observer>> \mbox{\hyperlink{class_subject_af5fdb545be4946b0bd55630c5dec5844}{observerList}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_subject_ab4f33719b83034be37c7f8223f1a5e63}{Subject}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_subject_af9723476c61afcceeb91bee3211258c7}{\string~Subject}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_subject_ab12cea321523e84116a5f8dcf4a4f959}{addObserver}}(shared\_ptr<Observer> observer);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_subject_ac9d95bab4f0fbb577496b534d6a842ee}{removeObserver}}(shared\_ptr<Observer> observer);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_subject_aa65b1a1575db02de92f1c5817c95bc9a}{updateObservers}}();}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keyword}{const} vector<shared\_ptr<Observer>>\& \mbox{\hyperlink{class_subject_a6d16bc45227813bce2e41699a3362a87}{getObserverList}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_SUBJECT\_H}}
+
+\end{DoxyCode}

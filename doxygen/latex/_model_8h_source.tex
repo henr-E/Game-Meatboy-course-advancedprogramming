@@ -1,0 +1,40 @@
+\hypertarget{_model_8h_source}{}\doxysection{Model.\+h}
+\label{_model_8h_source}\index{Game\_Logic/Models/Model.h@{Game\_Logic/Models/Model.h}}
+\mbox{\hyperlink{_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 02/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_MODEL\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_MODEL\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../Subject.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../structures\_enums\_std\_include.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceown_model}{ownModel}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classown_model_1_1_model}{Model}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_subject}{Subject}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{classown_model_1_1_model_a83e5f29a10f2974e449150b76ffeb76a}{leftUpperCorner}};}
+\DoxyCodeLine{15     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{classown_model_1_1_model_af7af18a0bfa589fbe13a5abcd0a338b0}{rightDownCorner}};}
+\DoxyCodeLine{16     \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{ownType::TileType}} \mbox{\hyperlink{classown_model_1_1_model_a1a7df51c472a9ccc5260ef206a71e142}{tileType}};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{float} \mbox{\hyperlink{classown_model_1_1_model_aca7fb025fc7b539d9b8a8cd6fb841836}{tileHeightWidth}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{classown_model_1_1_model_a1a3b3491bafc171de7eae06141aaaac1}{Model}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{27     \mbox{\hyperlink{classown_model_1_1_model_a7cef2adb4ec5aab4aaacb0b0d46cab50}{\string~Model}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classown_model_1_1_model_af09851aa8a1e6041dc181cc5007b9546}{updateObservers}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{classown_model_1_1_model_ae8c36a4d15decc2f8a4ec91bc42c570a}{getLeftUpperCorner}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classown_model_1_1_model_afea01fffbf4b3000031f83ab83164520}{setLeftUpperCorner}}(\textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{classown_model_1_1_model_a83e5f29a10f2974e449150b76ffeb76a}{leftUpperCorner}});}
+\DoxyCodeLine{47     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{classown_model_1_1_model_aab4bbbcb47ff315dd08fb7a78b2071cc}{getRightDownCorner}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classown_model_1_1_model_a479e28c27a311a5773cdd5244ec15c93}{setRightDownCorner}}(\textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{classown_model_1_1_model_af7af18a0bfa589fbe13a5abcd0a338b0}{rightDownCorner}});}
+\DoxyCodeLine{57     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{ownType::TileType}} \mbox{\hyperlink{classown_model_1_1_model_a8da68e7223c924a6dbe4235244122d9c}{getTileType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{62     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classown_model_1_1_model_aabc5e71fc3272411337e3005aeed9468}{setTileType}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{ownType::TileType}}\& \mbox{\hyperlink{classown_model_1_1_model_a1a7df51c472a9ccc5260ef206a71e142}{tileType}});}
+\DoxyCodeLine{67     \textcolor{keyword}{virtual} \textcolor{keywordtype}{float} \mbox{\hyperlink{classown_model_1_1_model_a33a5c7b82467950ef5b1264a838a9b30}{getTileHeightWidth}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{72     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classown_model_1_1_model_a84f96ba92c6607c82f0ed149fba08a5d}{setTileHeightWidth}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& \mbox{\hyperlink{classown_model_1_1_model_aca7fb025fc7b539d9b8a8cd6fb841836}{tileHeightWidth}});}
+\DoxyCodeLine{77     \textcolor{keyword}{const} vector<shared\_ptr<Observer>>\& \mbox{\hyperlink{classown_model_1_1_model_a5c9a09bd7fa2b27e86d44fde9ce5f96a}{getObserverList}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 \} \textcolor{comment}{// namespace ownModel}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_MODEL\_H}}
+
+\end{DoxyCode}

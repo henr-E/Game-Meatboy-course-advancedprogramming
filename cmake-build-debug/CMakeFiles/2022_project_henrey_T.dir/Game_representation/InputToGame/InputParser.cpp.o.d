@@ -423,6 +423,13 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/GoalModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/Model.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/../Subject.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/../Observer.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/../structures_enums_std_include.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/WallModel.h \
+  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/structures_enums_std_include.h \
   /opt/homebrew/include/SFML/Audio.hpp \
   /opt/homebrew/include/SFML/System.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
@@ -520,11 +527,4 @@ CMakeFiles/2022_project_henrey_T.dir/Game_representation/InputToGame/InputParser
   /opt/homebrew/include/SFML/Graphics/Glsl.inl \
   /opt/homebrew/include/SFML/Graphics/Sprite.hpp \
   /opt/homebrew/include/SFML/Graphics/Text.hpp \
-  /opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/WallModel.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/Model.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/../structures_enums_std_include.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/../Subject.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/../Observer.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/Models/GoalModel.h \
-  /Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/Game_representation/InputToGame/../../Game_Logic/structures_enums_std_include.h
+  /opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp

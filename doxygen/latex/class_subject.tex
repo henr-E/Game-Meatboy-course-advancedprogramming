@@ -1,0 +1,113 @@
+\hypertarget{class_subject}{}\doxysection{Subject Class Reference}
+\label{class_subject}\index{Subject@{Subject}}
+
+
+{\ttfamily \#include $<$Subject.\+h$>$}
+
+Inheritance diagram for Subject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_subject}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_subject_ab4f33719b83034be37c7f8223f1a5e63}{Subject}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_subject_af9723476c61afcceeb91bee3211258c7}{$\sim$\+Subject}} ()=default
+\item 
+void \mbox{\hyperlink{class_subject_ab12cea321523e84116a5f8dcf4a4f959}{add\+Observer}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{class_subject_ac9d95bab4f0fbb577496b534d6a842ee}{remove\+Observer}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_subject_aa65b1a1575db02de92f1c5817c95bc9a}{update\+Observers}} ()
+\item 
+virtual const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ $>$ \& \mbox{\hyperlink{class_subject_a6d16bc45227813bce2e41699a3362a87}{get\+Observer\+List}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ $>$ \mbox{\hyperlink{class_subject_af5fdb545be4946b0bd55630c5dec5844}{observer\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_subject_ab4f33719b83034be37c7f8223f1a5e63}\label{class_subject_ab4f33719b83034be37c7f8223f1a5e63}} 
+\index{Subject@{Subject}!Subject@{Subject}}
+\index{Subject@{Subject}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Subject()}{Subject()}}
+{\footnotesize\ttfamily Subject\+::\+Subject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+constructor \mbox{\Hypertarget{class_subject_af9723476c61afcceeb91bee3211258c7}\label{class_subject_af9723476c61afcceeb91bee3211258c7}} 
+\index{Subject@{Subject}!````~Subject@{$\sim$Subject}}
+\index{````~Subject@{$\sim$Subject}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{$\sim$Subject()}{~Subject()}}
+{\footnotesize\ttfamily virtual Subject\+::$\sim$\+Subject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_subject_ab12cea321523e84116a5f8dcf4a4f959}\label{class_subject_ab12cea321523e84116a5f8dcf4a4f959}} 
+\index{Subject@{Subject}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily void Subject\+::add\+Observer (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$}]{observer }\end{DoxyParamCaption})}
+
+add an observer 
+\begin{DoxyParams}{Parameters}
+{\em observer} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_subject_a6d16bc45227813bce2e41699a3362a87}\label{class_subject_a6d16bc45227813bce2e41699a3362a87}} 
+\index{Subject@{Subject}!getObserverList@{getObserverList}}
+\index{getObserverList@{getObserverList}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{getObserverList()}{getObserverList()}}
+{\footnotesize\ttfamily const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$ $>$ \& Subject\+::get\+Observer\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+list of all observers for current model 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classown_model_1_1_model_a5c9a09bd7fa2b27e86d44fde9ce5f96a}{own\+Model\+::\+Model}}.
+
+\mbox{\Hypertarget{class_subject_ac9d95bab4f0fbb577496b534d6a842ee}\label{class_subject_ac9d95bab4f0fbb577496b534d6a842ee}} 
+\index{Subject@{Subject}!removeObserver@{removeObserver}}
+\index{removeObserver@{removeObserver}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{removeObserver()}{removeObserver()}}
+{\footnotesize\ttfamily void Subject\+::remove\+Observer (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{class_observer}{Observer}} $>$}]{observer }\end{DoxyParamCaption})}
+
+remove an observer 
+\begin{DoxyParams}{Parameters}
+{\em observer} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_subject_aa65b1a1575db02de92f1c5817c95bc9a}\label{class_subject_aa65b1a1575db02de92f1c5817c95bc9a}} 
+\index{Subject@{Subject}!updateObservers@{updateObservers}}
+\index{updateObservers@{updateObservers}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{updateObservers()}{updateObservers()}}
+{\footnotesize\ttfamily void Subject\+::update\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+update all observers for curretn model 
+
+Reimplemented in \mbox{\hyperlink{classown_model_1_1_model_af09851aa8a1e6041dc181cc5007b9546}{own\+Model\+::\+Model}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_subject_af5fdb545be4946b0bd55630c5dec5844}\label{class_subject_af5fdb545be4946b0bd55630c5dec5844}} 
+\index{Subject@{Subject}!observerList@{observerList}}
+\index{observerList@{observerList}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{observerList}{observerList}}
+{\footnotesize\ttfamily vector$<$shared\+\_\+ptr$<$\mbox{\hyperlink{class_observer}{Observer}}$>$ $>$ Subject\+::observer\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_subject_8h}{Subject.\+h}}\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_subject_8cpp}{Subject.\+cpp}}\end{DoxyCompactItemize}

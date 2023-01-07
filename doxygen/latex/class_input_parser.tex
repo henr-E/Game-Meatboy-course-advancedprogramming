@@ -1,0 +1,144 @@
+\hypertarget{class_input_parser}{}\doxysection{Input\+Parser Class Reference}
+\label{class_input_parser}\index{InputParser@{InputParser}}
+
+
+{\ttfamily \#include $<$Input\+Parser.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_parser_a9e2e24cbf89184dd4fa72a74fb89773a}{Input\+Parser}} ()
+\item 
+virtual \mbox{\hyperlink{class_input_parser_a9f3fba1742f4c6f2f35e001cb20a1634}{$\sim$\+Input\+Parser}} ()=default
+\item 
+void \mbox{\hyperlink{class_input_parser_a58ad2f6cec4fe0392e63f48a0d531e77}{parse}} (int level\+Numb)
+\item 
+const vector$<$ vector$<$ \mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} $>$ $>$ \& \mbox{\hyperlink{class_input_parser_aff9fad48a9629771751da760c7e9395f}{get\+Tiles}} () const
+\item 
+const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& \mbox{\hyperlink{class_input_parser_ad6b249bf71f91a5556c29a6f2216d4bb}{get\+Screen\+Dimensions}} () const
+\item 
+float \mbox{\hyperlink{class_input_parser_ac1432c2389462e6780c70a947918d25f}{get\+Tile\+Size}} () const
+\item 
+\mbox{\hyperlink{namespaceown_type_ac5208437bfd75911caadbf0d37d4c058}{own\+Type\+::\+Move\+Screen}} \mbox{\hyperlink{class_input_parser_ad506f37e4a4fa6b469d73b16c2a2756d}{get\+Move\+Screen}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ vector$<$ \mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} $>$ $>$ \mbox{\hyperlink{class_input_parser_ace76b3342340734f94ffd855fc38f07e}{tiles}}
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{class_input_parser_ae74a6f255be33d1464b3d7c787dd49a3}{screen\+Dimensions}}
+\item 
+float \mbox{\hyperlink{class_input_parser_a565e77154c41d2e5b1043254fc78c42b}{tile\+Size}}
+\item 
+\mbox{\hyperlink{namespaceown_type_ac5208437bfd75911caadbf0d37d4c058}{own\+Type\+::\+Move\+Screen}} \mbox{\hyperlink{class_input_parser_a3a91f42400fc5f1813418b3606a17aa6}{move\+Screen\+Input}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_parser_a9e2e24cbf89184dd4fa72a74fb89773a}\label{class_input_parser_a9e2e24cbf89184dd4fa72a74fb89773a}} 
+\index{InputParser@{InputParser}!InputParser@{InputParser}}
+\index{InputParser@{InputParser}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{InputParser()}{InputParser()}}
+{\footnotesize\ttfamily Input\+Parser\+::\+Input\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+default constructor \mbox{\Hypertarget{class_input_parser_a9f3fba1742f4c6f2f35e001cb20a1634}\label{class_input_parser_a9f3fba1742f4c6f2f35e001cb20a1634}} 
+\index{InputParser@{InputParser}!````~InputParser@{$\sim$InputParser}}
+\index{````~InputParser@{$\sim$InputParser}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputParser()}{~InputParser()}}
+{\footnotesize\ttfamily virtual Input\+Parser\+::$\sim$\+Input\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_parser_ad506f37e4a4fa6b469d73b16c2a2756d}\label{class_input_parser_ad506f37e4a4fa6b469d73b16c2a2756d}} 
+\index{InputParser@{InputParser}!getMoveScreen@{getMoveScreen}}
+\index{getMoveScreen@{getMoveScreen}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{getMoveScreen()}{getMoveScreen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceown_type_ac5208437bfd75911caadbf0d37d4c058}{own\+Type\+::\+Move\+Screen}} Input\+Parser\+::get\+Move\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_parser_ad6b249bf71f91a5556c29a6f2216d4bb}\label{class_input_parser_ad6b249bf71f91a5556c29a6f2216d4bb}} 
+\index{InputParser@{InputParser}!getScreenDimensions@{getScreenDimensions}}
+\index{getScreenDimensions@{getScreenDimensions}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{getScreenDimensions()}{getScreenDimensions()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& Input\+Parser\+::get\+Screen\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+screen\+Dimensions that were generated from the input this is not the same as window\+Dimensions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_parser_aff9fad48a9629771751da760c7e9395f}\label{class_input_parser_aff9fad48a9629771751da760c7e9395f}} 
+\index{InputParser@{InputParser}!getTiles@{getTiles}}
+\index{getTiles@{getTiles}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{getTiles()}{getTiles()}}
+{\footnotesize\ttfamily const vector$<$ vector$<$ \mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}} $>$ $>$ \& Input\+Parser\+::get\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+walls 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_parser_ac1432c2389462e6780c70a947918d25f}\label{class_input_parser_ac1432c2389462e6780c70a947918d25f}} 
+\index{InputParser@{InputParser}!getTileSize@{getTileSize}}
+\index{getTileSize@{getTileSize}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{getTileSize()}{getTileSize()}}
+{\footnotesize\ttfamily float Input\+Parser\+::get\+Tile\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+tile\+Size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_parser_a58ad2f6cec4fe0392e63f48a0d531e77}\label{class_input_parser_a58ad2f6cec4fe0392e63f48a0d531e77}} 
+\index{InputParser@{InputParser}!parse@{parse}}
+\index{parse@{parse}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void Input\+Parser\+::parse (\begin{DoxyParamCaption}\item[{int}]{level\+Numb }\end{DoxyParamCaption})}
+
+parses the level that is given takes input from \char`\"{}levels\char`\"{} directory and makes level 
+\begin{DoxyParams}{Parameters}
+{\em level\+Numb} & \\
+\hline
+\end{DoxyParams}
+We use a grid system, this means that when converted, the size of a tile has to be 32x32 so we need to check how many wall\+Tiles there are to know the size
+
+if the screen is width 544 then 544/32 = 17 =\texorpdfstring{$>$}{>} 17 wall\+Tiles
+
+17 wall\+Tiles =\texorpdfstring{$>$}{>} 2/17 = size of tile in coordinate system
+
+so the size of a tile is 2/(screen\+Dimenstions\+X/32)
+
+if there are 0 girlfriends
+
+add girlfriend\+Count
+
+if there are no girlfriends its a false level because the goal pointer will be a nullptr todo throw exceptions !!!
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_input_parser_a3a91f42400fc5f1813418b3606a17aa6}\label{class_input_parser_a3a91f42400fc5f1813418b3606a17aa6}} 
+\index{InputParser@{InputParser}!moveScreenInput@{moveScreenInput}}
+\index{moveScreenInput@{moveScreenInput}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{moveScreenInput}{moveScreenInput}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceown_type_ac5208437bfd75911caadbf0d37d4c058}{own\+Type\+::\+Move\+Screen}} Input\+Parser\+::move\+Screen\+Input\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_input_parser_ae74a6f255be33d1464b3d7c787dd49a3}\label{class_input_parser_ae74a6f255be33d1464b3d7c787dd49a3}} 
+\index{InputParser@{InputParser}!screenDimensions@{screenDimensions}}
+\index{screenDimensions@{screenDimensions}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{screenDimensions}{screenDimensions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} Input\+Parser\+::screen\+Dimensions\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_input_parser_ace76b3342340734f94ffd855fc38f07e}\label{class_input_parser_ace76b3342340734f94ffd855fc38f07e}} 
+\index{InputParser@{InputParser}!tiles@{tiles}}
+\index{tiles@{tiles}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{tiles}{tiles}}
+{\footnotesize\ttfamily vector$<$vector$<$\mbox{\hyperlink{classown_type_1_1input_rectangles}{own\+Type\+::input\+Rectangles}}$>$ $>$ Input\+Parser\+::tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_input_parser_a565e77154c41d2e5b1043254fc78c42b}\label{class_input_parser_a565e77154c41d2e5b1043254fc78c42b}} 
+\index{InputParser@{InputParser}!tileSize@{tileSize}}
+\index{tileSize@{tileSize}!InputParser@{InputParser}}
+\doxysubsubsection{\texorpdfstring{tileSize}{tileSize}}
+{\footnotesize\ttfamily float Input\+Parser\+::tile\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Representation/\+Input\+To\+Game/\mbox{\hyperlink{_input_parser_8h}{Input\+Parser.\+h}}\item 
+Game\+\_\+\+Representation/\+Input\+To\+Game/\mbox{\hyperlink{_input_parser_8cpp}{Input\+Parser.\+cpp}}\end{DoxyCompactItemize}

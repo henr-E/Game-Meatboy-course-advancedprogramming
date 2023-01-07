@@ -1,0 +1,103 @@
+\hypertarget{class_stopwatch}{}\doxysection{Stopwatch Class Reference}
+\label{class_stopwatch}\index{Stopwatch@{Stopwatch}}
+
+
+{\ttfamily \#include $<$Stopwatch.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stopwatch_a628b5ebeed5df065dd847e68fb6336cf}{Stopwatch}} ()
+\item 
+virtual \mbox{\hyperlink{class_stopwatch_ad86e08d167d5cf827e612103ef7107e7}{$\sim$\+Stopwatch}} ()=default
+\item 
+\mbox{\hyperlink{class_stopwatch_ab9f33b55664ef1358df1909b8696bb74}{Stopwatch}} (\mbox{\hyperlink{class_stopwatch}{Stopwatch}} \&other)=delete
+\item 
+void \mbox{\hyperlink{class_stopwatch_aadd43373c5401100e59a9dd5c97110dc}{operator=}} (const \mbox{\hyperlink{class_stopwatch}{Stopwatch}} \&)=delete
+\item 
+float \mbox{\hyperlink{class_stopwatch_a56091442f072c7876acb5839b57f0e73}{get\+Difference}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_stopwatch}{Stopwatch}} $>$ \& \mbox{\hyperlink{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+time\+\_\+point$<$ steady\+\_\+clock $>$ \mbox{\hyperlink{class_stopwatch_a705b0fa44452f93a31672eee4c6678dc}{prev\+\_\+time}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_stopwatch}{Stopwatch}} $>$ \mbox{\hyperlink{class_stopwatch_aedbb7a69bc5b9ba95223d78614013a4e}{instance\+\_\+}} \{nullptr\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_stopwatch_a628b5ebeed5df065dd847e68fb6336cf}\label{class_stopwatch_a628b5ebeed5df065dd847e68fb6336cf}} 
+\index{Stopwatch@{Stopwatch}!Stopwatch@{Stopwatch}}
+\index{Stopwatch@{Stopwatch}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{Stopwatch()}{Stopwatch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Stopwatch\+::\+Stopwatch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+constructor \mbox{\Hypertarget{class_stopwatch_ad86e08d167d5cf827e612103ef7107e7}\label{class_stopwatch_ad86e08d167d5cf827e612103ef7107e7}} 
+\index{Stopwatch@{Stopwatch}!````~Stopwatch@{$\sim$Stopwatch}}
+\index{````~Stopwatch@{$\sim$Stopwatch}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{$\sim$Stopwatch()}{~Stopwatch()}}
+{\footnotesize\ttfamily virtual Stopwatch\+::$\sim$\+Stopwatch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+destructor \mbox{\Hypertarget{class_stopwatch_ab9f33b55664ef1358df1909b8696bb74}\label{class_stopwatch_ab9f33b55664ef1358df1909b8696bb74}} 
+\index{Stopwatch@{Stopwatch}!Stopwatch@{Stopwatch}}
+\index{Stopwatch@{Stopwatch}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{Stopwatch()}{Stopwatch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Stopwatch\+::\+Stopwatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stopwatch}{Stopwatch}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+not clonable 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stopwatch_a56091442f072c7876acb5839b57f0e73}\label{class_stopwatch_a56091442f072c7876acb5839b57f0e73}} 
+\index{Stopwatch@{Stopwatch}!getDifference@{getDifference}}
+\index{getDifference@{getDifference}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{getDifference()}{getDifference()}}
+{\footnotesize\ttfamily float Stopwatch\+::get\+Difference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+difference in time between two clock ticks in a float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}\label{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}} 
+\index{Stopwatch@{Stopwatch}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_stopwatch}{Stopwatch}} $>$ \& Stopwatch\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stopwatch_aadd43373c5401100e59a9dd5c97110dc}\label{class_stopwatch_aadd43373c5401100e59a9dd5c97110dc}} 
+\index{Stopwatch@{Stopwatch}!operator=@{operator=}}
+\index{operator=@{operator=}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Stopwatch\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stopwatch}{Stopwatch}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+not assignable 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_stopwatch_aedbb7a69bc5b9ba95223d78614013a4e}\label{class_stopwatch_aedbb7a69bc5b9ba95223d78614013a4e}} 
+\index{Stopwatch@{Stopwatch}!instance\_@{instance\_}}
+\index{instance\_@{instance\_}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{instance\_}{instance\_}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_stopwatch}{Stopwatch}} $>$ Stopwatch\+::instance\+\_\+ \{nullptr\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_stopwatch_a705b0fa44452f93a31672eee4c6678dc}\label{class_stopwatch_a705b0fa44452f93a31672eee4c6678dc}} 
+\index{Stopwatch@{Stopwatch}!prev\_time@{prev\_time}}
+\index{prev\_time@{prev\_time}!Stopwatch@{Stopwatch}}
+\doxysubsubsection{\texorpdfstring{prev\_time}{prev\_time}}
+{\footnotesize\ttfamily time\+\_\+point$<$steady\+\_\+clock$>$ Stopwatch\+::prev\+\_\+time}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_stopwatch_8h}{Stopwatch.\+h}}\item 
+Game\+\_\+\+Logic/\mbox{\hyperlink{_stopwatch_8cpp}{Stopwatch.\+cpp}}\end{DoxyCompactItemize}

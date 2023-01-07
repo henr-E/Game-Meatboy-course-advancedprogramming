@@ -1,0 +1,84 @@
+\hypertarget{class_goal_view}{}\doxysection{Goal\+View Class Reference}
+\label{class_goal_view}\index{GoalView@{GoalView}}
+
+
+{\ttfamily \#include $<$Goal\+View.\+h$>$}
+
+Inheritance diagram for Goal\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_goal_view}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_goal_view_ae21781192dda612f35f4487bc27c9687}{Goal\+View}} (const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&\mbox{\hyperlink{classown_view_1_1_view_a3b212e3f4dd1e9dbfa8088d7935fde60}{model\+Position}}, \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}} \mbox{\hyperlink{classown_view_1_1_view_aff1b306df92a213b5a91da1696526b39}{model\+Tile\+Type}}, const shared\+\_\+ptr$<$ Render\+Window $>$ \&\mbox{\hyperlink{classown_view_1_1_view_a9715cba75b1462881bee7922dacb16f4}{sf\+Window}})
+\item 
+\mbox{\hyperlink{class_goal_view_a1768dbeccabf29ed5556f626b9177ff1}{$\sim$\+Goal\+View}} () override=default
+\item 
+void \mbox{\hyperlink{class_goal_view_a7d582c6364afb48b7850fcc16aac0439}{update}} () override
+\item 
+void \mbox{\hyperlink{class_goal_view_a194818fdf6bdf1cbf43a3709fcd04eea}{update\+Data}} (\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} position, \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{own\+Type\+::\+Direction}} direction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_goal_view_ae21781192dda612f35f4487bc27c9687}\label{class_goal_view_ae21781192dda612f35f4487bc27c9687}} 
+\index{GoalView@{GoalView}!GoalView@{GoalView}}
+\index{GoalView@{GoalView}!GoalView@{GoalView}}
+\doxysubsubsection{\texorpdfstring{GoalView()}{GoalView()}}
+{\footnotesize\ttfamily Goal\+View\+::\+Goal\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \&}]{model\+Position,  }\item[{\mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{own\+Type\+::\+Tile\+Type}}}]{model\+Tile\+Type,  }\item[{const shared\+\_\+ptr$<$ Render\+Window $>$ \&}]{sf\+Window }\end{DoxyParamCaption})}
+
+constructor 
+\begin{DoxyParams}{Parameters}
+{\em model\+Position} & \\
+\hline
+{\em model\+Tile\+Type} & \\
+\hline
+{\em sf\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_goal_view_a1768dbeccabf29ed5556f626b9177ff1}\label{class_goal_view_a1768dbeccabf29ed5556f626b9177ff1}} 
+\index{GoalView@{GoalView}!````~GoalView@{$\sim$GoalView}}
+\index{````~GoalView@{$\sim$GoalView}!GoalView@{GoalView}}
+\doxysubsubsection{\texorpdfstring{$\sim$GoalView()}{~GoalView()}}
+{\footnotesize\ttfamily Goal\+View\+::$\sim$\+Goal\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_goal_view_a7d582c6364afb48b7850fcc16aac0439}\label{class_goal_view_a7d582c6364afb48b7850fcc16aac0439}} 
+\index{GoalView@{GoalView}!update@{update}}
+\index{update@{update}!GoalView@{GoalView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Goal\+View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+draws the goal on the screen 
+
+Implements \mbox{\hyperlink{classown_view_1_1_view_a0d755bb03c908ec3c64e2592985b39b1}{own\+View\+::\+View}}.
+
+\mbox{\Hypertarget{class_goal_view_a194818fdf6bdf1cbf43a3709fcd04eea}\label{class_goal_view_a194818fdf6bdf1cbf43a3709fcd04eea}} 
+\index{GoalView@{GoalView}!updateData@{updateData}}
+\index{updateData@{updateData}!GoalView@{GoalView}}
+\doxysubsubsection{\texorpdfstring{updateData()}{updateData()}}
+{\footnotesize\ttfamily void Goal\+View\+::update\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}}}]{position,  }\item[{\mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{own\+Type\+::\+Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update data from model 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classown_view_1_1_view_a4615d133ed73a95f889f1897dc243b78}{own\+View\+::\+View}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Representation/\+Views/\mbox{\hyperlink{_goal_view_8h}{Goal\+View.\+h}}\item 
+Game\+\_\+\+Representation/\+Views/\mbox{\hyperlink{_goal_view_8cpp}{Goal\+View.\+cpp}}\end{DoxyCompactItemize}

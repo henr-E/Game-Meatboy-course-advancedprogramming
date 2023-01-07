@@ -1,0 +1,58 @@
+\hypertarget{_world_8h_source}{}\doxysection{World.\+h}
+\label{_world_8h_source}\index{Game\_Logic/World.h@{Game\_Logic/World.h}}
+\mbox{\hyperlink{_world_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 13/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_WORLD\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_WORLD\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract_factory_8h}{AbstractFactory.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_goal_model_8h}{Models/GoalModel.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_model_8h}{Models/PlayerModel.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_wall_model_8h}{Models/WallModel.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stopwatch_8h}{Stopwatch.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{structures__enums__std__include_8h}{structures\_enums\_std\_include.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{20 \textcolor{keyword}{using namespace }chrono;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_world}{World}} \{}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{classown_type_1_1_collision}{ownType::Collision}} \mbox{\hyperlink{class_world_aa70b7ae1a36d3fb1533e787e43942b5e}{collision}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     shared\_ptr<Stopwatch> \mbox{\hyperlink{class_world_ab3bef2c9d05bb129da232905c131514b}{stopwatch}} = \mbox{\hyperlink{class_stopwatch_aecf55837063c3cf84ece1d4a30e0510f}{Stopwatch::getInstance}}();}
+\DoxyCodeLine{27     shared\_ptr<AbstractFactory> \mbox{\hyperlink{class_world_ac02a7e5b5bd4d1a7592949861e99e37a}{abstractFactory}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     shared\_ptr<PlayerModel> \mbox{\hyperlink{class_world_a7b9336872cf7a27c765908c65956af15}{player}};}
+\DoxyCodeLine{30     vector<vector<shared\_ptr<WallModel>>> \mbox{\hyperlink{class_world_aeeb14ff838f0ac94ec9e3c08a7e74b99}{walls}};}
+\DoxyCodeLine{31     shared\_ptr<GoalModel> \mbox{\hyperlink{class_world_a635df1fe85437a4f502663e7ded5af55}{goal}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_world_ae0463f79b55d4b164f39d6a2b4e539c5}{tileSize}};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_world_a7bea9a8fe1ca2f80bef805e41840444c}{bottomViewY}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_world_a1fc6067fe31da6405bece93c9dbb61ac}{World}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_world_a224e5607807d4a2a24c7dea3080ceb08}{\string~World}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_afb15aa5dbe4b208af34ae4202f6b6218}{setUp}}(vector<vector<ownType::inputRectangles>> tiles);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a857128365d2f6abd77476029010a4047}{checkCollisionWithTiles}}();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_af0e3eb1c3bb4104ceb2ebf4fd0207b57}{checkCollisionWallsBotom}}();}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_ac02ecc9811c5ef7235481520e7c8708d}{keyboardToPlayer}}(\mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{ownType::KeyboardInput}} keyboardInput);}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a1a4936427b3bee3763d66d04c7b71efc}{updatePlayerModel}}();}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_aacc277932905d3c76aa0890599791ea6}{updateViews}}();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a34a89ac9e162d61369f9016d527f4913}{setAbstractFactory}}(\textcolor{keyword}{const} shared\_ptr<AbstractFactory>\& \mbox{\hyperlink{class_world_ac02a7e5b5bd4d1a7592949861e99e37a}{abstractFactory}});}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a0371ddbe91eec57771f4a0e2f7ab2761}{setTileSize}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{class_world_ae0463f79b55d4b164f39d6a2b4e539c5}{tileSize}});}
+\DoxyCodeLine{86     \textcolor{keyword}{const} shared\_ptr<PlayerModel>\& \mbox{\hyperlink{class_world_a3e0f91432497cf4ff1317de2b08dd17d}{getPlayer}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{87     \textcolor{keyword}{const} shared\_ptr<GoalModel>\& \mbox{\hyperlink{class_world_a4be8f12e42ec9f796e4293a5e862824d}{getGoal}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_a9576431bcd1f4f6e572fe441b4e5fc42}{setBottomViewY}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{class_world_a7bea9a8fe1ca2f80bef805e41840444c}{bottomViewY}});}
+\DoxyCodeLine{89 \};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_WORLD\_H}}
+
+\end{DoxyCode}

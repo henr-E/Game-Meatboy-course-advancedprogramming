@@ -1,0 +1,33 @@
+\hypertarget{_player_view_8h_source}{}\doxysection{Player\+View.\+h}
+\label{_player_view_8h_source}\index{Game\_Representation/Views/PlayerView.h@{Game\_Representation/Views/PlayerView.h}}
+\mbox{\hyperlink{_player_view_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 08/12/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_PLAYERVIEW\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_PLAYERVIEW\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../../Game\_Logic/Camera.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_view_8h}{View.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_view}{PlayerView}} : \textcolor{keyword}{public} \mbox{\hyperlink{classown_view_1_1_view}{ownView::View}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{ownType::Direction}} \mbox{\hyperlink{class_player_view_aa0884b9ff8b36441a6733baef06107c9}{playerDirection}};}
+\DoxyCodeLine{15     Texture \mbox{\hyperlink{class_player_view_a07b8f75a4830ebdf8d679f50a679dce3}{playerTextureRight}};}
+\DoxyCodeLine{16     Texture \mbox{\hyperlink{class_player_view_a8f2788d3f18d90f75120356e4acc4eb3}{playerTextureLeft}};}
+\DoxyCodeLine{20     Sprite \mbox{\hyperlink{class_player_view_a6c154d92459bad83e22c6c960c0a0ffd}{playerSpriteRight}};}
+\DoxyCodeLine{21     Sprite \mbox{\hyperlink{class_player_view_a33fd4f2fbb4cd7875aee94129fc33404}{playerSpriteLeft}};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_view_a263176bc881bd046fc472d80d6f19092}{playerTextureExistsRight}};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_view_a5b7cf0bbc5148d0b504774650e2e0724}{playerTextureExistsLeft}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_player_view}{PlayerView}}(\textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{classown_view_1_1_view_a3b212e3f4dd1e9dbfa8088d7935fde60}{modelPosition}}, \mbox{\hyperlink{namespaceown_type_a83a062ad493704558ea7784c2363a1d4}{ownType::TileType}} \mbox{\hyperlink{classown_view_1_1_view_aff1b306df92a213b5a91da1696526b39}{modelTileType}},}
+\DoxyCodeLine{36                \textcolor{keyword}{const} shared\_ptr<RenderWindow>\& \mbox{\hyperlink{classown_view_1_1_view_a9715cba75b1462881bee7922dacb16f4}{sfWindow}});}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_player_view_a118834e02c8865b9b445b67af4b315d5}{\string~PlayerView}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_view_a358eb11647b94da6cbe6a716ce002025}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_view_aed56518c758be41962f7edc4012bc8f9}{updateData}}(\mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} position, \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{ownType::Direction}} direction) \textcolor{keyword}{override};}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_PLAYERVIEW\_H}}
+
+\end{DoxyCode}

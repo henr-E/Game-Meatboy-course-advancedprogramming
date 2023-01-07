@@ -1,0 +1,38 @@
+\hypertarget{_camera_8h_source}{}\doxysection{Camera.\+h}
+\label{_camera_8h_source}\index{Game\_Logic/Camera.h@{Game\_Logic/Camera.h}}
+\mbox{\hyperlink{_camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 13/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_CAMERA\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_CAMERA\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}memory"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{structures__enums__std__include_8h}{structures\_enums\_std\_include.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_camera}{Camera}} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \textcolor{keyword}{static} shared\_ptr<Camera> \mbox{\hyperlink{class_camera_a408d0bf66620c0df37543c9978c87bc8}{instance\_}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{class_camera_a3af7ac75e573a4215acbed747ff83547}{screenDimensions}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera}}();}
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_camera_ad3ed0c5e02c46f73ba92673598e40514}{\string~Camera}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_camera_acd4f99b146dbea1819151191a3c04547}{Camera}}(\mbox{\hyperlink{class_camera}{Camera}}\& other) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_camera_a7eeb2e42536c113977174165dd29742d}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_camera}{Camera}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{41     \textcolor{keyword}{static} shared\_ptr<Camera>\& \mbox{\hyperlink{class_camera_a8f270264fd87d248198e0f19a6821b03}{getInstance}}();}
+\DoxyCodeLine{48     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{class_camera_a5658eedf91b3bdc7c4216420da4d994f}{coordinatesToPixel}}(\textcolor{keywordtype}{float} xOld, \textcolor{keywordtype}{float} yOld);}
+\DoxyCodeLine{55     \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} \mbox{\hyperlink{class_camera_abaeec845ce5af14d1df366f237f52a5d}{pixelToCoordinates}}(\textcolor{keywordtype}{float} xOld, \textcolor{keywordtype}{float} yOld);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_camera_ae1967c6c9b5c6040833942fe33cbb024}{setScreenDimensions}}(\textcolor{keyword}{const} \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}}\& \mbox{\hyperlink{class_camera_a3af7ac75e573a4215acbed747ff83547}{screenDimensions}});}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_camera_a6ee788e6ae154e9f101cb95b36a6d367}{moveScreenAtEighty}}(\mbox{\hyperlink{structown_type_1_1_camera_positions}{ownType::CameraPositions}}\& cameraPositions, \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} playerPosition,}
+\DoxyCodeLine{70                             \mbox{\hyperlink{classown_type_1_1_position}{ownType::Position}} prevPlayerPosition);}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_camera_a3275d740a066280bb01ed26540dfa684}{moveScreen}}(\mbox{\hyperlink{structown_type_1_1_camera_positions}{ownType::CameraPositions}}\& cameraPositions);}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_CAMERA\_H}}
+
+\end{DoxyCode}

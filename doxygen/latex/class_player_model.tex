@@ -1,0 +1,223 @@
+\hypertarget{class_player_model}{}\doxysection{Player\+Model Class Reference}
+\label{class_player_model}\index{PlayerModel@{PlayerModel}}
+
+
+{\ttfamily \#include $<$Player\+Model.\+h$>$}
+
+Inheritance diagram for Player\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_player_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_model_a10b23d720ce628b505b259d268f54d80}{Player\+Model}} ()
+\item 
+\mbox{\hyperlink{class_player_model_a2f072d6c31bdc421dce7fc4084f8888d}{$\sim$\+Player\+Model}} () override
+\item 
+void \mbox{\hyperlink{class_player_model_aef73817c2ff57c6b58975bacb998c991}{update\+From\+Keyboard}} (\mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{own\+Type\+::\+Keyboard\+Input}} keyboard\+Input)
+\item 
+void \mbox{\hyperlink{class_player_model_aa46b96bc62901af5ce369b6cefa9219d}{simulate}} (float elapsed\+Time)
+\item 
+\mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{own\+Type\+::\+Direction}} \mbox{\hyperlink{class_player_model_a8952c61a7285ef87c5e457ac3d675cb3}{get\+Direction}} () const
+\item 
+bool \mbox{\hyperlink{class_player_model_a12d77167617ed7f02f9d04d04d90c20d}{intersects}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{classown_model_1_1_model_a1a3b3491bafc171de7eae06141aaaac1}{Model}} $>$ \&that)
+\item 
+void \mbox{\hyperlink{class_player_model_a223c0b46502906ce8a826b6f2a24e4d4}{set\+Collision}} (const \mbox{\hyperlink{classown_type_1_1_collision}{own\+Type\+::\+Collision}} \&\mbox{\hyperlink{class_player_model_a83e979883cff4fa05d1cab009356805a}{collision}})
+\item 
+const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& \mbox{\hyperlink{class_player_model_a95e45feb12c6353b60882d5f445da554}{get\+Previous\+Left\+Upper\+Corner}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_model_aa84df08bd321bebd499d6a200b275ec0}{vertical\+Speed}}
+\item 
+float \mbox{\hyperlink{class_player_model_a1de8424bee8f95752fa521c5afa8d321}{horizontal\+Speed}}
+\item 
+float \mbox{\hyperlink{class_player_model_aa23415830855cc7f0969a4f723280072}{accelerationX}}
+\item 
+float \mbox{\hyperlink{class_player_model_a9eb20c9441a5072af96b111b9709d4ab}{accelerationY}}
+\item 
+float \mbox{\hyperlink{class_player_model_aa58bc170a4ed35800ec6a9061412a9f0}{gravity}}
+\item 
+bool \mbox{\hyperlink{class_player_model_a775c379ab77fe4be02a3015038aff787}{keyboard\+Left}}
+\item 
+bool \mbox{\hyperlink{class_player_model_afb8cf0850dde228d5da36bf5db9da398}{keyboard\+Right}}
+\item 
+bool \mbox{\hyperlink{class_player_model_a09388b2786e2802f239feedb9be98874}{jump\+Wall\+Left}}
+\item 
+bool \mbox{\hyperlink{class_player_model_af661a4e3887642d200dfe9228c37c576}{jump\+Wall\+Right}}
+\item 
+\mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{own\+Type\+::\+Direction}} \mbox{\hyperlink{class_player_model_a9f38d852b79ca74bfd33c352da1ef923}{direction}}
+\item 
+\mbox{\hyperlink{classown_type_1_1_collision}{own\+Type\+::\+Collision}} \mbox{\hyperlink{class_player_model_a83e979883cff4fa05d1cab009356805a}{collision}}
+\item 
+\mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \mbox{\hyperlink{class_player_model_af1bd9b515308027c5f0a89e5b7ea34fd}{previous\+Left\+Upper\+Corner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_model_a10b23d720ce628b505b259d268f54d80}\label{class_player_model_a10b23d720ce628b505b259d268f54d80}} 
+\index{PlayerModel@{PlayerModel}!PlayerModel@{PlayerModel}}
+\index{PlayerModel@{PlayerModel}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{PlayerModel()}{PlayerModel()}}
+{\footnotesize\ttfamily Player\+Model\+::\+Player\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+constructor \mbox{\Hypertarget{class_player_model_a2f072d6c31bdc421dce7fc4084f8888d}\label{class_player_model_a2f072d6c31bdc421dce7fc4084f8888d}} 
+\index{PlayerModel@{PlayerModel}!````~PlayerModel@{$\sim$PlayerModel}}
+\index{````~PlayerModel@{$\sim$PlayerModel}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{$\sim$PlayerModel()}{~PlayerModel()}}
+{\footnotesize\ttfamily Player\+Model\+::$\sim$\+Player\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_model_a8952c61a7285ef87c5e457ac3d675cb3}\label{class_player_model_a8952c61a7285ef87c5e457ac3d675cb3}} 
+\index{PlayerModel@{PlayerModel}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{own\+Type\+::\+Direction}} Player\+Model\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Direction of the player this is used to define the player\+Sprite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_model_a95e45feb12c6353b60882d5f445da554}\label{class_player_model_a95e45feb12c6353b60882d5f445da554}} 
+\index{PlayerModel@{PlayerModel}!getPreviousLeftUpperCorner@{getPreviousLeftUpperCorner}}
+\index{getPreviousLeftUpperCorner@{getPreviousLeftUpperCorner}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{getPreviousLeftUpperCorner()}{getPreviousLeftUpperCorner()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} \& Player\+Model\+::get\+Previous\+Left\+Upper\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+previous position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_model_a12d77167617ed7f02f9d04d04d90c20d}\label{class_player_model_a12d77167617ed7f02f9d04d04d90c20d}} 
+\index{PlayerModel@{PlayerModel}!intersects@{intersects}}
+\index{intersects@{intersects}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{intersects()}{intersects()}}
+{\footnotesize\ttfamily bool Player\+Model\+::intersects (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{classown_model_1_1_model_a1a3b3491bafc171de7eae06141aaaac1}{Model}} $>$ \&}]{that }\end{DoxyParamCaption})}
+
+checks if 2 models intersect 
+\begin{DoxyParams}{Parameters}
+{\em that} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_model_a223c0b46502906ce8a826b6f2a24e4d4}\label{class_player_model_a223c0b46502906ce8a826b6f2a24e4d4}} 
+\index{PlayerModel@{PlayerModel}!setCollision@{setCollision}}
+\index{setCollision@{setCollision}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{setCollision()}{setCollision()}}
+{\footnotesize\ttfamily void Player\+Model\+::set\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classown_type_1_1_collision}{own\+Type\+::\+Collision}} \&}]{collision }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_model_aa46b96bc62901af5ce369b6cefa9219d}\label{class_player_model_aa46b96bc62901af5ce369b6cefa9219d}} 
+\index{PlayerModel@{PlayerModel}!simulate@{simulate}}
+\index{simulate@{simulate}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void Player\+Model\+::simulate (\begin{DoxyParamCaption}\item[{float}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+simulate the speed, position, ... 
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_model_aef73817c2ff57c6b58975bacb998c991}\label{class_player_model_aef73817c2ff57c6b58975bacb998c991}} 
+\index{PlayerModel@{PlayerModel}!updateFromKeyboard@{updateFromKeyboard}}
+\index{updateFromKeyboard@{updateFromKeyboard}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{updateFromKeyboard()}{updateFromKeyboard()}}
+{\footnotesize\ttfamily void Player\+Model\+::update\+From\+Keyboard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceown_type_a70cd162913f186325c328a43c65edf2b}{own\+Type\+::\+Keyboard\+Input}}}]{keyboard\+Input }\end{DoxyParamCaption})}
+
+the world passes keyboard user input to the player 
+\begin{DoxyParams}{Parameters}
+{\em keyboard\+Input} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_model_aa23415830855cc7f0969a4f723280072}\label{class_player_model_aa23415830855cc7f0969a4f723280072}} 
+\index{PlayerModel@{PlayerModel}!accelerationX@{accelerationX}}
+\index{accelerationX@{accelerationX}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{accelerationX}{accelerationX}}
+{\footnotesize\ttfamily float Player\+Model\+::accelerationX\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_a9eb20c9441a5072af96b111b9709d4ab}\label{class_player_model_a9eb20c9441a5072af96b111b9709d4ab}} 
+\index{PlayerModel@{PlayerModel}!accelerationY@{accelerationY}}
+\index{accelerationY@{accelerationY}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{accelerationY}{accelerationY}}
+{\footnotesize\ttfamily float Player\+Model\+::accelerationY\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_a83e979883cff4fa05d1cab009356805a}\label{class_player_model_a83e979883cff4fa05d1cab009356805a}} 
+\index{PlayerModel@{PlayerModel}!collision@{collision}}
+\index{collision@{collision}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_collision}{own\+Type\+::\+Collision}} Player\+Model\+::collision\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_a9f38d852b79ca74bfd33c352da1ef923}\label{class_player_model_a9f38d852b79ca74bfd33c352da1ef923}} 
+\index{PlayerModel@{PlayerModel}!direction@{direction}}
+\index{direction@{direction}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceown_type_a45f0ea0af1cb81d2127bd794e4be9312}{own\+Type\+::\+Direction}} Player\+Model\+::direction\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_aa58bc170a4ed35800ec6a9061412a9f0}\label{class_player_model_aa58bc170a4ed35800ec6a9061412a9f0}} 
+\index{PlayerModel@{PlayerModel}!gravity@{gravity}}
+\index{gravity@{gravity}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{gravity}{gravity}}
+{\footnotesize\ttfamily float Player\+Model\+::gravity\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_a1de8424bee8f95752fa521c5afa8d321}\label{class_player_model_a1de8424bee8f95752fa521c5afa8d321}} 
+\index{PlayerModel@{PlayerModel}!horizontalSpeed@{horizontalSpeed}}
+\index{horizontalSpeed@{horizontalSpeed}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{horizontalSpeed}{horizontalSpeed}}
+{\footnotesize\ttfamily float Player\+Model\+::horizontal\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_a09388b2786e2802f239feedb9be98874}\label{class_player_model_a09388b2786e2802f239feedb9be98874}} 
+\index{PlayerModel@{PlayerModel}!jumpWallLeft@{jumpWallLeft}}
+\index{jumpWallLeft@{jumpWallLeft}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{jumpWallLeft}{jumpWallLeft}}
+{\footnotesize\ttfamily bool Player\+Model\+::jump\+Wall\+Left\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_af661a4e3887642d200dfe9228c37c576}\label{class_player_model_af661a4e3887642d200dfe9228c37c576}} 
+\index{PlayerModel@{PlayerModel}!jumpWallRight@{jumpWallRight}}
+\index{jumpWallRight@{jumpWallRight}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{jumpWallRight}{jumpWallRight}}
+{\footnotesize\ttfamily bool Player\+Model\+::jump\+Wall\+Right\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_a775c379ab77fe4be02a3015038aff787}\label{class_player_model_a775c379ab77fe4be02a3015038aff787}} 
+\index{PlayerModel@{PlayerModel}!keyboardLeft@{keyboardLeft}}
+\index{keyboardLeft@{keyboardLeft}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{keyboardLeft}{keyboardLeft}}
+{\footnotesize\ttfamily bool Player\+Model\+::keyboard\+Left\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_afb8cf0850dde228d5da36bf5db9da398}\label{class_player_model_afb8cf0850dde228d5da36bf5db9da398}} 
+\index{PlayerModel@{PlayerModel}!keyboardRight@{keyboardRight}}
+\index{keyboardRight@{keyboardRight}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{keyboardRight}{keyboardRight}}
+{\footnotesize\ttfamily bool Player\+Model\+::keyboard\+Right\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_af1bd9b515308027c5f0a89e5b7ea34fd}\label{class_player_model_af1bd9b515308027c5f0a89e5b7ea34fd}} 
+\index{PlayerModel@{PlayerModel}!previousLeftUpperCorner@{previousLeftUpperCorner}}
+\index{previousLeftUpperCorner@{previousLeftUpperCorner}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{previousLeftUpperCorner}{previousLeftUpperCorner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classown_type_1_1_position}{own\+Type\+::\+Position}} Player\+Model\+::previous\+Left\+Upper\+Corner\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_model_aa84df08bd321bebd499d6a200b275ec0}\label{class_player_model_aa84df08bd321bebd499d6a200b275ec0}} 
+\index{PlayerModel@{PlayerModel}!verticalSpeed@{verticalSpeed}}
+\index{verticalSpeed@{verticalSpeed}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{verticalSpeed}{verticalSpeed}}
+{\footnotesize\ttfamily float Player\+Model\+::vertical\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+\_\+\+Logic/\+Models/\mbox{\hyperlink{_player_model_8h}{Player\+Model.\+h}}\item 
+Game\+\_\+\+Logic/\+Models/\mbox{\hyperlink{_player_model_8cpp}{Player\+Model.\+cpp}}\end{DoxyCompactItemize}

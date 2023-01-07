@@ -1,0 +1,48 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+\label{_game_8h_source}\index{Game\_Representation/Game.h@{Game\_Representation/Game.h}}
+\mbox{\hyperlink{_game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by henri kerch on 13/11/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef INC\_2022\_PROJECT\_HENREY\_T\_GAME\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define INC\_2022\_PROJECT\_HENREY\_T\_GAME\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_manager_8h}{States/StateManager.h}}"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{19 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} \{}
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     \textcolor{comment}{// sfml elements}}
+\DoxyCodeLine{24     VideoMode \mbox{\hyperlink{class_game_a20222fc0ca3f60cd154e60f991032df1}{sfVideoMode}};}
+\DoxyCodeLine{25     shared\_ptr<RenderWindow> \mbox{\hyperlink{class_game_acf0be6c37bbf22a24f2bbf9925157684}{sfWindow}} = make\_shared<RenderWindow>();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     shared\_ptr<StateManager> \mbox{\hyperlink{class_game_a88dc5959b009b05b75950bd9e6fd211d}{stateManager}};}
+\DoxyCodeLine{28     \mbox{\hyperlink{namespaceown_type_a7e8a6ae398a86ee5cace304c92cb936e}{ownType::FunctionCallTo}} \mbox{\hyperlink{class_game_a34c2de35fd19da03c751edbd0a874fa1}{functionCallTo}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     SoundBuffer \mbox{\hyperlink{class_game_a1113e62407b391d223d4312c4ec272b3}{buffer}};}
+\DoxyCodeLine{31     Sound \mbox{\hyperlink{class_game_a989917d00cccd8bca2aa7c0a666b6c5a}{sound}};}
+\DoxyCodeLine{32     Music \mbox{\hyperlink{class_game_aaea1edb9042f804aea528ab5fe2d9b32}{music}};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     Vector2i \mbox{\hyperlink{class_game_a0a30c286d21924945c311bf1b82c14a4}{windowDimentions}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_game_ab0556d428e8db075b405355af7e81dae}{\string~Game}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}();}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INC\_2022\_PROJECT\_HENREY\_T\_GAME\_H}}
+
+\end{DoxyCode}
