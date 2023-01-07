@@ -34,6 +34,13 @@ void InputParser::parse(int levelNumb) {
         auto s = string(myText);
         lines.emplace_back(s);
     }
+    //if level is empty
+    if(lines.empty()){
+        cout << "Level is completely empty => starting next level" << endl;
+        return parse(levelNumb+1);
+    }
+
+
     // amount of strings will show how many rows there are
     screenDimensions.y = (lines.size() - 1) * 32;
 

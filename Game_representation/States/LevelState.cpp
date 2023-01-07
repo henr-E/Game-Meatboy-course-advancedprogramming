@@ -99,9 +99,18 @@ void LevelState::simulate() {
     }
     // start next level
     if (world.getPlayer()->intersects(world.getGoal())) {
-        shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel + 1);
-        stateManager.setState(newState);
-        return;
+        if(chosenLevel != 5){
+            shared_ptr<State> newState = make_shared<LevelState>(stateManager, sfWindow, chosenLevel + 1);
+            stateManager.setState(newState);
+            return;
+        }
+        //last level
+        else{
+            shared_ptr<State> newState = make_shared<MenuState>(stateManager, sfWindow);
+            stateManager.setState(newState);
+            return;
+        }
+
     }
 }
 void LevelState::moveScreen() {
