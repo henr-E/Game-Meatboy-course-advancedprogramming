@@ -16,6 +16,8 @@ git clone < url >
 git branch -D branch_name (delete branch)  
 git checkout -b branch_name (new branch)  
 git config --list (shows configuration)
+
+
 ##run from terminal
 cd < directory >  
 mkdir build  
@@ -23,7 +25,9 @@ cd build
 cmake ..  
 make  
 make install  
-./installed/bin/hw  
+./installed/bin/2022_project_henrey_T  
+
+
 
 ##doxygen
 * ###install

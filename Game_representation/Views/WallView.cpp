@@ -11,7 +11,7 @@ WallView::WallView(const ownType::Position& modelPosition, ownType::TileType mod
     // transform coordinates
     ownType::Position p = camera->coordinatesToPixel(modelPosition.x, modelPosition.y);
 
-    if (!modelTexture.loadFromFile("../content/tileset.png", IntRect(64, 0, 32, 32))) {
+    if (!modelTexture.loadFromFile("../sprites_fonts_music/tileset.png", IntRect(64, 0, 32, 32))) {
         cout << "Can't find file with tileTexture for walls => using green rectangle" << endl;
         rectangle.setSize(Vector2f(32, 32));
         rectangle.setPosition(p.x, p.y);

@@ -11,14 +11,14 @@ MenuState::MenuState(StateManager& stateManager, shared_ptr<RenderWindow>& sfWin
     sfWindow->setView(view);
 
     // load background
-    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
+    if (!textureBackground.loadFromFile("../sprites_fonts_music/Background_blurred.png")) {
         cout << ("Failed to load background into texture.") << endl;
     }
     // configure sprite
     spriteBackground.setTexture(textureBackground);
 
     // load font
-    if (!font.loadFromFile("../content/Fonts/Herculanum.ttf")) {
+    if (!font.loadFromFile("../sprites_fonts_music/Fonts/Herculanum.ttf")) {
         cout << printf("Failed to load font.") << endl;
     }
 

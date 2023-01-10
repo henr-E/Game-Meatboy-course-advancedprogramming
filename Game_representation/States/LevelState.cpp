@@ -35,7 +35,7 @@ void LevelState::startup(int chosenLevel) {
     world.setTileSize(inputParser.getTileSize());
 
     // load background
-    if (!textureBackground.loadFromFile("../content/Background_blurred.png")) {
+    if (!textureBackground.loadFromFile("../sprites_fonts_music/Background_blurred.png")) {
         cout << ("Failed to load background into texture.") << endl;
     }
     // configure sprite

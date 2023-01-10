@@ -8,12 +8,6 @@ set(CMAKE_CXX_FLAGS "-Wall")
 # will be found in the cmake-build-debug file
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-if(NOT USE_INSTALL_RESOURCE_PATH)
-    set(RESOURCE_PATH "${PROJECT_SOURCE_DIR}/content/")
-else()
-    set(RESOURCE_PATH "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}/content/")
-endif()
-
 # Find SFML shared libraries
 find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 
@@ -92,10 +86,10 @@ target_link_libraries(2022_project_henrey_T sfml-graphics sfml-audio logicLibrar
 # Set executable install location
 install(TARGETS 2022_project_henrey_T DESTINATION bin)
 
-# Set install location for resources
-install(DIRECTORY content
-        DESTINATION "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}"
-        )
+## Set install location for resources
+#install(DIRECTORY content
+#        DESTINATION "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}"
+#        )
 
 
 IF (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)

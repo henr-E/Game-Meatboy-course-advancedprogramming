@@ -10,7 +10,7 @@ PlayerView::PlayerView(const ownType::Position& modelPosition, ownType::TileType
     /**
      * if texture for player moving right doesn exist, make rectangle
      */
-    if (!playerTextureRight.loadFromFile("../content/meatboy.png")) {
+    if (!playerTextureRight.loadFromFile("../sprites_fonts_music/meatboy.png")) {
         playerTextureExistsRight = false;
         rectangle.setSize(Vector2f(26, 26));
         rectangle.setFillColor(Color::Red);
@@ -21,7 +21,7 @@ PlayerView::PlayerView(const ownType::Position& modelPosition, ownType::TileType
         playerSpriteRight.setTexture(playerTextureRight);
     }
 
-    if (!playerTextureLeft.loadFromFile("../content/meatboyMirror.png")) {
+    if (!playerTextureLeft.loadFromFile("../sprites_fonts_music/meatboyMirror.png")) {
         playerTextureExistsLeft = false;
         rectangle.setSize(Vector2f(26, 26));
         rectangle.setFillColor(Color::Red);

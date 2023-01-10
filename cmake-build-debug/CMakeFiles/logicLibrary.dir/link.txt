@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc liblogicLibrary.a CMakeFiles/logicLibrary.dir/Game_Logic/World.cpp.o CMakeFiles/logicLibrary.dir/Game_Logic/Stopwatch.cpp.o CMakeFiles/logicLibrary.dir/Game_Logic/Models/PlayerModel.cpp.o CMakeFiles/logicLibrary.dir/Game_Logic/Observer.cpp.o CMakeFiles/logicLibrary.dir/Game_Logic/Subject.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib liblogicLibrary.a
