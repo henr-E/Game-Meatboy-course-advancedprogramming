@@ -160,7 +160,7 @@ function SearchBox(name, resultsPath, extension)
                                   this.closeSelectionTimeout);
   }
 
-  // Called when the sprites_fonts_music of the search field is changed.
+  // Called when the content of the search field is changed.
   this.OnSearchFieldChange = function(evt)
   {
     if (this.keyTimeout) // kill running timer

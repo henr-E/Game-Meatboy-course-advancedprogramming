@@ -26,7 +26,7 @@ function toggleVisibility(linkObj)
 {
  var base = $(linkObj).attr('id');
  var summary = $('#'+base+'-summary');
- var content = $('#'+base+'-sprites_fonts_music');
+ var content = $('#'+base+'-content');
  var trigger = $('#'+base+'-trigger');
  var src=$(trigger).attr('src');
  if (content.is(':visible')===true) {

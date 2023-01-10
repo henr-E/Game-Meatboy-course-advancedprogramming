@@ -66,30 +66,11 @@ add_executable(2022_project_henrey_T
         Game_representation/Views/GoalView.h
         Game_representation/ConcreteFactory.cpp)
 
-### Set include directory search paths
-#target_include_directories(2022_project_henrey_T
-#        PRIVATE
-#        "${PROJECT_BINARY_DIR}"
-#        "${CMAKE_CURRENT_SOURCE_DIR}/include"
-#        )
-#
-## Set executable RPATH
-#set_target_properties(2022_project_henrey_T
-#        PROPERTIES
-#        INSTALL_RPATH
-#        "${CMAKE_INSTALL_PREFIX}/lib"
-#        )
-
 # Link executable to required SFML modules
 target_link_libraries(2022_project_henrey_T sfml-graphics sfml-audio logicLibrary_meatBoy)
 
 # Set executable install location
 install(TARGETS 2022_project_henrey_T DESTINATION bin)
-
-## Set install location for resources
-#install(DIRECTORY content
-#        DESTINATION "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}"
-#        )
 
 
 IF (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)

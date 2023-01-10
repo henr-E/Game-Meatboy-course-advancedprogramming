@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3ab4a2e9e481b6e351d7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "2022_project_henrey_T",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "2022_project_henrey_T::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-2022_project_henrey_T-Debug-cbd631eed132647abd79.json",
+					"name" : "2022_project_henrey_T",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "logicLibrary_meatBoy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-logicLibrary_meatBoy-Debug-2be434a87e572756ff29.json",
+					"name" : "logicLibrary_meatBoy",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T/cmake-build-debug",
+		"source" : "/Users/henrikerch/Desktop/ALLLOCALPROJECTS/2022-project-henrey-T"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

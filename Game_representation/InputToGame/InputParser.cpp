@@ -124,6 +124,10 @@ void InputParser::parse(int levelNumb) {
                      * add girlfriendCount
                      */
                     countGirlfriends += 1;
+                }else{
+                    cout << "A wrong character or a space was given in the configuration file => ignoring character" << endl;
+                    // set tileType
+                    tile.tileType = ownType::NONE;
                 }
                 // set height
                 tile.tileHeightWidth = tileSize;
