@@ -24,16 +24,16 @@ Game::Game() {
     if (!music.openFromFile("../sprites_fonts_music/music.ogg")) {
     }
 
-    music.play();
-
-    music.setLoop(true);
-    music.setVolume(15);
-
-    // Load sound
-    if (!buffer.loadFromFile("../sprites_fonts_music/bip.wav"))
-
-        sound.setBuffer(buffer);
-    sound.play();
+//    music.play();
+//
+//    music.setLoop(true);
+//    music.setVolume(15);
+//
+//    // Load sound
+//    if (!buffer.loadFromFile("../sprites_fonts_music/bip.wav"))
+//
+//        sound.setBuffer(buffer);
+//    sound.play();
 }
 
 void Game::run() {
